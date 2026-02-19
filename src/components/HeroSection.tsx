@@ -1,9 +1,12 @@
+import { useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
+import ContactFormDialog from "./ContactFormDialog";
 
 const HeroSection = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-background/70" />
@@ -23,13 +26,13 @@ const HeroSection = () => {
           Un accompagnement structuré pour éliminer tes blocages, comprendre ton incarnation et activer ton feu sacré.
         </p>
 
-        <a
-          href="#offres"
+        <button
+          onClick={() => setDialogOpen(true)}
           className="inline-block bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-10 py-4 rounded-sm hover:shadow-gold transition-all duration-500 opacity-0 animate-fade-in-up"
           style={{ animationDelay: "0.6s" }}
         >
           Réserver un appel découverte
-        </a>
+        </button>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.9s" }}>
           {[
@@ -43,6 +46,8 @@ const HeroSection = () => {
           ))}
         </div>
       </div>
+
+      <ContactFormDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </section>
   );
 };

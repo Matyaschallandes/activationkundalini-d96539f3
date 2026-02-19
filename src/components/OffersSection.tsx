@@ -1,9 +1,25 @@
 import { Check } from "lucide-react";
+import { useState } from "react";
+import ContactFormDialog from "./ContactFormDialog";
 
 const offers = [
   {
+    name: "Découverte Gratuite",
+    price: "Gratuit",
+    duration: "~1h",
+    description: "Lecture d'âme et mini activation pour découvrir ton potentiel.",
+    features: [
+      "Lecture d'âme (carte du ciel + Ba Zi)",
+      "Mini soin de bannissement",
+      "Mini activation Kundalini",
+      "Élimination des blocages",
+    ],
+    highlighted: false,
+    free: true,
+  },
+  {
     name: "Découverte",
-    price: "150",
+    price: "111",
     duration: "2h",
     description: "Vision claire de ton incarnation et début d'activation.",
     features: [
@@ -12,10 +28,11 @@ const offers = [
       "Lecture d'âme (carte du ciel + bodygraph)",
     ],
     highlighted: false,
+    free: false,
   },
   {
     name: "Accompagnement",
-    price: "500",
+    price: "163",
     duration: "4–6 semaines",
     description: "Nettoyage et activation en profondeur avec suivi régulier.",
     features: [
@@ -28,10 +45,11 @@ const offers = [
       "Bannissements illimités",
     ],
     highlighted: false,
+    free: false,
   },
   {
     name: "Premium",
-    price: "1000",
+    price: "559",
     duration: "8–10 semaines",
     description: "Transformation complète avec protocole 21 jours et suivi étendu.",
     features: [
@@ -44,13 +62,22 @@ const offers = [
       "Bannissements illimités",
     ],
     highlighted: true,
+    free: false,
   },
 ];
 
 const OffersSection = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [selectedOffer, setSelectedOffer] = useState("");
+
+  const handleChoose = (offerName: string) => {
+    setSelectedOffer(offerName);
+    setDialogOpen(true);
+  };
+
   return (
     <section id="offres" className="py-24 md:py-32 bg-muted/30">
-      <div className="container mx-auto px-6 max-w-6xl">
+      <div className="container mx-auto px-6 max-w-7xl">
         <p className="text-primary font-body tracking-[0.3em] uppercase text-xs text-center mb-4">
           Les offres
         </p>
@@ -59,7 +86,7 @@ const OffersSection = () => {
         </h2>
         <div className="glow-line w-24 mx-auto mb-16" />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {offers.map((offer, i) => (
             <div
               key={i}
@@ -74,13 +101,24 @@ const OffersSection = () => {
                   Recommandé
                 </div>
               )}
+              {offer.free && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground font-body text-xs font-semibold tracking-wider uppercase px-4 py-1 rounded-sm">
+                  Gratuit
+                </div>
+              )}
 
               <h3 className="font-heading text-2xl text-foreground mb-1">{offer.name}</h3>
               <p className="text-muted-foreground font-body text-sm mb-6">{offer.duration}</p>
 
               <div className="mb-6">
-                <span className="font-heading text-5xl text-gradient-gold">{offer.price}</span>
-                <span className="text-muted-foreground font-body text-sm ml-2">CHF</span>
+                {offer.free ? (
+                  <span className="font-heading text-4xl text-gradient-gold">Gratuit</span>
+                ) : (
+                  <>
+                    <span className="font-heading text-5xl text-gradient-gold">{offer.price}</span>
+                    <span className="text-muted-foreground font-body text-sm ml-2">CHF</span>
+                  </>
+                )}
               </div>
 
               <p className="text-foreground/70 font-body text-sm mb-8 leading-relaxed">{offer.description}</p>
@@ -94,20 +132,26 @@ const OffersSection = () => {
                 ))}
               </ul>
 
-              <a
-                href="#contact"
-                className={`block text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 ${
+              <button
+                onClick={() => handleChoose(offer.name)}
+                className={`block w-full text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 ${
                   offer.highlighted
                     ? "bg-gradient-gold text-primary-foreground hover:shadow-gold"
                     : "border border-primary/30 text-primary hover:bg-primary/10"
                 }`}
               >
                 Choisir cette offre
-              </a>
+              </button>
             </div>
           ))}
         </div>
       </div>
+
+      <ContactFormDialog
+        open={dialogOpen}
+        onOpenChange={setDialogOpen}
+        offerName={selectedOffer}
+      />
     </section>
   );
 };
