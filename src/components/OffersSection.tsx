@@ -70,6 +70,47 @@ const offers = [
   },
 ];
 
+const alaCarteOffers = [
+  {
+    name: "Nettoyage de Maison",
+    price: "80",
+    duration: "~1h",
+    description: "Purification énergétique complète de votre espace de vie. En présentiel ou à distance (envoi de photos de chaque pièce).",
+    features: [
+      "Élimination des entités et énergies négatives",
+      "Purification des murs et mémoire des lieux",
+      "Contrôle des réseaux Hartmann",
+      "Détection des perturbations électromagnétiques",
+      "En présentiel ou à distance (photos)",
+    ],
+  },
+  {
+    name: "Soin Énergétique",
+    price: "80",
+    duration: "~1h",
+    description: "Soin profond pour rééquilibrer votre champ énergétique et libérer les blocages.",
+    features: [
+      "Respiration alchimique",
+      "Activation de la Kundalini",
+      "Techniques énergétiques avancées",
+      "Nettoyage et rééquilibrage du corps énergétique",
+    ],
+  },
+  {
+    name: "Lecture d'Âme au Pendule",
+    price: "60",
+    duration: "~1h",
+    description: "Analyse complète de votre incarnation pour identifier les blocages et ouvrir votre chemin de vie.",
+    features: [
+      "Identification des blocages",
+      "Analyse des chemins de vie",
+      "Détection des parasites énergétiques",
+      "Maladies chroniques et problèmes d'incarnation",
+      "Guidance personnalisée",
+    ],
+  },
+];
+
 const OffersSection = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedOffer, setSelectedOffer] = useState("");
@@ -148,6 +189,52 @@ const OffersSection = () => {
               </button>
             </div>
           ))}
+        </div>
+
+        {/* À la carte */}
+        <div className="mt-20">
+          <p className="text-primary font-body tracking-[0.3em] uppercase text-xs text-center mb-4">
+            Services individuels
+          </p>
+          <h3 className="font-heading text-3xl md:text-4xl text-center font-light mb-4 text-foreground">
+            À la <span className="text-gradient-gold italic">carte</span>
+          </h3>
+          <div className="glow-line w-16 mx-auto mb-12" />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {alaCarteOffers.map((offer, i) => (
+              <div
+                key={i}
+                className="relative rounded-sm p-8 border border-border bg-card/60 hover:border-primary/20 transition-all duration-500 flex flex-col"
+              >
+                <h3 className="font-heading text-2xl text-foreground mb-1">{offer.name}</h3>
+                <p className="text-muted-foreground font-body text-sm mb-6">{offer.duration}</p>
+
+                <div className="mb-6">
+                  <span className="font-heading text-5xl text-gradient-gold">{offer.price}</span>
+                  <span className="text-muted-foreground font-body text-sm ml-2">CHF</span>
+                </div>
+
+                <p className="text-foreground/70 font-body text-sm mb-8 leading-relaxed">{offer.description}</p>
+
+                <ul className="space-y-3 mb-8 flex-1">
+                  {offer.features.map((f, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <Check className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                      <span className="font-body text-sm text-foreground/80">{f}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button
+                  onClick={() => handleChoose(offer.name)}
+                  className="block w-full text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 border border-primary/30 text-primary hover:bg-primary/10"
+                >
+                  Réserver ce service
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
