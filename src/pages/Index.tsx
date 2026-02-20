@@ -8,6 +8,7 @@ import OffersSection from "@/components/OffersSection";
 import Programme21Section from "@/components/Programme21Section";
 import JourneySection from "@/components/JourneySection";
 import WhyMeSection from "@/components/WhyMeSection";
+import GoogleReviewsSection from "@/components/GoogleReviewsSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 
@@ -24,6 +25,7 @@ const Index = () => {
       <Programme21Section />
       <JourneySection />
       <WhyMeSection />
+      <GoogleReviewsSection />
       <CtaSection />
       <Footer />
     </main>
