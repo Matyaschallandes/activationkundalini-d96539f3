@@ -9,7 +9,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
 import { Mail, Phone } from "lucide-react";
 
 interface ContactFormDialogProps {
@@ -28,44 +27,49 @@ const ContactFormDialog = ({ open, onOpenChange, offerName }: ContactFormDialogP
     lieuNaissance: "",
     heureNaissance: "",
   });
-  const [sending, setSending] = useState(false);
+  
 
   const handleChange = (field: string, value: string) => {
     setForm((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.prenom || !form.nom || !form.email) {
       toast.error("Merci de remplir au moins le prénom, le nom et l'email.");
       return;
     }
 
-    setSending(true);
-    try {
-      const { data, error } = await supabase.functions.invoke("send-contact", {
-        body: { ...form, offerName },
-      });
+    const subject = encodeURIComponent(
+      `Nouvelle demande${offerName ? ` — ${offerName}` : ""}`
+    );
 
-      if (error) throw error;
+    const lines = [
+      offerName ? `Offre choisie : ${offerName}` : "",
+      `Prénom : ${form.prenom}`,
+      `Nom : ${form.nom}`,
+      `Email : ${form.email}`,
+      `Téléphone : ${form.telephone || "Non renseigné"}`,
+      `Date de naissance : ${form.dateNaissance || "Non renseignée"}`,
+      `Lieu de naissance : ${form.lieuNaissance || "Non renseigné"}`,
+      `Heure de naissance : ${form.heureNaissance || "Non renseignée"}`,
+    ].filter(Boolean);
 
-      toast.success("Demande envoyée avec succès ! Je vous recontacte rapidement 🌿");
-      setForm({
-        prenom: "",
-        nom: "",
-        email: "",
-        telephone: "",
-        dateNaissance: "",
-        lieuNaissance: "",
-        heureNaissance: "",
-      });
-      onOpenChange(false);
-    } catch (err) {
-      console.error(err);
-      toast.error("Erreur lors de l'envoi. Vous pouvez me contacter directement par téléphone ou email.");
-    } finally {
-      setSending(false);
-    }
+    const body = encodeURIComponent(lines.join("\n"));
+
+    window.open(`mailto:matyas.challandes@gmail.com?subject=${subject}&body=${body}`, "_self");
+
+    toast.success("Votre boîte mail va s'ouvrir pour envoyer la demande 🌿");
+    setForm({
+      prenom: "",
+      nom: "",
+      email: "",
+      telephone: "",
+      dateNaissance: "",
+      lieuNaissance: "",
+      heureNaissance: "",
+    });
+    onOpenChange(false);
   };
 
   return (
@@ -120,10 +124,9 @@ const ContactFormDialog = ({ open, onOpenChange, offerName }: ContactFormDialogP
 
           <button
             type="submit"
-            disabled={sending}
-            className="w-full bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm py-3 rounded-sm hover:shadow-gold transition-all duration-300 mt-4 disabled:opacity-50"
+            className="w-full bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm py-3 rounded-sm hover:shadow-gold transition-all duration-300 mt-4"
           >
-            {sending ? "Envoi en cours…" : "Envoyer ma demande"}
+            Envoyer ma demande
           </button>
 
           <div className="pt-4 border-t border-border/50 mt-4">
