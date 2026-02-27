@@ -115,7 +115,7 @@ const alaCarteOffers = [
   },
   {
     name: "Lecture d'Âme au Pendule",
-    price: "60",
+    price: "80",
     duration: "~1h",
     description: "Analyse complète de votre incarnation pour identifier les blocages et ouvrir votre chemin de vie.",
     features: [
@@ -126,6 +126,21 @@ const alaCarteOffers = [
       "Guidance personnalisée",
     ],
     special: false,
+  },
+  {
+    name: "Guidances",
+    price: "20",
+    duration: "Par écrit · WhatsApp ou PDF",
+    description: "Des questions sur votre vie ? Vos blocages ? En amour ? Personnes toxiques ? Je vous envoie les guidances par écrit sur WhatsApp ou en PDF.",
+    features: [
+      "3 questions — 20 CHF",
+      "5 questions — 30 CHF",
+      "10 questions — 50 CHF",
+      "Réponses envoyées par WhatsApp ou PDF",
+      "Guidances personnalisées",
+    ],
+    special: false,
+    priceLabel: "dès",
   },
 ];
 
@@ -239,6 +254,9 @@ const OffersSection = () => {
                 <p className="text-muted-foreground font-body text-sm mb-6">{offer.duration}</p>
 
                 <div className="mb-6">
+                  {offer.priceLabel && (
+                    <span className="text-muted-foreground font-body text-sm mr-1">{offer.priceLabel}</span>
+                  )}
                   <span className="font-heading text-5xl text-gradient-gold">{offer.price}</span>
                   <span className="text-muted-foreground font-body text-sm ml-2">CHF</span>
                 </div>
