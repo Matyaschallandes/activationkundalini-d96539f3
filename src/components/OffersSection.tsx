@@ -128,6 +128,20 @@ const alaCarteOffers = [
     special: false,
   },
   {
+    name: "Bannissement & Nettoyage Énergétique",
+    price: "60",
+    duration: "À distance ou en présentiel",
+    description: "Dissolution de pactes conscients ou inconscients, magie noire, sorcellerie, charmes, envoûtements et exorcisme.",
+    features: [
+      "Dissolution de pactes conscients ou inconscients",
+      "Magie noire et sorcellerie",
+      "Charmes et envoûtements",
+      "Exorcisme",
+      "Nettoyage énergétique complet",
+    ],
+    special: false,
+  },
+  {
     name: "Guidances",
     price: "20",
     duration: "Par écrit · WhatsApp ou PDF",
