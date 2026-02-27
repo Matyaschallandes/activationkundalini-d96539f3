@@ -81,7 +81,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background: hsl(220 20% 6% / 0.75);
+    background: hsl(220 20% 6% / 0.82);
     pointer-events: none;
     z-index: 0;
   }
