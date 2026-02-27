@@ -70,6 +70,25 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    background-image: url('/src/assets/jungle-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: hsl(220 20% 6% / 0.75);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #root {
+    position: relative;
+    z-index: 1;
   }
 
   h1, h2, h3, h4, h5, h6 {
