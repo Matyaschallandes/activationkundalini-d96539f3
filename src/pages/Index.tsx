@@ -9,6 +9,7 @@ import Programme21Section from "@/components/Programme21Section";
 import JourneySection from "@/components/JourneySection";
 import WhyMeSection from "@/components/WhyMeSection";
 import CtaSection from "@/components/CtaSection";
+import GoogleReviewsBadge from "@/components/GoogleReviewsBadge";
 import Footer from "@/components/Footer";
 import SeoKeywords from "@/components/SeoKeywords";
 
@@ -62,6 +63,7 @@ const Index = () => {
       <Programme21Section />
       <JourneySection />
       <WhyMeSection />
+      <GoogleReviewsBadge />
       <CtaSection />
       <Footer />
       <SeoKeywords />
