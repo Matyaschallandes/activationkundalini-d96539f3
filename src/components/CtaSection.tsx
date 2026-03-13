@@ -5,7 +5,7 @@ const CtaSection = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-background relative overflow-hidden">
+    <section id="contact" data-build-trigger="2026-03-13" className="py-24 md:py-32 bg-background relative overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] animate-glow-pulse" />
 
       <div className="relative z-10 container mx-auto px-6 max-w-3xl text-center">
