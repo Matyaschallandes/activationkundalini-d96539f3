@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import DiscoveryOfferSection from "@/components/DiscoveryOfferSection";
 import FrustrationsSection from "@/components/FrustrationsSection";
 import TransformationSection from "@/components/TransformationSection";
 import KundaliniSection from "@/components/KundaliniSection";
@@ -54,6 +55,7 @@ const Index = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(seoJsonLd) }}
       />
       <HeroSection />
+      <DiscoveryOfferSection />
       <FrustrationsSection />
       <TransformationSection />
       <KundaliniSection />
