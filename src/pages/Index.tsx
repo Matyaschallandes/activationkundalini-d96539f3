@@ -1,18 +1,8 @@
+import Layout from "@/components/Layout";
 import HeroSection from "@/components/HeroSection";
 import DiscoveryOfferSection from "@/components/DiscoveryOfferSection";
 import FrustrationsSection from "@/components/FrustrationsSection";
 import TransformationSection from "@/components/TransformationSection";
-import KundaliniSection from "@/components/KundaliniSection";
-import SoinSection from "@/components/SoinSection";
-import MethodSection from "@/components/MethodSection";
-import OffersSection from "@/components/OffersSection";
-import Programme21Section from "@/components/Programme21Section";
-import JourneySection from "@/components/JourneySection";
-import WhyMeSection from "@/components/WhyMeSection";
-import CtaSection from "@/components/CtaSection";
-import GoogleReviewsBadge from "@/components/GoogleReviewsBadge";
-import Footer from "@/components/Footer";
-import SeoKeywords from "@/components/SeoKeywords";
 
 const seoJsonLd = {
   "@context": "https://schema.org",
@@ -24,21 +14,9 @@ const seoJsonLd = {
   "email": "matyas.challandes@gmail.com",
   "areaServed": ["Neuchâtel", "Lausanne", "Genève", "Zurich", "Fribourg", "Vaud", "Suisse"],
   "serviceType": [
-    "Activation Kundalini",
-    "Soins énergétiques",
-    "Harmonisation des chakras",
-    "Nettoyage énergétique",
-    "Libération karmique",
-    "Thérapie énergétique",
-    "Méditation guidée",
-    "Soins à distance",
-    "Guérison holistique",
-    "Rééquilibrage énergétique"
-  ],
-  "knowsAbout": [
-    "Kundalini", "Chakras", "Énergie vitale", "Éveil spirituel", "Soins holistiques",
-    "Yoga kundalini", "Méditation énergétique", "Purification énergétique", "Alchimie intérieure",
-    "Biorésonance énergétique", "Soin quantique", "Élévation vibrationnelle"
+    "Activation Kundalini", "Soins énergétiques", "Harmonisation des chakras",
+    "Nettoyage énergétique", "Libération karmique", "Thérapie énergétique",
+    "Méditation guidée", "Soins à distance", "Guérison holistique", "Rééquilibrage énergétique"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -49,7 +27,7 @@ const seoJsonLd = {
 
 const Index = () => {
   return (
-    <main className="overflow-hidden">
+    <Layout>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(seoJsonLd) }}
@@ -58,18 +36,7 @@ const Index = () => {
       <DiscoveryOfferSection />
       <FrustrationsSection />
       <TransformationSection />
-      <KundaliniSection />
-      <SoinSection />
-      <MethodSection />
-      <OffersSection />
-      <Programme21Section />
-      <JourneySection />
-      <WhyMeSection />
-      <GoogleReviewsBadge />
-      <CtaSection />
-      <Footer />
-      <SeoKeywords />
-    </main>
+    </Layout>
   );
 };
 
