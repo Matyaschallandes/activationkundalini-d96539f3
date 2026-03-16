@@ -22,6 +22,13 @@ const Footer = () => {
           </a>
         </div>
 
+        <div className="flex items-center justify-center gap-2 text-sm">
+          <MapPin className="w-3.5 h-3.5 text-foreground/70" />
+          <p className="font-body text-foreground/70">
+            Matyas Challandes · Chemin du Cuard 22, 2022 Bevaix
+          </p>
+        </div>
+
         <p className="font-body text-xs text-muted-foreground pt-2">
           © {new Date().getFullYear()} — Activation & Transformation Profonde
         </p>
