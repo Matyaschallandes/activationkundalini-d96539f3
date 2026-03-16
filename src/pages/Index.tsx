@@ -9,7 +9,7 @@ const seoJsonLd = {
   "@type": "ProfessionalService",
   "name": "Karmaequilego – Activation Kundalini & Soins Énergétiques",
   "description": "Activation kundalini, éveil spirituel, soins énergétiques, harmonisation des chakras, libération karmique et transformation spirituelle en Suisse. Séances en présentiel et à distance.",
-  "url": "https://activationkundalini.lovable.app",
+  "url": "https://www.activationkundalini.ch",
   "telephone": "+41762445552",
   "email": "matyas.challandes@gmail.com",
   "areaServed": ["Neuchâtel", "Lausanne", "Genève", "Zurich", "Fribourg", "Vaud", "Suisse"],
