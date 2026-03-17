@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import DiscoveryOfferSection from "@/components/DiscoveryOfferSection";
 import FrustrationsSection from "@/components/FrustrationsSection";
 import TransformationSection from "@/components/TransformationSection";
+import VideoSection from "@/components/VideoSection";
 
 const seoJsonLd = {
   "@context": "https://schema.org",
@@ -35,6 +36,7 @@ const Index = () => {
       <HeroSection />
       <DiscoveryOfferSection />
       <FrustrationsSection />
+      <VideoSection />
       <TransformationSection />
     </Layout>
   );
