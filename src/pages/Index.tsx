@@ -36,6 +36,7 @@ const Index = () => {
       <HeroSection />
       <DiscoveryOfferSection />
       <FrustrationsSection />
+      <VideoSection />
       <TransformationSection />
     </Layout>
   );
