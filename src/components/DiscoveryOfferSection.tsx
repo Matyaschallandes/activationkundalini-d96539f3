@@ -92,7 +92,7 @@ const DiscoveryOfferSection = () => {
                 Je réserve ma séance découverte
               </button>
               <p className="font-body text-xs text-muted-foreground mt-3">
-                Sans engagement · Séance en visio ou en présentiel
+                Sans engagement · Prix libre · En visio ou en présentiel
               </p>
             </div>
           </div>
