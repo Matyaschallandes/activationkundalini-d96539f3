@@ -203,8 +203,8 @@ const OffersSection = () => {
               <p className="text-muted-foreground font-body text-sm mb-6">{offer.duration}</p>
 
               <div className="mb-6">
-                {offer.free ? (
-                  <span className="font-heading text-4xl text-gradient-gold">Gratuit</span>
+              {offer.free ? (
+                  <span className="font-heading text-3xl text-gradient-gold">Prix libre</span>
                 ) : (
                   <>
                     <span className="font-heading text-5xl text-gradient-gold">{offer.price}</span>
