@@ -40,8 +40,11 @@ const DiscoveryOfferSection = () => {
         <h2 className="font-heading text-4xl md:text-6xl text-center font-light mb-4 text-foreground animate-fade-in-up">
           Ton <span className="text-gradient-gold italic font-medium">éveil</span> commence ici
         </h2>
-        <p className="font-body text-muted-foreground text-center text-lg md:text-xl max-w-2xl mx-auto mb-12">
-          Une séance offerte pour conscientiser tes blessures, tes blocages — puis activer ton feu sacré.
+        <p className="font-body text-muted-foreground text-center text-lg md:text-xl max-w-2xl mx-auto mb-8">
+          Une séance pour conscientiser tes blessures, tes blocages — puis activer ton feu sacré.
+        </p>
+        <p className="font-body text-muted-foreground/80 text-center text-sm max-w-xl mx-auto mb-12 italic leading-relaxed">
+          Cette séance fonctionne au prix libre. En énergétique, l'échange — même symbolique — est essentiel pour que la transformation opère pleinement. Donne ce qui te semble juste. Si tu traverses une période difficile, on en parle.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
