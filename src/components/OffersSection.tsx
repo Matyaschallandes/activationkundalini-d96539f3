@@ -176,6 +176,9 @@ const OffersSection = () => {
         <h2 className="font-heading text-4xl md:text-5xl text-center font-light mb-4 text-foreground">
           Choisis ton <span className="text-gradient-gold italic">niveau d'engagement</span>
         </h2>
+        <p className="font-body text-muted-foreground/80 text-center text-sm max-w-xl mx-auto mb-6 italic leading-relaxed">
+          Tous les tarifs sont indicatifs. L'argent ne doit jamais être un frein à ta transformation — chaque situation est unique et nous trouverons ensemble ce qui te convient.
+        </p>
         <div className="glow-line w-24 mx-auto mb-16" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
