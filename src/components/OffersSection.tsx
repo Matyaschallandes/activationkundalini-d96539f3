@@ -4,10 +4,10 @@ import ContactFormDialog from "./ContactFormDialog";
 
 const offers = [
   {
-    name: "Découverte Gratuite",
-    price: "Gratuit",
+    name: "Découverte",
+    price: "Prix libre",
     duration: "~1h",
-    description: "Lecture d'âme et mini activation pour découvrir ton potentiel.",
+    description: "Lecture d'âme et mini activation pour découvrir ton potentiel. Prix libre — l'échange énergétique est essentiel.",
     features: [
       "Lecture d'âme (carte du ciel + bodygraph)",
       "Mini soin de bannissement",
@@ -176,6 +176,9 @@ const OffersSection = () => {
         <h2 className="font-heading text-4xl md:text-5xl text-center font-light mb-4 text-foreground">
           Choisis ton <span className="text-gradient-gold italic">niveau d'engagement</span>
         </h2>
+        <p className="font-body text-muted-foreground/80 text-center text-sm max-w-xl mx-auto mb-6 italic leading-relaxed">
+          Tous les tarifs sont indicatifs. L'argent ne doit jamais être un frein à ta transformation — chaque situation est unique et nous trouverons ensemble ce qui te convient.
+        </p>
         <div className="glow-line w-24 mx-auto mb-16" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -195,7 +198,7 @@ const OffersSection = () => {
               )}
               {offer.free && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground font-body text-xs font-semibold tracking-wider uppercase px-4 py-1 rounded-sm">
-                  Gratuit
+                  Prix libre
                 </div>
               )}
 
@@ -203,8 +206,8 @@ const OffersSection = () => {
               <p className="text-muted-foreground font-body text-sm mb-6">{offer.duration}</p>
 
               <div className="mb-6">
-                {offer.free ? (
-                  <span className="font-heading text-4xl text-gradient-gold">Gratuit</span>
+              {offer.free ? (
+                  <span className="font-heading text-3xl text-gradient-gold">Prix libre</span>
                 ) : (
                   <>
                     <span className="font-heading text-5xl text-gradient-gold">{offer.price}</span>

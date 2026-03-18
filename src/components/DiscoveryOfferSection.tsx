@@ -33,15 +33,18 @@ const DiscoveryOfferSection = () => {
         {/* Badge */}
         <div className="text-center mb-8">
           <span className="inline-block bg-primary/10 border border-primary/30 text-primary font-body text-xs tracking-[0.25em] uppercase px-6 py-2 rounded-sm animate-glow-pulse">
-            🎁 Offre découverte 100% gratuite
+            🎁 Séance découverte · Prix libre
           </span>
         </div>
 
         <h2 className="font-heading text-4xl md:text-6xl text-center font-light mb-4 text-foreground animate-fade-in-up">
           Ton <span className="text-gradient-gold italic font-medium">éveil</span> commence ici
         </h2>
-        <p className="font-body text-muted-foreground text-center text-lg md:text-xl max-w-2xl mx-auto mb-12">
-          Une séance offerte pour conscientiser tes blessures, tes blocages — puis activer ton feu sacré.
+        <p className="font-body text-muted-foreground text-center text-lg md:text-xl max-w-2xl mx-auto mb-8">
+          Une séance pour conscientiser tes blessures, tes blocages — puis activer ton feu sacré.
+        </p>
+        <p className="font-body text-muted-foreground/80 text-center text-sm max-w-xl mx-auto mb-12 italic leading-relaxed">
+          Cette séance fonctionne au prix libre. En énergétique, l'échange — même symbolique — est essentiel pour que la transformation opère pleinement. Donne ce qui te semble juste. Si tu traverses une période difficile, on en parle.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
@@ -86,10 +89,10 @@ const DiscoveryOfferSection = () => {
                 onClick={() => setDialogOpen(true)}
                 className="bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-10 py-4 rounded-sm hover:shadow-gold transition-all duration-500 w-full lg:w-auto"
               >
-                Je veux ma séance gratuite
+                Je réserve ma séance découverte
               </button>
               <p className="font-body text-xs text-muted-foreground mt-3">
-                Sans engagement · Séance en visio ou en présentiel
+                Sans engagement · Prix libre · En visio ou en présentiel
               </p>
             </div>
           </div>
