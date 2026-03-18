@@ -89,7 +89,7 @@ const DiscoveryOfferSection = () => {
                 onClick={() => setDialogOpen(true)}
                 className="bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-10 py-4 rounded-sm hover:shadow-gold transition-all duration-500 w-full lg:w-auto"
               >
-                Je veux ma séance gratuite
+                Je réserve ma séance découverte
               </button>
               <p className="font-body text-xs text-muted-foreground mt-3">
                 Sans engagement · Séance en visio ou en présentiel
