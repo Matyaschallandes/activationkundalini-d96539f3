@@ -117,7 +117,7 @@ const alaCarteOffers = [
     name: "Lecture d'Âme au Pendule",
     price: "80",
     duration: "~1h",
-    description: "Analyse complète de votre incarnation pour identifier les blocages et ouvrir votre chemin de vie.",
+    description: "Analyse de tes données de naissance (astrologie, Human Design, numérologie) pour révéler ta nature profonde, tes blocages inconscients et ta mission de vie — une étape essentielle avant tout travail énergétique.",
     features: [
       "Identification des blocages",
       "Analyse des chemins de vie",

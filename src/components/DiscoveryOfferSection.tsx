@@ -9,7 +9,7 @@ const DiscoveryOfferSection = () => {
     {
       icon: "🔮",
       title: "Lecture d'âme complète",
-      desc: "Grâce à ta carte du ciel et ton profil Human Design, je révèle ton archétype, ta mission d'incarnation et tes blocages profonds.",
+      desc: "Analyse de tes données de naissance (astrologie, Human Design, numérologie) pour révéler ta nature profonde, tes forces, tes blocages inconscients et ta mission de vie. Une étape essentielle avant l'activation énergétique.",
     },
     {
       icon: "🔥",
