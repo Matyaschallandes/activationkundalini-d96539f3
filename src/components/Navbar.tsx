@@ -5,6 +5,7 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { label: "Accueil", path: "/" },
   { label: "La Kundalini", path: "/la-kundalini" },
+  { label: "Lecture d'âme", path: "/lecture-ame" },
   { label: "Offres", path: "/offres" },
   { label: "À propos", path: "/a-propos" },
   { label: "Contact", path: "/contact" },

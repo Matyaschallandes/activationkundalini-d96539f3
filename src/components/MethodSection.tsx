@@ -3,7 +3,7 @@ import { Sparkles, Eye, Flame, Shield, Users } from "lucide-react";
 const features = [
   { icon: Sparkles, title: "Soins énergétiques puissants" },
   { icon: Flame, title: "Activation kundalini progressive" },
-  { icon: Eye, title: "Lecture d'âme (carte du ciel & Human Design)" },
+  { icon: Eye, title: "Lecture d'âme — comprendre qui tu es avant l'activation" },
   { icon: Shield, title: "Protocole transformation 21 jours" },
   { icon: Users, title: "Bannissements énergétiques illimités" },
 ];
