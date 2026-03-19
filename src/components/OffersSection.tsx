@@ -5,9 +5,9 @@ import ContactFormDialog from "./ContactFormDialog";
 const offers = [
   {
     name: "Découverte",
-    price: "Prix libre",
+    price: "Gratuite",
     duration: "~1h",
-    description: "Lecture d'âme et mini activation pour découvrir ton potentiel. Prix libre — l'échange énergétique est essentiel.",
+    description: "Séance offerte pour découvrir ton potentiel. Si tu le souhaites, tu es libre de contribuer — en énergétique, un échange favorise l'ancrage de la transformation.",
     features: [
       "Lecture d'âme (carte du ciel + bodygraph)",
       "Mini soin de bannissement",
@@ -198,7 +198,7 @@ const OffersSection = () => {
               )}
               {offer.free && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground font-body text-xs font-semibold tracking-wider uppercase px-4 py-1 rounded-sm">
-                  Prix libre
+                  Gratuite
                 </div>
               )}
 
@@ -207,7 +207,7 @@ const OffersSection = () => {
 
               <div className="mb-6">
               {offer.free ? (
-                  <span className="font-heading text-3xl text-gradient-gold">Prix libre</span>
+                  <span className="font-heading text-3xl text-gradient-gold">Gratuite</span>
                 ) : (
                   <>
                     <span className="font-heading text-5xl text-gradient-gold">{offer.price}</span>
