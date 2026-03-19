@@ -5,9 +5,9 @@ import ContactFormDialog from "./ContactFormDialog";
 const offers = [
   {
     name: "Découverte",
-    price: "Prix libre",
+    price: "Gratuite",
     duration: "~1h",
-    description: "Lecture d'âme et mini activation pour découvrir ton potentiel. Prix libre — l'échange énergétique est essentiel.",
+    description: "Séance offerte pour découvrir ton potentiel. Si tu le souhaites, tu es libre de contribuer — en énergétique, un échange favorise l'ancrage de la transformation.",
     features: [
       "Lecture d'âme (carte du ciel + bodygraph)",
       "Mini soin de bannissement",
