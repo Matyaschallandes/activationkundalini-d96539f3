@@ -44,7 +44,7 @@ const DiscoveryOfferSection = () => {
           Une séance pour conscientiser tes blessures, tes blocages — puis activer ton feu sacré.
         </p>
         <p className="font-body text-muted-foreground/80 text-center text-sm max-w-xl mx-auto mb-12 italic leading-relaxed">
-          Cette séance fonctionne au prix libre. En énergétique, l'échange — même symbolique — est essentiel pour que la transformation opère pleinement. Donne ce qui te semble juste. Si tu traverses une période difficile, on en parle.
+          Cette séance est gratuite. Cependant, en énergétique, un échange — même symbolique — favorise l'ancrage de la transformation. Si tu le souhaites, tu es libre de contribuer au montant qui te semble juste.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
