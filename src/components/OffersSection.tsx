@@ -198,7 +198,7 @@ const OffersSection = () => {
               )}
               {offer.free && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground font-body text-xs font-semibold tracking-wider uppercase px-4 py-1 rounded-sm">
-                  Prix libre
+                  Gratuite
                 </div>
               )}
 
