@@ -33,7 +33,7 @@ const DiscoveryOfferSection = () => {
         {/* Badge */}
         <div className="text-center mb-8">
           <span className="inline-block bg-primary/10 border border-primary/30 text-primary font-body text-xs tracking-[0.25em] uppercase px-6 py-2 rounded-sm animate-glow-pulse">
-            🎁 Séance découverte · Prix libre
+            🎁 Séance découverte · Gratuite
           </span>
         </div>
 
