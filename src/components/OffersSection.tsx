@@ -176,8 +176,8 @@ const OffersSection = () => {
         <h2 className="font-heading text-4xl md:text-5xl text-center font-light mb-4 text-foreground">
           Choisis ton <span className="text-gradient-gold italic">niveau d'engagement</span>
         </h2>
-        <p className="font-body text-muted-foreground/80 text-center text-sm max-w-xl mx-auto mb-6 italic leading-relaxed">
-          Tous les tarifs sont indicatifs. L'argent ne doit jamais être un frein à ta transformation — chaque situation est unique et nous trouverons ensemble ce qui te convient.
+        <p className="font-body text-muted-foreground/80 text-center text-sm max-w-2xl mx-auto mb-6 italic leading-relaxed">
+          Toutes les offres sont à prix indicatif, sous forme de dons. L'argent ne doit jamais être un frein à ta transformation — si tu traverses une période difficile, on en discute et on trouve une solution ensemble. En énergétique, un échange — même symbolique — est essentiel pour que le travail porte ses fruits.
         </p>
         <div className="glow-line w-24 mx-auto mb-16" />
 
@@ -249,6 +249,9 @@ const OffersSection = () => {
           <h3 className="font-heading text-3xl md:text-4xl text-center font-light mb-4 text-foreground">
             À la <span className="text-gradient-gold italic">carte</span>
           </h3>
+          <p className="font-body text-muted-foreground/80 text-center text-xs max-w-lg mx-auto mb-4 italic">
+            Prix indicatifs · Dons bienvenus · On s'adapte à ta situation
+          </p>
           <div className="glow-line w-16 mx-auto mb-12" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
