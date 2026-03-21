@@ -249,6 +249,9 @@ const OffersSection = () => {
           <h3 className="font-heading text-3xl md:text-4xl text-center font-light mb-4 text-foreground">
             À la <span className="text-gradient-gold italic">carte</span>
           </h3>
+          <p className="font-body text-muted-foreground/80 text-center text-xs max-w-lg mx-auto mb-4 italic">
+            Prix indicatifs · Dons bienvenus · On s'adapte à ta situation
+          </p>
           <div className="glow-line w-16 mx-auto mb-12" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
