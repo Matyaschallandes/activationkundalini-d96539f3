@@ -10,6 +10,7 @@ import Offres from "./pages/Offres";
 import APropos from "./pages/APropos";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import PageUne from "./pages/PageUne";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/offres" element={<Offres />} />
           <Route path="/a-propos" element={<APropos />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/page-une" element={<PageUne />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
