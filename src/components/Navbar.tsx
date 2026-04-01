@@ -7,6 +7,7 @@ const navItems = [
   { label: "La Kundalini", path: "/la-kundalini" },
   { label: "Lecture d'âme", path: "/lecture-ame" },
   { label: "Offres", path: "/offres" },
+  { label: "Mon histoire", path: "/mon-histoire" },
   { label: "À propos", path: "/a-propos" },
   { label: "Contact", path: "/contact" },
 ];
