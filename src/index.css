@@ -111,11 +111,11 @@
   }
 
   .border-gold {
-    border-color: hsl(40 80% 55% / 0.3);
+    border-color: hsl(40 80% 45% / 0.3);
   }
 
   .glow-line {
     height: 1px;
-    background: linear-gradient(90deg, transparent, hsl(40 80% 55% / 0.5), transparent);
+    background: linear-gradient(90deg, transparent, hsl(40 80% 45% / 0.5), transparent);
   }
 }
