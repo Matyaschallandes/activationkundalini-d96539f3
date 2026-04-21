@@ -12,6 +12,7 @@ import MonHistoire from "./pages/MonHistoire";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import PageUne from "./pages/PageUne";
+import RendezVous from "./pages/RendezVous";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
