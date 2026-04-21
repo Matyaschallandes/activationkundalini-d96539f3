@@ -12,6 +12,7 @@ import MonHistoire from "./pages/MonHistoire";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import PageUne from "./pages/PageUne";
+import RendezVous from "./pages/RendezVous";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/mon-histoire" element={<MonHistoire />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/page-une" element={<PageUne />} />
+          <Route path="/rendez-vous" element={<RendezVous />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
