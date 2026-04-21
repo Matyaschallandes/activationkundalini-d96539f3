@@ -22,7 +22,7 @@ const HeroSection = () => {
           <span className="text-gradient-gold italic font-medium">vous</span>.
         </h1>
 
-        <p className="font-body text-muted-foreground text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+        <p className="font-body text-foreground/90 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           Vous reconnecter à votre corps. Sortir des illusions. Un accompagnement structuré pour éliminer vos blocages et activer votre feu sacré.
         </p>
 
