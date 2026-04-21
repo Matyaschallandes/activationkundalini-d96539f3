@@ -13,7 +13,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 container mx-auto px-6 py-24 text-center max-w-4xl">
-        <p className="text-primary font-body tracking-[0.3em] uppercase text-sm mb-6 animate-fade-in">
+        <p className="text-foreground font-body font-semibold tracking-[0.3em] uppercase text-sm mb-6 animate-fade-in">
           🔥 Activation de la Kundalini & Souveraineté Intérieure
         </p>
 
