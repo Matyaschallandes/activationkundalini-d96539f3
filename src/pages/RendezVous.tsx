@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Layout from "@/components/Layout";
-import { Calendar, MessageCircle, Camera, FileText } from "lucide-react";
+import { Calendar, MessageCircle, Camera, FileText, Smartphone, Mail, Building2 } from "lucide-react";
 
 const phoneNumber = "41762445552";
 const whatsappMessage = encodeURIComponent(
@@ -89,12 +89,53 @@ const RendezVous = () => {
                   <h3 className="font-heading text-lg text-foreground mb-2">
                     Le paiement se fait après la séance
                   </h3>
-                  <p className="font-body text-muted-foreground">
-                    Toutes les offres sont à prix indicatif, sous forme de dons. On s'adapte à votre situation.
+                  <p className="font-body text-muted-foreground mb-3">
+                    Toutes les offres sont à prix libre, sous forme de dons. On s'adapte à votre situation.
+                  </p>
+                  <p className="font-body text-sm text-muted-foreground">
+                    Moyens de paiement acceptés : <span className="text-foreground font-medium">Twint, PayPal, virement bancaire ou espèces</span>.
                   </p>
                 </div>
               </li>
             </ol>
+          </div>
+
+          {/* Moyens de paiement */}
+          <div className="bg-gradient-card border border-border rounded-sm p-8 md:p-10 mb-12">
+            <h2 className="font-heading text-2xl text-foreground mb-6 text-center">
+              Moyens de paiement
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center space-y-2">
+                <Smartphone className="w-8 h-8 text-primary mx-auto" />
+                <h3 className="font-heading text-lg text-foreground">Twint</h3>
+                <p className="font-body text-sm text-muted-foreground">
+                  <a href="tel:+41762445552" className="hover:text-primary transition-colors">
+                    076 244 55 52
+                  </a>
+                </p>
+              </div>
+              <div className="text-center space-y-2">
+                <Mail className="w-8 h-8 text-primary mx-auto" />
+                <h3 className="font-heading text-lg text-foreground">PayPal</h3>
+                <p className="font-body text-sm text-muted-foreground break-all">
+                  <a href="https://www.paypal.com/paypalme/matyaschallandes" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    matyas.challandes@gmail.com
+                  </a>
+                </p>
+              </div>
+              <div className="text-center space-y-2">
+                <Building2 className="w-8 h-8 text-primary mx-auto" />
+                <h3 className="font-heading text-lg text-foreground">Virement bancaire</h3>
+                <p className="font-body text-sm text-muted-foreground">
+                  IBAN<br />
+                  <span className="text-foreground font-medium">CH59 0900 0000 1763 1365 6</span>
+                </p>
+              </div>
+            </div>
+            <p className="font-body text-xs text-muted-foreground text-center mt-6">
+              Espèces également acceptées en présentiel.
+            </p>
           </div>
 
           {/* Koalendar embed */}
