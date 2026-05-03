@@ -5,20 +5,6 @@ import ContactFormDialog from "./ContactFormDialog";
 const offers = [
   {
     name: "Découverte",
-    price: "Gratuite",
-    duration: "~1h",
-    description: "Séance offerte pour découvrir ton potentiel. Si tu le souhaites, tu es libre de contribuer — en énergétique, un échange favorise l'ancrage de la transformation.",
-    features: [
-      "Lecture d'âme (carte du ciel + bodygraph)",
-      "Mini soin de bannissement",
-      "Mini activation Kundalini",
-      "Élimination des blocages",
-    ],
-    highlighted: false,
-    free: true,
-  },
-  {
-    name: "Découverte",
     price: "111",
     duration: "2h",
     description: "Vision claire de ton incarnation et début d'activation.",
