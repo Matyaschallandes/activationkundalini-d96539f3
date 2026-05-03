@@ -5,20 +5,6 @@ import ContactFormDialog from "./ContactFormDialog";
 const offers = [
   {
     name: "Découverte",
-    price: "Gratuite",
-    duration: "~1h",
-    description: "Séance offerte pour découvrir ton potentiel. Si tu le souhaites, tu es libre de contribuer — en énergétique, un échange favorise l'ancrage de la transformation.",
-    features: [
-      "Lecture d'âme (carte du ciel + bodygraph)",
-      "Mini soin de bannissement",
-      "Mini activation Kundalini",
-      "Élimination des blocages",
-    ],
-    highlighted: false,
-    free: true,
-  },
-  {
-    name: "Découverte",
     price: "111",
     duration: "2h",
     description: "Vision claire de ton incarnation et début d'activation.",
@@ -142,6 +128,21 @@ const alaCarteOffers = [
     special: false,
   },
   {
+    name: "Kinésiologie",
+    price: "Prix libre",
+    duration: "~1h",
+    description: "Travail en kinésiologie sur un objectif à atteindre, le futur ou le passé, les traumatismes, les douleurs, les blocages, le Brain Gym et les allergies. Je suis en première année de formation : c'est avant tout pour m'entraîner, mais la méthode reste très efficace. Un échange — même symbolique — est le bienvenu.",
+    features: [
+      "Objectif à atteindre",
+      "Traumatismes (futur ou passé)",
+      "Douleurs et blocages",
+      "Brain Gym",
+      "Allergies",
+    ],
+    special: false,
+    priceLabel: "",
+  },
+  {
     name: "Guidances",
     price: "20",
     duration: "Par écrit · WhatsApp ou PDF",
@@ -181,7 +182,7 @@ const OffersSection = () => {
         </p>
         <div className="glow-line w-24 mx-auto mb-16" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {offers.map((offer, i) => (
             <div
               key={i}
@@ -277,8 +278,14 @@ const OffersSection = () => {
                   {offer.priceLabel && (
                     <span className="text-muted-foreground font-body text-sm mr-1">{offer.priceLabel}</span>
                   )}
-                  <span className="font-heading text-5xl text-gradient-gold">{offer.price}</span>
-                  <span className="text-muted-foreground font-body text-sm ml-2">CHF</span>
+                  {offer.price.toString().toLowerCase().includes("libre") ? (
+                    <span className="font-heading text-3xl text-gradient-gold">{offer.price}</span>
+                  ) : (
+                    <>
+                      <span className="font-heading text-5xl text-gradient-gold">{offer.price}</span>
+                      <span className="text-muted-foreground font-body text-sm ml-2">CHF</span>
+                    </>
+                  )}
                 </div>
 
                 <p className="text-foreground/70 font-body text-sm mb-8 leading-relaxed">{offer.description}</p>
