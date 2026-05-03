@@ -1,6 +1,5 @@
 import Layout from "@/components/Layout";
 import HeroSection from "@/components/HeroSection";
-import DiscoveryOfferSection from "@/components/DiscoveryOfferSection";
 import FrustrationsSection from "@/components/FrustrationsSection";
 import TransformationSection from "@/components/TransformationSection";
 import VideoSection from "@/components/VideoSection";
