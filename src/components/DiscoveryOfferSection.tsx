@@ -7,9 +7,9 @@ const DiscoveryOfferSection = () => {
 
   const offerItems = [
     {
-      icon: "🔮",
-      title: "Lecture d'âme complète",
-      desc: "Analyse de tes données de naissance (astrologie, Human Design, numérologie) pour révéler ta nature profonde, tes forces, tes blocages inconscients et ta mission de vie. Une étape essentielle avant l'activation énergétique.",
+      icon: "🪞",
+      title: "Lecture des 3 blessures & blocages",
+      desc: "Identification de tes 3 blessures et blocages principaux (date et type) à partir de tes données de naissance. Conscientiser avant de libérer — une étape essentielle pour comprendre ce qui te freine en profondeur.",
     },
     {
       icon: "🔥",
@@ -20,6 +20,11 @@ const DiscoveryOfferSection = () => {
       icon: "✨",
       title: "Soin énergétique & bannissement",
       desc: "Mini soin énergétique suivi d'un bannissement des énergies extérieures qui te parasitent.",
+    },
+    {
+      icon: "🌀",
+      title: "Séance de kinésiologie offerte",
+      desc: "Travail sur un objectif à atteindre, le futur ou le passé, les traumatismes, les douleurs, les blocages, le Brain Gym et les allergies. Je suis en première année de formation : c'est avant tout pour m'entraîner, mais la méthode reste très efficace. Si tu souhaites me remercier par un petit échange, c'est le bienvenu.",
     },
   ];
 
