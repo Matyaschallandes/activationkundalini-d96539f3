@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Layout from "@/components/Layout";
-import { Calendar, MessageCircle, Camera, FileText } from "lucide-react";
+import { Calendar, MessageCircle, Camera, FileText, Smartphone, Mail, Building2 } from "lucide-react";
 
 const phoneNumber = "41762445552";
 const whatsappMessage = encodeURIComponent(
