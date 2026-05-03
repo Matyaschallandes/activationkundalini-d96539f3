@@ -278,8 +278,14 @@ const OffersSection = () => {
                   {offer.priceLabel && (
                     <span className="text-muted-foreground font-body text-sm mr-1">{offer.priceLabel}</span>
                   )}
-                  <span className="font-heading text-5xl text-gradient-gold">{offer.price}</span>
-                  <span className="text-muted-foreground font-body text-sm ml-2">CHF</span>
+                  {offer.price.toString().toLowerCase().includes("libre") ? (
+                    <span className="font-heading text-3xl text-gradient-gold">{offer.price}</span>
+                  ) : (
+                    <>
+                      <span className="font-heading text-5xl text-gradient-gold">{offer.price}</span>
+                      <span className="text-muted-foreground font-body text-sm ml-2">CHF</span>
+                    </>
+                  )}
                 </div>
 
                 <p className="text-foreground/70 font-body text-sm mb-8 leading-relaxed">{offer.description}</p>
