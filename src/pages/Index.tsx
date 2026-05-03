@@ -33,7 +33,7 @@ const Index = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(seoJsonLd) }}
       />
       <HeroSection />
-      <DiscoveryOfferSection />
+      
       <FrustrationsSection />
       <VideoSection />
       <TransformationSection />
