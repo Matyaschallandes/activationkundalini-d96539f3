@@ -128,6 +128,21 @@ const alaCarteOffers = [
     special: false,
   },
   {
+    name: "Kinésiologie",
+    price: "Prix libre",
+    duration: "~1h",
+    description: "Travail en kinésiologie sur un objectif à atteindre, le futur ou le passé, les traumatismes, les douleurs, les blocages, le Brain Gym et les allergies. Je suis en première année de formation : c'est avant tout pour m'entraîner, mais la méthode reste très efficace. Un échange — même symbolique — est le bienvenu.",
+    features: [
+      "Objectif à atteindre",
+      "Traumatismes (futur ou passé)",
+      "Douleurs et blocages",
+      "Brain Gym",
+      "Allergies",
+    ],
+    special: false,
+    priceLabel: "",
+  },
+  {
     name: "Guidances",
     price: "20",
     duration: "Par écrit · WhatsApp ou PDF",
