@@ -137,10 +137,6 @@ const RendezVous = () => {
               Espèces également acceptées en présentiel.
             </p>
           </div>
-                </div>
-              </li>
-            </ol>
-          </div>
 
           {/* Koalendar embed */}
           <div className="mb-12">
