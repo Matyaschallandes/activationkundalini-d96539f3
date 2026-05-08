@@ -23,7 +23,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="font-body text-foreground/90 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-          Vous reconnecter à votre corps. Sortir des illusions. Un accompagnement structuré pour éliminer vos blocages et activer votre feu sacré.
+          Vous reconnecter à votre corps. Sortir des illusions. Un accompagnement structuré pour éliminer vos blocages et activer votre feu sacré. Basé en Suisse romande, à Bevaix dans le canton de Neuchâtel.
         </p>
 
         <button
