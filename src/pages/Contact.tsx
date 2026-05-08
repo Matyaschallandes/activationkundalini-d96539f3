@@ -10,6 +10,9 @@ const Contact = () => {
       {/* Map & Contact Info Section */}
       <section className="py-16 md:py-24 bg-card/30">
         <div className="container mx-auto px-6 max-w-5xl">
+          <p className="text-primary font-body tracking-[0.3em] uppercase text-xs text-center mb-4">
+            Suisse romande — Canton de Neuchâtel
+          </p>
           <h2 className="font-heading text-3xl md:text-4xl text-center mb-4 text-foreground">
             Me <span className="text-gradient-gold italic">trouver</span>
           </h2>
@@ -41,7 +44,7 @@ const Contact = () => {
                   <p className="font-body text-muted-foreground">
                     Matyas Challandes<br />
                     Chemin du Cuard 22<br />
-                    2022 Bevaix, Suisse
+                    2022 Bevaix, Suisse romande
                   </p>
                 </div>
               </div>
@@ -73,7 +76,7 @@ const Contact = () => {
               <div className="mt-8 p-6 rounded-lg bg-muted/20 border border-border/20">
                 <p className="font-body text-sm text-muted-foreground leading-relaxed">
                   <strong className="text-foreground/80">Séances disponibles :</strong><br />
-                  En présentiel à Bevaix (Neuchâtel) ou à distance via Zoom, WhatsApp vidéo ou sur photo.
+                  En présentiel à Bevaix, dans le canton de Neuchâtel (La Grande Béroche, Suisse romande) ou à distance via Zoom, WhatsApp vidéo ou sur photo.
                 </p>
               </div>
             </div>
