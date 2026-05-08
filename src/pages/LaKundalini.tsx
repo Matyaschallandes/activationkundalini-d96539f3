@@ -1,7 +1,19 @@
 import Layout from "@/components/Layout";
+import { useEffect } from "react";
 import { Flame, Zap, Sparkles, Heart, Eye, Shield, TreePine, Sun, Hand, Brain, Bird, Star } from "lucide-react";
 
 const LaKundalini = () => {
+  useEffect(() => {
+    document.title = "Qu'est-ce que la Kundalini ? | Facilitation & Activation — Bevaix, Suisse romande";
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute(
+        "content",
+        "Comprendre la Kundalini et la facilitation énergétique. Activation de l'énergie vitale en Suisse romande, à Bevaix dans le canton de Neuchâtel (La Grande Béroche). Séances en présentiel ou à distance."
+      );
+    }
+  }, []);
+
   return (
     <Layout>
       {/* Hero */}

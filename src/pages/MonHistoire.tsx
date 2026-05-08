@@ -4,10 +4,10 @@ import matyasPhoto from "@/assets/matyas-photo.jpg";
 
 const MonHistoire = () => {
   useEffect(() => {
-    document.title = "Mon Histoire — Matyas Challandes | Activation Kundalini";
+    document.title = "Mon Histoire — Matyas Challandes | Praticien Énergétique Suisse Romande";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
-      meta.setAttribute("content", "Découvrez le parcours de Matyas Challandes, praticien énergétique en Suisse romande. Un chemin de transformation intérieure au service de votre guérison.");
+      meta.setAttribute("content", "Découvrez le parcours de Matyas Challandes, praticien énergétique en Suisse romande, à Bevaix dans le canton de Neuchâtel (La Grande Béroche). Un chemin de transformation intérieure au service de votre guérison.");
     }
   }, []);
 

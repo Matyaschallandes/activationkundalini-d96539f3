@@ -13,7 +13,7 @@ const SoinSection = () => {
     <section className="py-24 md:py-32 bg-muted/20">
       <div className="container mx-auto px-6 max-w-5xl">
         <p className="text-primary font-body tracking-[0.3em] uppercase text-xs text-center mb-4">
-          🌀 Le processus
+          🌀 Le processus — Soins en Suisse romande
         </p>
         <h2 className="font-heading text-4xl md:text-5xl text-center font-light mb-4 text-foreground">
           Comment se déroule <span className="text-gradient-gold italic">un soin</span> ?

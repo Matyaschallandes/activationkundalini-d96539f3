@@ -27,6 +27,10 @@ const keywords = [
   "résonance vibratoire", "énergie subtile", "harmonisation vibrationnelle",
   "activation du potentiel énergétique", "soin énergétique holistique",
   "éveil spirituel rapide",
+  "soins énergétiques Suisse romande", "thérapeute énergétique Suisse romande",
+  "Bevaix", "La Grande Béroche", "canton de Neuchâtel", "activation kundalini Neuchâtel",
+  "soins énergétiques Bevaix", "thérapie énergétique Suisse romande", "éveil spirituel Neuchâtel",
+  "guérison énergétique Suisse romande", "méditation guidée Neuchâtel",
 ];
 
 const SeoKeywords = () => {

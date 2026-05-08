@@ -10,12 +10,12 @@ const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
 
 const RendezVous = () => {
   useEffect(() => {
-    document.title = "Prendre rendez-vous | Activation Kundalini & Soins Énergétiques";
+    document.title = "Prendre rendez-vous | Activation Kundalini & Soins Énergétiques – Bevaix, Suisse romande";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) {
       meta.setAttribute(
         "content",
-        "Réservez votre séance d'activation kundalini, lecture d'âme ou soin énergétique avec Matyas Challandes. Disponibilités en ligne, paiement après la séance."
+        "Réservez votre séance d'activation kundalini ou soin énergétique avec Matyas Challandes à Bevaix, dans le canton de Neuchâtel (Suisse romande). Disponibilités en ligne, séances en présentiel ou à distance."
       );
     }
   }, []);
