@@ -145,7 +145,7 @@ const RendezVous = () => {
             </h2>
             <div className="rounded-sm border border-border overflow-hidden bg-card">
               <iframe
-                src="https://koalendar.com/e/rencontrer-matyas-challandes"
+                src="https://koalendar.com/e/Activationkundalini?month=2026-06&duration=120"
                 width="100%"
                 height="700"
                 frameBorder="0"
@@ -155,7 +155,7 @@ const RendezVous = () => {
             </div>
             <p className="text-center mt-4">
               <a
-                href="https://koalendar.com/e/rencontrer-matyas-challandes"
+                href="https://koalendar.com/e/Activationkundalini?month=2026-06&duration=120"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary font-body text-sm hover:underline"
