@@ -81,6 +81,18 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href="https://karmaequilego-humandesign.lovable.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+                className="inline-flex items-center gap-1.5 font-body text-sm tracking-wider uppercase text-primary hover:text-foreground transition-colors"
+              >
+                Lecture d&apos;âme holistique gratuite
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </li>
           </ul>
         </div>
       )}
