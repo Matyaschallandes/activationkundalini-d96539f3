@@ -8,6 +8,7 @@ const navItems = [
   { label: "Offres", path: "/offres" },
   { label: "Mon histoire", path: "/mon-histoire" },
   { label: "À propos", path: "/a-propos" },
+  { label: "Cercle de guérison", path: "/cercle-de-guerison" },
   { label: "Rendez-vous", path: "/rendez-vous" },
   { label: "Contact", path: "/contact" },
 ];

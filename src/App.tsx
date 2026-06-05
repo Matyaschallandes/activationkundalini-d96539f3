@@ -13,6 +13,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import PageUne from "./pages/PageUne";
 import RendezVous from "./pages/RendezVous";
+import CercleGuerison from "./pages/CercleGuerison";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/page-une" element={<PageUne />} />
           <Route path="/rendez-vous" element={<RendezVous />} />
+          <Route path="/cercle-de-guerison" element={<CercleGuerison />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
