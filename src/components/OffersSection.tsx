@@ -271,13 +271,14 @@ const OffersSection = () => {
               <button
                 onClick={() => handleChoose(offer.name)}
                 className={`block w-full text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 ${
-                  offer.highlighted
+                  offer.highlighted || offer.ultimate
                     ? "bg-gradient-gold text-primary-foreground hover:shadow-gold"
                     : "border border-primary/30 text-primary hover:bg-primary/10"
                 }`}
               >
-                Choisir cette offre
+                {offer.ultimate ? "Je m'engage totalement" : "Choisir cette offre"}
               </button>
+
             </div>
           ))}
         </div>
