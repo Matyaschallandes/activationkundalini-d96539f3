@@ -4,6 +4,7 @@ import KundaliniSection from "@/components/KundaliniSection";
 import SoinSection from "@/components/SoinSection";
 import MethodSection from "@/components/MethodSection";
 import OffersSection from "@/components/OffersSection";
+import OffersImageSection from "@/components/OffersImageSection";
 import Programme21Section from "@/components/Programme21Section";
 
 const Offres = () => {
@@ -23,6 +24,7 @@ const Offres = () => {
       <KundaliniSection />
       <SoinSection />
       <MethodSection />
+      <OffersImageSection />
       <OffersSection />
       <Programme21Section />
     </Layout>
