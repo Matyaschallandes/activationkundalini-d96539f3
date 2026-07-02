@@ -2,3 +2,6 @@ project_id = "wchaptnajxqvfidwmccl"
 
 [functions.send-contact]
 verify_jwt = false
+
+[functions.robotspeed-webhook]
+verify_jwt = false
