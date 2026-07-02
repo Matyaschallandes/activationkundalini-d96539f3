@@ -5,56 +5,85 @@ import ContactFormDialog from "./ContactFormDialog";
 const offers = [
   {
     name: "Découverte",
+    subtitle: "Renaissance Intérieure",
     price: "111",
-    duration: "2h",
-    description: "Vision claire de ton incarnation et début d'activation.",
+    duration: "1 séance · 90 à 120 min",
+    description: "Idéale pour découvrir mon approche et initier un premier changement profond.",
     features: [
-      "1h entretien profond",
-      "1h soin énergétique + activation kundalini",
-      "Lecture d'âme (carte du ciel + bodygraph)",
-      "Bannissement des énergies négatives illimité",
-      "Questions et appels illimités",
+      "Échange et bilan énergétique",
+      "Tests énergétiques (inspirés de la kinésiologie)",
+      "Identification de la cause profonde",
+      "Libération émotionnelle",
+      "Nettoyage et rééquilibrage énergétique",
+      "Recouvrement d'âme si nécessaire",
+      "Activation Kundalini si appropriée",
+      "Conseils personnalisés",
     ],
     highlighted: false,
     free: false,
   },
   {
-    name: "Accompagnement",
+    name: "Transformation",
+    subtitle: "Réactivation du Pouvoir Sacré",
     price: "333",
-    duration: "4–6 semaines",
-    description: "Nettoyage et activation en profondeur avec suivi régulier.",
+    duration: "3 séances + suivi personnalisé",
+    description: "Pour transformer durablement ta vie et retrouver ton pouvoir intérieur. Programme d'intégration 21 jours inclus.",
     features: [
-      "3 soins énergétiques",
-      "5 guidances (tirages)",
-      "Lecture d'âme complète (carte du ciel + bodygraph)",
-      "Lecture au pendule",
-      "1h discussion stratégique",
-      "Exercices quotidiens",
-      "Bannissement des énergies négatives illimité",
-      "Questions et appels illimités",
+      "Tests énergétiques à chaque séance",
+      "Identification et libération des causes profondes",
+      "Libération émotionnelle",
+      "Recouvrement d'âme",
+      "Activation Kundalini",
+      "Rééquilibrage énergétique",
+      "Suivi personnalisé entre les séances",
+      "Programme 21 jours (méditations, exercices, respiration, journal)",
     ],
     highlighted: false,
     free: false,
   },
   {
     name: "Premium",
+    subtitle: "Métamorphose de l'Âme",
     price: "555",
-    duration: "8–10 semaines",
-    description: "Transformation complète avec protocole 21 jours et suivi étendu.",
+    duration: "5 séances + accompagnement complet",
+    description: "L'accompagnement le plus complet pour une véritable renaissance intérieure. Programme d'intégration 21 jours avancé inclus.",
     features: [
-      "6 soins énergétiques",
-      "15 guidances",
-      "Lecture d'âme approfondie (carte du ciel + bodygraph)",
-      "Lecture au pendule",
-      "Protocole transformation 21 jours",
-      "3h de discussion stratégique",
-      "Bannissement des énergies négatives illimité",
-      "Questions et appels illimités",
+      "Tests énergétiques approfondis",
+      "Libération des traumatismes et mémoires",
+      "Libération émotionnelle avancée",
+      "Recouvrement d'âme",
+      "Activation Kundalini",
+      "Rééquilibrage énergétique complet",
+      "Dissolution des pactes et liens limitants",
+      "Suivi prioritaire entre les séances",
+      "Programme 21 jours avancé + bonus (audio, plan d'action, intégration)",
     ],
     highlighted: true,
     free: false,
   },
+  {
+    name: "Alchimie Totale",
+    subtitle: "Transformation Sans Limite",
+    price: "999",
+    duration: "Accompagnement illimité",
+    description: "L'engagement le plus profond : un nombre illimité de soins, d'exercices et de discussions. La transformation jusqu'au bout — je t'accompagne sans limite de temps jusqu'à ce que la métamorphose soit complète.",
+    features: [
+      "Soins énergétiques illimités",
+      "Discussions et appels illimités",
+      "Exercices et pratiques personnalisées illimités",
+      "Activation Kundalini complète et progressive",
+      "Libération totale des traumatismes et mémoires",
+      "Dissolution complète des pactes et liens karmiques",
+      "Programme 21 jours avancé + intégration profonde",
+      "Suivi prioritaire jusqu'à la transformation intégrale",
+      "Accès à tous les bonus (audios, rituels, plan d'action)",
+    ],
+    highlighted: false,
+    ultimate: true,
+    free: false,
+  },
 ];
+
 
 const alaCarteOffers = [
   {
@@ -182,19 +211,26 @@ const OffersSection = () => {
         </p>
         <div className="glow-line w-24 mx-auto mb-16" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {offers.map((offer, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {offers.map((offer: any, i) => (
             <div
               key={i}
               className={`relative rounded-sm p-8 border transition-all duration-500 flex flex-col ${
-                offer.highlighted
+                offer.ultimate
+                  ? "border-primary bg-card shadow-gold ring-1 ring-primary/30"
+                  : offer.highlighted
                   ? "border-primary/50 bg-card shadow-gold"
                   : "border-border bg-card/60 hover:border-primary/20"
               }`}
             >
-              {offer.highlighted && (
+              {offer.highlighted && !offer.ultimate && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-gold text-primary-foreground font-body text-xs font-semibold tracking-wider uppercase px-4 py-1 rounded-sm">
                   Recommandé
+                </div>
+              )}
+              {offer.ultimate && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-gold text-primary-foreground font-body text-xs font-semibold tracking-wider uppercase px-4 py-1 rounded-sm whitespace-nowrap">
+                  Transformation ultime
                 </div>
               )}
               {offer.free && (
@@ -204,7 +240,11 @@ const OffersSection = () => {
               )}
 
               <h3 className="font-heading text-2xl text-foreground mb-1">{offer.name}</h3>
+              {offer.subtitle && (
+                <p className="font-heading italic text-primary/90 text-sm mb-1">{offer.subtitle}</p>
+              )}
               <p className="text-muted-foreground font-body text-sm mb-6">{offer.duration}</p>
+
 
               <div className="mb-6">
               {offer.free ? (
@@ -231,13 +271,14 @@ const OffersSection = () => {
               <button
                 onClick={() => handleChoose(offer.name)}
                 className={`block w-full text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 ${
-                  offer.highlighted
+                  offer.highlighted || offer.ultimate
                     ? "bg-gradient-gold text-primary-foreground hover:shadow-gold"
                     : "border border-primary/30 text-primary hover:bg-primary/10"
                 }`}
               >
-                Choisir cette offre
+                {offer.ultimate ? "Je m'engage totalement" : "Choisir cette offre"}
               </button>
+
             </div>
           ))}
         </div>
