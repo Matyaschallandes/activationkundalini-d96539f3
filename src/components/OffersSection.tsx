@@ -211,19 +211,26 @@ const OffersSection = () => {
         </p>
         <div className="glow-line w-24 mx-auto mb-16" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {offers.map((offer, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {offers.map((offer: any, i) => (
             <div
               key={i}
               className={`relative rounded-sm p-8 border transition-all duration-500 flex flex-col ${
-                offer.highlighted
+                offer.ultimate
+                  ? "border-primary bg-card shadow-gold ring-1 ring-primary/30"
+                  : offer.highlighted
                   ? "border-primary/50 bg-card shadow-gold"
                   : "border-border bg-card/60 hover:border-primary/20"
               }`}
             >
-              {offer.highlighted && (
+              {offer.highlighted && !offer.ultimate && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-gold text-primary-foreground font-body text-xs font-semibold tracking-wider uppercase px-4 py-1 rounded-sm">
                   Recommandé
+                </div>
+              )}
+              {offer.ultimate && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-gold text-primary-foreground font-body text-xs font-semibold tracking-wider uppercase px-4 py-1 rounded-sm whitespace-nowrap">
+                  Transformation ultime
                 </div>
               )}
               {offer.free && (
@@ -233,7 +240,11 @@ const OffersSection = () => {
               )}
 
               <h3 className="font-heading text-2xl text-foreground mb-1">{offer.name}</h3>
+              {offer.subtitle && (
+                <p className="font-heading italic text-primary/90 text-sm mb-1">{offer.subtitle}</p>
+              )}
               <p className="text-muted-foreground font-body text-sm mb-6">{offer.duration}</p>
+
 
               <div className="mb-6">
               {offer.free ? (
