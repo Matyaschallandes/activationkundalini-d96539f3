@@ -392,16 +392,29 @@ const OffersSection = () => {
                   ))}
                 </ul>
 
-                <button
-                  onClick={() => handleChoose(offer.name)}
-                  className={`block w-full text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 ${
-                    offer.special
-                      ? "bg-gradient-gold text-primary-foreground hover:shadow-gold"
-                      : "border border-primary/30 text-primary hover:bg-primary/10"
-                  }`}
-                >
-                  {offer.special ? "Commencer la formation" : "Réserver ce service"}
-                </button>
+                <div className="space-y-2">
+                  {paymentsEnabled && PRICE_IDS[offer.name] && !offer.price.toString().toLowerCase().includes("libre") && (
+                    <button
+                      onClick={() => handlePay(offer.name)}
+                      className="w-full inline-flex items-center justify-center gap-2 font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 bg-gradient-gold text-primary-foreground hover:shadow-gold"
+                    >
+                      <CreditCard className="w-4 h-4" />
+                      Payer {offer.price} CHF en ligne
+                    </button>
+                  )}
+                  <button
+                    onClick={() => handleChoose(offer.name)}
+                    className={`block w-full text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 ${
+                      offer.special && !(paymentsEnabled && PRICE_IDS[offer.name])
+                        ? "bg-gradient-gold text-primary-foreground hover:shadow-gold"
+                        : "border border-primary/30 text-primary hover:bg-primary/10"
+                    }`}
+                  >
+                    {paymentsEnabled && PRICE_IDS[offer.name] && !offer.price.toString().toLowerCase().includes("libre")
+                      ? "Ou me contacter (prix libre)"
+                      : offer.special ? "Commencer la formation" : "Réserver ce service"}
+                  </button>
+                </div>
               </div>
             ))}
           </div>
@@ -413,6 +426,7 @@ const OffersSection = () => {
         onOpenChange={setDialogOpen}
         offerName={selectedOffer}
       />
+      {checkoutElement}
     </section>
   );
 };
