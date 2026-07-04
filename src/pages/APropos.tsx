@@ -9,20 +9,20 @@ const jsonLd = {
   "@type": "Person",
   "name": "Matyas Challandes",
   "jobTitle": "Praticien énergétique & Guérisseur",
-  "description": "Praticien énergétique en Suisse romande, spécialisé en activation Kundalini, kinésiologie, libération des traumatismes et accompagnement burn-out.",
+  "description": "Praticien énergétique et chamane en Suisse romande, spécialisé en activation Kundalini, soins chamaniques (désenvoûtement, recouvrement d'âme, dégagement d'entités), kinésiologie et accompagnement burn-out.",
   "worksFor": { "@id": "https://www.activationkundalini.ch/#organization" },
   "address": { "@type": "PostalAddress", "addressLocality": "Bevaix", "addressRegion": "Neuchâtel", "addressCountry": "CH" },
-  "knowsAbout": ["Kundalini", "Kinésiologie", "Reiki Kundalini", "Lahochi", "Biorésonance", "Libération émotionnelle"]
+  "knowsAbout": ["Kundalini", "Chamanisme", "Désenvoûtement", "Recouvrement d'âme", "Dégagement d'entités", "Vision intuitive", "Kinésiologie", "Reiki Kundalini", "Lahochi", "Biorésonance", "Libération émotionnelle"]
 };
 
 const APropos = () => {
   return (
     <Layout>
       <Seo
-        title="À propos — Matyas Challandes | Guérisseur Énergétique Suisse Romande"
-        description="Matyas Challandes, praticien énergétique à Bevaix (Neuchâtel). Formé en Reiki Kundalini, Lahochi, kinésiologie et biorésonance. Accompagnement burn-out, traumatismes, angoisses."
+        title="À propos — Matyas Challandes | Guérisseur Énergétique & Chamane Suisse Romande"
+        description="Matyas Challandes, praticien énergétique et chamane à Bevaix (Neuchâtel). Activation Kundalini, soins chamaniques (désenvoûtement, recouvrement d'âme, dégagement d'entités), kinésiologie, accompagnement burn-out."
         path="/a-propos"
-        keywords="Matyas Challandes, guérisseur énergétique Neuchâtel, praticien kundalini Suisse romande"
+        keywords="Matyas Challandes, guérisseur énergétique Neuchâtel, chamane Suisse romande, désenvoûtement, recouvrement d'âme, dégagement d'entités, praticien kundalini"
         jsonLd={jsonLd}
       />
       <WhyMeSection />

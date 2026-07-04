@@ -12,7 +12,7 @@ const organizationLd = {
   "@id": "https://www.activationkundalini.ch/#organization",
   "name": "Karmaequilego — Activation Kundalini & Soins Énergétiques",
   "alternateName": "Matyas Challandes — Guérisseur Énergétique",
-  "description": "Guérisseur énergétique en Suisse romande : activation kundalini, accompagnement burn-out, traumatismes, angoisses et reconnexion à soi.",
+  "description": "Guérisseur énergétique et chamane en Suisse romande : activation kundalini, soins chamaniques (désenvoûtement, recouvrement d'âme, dégagement d'entités), accompagnement burn-out, traumatismes, angoisses et reconnexion à soi.",
   "url": "https://www.activationkundalini.ch",
   "telephone": "+41762445552",
   "email": "matyas.challandes@gmail.com",
@@ -21,6 +21,8 @@ const organizationLd = {
   "areaServed": ["Bevaix", "La Grande Béroche", "Neuchâtel", "Suisse romande", "Lausanne", "Genève", "Zurich", "Fribourg", "Vaud", "Suisse"],
   "serviceType": [
     "Activation Kundalini", "Guérisseur énergétique", "Soins énergétiques",
+    "Chamanisme", "Soins chamaniques", "Désenvoûtement", "Recouvrement d'âme",
+    "Dégagement d'entités", "Vision intuitive", "Protection énergétique",
     "Accompagnement burn-out", "Libération des traumatismes", "Gestion des angoisses",
     "Reconnexion à soi", "Harmonisation des chakras", "Libération karmique",
     "Kinésiologie", "Soins à distance"
@@ -50,10 +52,10 @@ const Index = () => {
   return (
     <Layout>
       <Seo
-        title="Guérisseur Énergétique Suisse Romande | Activation Kundalini, Burn-out & Angoisses — Bevaix"
-        description="Guérisseur énergétique à Bevaix (Neuchâtel). Activation Kundalini, accompagnement burn-out, traumatismes, angoisses et reconnexion à soi. Séances en présentiel et à distance en Suisse romande."
+        title="Guérisseur Énergétique & Chamane Suisse Romande | Kundalini, Chamanisme, Burn-out — Bevaix"
+        description="Guérisseur énergétique et chamane à Bevaix (Neuchâtel). Activation Kundalini, soins chamaniques (désenvoûtement, recouvrement d'âme, dégagement d'entités), burn-out, traumatismes. En présentiel et à distance en Suisse romande."
         path="/"
-        keywords="anxiété, burn-out, dépression, stress, traumatisme, guérisseur énergétique Suisse romande, activation kundalini, reconnexion à soi, soins énergétiques Neuchâtel, Bevaix"
+        keywords="anxiété, burn-out, dépression, stress, traumatisme, chamanisme, chamane Suisse romande, désenvoûtement, recouvrement d'âme, dégagement d'entités, vision intuitive, guérisseur énergétique, activation kundalini, soins énergétiques Neuchâtel, Bevaix"
         jsonLd={[organizationLd, websiteLd]}
       />
       <HeroSection />

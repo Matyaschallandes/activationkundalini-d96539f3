@@ -1,9 +1,10 @@
-import { Sparkles, Eye, Flame, Shield, Users } from "lucide-react";
+import { Sparkles, Eye, Flame, Shield, Users, Feather } from "lucide-react";
 
 const features = [
   { icon: Sparkles, title: "Soins énergétiques puissants" },
   { icon: Flame, title: "Activation kundalini progressive" },
   { icon: Eye, title: "Lecture d'âme — comprendre qui tu es avant l'activation" },
+  { icon: Feather, title: "Soins chamaniques — désenvoûtement, recouvrement d'âme, dégagement d'entités" },
   { icon: Shield, title: "Protocole transformation 21 jours" },
   { icon: Users, title: "Bannissements énergétiques illimités" },
 ];

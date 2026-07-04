@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import KundaliniSection from "@/components/KundaliniSection";
 import SoinSection from "@/components/SoinSection";
+import ShamanismSection from "@/components/ShamanismSection";
 import MethodSection from "@/components/MethodSection";
 import OffersSection from "@/components/OffersSection";
 import OffersImageSection from "@/components/OffersImageSection";
@@ -32,6 +33,7 @@ const Offres = () => {
       />
       <KundaliniSection />
       <SoinSection />
+      <ShamanismSection />
       <MethodSection />
       <OffersImageSection />
       <OffersSection />
