@@ -147,6 +147,24 @@ const BlogPost = () => {
 
   return (
     <Layout>
+      <Seo
+        title={`${post.title} | Blog Karmaequilego`}
+        description={post.excerpt ?? post.title}
+        path={`/blog/${post.slug}`}
+        type="article"
+        publishedTime={post.created_at}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": post.title,
+          "description": post.excerpt ?? "",
+          "datePublished": post.created_at,
+          "author": { "@type": "Person", "name": "Matyas Challandes" },
+          "publisher": { "@id": "https://www.activationkundalini.ch/#organization" },
+          "mainEntityOfPage": `https://www.activationkundalini.ch/blog/${post.slug}`,
+          "inLanguage": "fr-CH"
+        }}
+      />
       <article className="pt-32 pb-16 bg-background">
         <div className="container mx-auto px-6 max-w-3xl">
           <Link
