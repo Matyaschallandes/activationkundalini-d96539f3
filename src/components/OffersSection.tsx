@@ -143,6 +143,20 @@ const alaCarteOffers = [
     special: false,
   },
   {
+    name: "Soins Chamaniques",
+    price: "80",
+    duration: "~1h · À distance ou en présentiel",
+    description: "Soins chamaniques traditionnels pour libérer, protéger et reconnecter à ton essence. Désenvoûtement, recouvrement d'âme, vision intuitive et dégagement d'entités.",
+    features: [
+      "Désenvoûtement",
+      "Recouvrement d'âme",
+      "Vision intuitive",
+      "Dégagement d'entités",
+      "Protection énergétique",
+    ],
+    special: false,
+  },
+  {
     name: "Bannissement & Nettoyage Énergétique",
     price: "60",
     duration: "À distance ou en présentiel",
@@ -156,6 +170,7 @@ const alaCarteOffers = [
     ],
     special: false,
   },
+
   {
     name: "Kinésiologie",
     price: "Prix libre",
