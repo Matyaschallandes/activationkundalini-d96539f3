@@ -1,6 +1,8 @@
-import { Check } from "lucide-react";
+import { Check, CreditCard } from "lucide-react";
 import { useState } from "react";
 import ContactFormDialog from "./ContactFormDialog";
+import { useStripeCheckout } from "@/hooks/useStripeCheckout";
+import { isPaymentsConfigured } from "@/lib/stripe";
 
 const offers = [
   {
@@ -203,14 +205,36 @@ const alaCarteOffers = [
   },
 ];
 
+const PRICE_IDS: Record<string, string> = {
+  "Découverte": "offre_decouverte_chf",
+  "Transformation": "offre_transformation_chf",
+  "Premium": "offre_premium_chf",
+  "Alchimie Totale": "offre_alchimie_chf",
+  "Initiation Reiki Kundalini": "initiation_reiki_kundalini_chf",
+  "Nettoyage de Maison": "nettoyage_maison_chf",
+  "Soin Énergétique": "soin_energetique_chf",
+  "Lecture d'Âme au Pendule": "lecture_ame_chf",
+  "Soins Chamaniques": "soins_chamaniques_chf",
+  "Bannissement & Nettoyage Énergétique": "bannissement_chf",
+};
+
 const OffersSection = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedOffer, setSelectedOffer] = useState("");
+  const { openCheckout, checkoutElement } = useStripeCheckout();
+  const paymentsEnabled = isPaymentsConfigured();
 
   const handleChoose = (offerName: string) => {
     setSelectedOffer(offerName);
     setDialogOpen(true);
   };
+
+  const handlePay = (offerName: string) => {
+    const priceId = PRICE_IDS[offerName];
+    if (!priceId) return;
+    openCheckout({ priceId, title: offerName });
+  };
+
 
   return (
     <section id="offres" className="py-24 md:py-32 bg-muted/30">
@@ -283,16 +307,29 @@ const OffersSection = () => {
                 ))}
               </ul>
 
-              <button
-                onClick={() => handleChoose(offer.name)}
-                className={`block w-full text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 ${
-                  offer.highlighted || offer.ultimate
-                    ? "bg-gradient-gold text-primary-foreground hover:shadow-gold"
-                    : "border border-primary/30 text-primary hover:bg-primary/10"
-                }`}
-              >
-                {offer.ultimate ? "Je m'engage totalement" : "Choisir cette offre"}
-              </button>
+              <div className="space-y-2">
+                {paymentsEnabled && PRICE_IDS[offer.name] && (
+                  <button
+                    onClick={() => handlePay(offer.name)}
+                    className="w-full inline-flex items-center justify-center gap-2 font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 bg-gradient-gold text-primary-foreground hover:shadow-gold"
+                  >
+                    <CreditCard className="w-4 h-4" />
+                    Payer {offer.price} CHF en ligne
+                  </button>
+                )}
+                <button
+                  onClick={() => handleChoose(offer.name)}
+                  className={`block w-full text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 ${
+                    (offer.highlighted || offer.ultimate) && !(paymentsEnabled && PRICE_IDS[offer.name])
+                      ? "bg-gradient-gold text-primary-foreground hover:shadow-gold"
+                      : "border border-primary/30 text-primary hover:bg-primary/10"
+                  }`}
+                >
+                  {paymentsEnabled && PRICE_IDS[offer.name]
+                    ? "Ou me contacter (prix libre)"
+                    : offer.ultimate ? "Je m'engage totalement" : "Choisir cette offre"}
+                </button>
+              </div>
 
             </div>
           ))}
@@ -355,16 +392,29 @@ const OffersSection = () => {
                   ))}
                 </ul>
 
-                <button
-                  onClick={() => handleChoose(offer.name)}
-                  className={`block w-full text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 ${
-                    offer.special
-                      ? "bg-gradient-gold text-primary-foreground hover:shadow-gold"
-                      : "border border-primary/30 text-primary hover:bg-primary/10"
-                  }`}
-                >
-                  {offer.special ? "Commencer la formation" : "Réserver ce service"}
-                </button>
+                <div className="space-y-2">
+                  {paymentsEnabled && PRICE_IDS[offer.name] && !offer.price.toString().toLowerCase().includes("libre") && (
+                    <button
+                      onClick={() => handlePay(offer.name)}
+                      className="w-full inline-flex items-center justify-center gap-2 font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 bg-gradient-gold text-primary-foreground hover:shadow-gold"
+                    >
+                      <CreditCard className="w-4 h-4" />
+                      Payer {offer.price} CHF en ligne
+                    </button>
+                  )}
+                  <button
+                    onClick={() => handleChoose(offer.name)}
+                    className={`block w-full text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 ${
+                      offer.special && !(paymentsEnabled && PRICE_IDS[offer.name])
+                        ? "bg-gradient-gold text-primary-foreground hover:shadow-gold"
+                        : "border border-primary/30 text-primary hover:bg-primary/10"
+                    }`}
+                  >
+                    {paymentsEnabled && PRICE_IDS[offer.name] && !offer.price.toString().toLowerCase().includes("libre")
+                      ? "Ou me contacter (prix libre)"
+                      : offer.special ? "Commencer la formation" : "Réserver ce service"}
+                  </button>
+                </div>
               </div>
             ))}
           </div>
@@ -376,6 +426,7 @@ const OffersSection = () => {
         onOpenChange={setDialogOpen}
         offerName={selectedOffer}
       />
+      {checkoutElement}
     </section>
   );
 };
