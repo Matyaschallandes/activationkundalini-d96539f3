@@ -48,6 +48,15 @@ const renderContent = (md: string) => {
           {items.map((it, idx) => <li key={idx}>{it}</li>)}
         </ul>
       );
+    } else if (/^!\[[^\]]*\]\([^)]+\)\s*$/.test(line.trim())) {
+      const m = line.trim().match(/^!\[([^\]]*)\]\(([^)]+)\)$/)!;
+      blocks.push(
+        <figure key={key++} className="my-8">
+          <img src={m[2]} alt={m[1]} loading="lazy" className="w-full rounded-md shadow-gold" />
+          {m[1] && <figcaption className="text-xs text-muted-foreground text-center mt-2 italic">{m[1]}</figcaption>}
+        </figure>
+      );
+      i++;
     } else {
       blocks.push(
         <p key={key++} className="font-body text-foreground/85 text-base leading-relaxed mb-5">
