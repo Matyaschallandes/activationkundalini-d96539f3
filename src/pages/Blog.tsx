@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -16,16 +17,6 @@ const Blog = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    document.title = "Blog · Éveil, Kundalini & Guérison Énergétique | Karmaequilego";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute(
-        "content",
-        "Articles sur l'éveil spirituel, l'activation de la Kundalini, la guérison énergétique, la kinésiologie et la reconnexion à soi. Écrit par Matyas Challandes à Bevaix, Neuchâtel."
-      );
-    }
-  }, []);
 
   useEffect(() => {
     (async () => {
