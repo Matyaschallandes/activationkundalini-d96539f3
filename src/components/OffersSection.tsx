@@ -205,14 +205,36 @@ const alaCarteOffers = [
   },
 ];
 
+const PRICE_IDS: Record<string, string> = {
+  "Découverte": "offre_decouverte_chf",
+  "Transformation": "offre_transformation_chf",
+  "Premium": "offre_premium_chf",
+  "Alchimie Totale": "offre_alchimie_chf",
+  "Initiation Reiki Kundalini": "initiation_reiki_kundalini_chf",
+  "Nettoyage de Maison": "nettoyage_maison_chf",
+  "Soin Énergétique": "soin_energetique_chf",
+  "Lecture d'Âme au Pendule": "lecture_ame_chf",
+  "Soins Chamaniques": "soins_chamaniques_chf",
+  "Bannissement & Nettoyage Énergétique": "bannissement_chf",
+};
+
 const OffersSection = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedOffer, setSelectedOffer] = useState("");
+  const { openCheckout, checkoutElement } = useStripeCheckout();
+  const paymentsEnabled = isPaymentsConfigured();
 
   const handleChoose = (offerName: string) => {
     setSelectedOffer(offerName);
     setDialogOpen(true);
   };
+
+  const handlePay = (offerName: string) => {
+    const priceId = PRICE_IDS[offerName];
+    if (!priceId) return;
+    openCheckout({ priceId, title: offerName });
+  };
+
 
   return (
     <section id="offres" className="py-24 md:py-32 bg-muted/30">
