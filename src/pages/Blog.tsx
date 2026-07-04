@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -16,16 +17,6 @@ const Blog = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    document.title = "Blog · Éveil, Kundalini & Guérison Énergétique | Karmaequilego";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute(
-        "content",
-        "Articles sur l'éveil spirituel, l'activation de la Kundalini, la guérison énergétique, la kinésiologie et la reconnexion à soi. Écrit par Matyas Challandes à Bevaix, Neuchâtel."
-      );
-    }
-  }, []);
 
   useEffect(() => {
     (async () => {
@@ -41,6 +32,13 @@ const Blog = () => {
 
   return (
     <Layout>
+      <Seo
+        title="Blog — Kundalini, Éveil Énergétique & Guérison | Karmaequilego"
+        description="Articles sur l'activation Kundalini, la guérison énergétique, la kinésiologie, la reconnexion à soi, la gestion du burn-out et la libération des blocages. Par Matyas Challandes."
+        path="/blog"
+        keywords="blog kundalini, guérison énergétique, reconnexion à soi, burn out, angoisse"
+        jsonLd={{ "@context": "https://schema.org", "@type": "Blog", "url": "https://www.activationkundalini.ch/blog", "name": "Blog Karmaequilego", "inLanguage": "fr-CH", "publisher": { "@id": "https://www.activationkundalini.ch/#organization" } }}
+      />
       <section className="pt-32 pb-20 md:pb-28 bg-background">
         <div className="container mx-auto px-6 max-w-4xl">
           <p className="text-primary font-body tracking-[0.3em] uppercase text-xs text-center mb-4">

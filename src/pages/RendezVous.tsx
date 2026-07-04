@@ -1,5 +1,5 @@
-import { useEffect } from "react";
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import { Calendar, MessageCircle, Camera, FileText, Smartphone, Mail, Building2 } from "lucide-react";
 
 const phoneNumber = "41762445552";
@@ -9,19 +9,15 @@ const whatsappMessage = encodeURIComponent(
 const whatsappUrl = `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
 
 const RendezVous = () => {
-  useEffect(() => {
-    document.title = "Prendre rendez-vous | Activation Kundalini & Soins Énergétiques – Bevaix, Suisse romande";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute(
-        "content",
-        "Réservez votre séance d'activation kundalini ou soin énergétique avec Matyas Challandes à Bevaix, dans le canton de Neuchâtel (Suisse romande). Disponibilités en ligne, séances en présentiel ou à distance."
-      );
-    }
-  }, []);
-
   return (
     <Layout>
+      <Seo
+        title="Prendre rendez-vous | Séance Kundalini & Soin Énergétique — Bevaix, Neuchâtel"
+        description="Réservez votre séance d'activation Kundalini ou soin énergétique avec Matyas Challandes à Bevaix (Neuchâtel). Disponibilités en ligne, en présentiel ou à distance."
+        path="/rendez-vous"
+        keywords="rendez-vous guérisseur énergétique, réserver séance kundalini Neuchâtel"
+      />
+
       <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-6 max-w-4xl">
           <p className="text-primary font-body tracking-[0.3em] uppercase text-xs text-center mb-4">

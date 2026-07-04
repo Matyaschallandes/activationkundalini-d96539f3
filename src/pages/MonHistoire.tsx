@@ -1,18 +1,17 @@
 import Layout from "@/components/Layout";
-import { useEffect } from "react";
+import Seo from "@/components/Seo";
 import matyasPhoto from "@/assets/matyas-photo.jpg";
 
 const MonHistoire = () => {
-  useEffect(() => {
-    document.title = "Mon Histoire — Matyas Challandes | Praticien Énergétique Suisse Romande";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute("content", "Découvrez le parcours de Matyas Challandes, praticien énergétique en Suisse romande, à Bevaix dans le canton de Neuchâtel (La Grande Béroche). Un chemin de transformation intérieure au service de votre guérison.");
-    }
-  }, []);
-
   return (
     <Layout>
+      <Seo
+        title="Mon Histoire — Du burn-out à la guérison énergétique | Matyas Challandes"
+        description="Le parcours de Matyas Challandes : traversée de la souffrance, découverte de l'énergétique et transformation intérieure. Un chemin authentique de guérison en Suisse romande."
+        path="/mon-histoire"
+        keywords="parcours guérisseur énergétique, transformation intérieure, témoignage burn out kundalini"
+      />
+
       {/* Hero */}
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-6 max-w-4xl">

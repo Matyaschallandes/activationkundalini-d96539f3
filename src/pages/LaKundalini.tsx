@@ -1,21 +1,29 @@
 import Layout from "@/components/Layout";
-import { useEffect } from "react";
+import Seo from "@/components/Seo";
 import { Flame, Zap, Sparkles, Heart, Eye, Shield, TreePine, Sun, Hand, Brain, Bird, Star } from "lucide-react";
 
-const LaKundalini = () => {
-  useEffect(() => {
-    document.title = "Qu'est-ce que la Kundalini ? | Facilitation & Activation — Bevaix, Suisse romande";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute(
-        "content",
-        "Comprendre la Kundalini et la facilitation énergétique. Activation de l'énergie vitale en Suisse romande, à Bevaix dans le canton de Neuchâtel (La Grande Béroche). Séances en présentiel ou à distance."
-      );
-    }
-  }, []);
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Qu'est-ce que la Kundalini ? Comprendre l'éveil et la facilitation énergétique",
+  "description": "Comprendre la Kundalini, l'éveil de l'énergie vitale et la facilitation énergétique. Un guide complet par Matyas Challandes, praticien en Suisse romande.",
+  "author": { "@type": "Person", "name": "Matyas Challandes" },
+  "publisher": { "@id": "https://www.activationkundalini.ch/#organization" },
+  "mainEntityOfPage": "https://www.activationkundalini.ch/la-kundalini",
+  "inLanguage": "fr-CH"
+};
 
+const LaKundalini = () => {
   return (
     <Layout>
+      <Seo
+        title="Qu'est-ce que la Kundalini ? Éveil & Activation Énergétique — Suisse Romande"
+        description="Comprendre la Kundalini : origine, éveil, chakras et facilitation énergétique. Activation Kundalini par transmission à Bevaix (Neuchâtel) et à distance. Guide complet."
+        path="/la-kundalini"
+        keywords="kundalini, éveil kundalini, activation kundalini, énergie vitale, chakras, facilitation énergétique Suisse romande"
+        jsonLd={jsonLd}
+      />
+
       {/* Hero */}
       <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-6 max-w-4xl">
