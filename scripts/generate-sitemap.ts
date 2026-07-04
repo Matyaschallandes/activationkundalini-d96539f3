@@ -1,12 +1,24 @@
 // Runs before `vite dev` and `vite build` (predev/prebuild hooks); writes public/sitemap.xml.
-import { writeFileSync } from "fs";
+import { writeFileSync, readFileSync, existsSync } from "fs";
 import { resolve } from "path";
 
 const BASE_URL = "https://www.activationkundalini.ch";
-const SUPABASE_URL = process.env.VITE_SUPABASE_URL || "https://wchaptnajxqvfidwmccl.supabase.co";
-const SUPABASE_KEY =
-  process.env.VITE_SUPABASE_PUBLISHABLE_KEY ||
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndjaGFwdG5hanhxdmZpZHdtY2NsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzE1Mzc4ODYsImV4cCI6MjA4NzExMzg4Nn0.b-HDZ44yOUJIo5EuUwgTZzOZq-jCV_LPMAvZEOOLL1o";
+
+// Read Supabase creds from .env file directly (avoids stale process env in CI).
+function readEnv(): { url: string; key: string } {
+  const envPath = resolve(".env");
+  let url = "";
+  let key = "";
+  if (existsSync(envPath)) {
+    const txt = readFileSync(envPath, "utf8");
+    const grab = (name: string) =>
+      txt.match(new RegExp(`^${name}\\s*=\\s*"?([^"\\n]+)"?`, "m"))?.[1] ?? "";
+    url = grab("VITE_SUPABASE_URL");
+    key = grab("VITE_SUPABASE_PUBLISHABLE_KEY");
+  }
+  return { url, key };
+}
+const { url: SUPABASE_URL, key: SUPABASE_KEY } = readEnv();
 
 interface SitemapEntry {
   path: string;
