@@ -1,11 +1,27 @@
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import CtaSection from "@/components/CtaSection";
 import { MapPin, Phone, Mail } from "lucide-react";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "url": "https://www.activationkundalini.ch/contact",
+  "mainEntity": { "@id": "https://www.activationkundalini.ch/#organization" }
+};
 
 const Contact = () => {
   return (
     <Layout>
+      <Seo
+        title="Contact — Guérisseur Énergétique à Bevaix (Neuchâtel) | +41 76 244 55 52"
+        description="Contactez Matyas Challandes, guérisseur énergétique en Suisse romande. Adresse à Bevaix (Neuchâtel), téléphone, email et WhatsApp. Réponse rapide et bienveillante."
+        path="/contact"
+        keywords="contact guérisseur énergétique Neuchâtel, activation kundalini contact Suisse"
+        jsonLd={jsonLd}
+      />
       <CtaSection />
+
       
       {/* Map & Contact Info Section */}
       <section className="py-16 md:py-24 bg-card/30">

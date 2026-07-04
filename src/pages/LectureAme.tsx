@@ -1,9 +1,17 @@
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import { Link } from "react-router-dom";
 
 const LectureAme = () => {
   return (
     <Layout>
+      <Seo
+        title="Lecture d'âme — Astrologie, Human Design & Numérologie | Suisse Romande"
+        description="Lecture d'âme personnalisée : astrologie, Human Design, numérologie et lecture énergétique pour comprendre ta nature profonde, tes blocages et ton chemin d'incarnation."
+        path="/lecture-ame"
+        keywords="lecture d'âme, human design Suisse, astrologie karmique, numérologie Neuchâtel"
+      />
+
       <section className="pt-32 pb-24 md:pt-40 md:pb-32">
         <div className="container mx-auto px-6 max-w-4xl">
           {/* Header */}

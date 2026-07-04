@@ -1,15 +1,16 @@
-import { useEffect } from "react";
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 
 const PageUne = () => {
-  useEffect(() => {
-    document.title = "Soins énergétiques, guérison naturelle et libération des blocages | Activation Kundalini";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Soins énergétiques en Suisse romande : libération des blocages physiques et émotionnels, rééquilibrage des chakras, respiration alchimique, activation kundalini. Séances à distance ou en présentiel à Bevaix, Neuchâtel.");
-  }, []);
-
   return (
     <Layout>
+      <Seo
+        title="Soins Énergétiques & Libération des Blocages — Suisse Romande"
+        description="Soins énergétiques en Suisse romande : libération des blocages physiques et émotionnels, harmonisation des chakras, respiration alchimique, activation Kundalini. À distance ou en présentiel à Bevaix."
+        path="/page-une"
+        keywords="soins énergétiques Suisse romande, libération blocages émotionnels, harmonisation chakras Neuchâtel"
+      />
+
 
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-6 max-w-4xl">

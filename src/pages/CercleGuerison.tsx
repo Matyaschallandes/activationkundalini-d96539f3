@@ -1,6 +1,7 @@
-import { useEffect } from "react";
 import Layout from "@/components/Layout";
+import Seo from "@/components/Seo";
 import { MessageCircle, Users, Sparkles, Flame, Globe, Bell, Bed, Wind, Wand2, Heart } from "lucide-react";
+
 
 const phoneNumber = "41762445552";
 const whatsappMessage = encodeURIComponent(
