@@ -1,4 +1,9 @@
 const keywords = [
+  "anxiété", "burn-out", "dépression", "stress", "traumatisme",
+  "gestion de l'anxiété", "accompagnement burn-out", "sortir de la dépression",
+  "gestion du stress", "libération des traumatismes", "guérison des traumatismes",
+  "soin anxiété Suisse romande", "accompagnement burn-out Neuchâtel",
+  "soin dépression énergétique", "soin stress chronique", "traumatisme émotionnel",
   "activation kundalini", "éveil kundalini", "méditation kundalini", "énergie kundalini",
   "chakras kundalini", "libération kundalini", "éveil spirituel suisse", "éveil de la conscience",
   "éveil énergétique", "équilibrage des chakras", "harmonisation énergétique", "purification énergétique",
