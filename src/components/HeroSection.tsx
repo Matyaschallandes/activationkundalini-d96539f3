@@ -14,7 +14,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 container mx-auto px-6 py-24 text-center max-w-4xl">
         <p className="text-foreground font-body font-semibold tracking-[0.3em] uppercase text-sm mb-6 animate-fade-in">
-          🔥 Activation de la Kundalini & Souveraineté Intérieure
+          🔥 Activation Kundalini · Soins Énergétiques · Chamanisme
         </p>
 
         <h1 className="font-heading text-5xl md:text-7xl font-light leading-tight mb-8 animate-fade-in-up text-foreground">
@@ -23,7 +23,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="font-body text-foreground/90 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl mx-auto opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-          Vous reconnecter à votre corps. Sortir des illusions. Un accompagnement structuré pour éliminer vos blocages et activer votre feu sacré. Basé en Suisse romande, à Bevaix dans le canton de Neuchâtel.
+          Vous reconnecter à votre corps. Sortir des illusions. Un accompagnement structuré mêlant <span className="text-primary">soins énergétiques, activation Kundalini et chamanisme</span> (désenvoûtement, recouvrement d'âme, dégagement d'entités) pour éliminer vos blocages et activer votre feu sacré. Basé en Suisse romande, à Bevaix dans le canton de Neuchâtel.
         </p>
 
         <button
