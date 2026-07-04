@@ -32,6 +32,13 @@ const Blog = () => {
 
   return (
     <Layout>
+      <Seo
+        title="Blog — Kundalini, Éveil Énergétique & Guérison | Karmaequilego"
+        description="Articles sur l'activation Kundalini, la guérison énergétique, la kinésiologie, la reconnexion à soi, la gestion du burn-out et la libération des blocages. Par Matyas Challandes."
+        path="/blog"
+        keywords="blog kundalini, guérison énergétique, reconnexion à soi, burn out, angoisse"
+        jsonLd={{ "@context": "https://schema.org", "@type": "Blog", "url": "https://www.activationkundalini.ch/blog", "name": "Blog Karmaequilego", "inLanguage": "fr-CH", "publisher": { "@id": "https://www.activationkundalini.ch/#organization" } }}
+      />
       <section className="pt-32 pb-20 md:pb-28 bg-background">
         <div className="container mx-auto px-6 max-w-4xl">
           <p className="text-primary font-body tracking-[0.3em] uppercase text-xs text-center mb-4">
