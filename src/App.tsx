@@ -16,6 +16,8 @@ import RendezVous from "./pages/RendezVous";
 import CercleGuerison from "./pages/CercleGuerison";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Boutique from "./pages/Boutique";
+import CheckoutReturn from "./pages/CheckoutReturn";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
@@ -39,6 +41,8 @@ const App = () => (
           <Route path="/cercle-de-guerison" element={<CercleGuerison />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/boutique" element={<Boutique />} />
+          <Route path="/checkout/return" element={<CheckoutReturn />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

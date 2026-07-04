@@ -10,6 +10,7 @@ const navItems = [
   { label: "À propos", path: "/a-propos" },
   { label: "Cercle de guérison", path: "/cercle-de-guerison" },
   { label: "Blog", path: "/blog" },
+  { label: "Boutique", path: "/boutique" },
   { label: "Rendez-vous", path: "/rendez-vous" },
   { label: "Contact", path: "/contact" },
 ];
