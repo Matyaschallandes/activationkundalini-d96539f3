@@ -53,7 +53,7 @@ const Index = () => {
         title="Guérisseur Énergétique Suisse Romande | Activation Kundalini, Burn-out & Angoisses — Bevaix"
         description="Guérisseur énergétique à Bevaix (Neuchâtel). Activation Kundalini, accompagnement burn-out, traumatismes, angoisses et reconnexion à soi. Séances en présentiel et à distance en Suisse romande."
         path="/"
-        keywords="guérisseur énergétique Suisse romande, activation kundalini, burn out, traumatisme, angoisse, reconnexion à soi, soins énergétiques Neuchâtel, Bevaix"
+        keywords="anxiété, burn-out, dépression, stress, traumatisme, guérisseur énergétique Suisse romande, activation kundalini, reconnexion à soi, soins énergétiques Neuchâtel, Bevaix"
         jsonLd={[organizationLd, websiteLd]}
       />
       <HeroSection />
