@@ -32,14 +32,14 @@ const staticEntries: SitemapEntry[] = [
 async function fetchBlogPosts(): Promise<SitemapEntry[]> {
   try {
     const res = await fetch(
-      `${SUPABASE_URL}/rest/v1/blog_posts?select=slug,updated_at,created_at&published=eq.true&order=created_at.desc`,
+      `${SUPABASE_URL}/rest/v1/blog_posts?select=slug,created_at&published=eq.true&order=created_at.desc`,
       { headers: { apikey: SUPABASE_KEY, Authorization: `Bearer ${SUPABASE_KEY}` } }
     );
     if (!res.ok) return [];
-    const rows: Array<{ slug: string; updated_at: string; created_at: string }> = await res.json();
+    const rows: Array<{ slug: string; created_at: string }> = await res.json();
     return rows.map((r) => ({
       path: `/blog/${r.slug}`,
-      lastmod: (r.updated_at ?? r.created_at)?.slice(0, 10),
+      lastmod: r.created_at?.slice(0, 10),
       changefreq: "monthly",
       priority: "0.7",
     }));
