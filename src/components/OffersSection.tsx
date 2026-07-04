@@ -1,6 +1,8 @@
-import { Check } from "lucide-react";
+import { Check, CreditCard } from "lucide-react";
 import { useState } from "react";
 import ContactFormDialog from "./ContactFormDialog";
+import { useStripeCheckout } from "@/hooks/useStripeCheckout";
+import { isPaymentsConfigured } from "@/lib/stripe";
 
 const offers = [
   {
