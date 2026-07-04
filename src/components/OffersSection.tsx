@@ -307,16 +307,29 @@ const OffersSection = () => {
                 ))}
               </ul>
 
-              <button
-                onClick={() => handleChoose(offer.name)}
-                className={`block w-full text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 ${
-                  offer.highlighted || offer.ultimate
-                    ? "bg-gradient-gold text-primary-foreground hover:shadow-gold"
-                    : "border border-primary/30 text-primary hover:bg-primary/10"
-                }`}
-              >
-                {offer.ultimate ? "Je m'engage totalement" : "Choisir cette offre"}
-              </button>
+              <div className="space-y-2">
+                {paymentsEnabled && PRICE_IDS[offer.name] && (
+                  <button
+                    onClick={() => handlePay(offer.name)}
+                    className="w-full inline-flex items-center justify-center gap-2 font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 bg-gradient-gold text-primary-foreground hover:shadow-gold"
+                  >
+                    <CreditCard className="w-4 h-4" />
+                    Payer {offer.price} CHF en ligne
+                  </button>
+                )}
+                <button
+                  onClick={() => handleChoose(offer.name)}
+                  className={`block w-full text-center font-body text-sm font-semibold tracking-wider uppercase py-3 rounded-sm transition-all duration-300 ${
+                    (offer.highlighted || offer.ultimate) && !(paymentsEnabled && PRICE_IDS[offer.name])
+                      ? "bg-gradient-gold text-primary-foreground hover:shadow-gold"
+                      : "border border-primary/30 text-primary hover:bg-primary/10"
+                  }`}
+                >
+                  {paymentsEnabled && PRICE_IDS[offer.name]
+                    ? "Ou me contacter (prix libre)"
+                    : offer.ultimate ? "Je m'engage totalement" : "Choisir cette offre"}
+                </button>
+              </div>
 
             </div>
           ))}
