@@ -9,7 +9,7 @@ const CheckoutReturn = () => {
 
   return (
     <Layout>
-      <Seo title="Merci — Paiement confirmé" description="Confirmation de votre commande." />
+      <Seo title="Merci — Paiement confirmé" description="Confirmation de votre commande." path="/checkout/return" />
       <section className="py-32 min-h-[70vh] flex items-center">
         <div className="container mx-auto px-6 max-w-2xl text-center">
           <CheckCircle2 className="w-20 h-20 text-primary mx-auto mb-6" />

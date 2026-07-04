@@ -8,6 +8,7 @@ const Boutique = () => {
       <Seo
         title="Boutique — Pendules & T-shirts énergétiques | Activation Kundalini"
         description="Boutique en ligne bientôt disponible : pendules chargés énergétiquement, t-shirts spirituels et objets rituels. Livraison Suisse et Europe."
+        path="/boutique"
       />
 
       <section className="py-24 md:py-32">
