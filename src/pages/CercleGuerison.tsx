@@ -69,19 +69,15 @@ const afterEffects = [
 ];
 
 const CercleGuerison = () => {
-  useEffect(() => {
-    document.title = "Cercle de Guérison & Activation de l'Énergie Vitale | Bevaix, Neuchâtel";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute(
-        "content",
-        "Cercle de guérison avec respiration alchimique, bols chantants et activation Kundalini, animé par Matyas et Chantal à Bevaix (Neuchâtel, Suisse romande). Participation au chapeau."
-      );
-    }
-  }, []);
-
   return (
     <Layout>
+      <Seo
+        title="Cercle de Guérison Collectif — Respiration & Kundalini | Bevaix, Neuchâtel"
+        description="Cercle de guérison mensuel à Bevaix (Neuchâtel) : respiration alchimique, bols chantants et activation Kundalini animés par Matyas et Chantal. Participation au chapeau."
+        path="/cercle-de-guerison"
+        keywords="cercle de guérison Neuchâtel, respiration alchimique Suisse, bols chantants Bevaix"
+      />
+
       <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-6 max-w-4xl">
           <p className="text-primary font-body tracking-[0.3em] uppercase text-xs text-center mb-4">
