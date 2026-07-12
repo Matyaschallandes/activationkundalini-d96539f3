@@ -1,8 +1,37 @@
 import { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import { CheckCircle2, Loader2, Mail, AlertCircle } from "lucide-react";
+import { CheckCircle2, Loader2, Mail, AlertCircle, Download, MessageCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
+import pdfAsset from "@/assets/secret-initie-pdf.asset.json";
+
+const WHATSAPP_URL = "https://wa.me/41762445552";
+const CONTACT_EMAIL = "matyas.challandes@gmail.com";
+
+const ContactHelp = () => (
+  <div className="mt-10 pt-8 border-t border-border">
+    <p className="font-body text-sm text-muted-foreground mb-4">Un problème ? Contactez-moi directement :</p>
+    <div className="flex flex-wrap justify-center gap-3">
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2 border border-primary/40 text-foreground font-body text-sm px-5 py-2 rounded-sm hover:bg-primary/10 transition-all"
+      >
+        <MessageCircle className="w-4 h-4 text-primary" />
+        WhatsApp
+      </a>
+      <a
+        href={`mailto:${CONTACT_EMAIL}?subject=Le%20Secret%20de%20l'Initi%C3%A9`}
+        className="inline-flex items-center gap-2 border border-primary/40 text-foreground font-body text-sm px-5 py-2 rounded-sm hover:bg-primary/10 transition-all"
+      >
+        <Mail className="w-4 h-4 text-primary" />
+        {CONTACT_EMAIL}
+      </a>
+    </div>
+  </div>
+);
+
 import { supabase } from "@/integrations/supabase/client";
 import { getStripeEnvironment } from "@/lib/stripe";
 
@@ -74,12 +103,25 @@ const CheckoutReturn = () => {
                   Votre paiement a bien été reçu. Je te contacte très vite par email.
                 </p>
               )}
-              <Link
-                to="/"
-                className="inline-block bg-gradient-gold text-primary-foreground font-body text-sm font-semibold tracking-wider uppercase px-8 py-3 rounded-sm hover:shadow-gold transition-all"
-              >
-                Retour à l'accueil
-              </Link>
+              {(status === "delivered" || status === "idle") && (
+                <div className="mt-6 mb-2">
+                  <a
+                    href={pdfAsset.url}
+                    download="Le-Secret-de-l-Initie.pdf"
+                    className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-body text-sm font-semibold tracking-wider uppercase px-8 py-3 rounded-sm hover:shadow-gold transition-all mr-3"
+                  >
+                    <Download className="w-4 h-4" />
+                    Télécharger le livre
+                  </a>
+                  <Link
+                    to="/"
+                    className="inline-block border border-primary/40 text-foreground font-body text-sm font-semibold tracking-wider uppercase px-6 py-3 rounded-sm hover:bg-primary/10 transition-all"
+                  >
+                    Accueil
+                  </Link>
+                </div>
+              )}
+              <ContactHelp />
             </>
           )}
 
@@ -87,10 +129,18 @@ const CheckoutReturn = () => {
             <>
               <Loader2 className="w-16 h-16 text-primary mx-auto mb-6 animate-spin" />
               <h1 className="font-heading text-3xl md:text-4xl font-light mb-4">Paiement en cours de validation</h1>
-              <p className="font-body text-foreground/70 mb-8">
-                Votre livre vous sera envoyé par email dès la confirmation du paiement.
+              <p className="font-body text-foreground/70 mb-6">
+                Votre livre vous sera envoyé par email dès la confirmation.
               </p>
-              <Link to="/" className="text-primary underline">Retour à l'accueil</Link>
+              <a
+                href={pdfAsset.url}
+                download="Le-Secret-de-l-Initie.pdf"
+                className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-body text-sm font-semibold tracking-wider uppercase px-8 py-3 rounded-sm hover:shadow-gold transition-all"
+              >
+                <Download className="w-4 h-4" />
+                Télécharger maintenant
+              </a>
+              <ContactHelp />
             </>
           )}
 
@@ -98,12 +148,19 @@ const CheckoutReturn = () => {
             <>
               <AlertCircle className="w-16 h-16 text-destructive mx-auto mb-6" />
               <h1 className="font-heading text-3xl md:text-4xl font-light mb-4">Un souci est survenu</h1>
-              <p className="font-body text-foreground/70 mb-2">Votre paiement est enregistré, mais l'envoi automatique a échoué.</p>
-              <p className="font-body text-sm text-muted-foreground mb-8">
-                Contactez-moi via WhatsApp (+41 76 244 55 52) et je vous envoie le livre immédiatement.
+              <p className="font-body text-foreground/70 mb-6">
+                Votre paiement est enregistré. Vous pouvez télécharger le livre immédiatement ci-dessous :
               </p>
-              {errorMsg && <p className="text-xs text-muted-foreground mb-6">{errorMsg}</p>}
-              <Link to="/" className="text-primary underline">Retour à l'accueil</Link>
+              <a
+                href={pdfAsset.url}
+                download="Le-Secret-de-l-Initie.pdf"
+                className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-body text-sm font-semibold tracking-wider uppercase px-8 py-3 rounded-sm hover:shadow-gold transition-all"
+              >
+                <Download className="w-4 h-4" />
+                Télécharger le livre
+              </a>
+              {errorMsg && <p className="text-xs text-muted-foreground mt-6">{errorMsg}</p>}
+              <ContactHelp />
             </>
           )}
         </div>
