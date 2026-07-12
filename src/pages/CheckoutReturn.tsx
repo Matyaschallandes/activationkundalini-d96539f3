@@ -148,16 +148,8 @@ const CheckoutReturn = () => {
               <AlertCircle className="w-16 h-16 text-destructive mx-auto mb-6" />
               <h1 className="font-heading text-3xl md:text-4xl font-light mb-4">Un souci est survenu</h1>
               <p className="font-body text-foreground/70 mb-6">
-                Votre paiement est enregistré. Vous pouvez télécharger le livre immédiatement ci-dessous :
+                Votre paiement semble bien enregistré, mais l'envoi automatique du livre n'a pas pu être confirmé. Contactez-moi via WhatsApp ou email ci-dessous et je vous transmets votre exemplaire immédiatement.
               </p>
-              <a
-                href={pdfAsset.url}
-                download="Le-Secret-de-l-Initie.pdf"
-                className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-body text-sm font-semibold tracking-wider uppercase px-8 py-3 rounded-sm hover:shadow-gold transition-all"
-              >
-                <Download className="w-4 h-4" />
-                Télécharger le livre
-              </a>
               {errorMsg && <p className="text-xs text-muted-foreground mt-6">{errorMsg}</p>}
               <ContactHelp />
             </>
