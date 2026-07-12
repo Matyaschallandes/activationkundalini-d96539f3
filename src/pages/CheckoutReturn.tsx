@@ -32,7 +32,6 @@ const ContactHelp = () => (
   </div>
 );
 
-import Seo from "@/components/Seo";
 import { supabase } from "@/integrations/supabase/client";
 import { getStripeEnvironment } from "@/lib/stripe";
 
