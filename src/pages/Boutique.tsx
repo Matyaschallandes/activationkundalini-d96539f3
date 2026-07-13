@@ -43,7 +43,7 @@ const books: Book[] = [
       { emoji: "👑", label: "4 rituels de souveraineté à mettre en action" },
     ],
     pages: 27,
-    checkoutTitle: "Le Secret de l'Initié — 7 CHF",
+    checkoutTitle: "Le Secret de l'Initié — 0.10 CHF",
   },
   {
     productKey: "livre_lois_universelles",
@@ -66,7 +66,7 @@ const books: Book[] = [
       { emoji: "📓", label: "12 exercices + 12 points de réflexion à consigner" },
     ],
     pages: 27,
-    checkoutTitle: "Les Lois Universelles — 7 CHF",
+    checkoutTitle: "Les Lois Universelles — 0.10 CHF",
   },
 ];
 
@@ -86,7 +86,7 @@ const Boutique = () => {
     <Layout>
       <Seo
         title="Boutique — Livres numériques Karmaequilego"
-        description="Livres numériques de Karmaequilego : Le Secret de l'Initié et Les Lois Universelles. PDF livrés par email après paiement. 7 CHF chacun."
+        description="Livres numériques de Karmaequilego : Le Secret de l'Initié et Les Lois Universelles. PDF disponibles en téléchargement après paiement."
         path="/boutique"
       />
       <PaymentTestModeBanner />
@@ -146,7 +146,7 @@ const Boutique = () => {
                   </div>
 
                   <div className="flex items-baseline gap-3 mb-8">
-                    <span className="font-heading text-5xl text-gradient-gold">7</span>
+                    <span className="font-heading text-5xl text-gradient-gold">0.10</span>
                     <span className="font-body text-xl text-foreground/80">CHF</span>
                     <span className="font-body text-sm text-muted-foreground ml-2">· Livre PDF</span>
                   </div>
@@ -156,7 +156,7 @@ const Boutique = () => {
                       onClick={() => handleBuy(book)}
                       className="w-full md:w-auto bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-10 py-4 rounded-sm hover:shadow-gold transition-all duration-500"
                     >
-                      Acheter et recevoir par email
+                      Acheter et télécharger
                     </button>
                   ) : (
                     <p className="text-sm text-muted-foreground italic">Paiement bientôt disponible.</p>
@@ -165,7 +165,7 @@ const Boutique = () => {
                   <div className="mt-8 space-y-3 text-sm text-foreground/70">
                     <div className="flex items-start gap-3">
                       <Mail className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Livraison immédiate du PDF à votre adresse email après paiement</span>
+                       <span>Téléchargement immédiat du PDF après paiement</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <ShieldCheck className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
