@@ -66,7 +66,7 @@ const books: Book[] = [
       { emoji: "📓", label: "12 exercices + 12 points de réflexion à consigner" },
     ],
     pages: 27,
-    checkoutTitle: "Les Lois Universelles — 0.10 CHF",
+    checkoutTitle: "Les Lois Universelles — 0.50 CHF",
   },
 ];
 
