@@ -146,7 +146,7 @@ const Boutique = () => {
                   </div>
 
                   <div className="flex items-baseline gap-3 mb-8">
-                    <span className="font-heading text-5xl text-gradient-gold">0.10</span>
+                    <span className="font-heading text-5xl text-gradient-gold">0.50</span>
                     <span className="font-body text-xl text-foreground/80">CHF</span>
                     <span className="font-body text-sm text-muted-foreground ml-2">· Livre PDF</span>
                   </div>
