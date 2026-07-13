@@ -1,7 +1,10 @@
+import { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
-import { CheckCircle2, Mail, AlertCircle, Download, MessageCircle } from "lucide-react";
+import { CheckCircle2, Loader2, Mail, AlertCircle, Download, MessageCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
+import { supabase } from "@/integrations/supabase/client";
+import { getStripeEnvironment } from "@/lib/stripe";
 import secretPdf from "@/assets/secret-initie-pdf.asset.json";
 import loisPdf from "@/assets/lois-universelles-pdf.asset.json";
 
@@ -42,13 +45,40 @@ const CheckoutReturn = () => {
   const sessionId = searchParams.get("session_id");
   const product = searchParams.get("product");
   const productInfo = product && PRODUCTS[product];
-  const status: "delivered" | "idle" = productInfo && sessionId ? "delivered" : "idle";
+  const [status, setStatus] = useState<"loading" | "delivered" | "pending" | "error" | "idle">(
+    productInfo && sessionId ? "loading" : "idle",
+  );
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!productInfo || !sessionId) return;
+    (async () => {
+      try {
+        const { data, error } = await supabase.functions.invoke("deliver-ebook", {
+          body: { sessionId, environment: getStripeEnvironment(), product },
+        });
+        if (error) throw new Error(error.message);
+        setStatus(data?.delivered ? "delivered" : "pending");
+      } catch (e) {
+        setErrorMsg(e instanceof Error ? e.message : "Erreur inconnue");
+        setStatus("error");
+      }
+    })();
+  }, [sessionId, product, productInfo]);
 
   return (
     <Layout>
       <Seo title="Merci — Paiement confirmé" description="Confirmation de votre commande." path="/checkout/return" />
       <section className="py-32 min-h-[70vh] flex items-center">
         <div className="container mx-auto px-6 max-w-2xl text-center">
+          {status === "loading" && (
+            <>
+              <Loader2 className="w-16 h-16 text-primary mx-auto mb-6 animate-spin" />
+              <h1 className="font-heading text-3xl md:text-4xl font-light mb-4">Validation du paiement…</h1>
+              <p className="font-body text-foreground/70">Merci de patienter quelques secondes.</p>
+            </>
+          )}
+
           {status === "delivered" && (
             <>
               <CheckCircle2 className="w-20 h-20 text-primary mx-auto mb-6" />
@@ -79,6 +109,29 @@ const CheckoutReturn = () => {
                   Accueil
                 </Link>
               </div>
+              <ContactHelp />
+            </>
+          )}
+
+          {status === "pending" && (
+            <>
+              <Loader2 className="w-16 h-16 text-primary mx-auto mb-6 animate-spin" />
+              <h1 className="font-heading text-3xl md:text-4xl font-light mb-4">Paiement en cours de validation</h1>
+              <p className="font-body text-foreground/70 mb-6">
+                Dès que le paiement est confirmé, le lien de téléchargement apparaîtra ici. Rafraîchissez cette page dans quelques instants si besoin.
+              </p>
+              <ContactHelp />
+            </>
+          )}
+
+          {status === "error" && (
+            <>
+              <AlertCircle className="w-16 h-16 text-destructive mx-auto mb-6" />
+              <h1 className="font-heading text-3xl md:text-4xl font-light mb-4">Un souci est survenu</h1>
+              <p className="font-body text-foreground/70 mb-6">
+                Le paiement n'a pas pu être confirmé automatiquement. Contactez-moi via WhatsApp ou email ci-dessous et je vous transmets le lien immédiatement.
+              </p>
+              {errorMsg && <p className="text-xs text-muted-foreground mt-6">{errorMsg}</p>}
               <ContactHelp />
             </>
           )}
