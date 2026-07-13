@@ -1,4 +1,4 @@
-import { BookOpen, ShieldCheck, Mail } from "lucide-react";
+import { BookOpen, ShieldCheck, Mail, FileText, Languages, Download, Sparkles } from "lucide-react";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import { useStripeCheckout } from "@/hooks/useStripeCheckout";
@@ -15,7 +15,9 @@ interface Book {
   title: React.ReactNode;
   subtitle: React.ReactNode;
   tagline: string;
-  description: string;
+  paragraphs: string[];
+  highlights: { emoji: string; label: string }[];
+  pages: number;
   checkoutTitle: string;
 }
 
@@ -28,8 +30,19 @@ const books: Book[] = [
     title: <>Le <span className="text-gradient-gold italic">Secret</span> de l'Initié</>,
     subtitle: <>Haute Magie pour reprendre son <em className="text-gradient-gold">pouvoir souverain</em></>,
     tagline: "Et si ce qui vous retient n'avait jamais été réel ?",
-    description:
+    paragraphs: [
       "Un manuel opératif qui combine la Haute Magie hermétique, la psychologie des profondeurs et les rituels d'initiation traditionnels pour vous donner les clés concrètes d'une reconquête intérieure totale.",
+      "Vous allez identifier les mécanismes invisibles — peur, comparaison, dispersion — qui vous éloignent de votre autorité, puis traverser les Sept Lois de la Haute Magie (Mentalisme, Correspondance, Vibration, Polarité, Rythme, Cause à Effet, Genre) traduites en pratiques concrètes.",
+      "Le livre vous accompagne ensuite à travers les trois degrés initiatiques — Purification, Illumination, Union — avant de vous transmettre une série de rituels de souveraineté : rupture des liens énergétiques, couronnement souverain, Prière du Souverain et journal de l'initié.",
+      "Ce n'est pas un livre à survoler. C'est un chemin structuré, à pratiquer une étape après l'autre, pour cesser d'attendre qu'on vous couronne — et vous en souvenir.",
+    ],
+    highlights: [
+      { emoji: "🔓", label: "Comprendre la Cage — mécanismes invisibles de la peur" },
+      { emoji: "⚡", label: "Les 7 Lois de la Haute Magie décodées en pratiques" },
+      { emoji: "🕯️", label: "Purification, Illumination, Union — les 3 degrés" },
+      { emoji: "👑", label: "4 rituels de souveraineté à mettre en action" },
+    ],
+    pages: 27,
     checkoutTitle: "Le Secret de l'Initié — 7 CHF",
   },
   {
@@ -40,8 +53,19 @@ const books: Book[] = [
     title: <>Les <span className="text-gradient-gold italic">Lois</span> Universelles</>,
     subtitle: <>Comprendre, activer sa <em className="text-gradient-gold">mission de vie</em> et manifester</>,
     tagline: "Pas un livre de plus à lire — un outil à appliquer.",
-    description:
-      "Les 12 lois universelles décodées et reliées à votre vie réelle. Un exercice pratique et un point de réflexion à chaque étape, un protocole d'alignement en 4 piliers et une méthode de manifestation en 5 étapes.",
+    paragraphs: [
+      "Un manuel pratique pour comprendre les 12 lois qui gouvernent l'existence, clarifier votre mission de vie et manifester consciemment votre réalité — avec un exercice et un point de réflexion à chaque étape.",
+      "Les 12 lois — Unité, Vibration, Correspondance, Polarité, Rythme, Cause à Effet, Genre, Attraction, Action Inspirée, Transmutation, Relativité, Compensation — sont expliquées simplement et reliées à votre vie réelle, pas seulement à la théorie.",
+      "Vous découvrirez comment reconnaître votre mission de vie au-delà du métier ou du statut social grâce à un protocole d'alignement en 4 piliers (talent, sens, demande, compensation), puis une méthode de manifestation en 5 étapes pour transformer une intention en résultat concret — sans magie ni pensée positive naïve.",
+      "Chaque loi est suivie d'un exercice à réaliser sous 24 à 72 heures et d'un point de réflexion à consigner. Le contenu est pensé pour être pratiqué une semaine par loi, sur environ 3 mois — pas englouti en une soirée.",
+    ],
+    highlights: [
+      { emoji: "📜", label: "Les 12 lois universelles décodées une à une" },
+      { emoji: "🧭", label: "Protocole d'alignement en 4 piliers pour votre mission" },
+      { emoji: "✨", label: "Méthode de manifestation en 5 étapes concrètes" },
+      { emoji: "📓", label: "12 exercices + 12 points de réflexion à consigner" },
+    ],
+    pages: 27,
     checkoutTitle: "Les Lois Universelles — 7 CHF",
   },
 ];
@@ -97,8 +121,29 @@ const Boutique = () => {
                   <p className="text-primary font-body tracking-[0.3em] uppercase text-xs mb-3">{book.eyebrow}</p>
                   <h2 className="font-heading text-3xl md:text-4xl font-light mb-4 text-foreground">{book.title}</h2>
                   <h3 className="font-heading text-xl md:text-2xl font-light mb-5 text-foreground/90">{book.subtitle}</h3>
-                  <p className="font-body text-foreground/80 leading-relaxed mb-4 italic">{book.tagline}</p>
-                  <p className="font-body text-foreground/70 leading-relaxed mb-8">{book.description}</p>
+                  <p className="font-body text-foreground/80 leading-relaxed mb-5 italic">{book.tagline}</p>
+
+                  <div className="space-y-4 mb-6">
+                    {book.paragraphs.map((p, i) => (
+                      <p key={i} className="font-body text-foreground/70 leading-relaxed">{p}</p>
+                    ))}
+                  </div>
+
+                  <ul className="space-y-2 mb-8 border-l-2 border-primary/30 pl-4">
+                    {book.highlights.map((h, i) => (
+                      <li key={i} className="font-body text-sm text-foreground/80 flex items-start gap-3">
+                        <span className="text-base leading-tight">{h.emoji}</span>
+                        <span>{h.label}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted-foreground font-body tracking-wide uppercase mb-8">
+                    <span className="inline-flex items-center gap-2"><FileText className="w-3.5 h-3.5 text-primary" /> {book.pages} pages</span>
+                    <span className="inline-flex items-center gap-2"><Download className="w-3.5 h-3.5 text-primary" /> PDF numérique</span>
+                    <span className="inline-flex items-center gap-2"><Languages className="w-3.5 h-3.5 text-primary" /> Français</span>
+                    <span className="inline-flex items-center gap-2"><Sparkles className="w-3.5 h-3.5 text-primary" /> Accès immédiat</span>
+                  </div>
 
                   <div className="flex items-baseline gap-3 mb-8">
                     <span className="font-heading text-5xl text-gradient-gold">7</span>
@@ -124,7 +169,7 @@ const Boutique = () => {
                     </div>
                     <div className="flex items-start gap-3">
                       <ShieldCheck className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                      <span>Paiement sécurisé par Stripe (carte, TWINT, Apple Pay…)</span>
+                      <span>Paiement sécurisé — carte, TWINT, Apple Pay, Google Pay</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <BookOpen className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
