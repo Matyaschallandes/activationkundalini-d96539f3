@@ -43,7 +43,7 @@ const books: Book[] = [
       { emoji: "👑", label: "4 rituels de souveraineté à mettre en action" },
     ],
     pages: 27,
-    checkoutTitle: "Le Secret de l'Initié — 0.10 CHF",
+    checkoutTitle: "Le Secret de l'Initié — 0.50 CHF",
   },
   {
     productKey: "livre_lois_universelles",
@@ -66,7 +66,7 @@ const books: Book[] = [
       { emoji: "📓", label: "12 exercices + 12 points de réflexion à consigner" },
     ],
     pages: 27,
-    checkoutTitle: "Les Lois Universelles — 0.10 CHF",
+    checkoutTitle: "Les Lois Universelles — 0.50 CHF",
   },
 ];
 
@@ -146,7 +146,7 @@ const Boutique = () => {
                   </div>
 
                   <div className="flex items-baseline gap-3 mb-8">
-                    <span className="font-heading text-5xl text-gradient-gold">0.10</span>
+                    <span className="font-heading text-5xl text-gradient-gold">0.50</span>
                     <span className="font-body text-xl text-foreground/80">CHF</span>
                     <span className="font-body text-sm text-muted-foreground ml-2">· Livre PDF</span>
                   </div>
