@@ -3,7 +3,13 @@ import { useSearchParams, Link } from "react-router-dom";
 import { CheckCircle2, Loader2, Mail, AlertCircle, Download, MessageCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
-import pdfAsset from "@/assets/secret-initie-pdf.asset.json";
+import secretPdf from "@/assets/secret-initie-pdf.asset.json";
+import loisPdf from "@/assets/lois-universelles-pdf.asset.json";
+
+const PRODUCTS: Record<string, { name: string; pdfUrl: string; filename: string }> = {
+  livre_secret_initie: { name: "Le Secret de l'Initié", pdfUrl: secretPdf.url, filename: "Le-Secret-de-l-Initie.pdf" },
+  livre_lois_universelles: { name: "Les Lois Universelles", pdfUrl: loisPdf.url, filename: "Les-Lois-Universelles.pdf" },
+};
 
 const WHATSAPP_URL = "https://wa.me/41762445552";
 const CONTACT_EMAIL = "matyas.challandes@gmail.com";
@@ -39,18 +45,19 @@ const CheckoutReturn = () => {
   const [searchParams] = useSearchParams();
   const sessionId = searchParams.get("session_id");
   const product = searchParams.get("product");
+  const productInfo = product && PRODUCTS[product];
   const [status, setStatus] = useState<"loading" | "delivered" | "pending" | "error" | "idle">(
-    product === "livre_secret_initie" ? "loading" : "idle",
+    productInfo ? "loading" : "idle",
   );
   const [email, setEmail] = useState<string | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   useEffect(() => {
-    if (product !== "livre_secret_initie" || !sessionId) return;
+    if (!productInfo || !sessionId) return;
     (async () => {
       try {
         const { data, error } = await supabase.functions.invoke("deliver-ebook", {
-          body: { sessionId, environment: getStripeEnvironment() },
+          body: { sessionId, environment: getStripeEnvironment(), product },
         });
         if (error) throw new Error(error.message);
         if (data?.delivered) {
@@ -64,7 +71,7 @@ const CheckoutReturn = () => {
         setStatus("error");
       }
     })();
-  }, [sessionId, product]);
+  }, [sessionId, product, productInfo]);
 
   return (
     <Layout>
@@ -86,7 +93,7 @@ const CheckoutReturn = () => {
                 Merci <span className="text-gradient-gold italic">infiniment</span>
               </h1>
               <p className="font-body text-foreground/80 mb-6 leading-relaxed">
-                Votre livre <em className="text-primary">Le Secret de l'Initié</em> vient d'être envoyé à :
+                Votre livre <em className="text-primary">{productInfo ? productInfo.name : ""}</em> vient d'être envoyé à :
               </p>
               <div className="inline-flex items-center gap-3 border border-primary/30 bg-card px-6 py-3 rounded-sm mb-8">
                 <Mail className="w-5 h-5 text-primary" />
@@ -96,14 +103,16 @@ const CheckoutReturn = () => {
                 Pensez à vérifier vos courriers indésirables si vous ne le voyez pas arriver.
               </p>
               <div className="mt-6 mb-2">
-                <a
-                  href={pdfAsset.url}
-                  download="Le-Secret-de-l-Initie.pdf"
-                  className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-body text-sm font-semibold tracking-wider uppercase px-8 py-3 rounded-sm hover:shadow-gold transition-all mr-3"
-                >
-                  <Download className="w-4 h-4" />
-                  Télécharger le livre
-                </a>
+                {productInfo && (
+                  <a
+                    href={productInfo.pdfUrl}
+                    download={productInfo.filename}
+                    className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-body text-sm font-semibold tracking-wider uppercase px-8 py-3 rounded-sm hover:shadow-gold transition-all mr-3"
+                  >
+                    <Download className="w-4 h-4" />
+                    Télécharger le livre
+                  </a>
+                )}
                 <Link
                   to="/"
                   className="inline-block border border-primary/40 text-foreground font-body text-sm font-semibold tracking-wider uppercase px-6 py-3 rounded-sm hover:bg-primary/10 transition-all"
