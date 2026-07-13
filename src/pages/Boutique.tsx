@@ -43,7 +43,7 @@ const books: Book[] = [
       { emoji: "👑", label: "4 rituels de souveraineté à mettre en action" },
     ],
     pages: 27,
-    checkoutTitle: "Le Secret de l'Initié — 0.10 CHF",
+    checkoutTitle: "Le Secret de l'Initié — 0.50 CHF",
   },
   {
     productKey: "livre_lois_universelles",
