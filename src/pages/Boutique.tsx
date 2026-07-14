@@ -24,7 +24,7 @@ interface Book {
 const books: Book[] = [
   {
     productKey: "livre_secret_initie",
-    priceId: "livre_secret_initie_chf",
+    priceId: "livre_secret_initie_chf_7",
     cover: secretCover.url,
     eyebrow: "Édition initiatique",
     title: <>Le <span className="text-gradient-gold italic">Secret</span> de l'Initié</>,
@@ -43,11 +43,11 @@ const books: Book[] = [
       { emoji: "👑", label: "4 rituels de souveraineté à mettre en action" },
     ],
     pages: 27,
-    checkoutTitle: "Le Secret de l'Initié — 1 CHF",
+    checkoutTitle: "Le Secret de l'Initié — 7 CHF",
   },
   {
     productKey: "livre_lois_universelles",
-    priceId: "livre_lois_universelles_chf",
+    priceId: "livre_lois_universelles_chf_7",
     cover: loisCover.url,
     eyebrow: "Manuel pratique",
     title: <>Les <span className="text-gradient-gold italic">Lois</span> Universelles</>,
@@ -57,7 +57,7 @@ const books: Book[] = [
       "Un manuel pratique pour comprendre les 12 lois qui gouvernent l'existence, clarifier votre mission de vie et manifester consciemment votre réalité — avec un exercice et un point de réflexion à chaque étape.",
       "Les 12 lois — Unité, Vibration, Correspondance, Polarité, Rythme, Cause à Effet, Genre, Attraction, Action Inspirée, Transmutation, Relativité, Compensation — sont expliquées simplement et reliées à votre vie réelle, pas seulement à la théorie.",
       "Vous découvrirez comment reconnaître votre mission de vie au-delà du métier ou du statut social grâce à un protocole d'alignement en 4 piliers (talent, sens, demande, compensation), puis une méthode de manifestation en 5 étapes pour transformer une intention en résultat concret — sans magie ni pensée positive naïve.",
-      "Chaque loi est suivie d'un exercice à réaliser sous 24 à 72 heures et d'un point de réflexion à consigner. Le contenu est pensé pour être pratiqué une semaine par loi, sur environ 3 mois — pas englouti en une soirée.",
+      "Chaque loi est suivie d'un exercice à réaliser sous 24 à 72 heures et d'un point de réflexion à consigner. Le contenu est pensé pour être pratiquer une semaine par loi, sur environ 3 mois — pas englouti en une soirée.",
     ],
     highlights: [
       { emoji: "📜", label: "Les 12 lois universelles décodées une à une" },
@@ -66,7 +66,7 @@ const books: Book[] = [
       { emoji: "📓", label: "12 exercices + 12 points de réflexion à consigner" },
     ],
     pages: 27,
-    checkoutTitle: "Les Lois Universelles — 1 CHF",
+    checkoutTitle: "Les Lois Universelles — 7 CHF",
   },
 ];
 
@@ -146,7 +146,7 @@ const Boutique = () => {
                   </div>
 
                   <div className="flex items-baseline gap-3 mb-8">
-                    <span className="font-heading text-5xl text-gradient-gold">1</span>
+                    <span className="font-heading text-5xl text-gradient-gold">7</span>
                     <span className="font-body text-xl text-foreground/80">CHF</span>
                     <span className="font-body text-sm text-muted-foreground ml-2">· Livre PDF</span>
                   </div>
