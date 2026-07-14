@@ -45,6 +45,7 @@ const books: Book[] = [
     ],
     pages: 27,
     checkoutTitle: "Le Secret de l'Initié — 7 CHF",
+    originalPrice: 9,
   },
   {
     productKey: "livre_lois_universelles",
