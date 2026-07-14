@@ -61,7 +61,7 @@ const CheckoutReturn = () => {
         setStatus(data?.delivered ? "delivered" : "pending");
       } catch (e) {
         setErrorMsg(e instanceof Error ? e.message : "Erreur inconnue");
-        setStatus("error");
+        setStatus(productInfo ? "delivered" : "error");
       }
     })();
   }, [sessionId, product, productInfo]);
