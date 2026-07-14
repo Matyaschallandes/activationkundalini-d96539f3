@@ -148,11 +148,21 @@ const Boutique = () => {
                     <span className="inline-flex items-center gap-2"><Sparkles className="w-3.5 h-3.5 text-primary" /> Accès immédiat</span>
                   </div>
 
-                  <div className="flex items-baseline gap-3 mb-8">
+                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 mb-3">
                     <span className="font-heading text-5xl text-gradient-gold">7</span>
                     <span className="font-body text-xl text-foreground/80">CHF</span>
-                    <span className="font-body text-sm text-muted-foreground ml-2">· Livre PDF</span>
+                    {book.originalPrice && (
+                      <span className="font-body text-lg text-muted-foreground line-through">
+                        {book.originalPrice} CHF
+                      </span>
+                    )}
+                    <span className="ml-auto inline-flex items-center rounded-sm bg-primary/10 px-2.5 py-1 text-xs font-body font-semibold tracking-wide text-primary uppercase">
+                      Promo
+                    </span>
                   </div>
+                  <p className="font-body text-sm text-primary/90 mb-8">
+                    {book.originalPrice} CHF au lieu de {book.originalPrice} CHF — offre limitée
+                  </p>
 
                   {isPaymentsConfigured() ? (
                     <button
