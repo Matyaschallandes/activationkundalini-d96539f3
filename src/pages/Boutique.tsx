@@ -161,7 +161,7 @@ const Boutique = () => {
                     </span>
                   </div>
                   <p className="font-body text-sm text-primary/90 mb-8">
-                    {book.originalPrice} CHF au lieu de {book.originalPrice} CHF — offre limitée
+                    7 CHF au lieu de {book.originalPrice} CHF — offre limitée
                   </p>
 
                   {isPaymentsConfigured() ? (
