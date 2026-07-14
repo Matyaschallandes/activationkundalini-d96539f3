@@ -69,6 +69,7 @@ const books: Book[] = [
     ],
     pages: 27,
     checkoutTitle: "Les Lois Universelles — 7 CHF",
+    originalPrice: 9,
   },
 ];
 
