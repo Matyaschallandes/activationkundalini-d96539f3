@@ -19,6 +19,7 @@ interface Book {
   highlights: { emoji: string; label: string }[];
   pages: number;
   checkoutTitle: string;
+  originalPrice?: number;
 }
 
 const books: Book[] = [
