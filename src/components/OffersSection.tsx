@@ -340,9 +340,9 @@ const OffersSection = () => {
           <p className="text-primary font-body tracking-[0.3em] uppercase text-xs text-center mb-4">
             Services individuels
           </p>
-          <h3 className="font-heading text-3xl md:text-4xl text-center font-light mb-4 text-foreground">
+          <h2 className="font-heading text-3xl md:text-4xl text-center font-light mb-4 text-foreground">
             À la <span className="text-gradient-gold italic">carte</span>
-          </h3>
+          </h2>
           <p className="font-body text-muted-foreground/80 text-center text-xs max-w-lg mx-auto mb-4 italic">
             Prix indicatifs · Dons bienvenus · On s'adapte à ta situation
           </p>
