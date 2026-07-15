@@ -13,9 +13,9 @@ export const cityPages: CityPageData[] = [
   {
     slug: "/activation-kundalini-neuchatel",
     ville: "Neuchâtel",
-    title: "Activation Kundalini Neuchâtel | Magnétiseur & Soin Énergétique — Bevaix",
+    title: "Activation Kundalini Neuchâtel | Soin Énergétique Bevaix",
     description:
-      "Activation Kundalini à Neuchâtel : magnétiseur, thérapeute énergétique et soin chamanique à Bevaix. Libération émotionnelle, chakras, séance à distance. Prix libre.",
+      "Activation Kundalini à Neuchâtel : magnétiseur et soin énergétique à Bevaix. Libération émotionnelle, chakras, séance à distance. Prix libre.",
     keywords:
       "activation kundalini Neuchâtel, magnétiseur Neuchâtel, soin énergétique Neuchâtel, énergéticienne autour de moi, thérapeute énergétique Neuchâtel, soin chamanique Neuchâtel, libération émotionnelle, harmonisation des chakras, montée de kundalini, guérisseur Neuchâtel",
     h1: "Activation Kundalini à Neuchâtel — Magnétiseur & Thérapeute Énergétique",
@@ -47,7 +47,7 @@ export const cityPages: CityPageData[] = [
   {
     slug: "/activation-kundalini-lausanne",
     ville: "Lausanne",
-    title: "Activation Kundalini Lausanne | Magnétiseur & Thérapeute Énergétique Vaud",
+    title: "Activation Kundalini Lausanne | Soin Énergétique Vaud",
     description:
       "Activation Kundalini à Lausanne : magnétiseur, soin énergétique, libération émotionnelle et soin chamanique. Bevaix à 40 min ou séance à distance. Prix libre.",
     keywords:
@@ -81,7 +81,7 @@ export const cityPages: CityPageData[] = [
   {
     slug: "/activation-kundalini-fribourg",
     ville: "Fribourg",
-    title: "Activation Kundalini Fribourg | Magnétiseur & Soin Énergétique",
+    title: "Activation Kundalini Fribourg | Soin Énergétique",
     description:
       "Activation Kundalini à Fribourg : magnétiseur, thérapeute énergétique, soin chamanique et libération émotionnelle. Bevaix à 35 min ou à distance. Prix libre.",
     keywords:
@@ -115,7 +115,7 @@ export const cityPages: CityPageData[] = [
   {
     slug: "/activation-kundalini-geneve",
     ville: "Genève",
-    title: "Activation Kundalini Genève | Magnétiseur & Soin Énergétique à Distance",
+    title: "Activation Kundalini Genève | Soin Énergétique à Distance",
     description:
       "Activation Kundalini à Genève : magnétiseur, thérapeute énergétique, soin chamanique et libération émotionnelle. Séances à distance ou à Bevaix. Prix libre.",
     keywords:
