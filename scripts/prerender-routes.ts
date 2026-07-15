@@ -348,4 +348,62 @@ ${commonNav}
 </main>
 ${commonFooter}`,
   },
+  ...(
+    [
+      [
+        "neuchatel",
+        "Neuchâtel",
+        "Activation Kundalini à Neuchâtel | Soins Énergétiques & Chamanisme — Bevaix",
+        "Activation Kundalini à Neuchâtel : séances en présentiel à Bevaix (15 min du centre-ville) et à distance. Soins énergétiques, libération émotionnelle, accompagnement burn-out.",
+        "À quinze minutes du centre-ville de Neuchâtel, le cabinet de Bevaix accueille les habitants du canton pour un travail énergétique profond : activation Kundalini, soins chamaniques, libération émotionnelle. Un cadre calme, au bord du lac, dédié à la reconnexion à soi.",
+        "L'activation Kundalini est un processus d'alchimie respiratoire encore rare dans le canton de Neuchâtel. Elle relance la circulation énergétique, libère les mémoires bloquées et harmonise les chakras. Protocole en 1 à 3 séances personnalisées. Habitants de Neuchâtel, La Chaux-de-Fonds, Le Locle, Boudry, Colombier, Cortaillod, Saint-Blaise et toute la région littorale sont accueillis. Prix libre.",
+      ],
+      [
+        "lausanne",
+        "Lausanne",
+        "Activation Kundalini à Lausanne | Soins Énergétiques Vaud — Karmaequilego",
+        "Activation Kundalini pour les habitants de Lausanne : séances en présentiel à Bevaix (40 min en train direct) ou à distance. Éveil énergétique, chamanisme, prix libre.",
+        "Pour les Lausannois en quête d'un travail énergétique profond, mon cabinet à Bevaix est accessible en train direct en environ quarante minutes. Alternative : la séance à distance depuis votre domicile lausannois.",
+        "Lausanne concentre une densité rare de responsabilités et de rythmes soutenus — capitale olympique, pôle universitaire, hub tertiaire. Beaucoup de Lausannois arrivent en épuisement professionnel, angoisses nocturnes, fatigue chronique inexpliquée. L'activation Kundalini par l'alchimie respiratoire offre un espace de réajustement énergétique profond, complémentaire aux approches médicales ou psychothérapeutiques. Protocole en 1 à 3 séances. Prix libre.",
+      ],
+      [
+        "fribourg",
+        "Fribourg",
+        "Activation Kundalini à Fribourg | Soins Énergétiques & Chamanisme",
+        "Activation Kundalini pour les habitants de Fribourg : séances en présentiel à Bevaix (35 min) ou à distance. Éveil énergétique, harmonisation des chakras, prix libre.",
+        "À trente-cinq minutes de la ville de Fribourg par l'autoroute A1, mon cabinet à Bevaix accueille les Fribourgeois pour un travail énergétique profond, dans un cadre bilingue et respectueux des sensibilités de chacun.",
+        "Fribourg cultive une identité singulière — bilingue, universitaire, ancrée dans une tradition catholique forte et ouverte aux approches spirituelles nouvelles. L'activation Kundalini ne s'oppose à aucune tradition : elle réveille une force vitale universelle. Soignants du HFR épuisés, enseignants au bout du rouleau, jeunes adultes de l'Uni de Fribourg en quête de sens — le protocole en 1 à 3 séances permet de relancer la circulation énergétique. Séances en français, prix libre.",
+      ],
+      [
+        "geneve",
+        "Genève",
+        "Activation Kundalini à Genève | Soins Énergétiques à Distance & Bevaix",
+        "Activation Kundalini pour les Genevois : séances à distance depuis votre domicile ou en présentiel à Bevaix. Éveil énergétique, libération émotionnelle, prix libre.",
+        "Depuis Genève, la distance jusqu'à Bevaix est réelle — c'est pourquoi je propose aux Genevois des séances à distance pleinement efficaces, ou un déplacement en présentiel pour un travail plus immersif.",
+        "Genève concentre une intensité rare — institutions internationales, finance, horlogerie, ONG, expatriés. Cette densité crée une pression particulière : décalages horaires, exigence permanente, isolement affectif. L'activation Kundalini répond à cette quête de profondeur : réveiller la source de vie intérieure. La séance à distance par visioconférence est pleinement efficace — l'énergie ne connaît pas les kilomètres. Protocole en 1 à 3 séances. Prix libre, même à Genève.",
+      ],
+    ] as const
+  ).map(([slug, ville, title, description, intro, body]) => ({
+    path: `/activation-kundalini-${slug}`,
+    title,
+    description,
+    canonical: `${BASE}/activation-kundalini-${slug}`,
+    content: `
+${commonNav}
+<main>
+  <h1>Activation Kundalini à ${ville}</h1>
+  <p><strong>${intro}</strong></p>
+  <h2>Un accompagnement énergétique pour les habitants de ${ville}</h2>
+  <p>${body}</p>
+  <h2>Prestations disponibles</h2>
+  <ul>
+    <li><a href="/la-kundalini">Activation Kundalini</a> — éveil énergétique par alchimie respiratoire</li>
+    <li><a href="/lecture-ame">Lecture d'âme</a> — guidance intuitive</li>
+    <li><a href="/cercle-de-guerison">Cercle de guérison</a> — soins collectifs</li>
+    <li><a href="/accompagnement-burn-out-suisse-romande">Accompagnement burn-out</a></li>
+  </ul>
+  <p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/contact">Me contacter</a> · <a href="/offres">Voir toutes les offres</a>.</p>
+</main>
+${commonFooter}`,
+  })),
 ];
