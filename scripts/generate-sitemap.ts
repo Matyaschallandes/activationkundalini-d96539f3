@@ -39,6 +39,10 @@ const staticEntries: SitemapEntry[] = [
   { path: "/cercle-de-guerison", changefreq: "monthly", priority: "0.8" },
   { path: "/page-une", changefreq: "monthly", priority: "0.6" },
   { path: "/blog", changefreq: "weekly", priority: "0.9" },
+  { path: "/activation-kundalini-neuchatel", changefreq: "monthly", priority: "0.9" },
+  { path: "/activation-kundalini-lausanne", changefreq: "monthly", priority: "0.9" },
+  { path: "/activation-kundalini-fribourg", changefreq: "monthly", priority: "0.9" },
+  { path: "/activation-kundalini-geneve", changefreq: "monthly", priority: "0.9" },
 ];
 
 async function fetchBlogPosts(): Promise<SitemapEntry[]> {

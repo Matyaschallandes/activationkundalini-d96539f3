@@ -45,6 +45,18 @@ const Footer = () => {
           </ul>
         </nav>
 
+        <nav aria-label="Kundalini par ville" className="pt-2">
+          <p className="font-body text-xs uppercase tracking-widest text-foreground/50 mb-2">
+            Activation Kundalini par ville
+          </p>
+          <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs">
+            <li><Link to="/activation-kundalini-neuchatel" className="text-foreground/60 hover:text-primary transition-colors">Neuchâtel</Link></li>
+            <li><Link to="/activation-kundalini-lausanne" className="text-foreground/60 hover:text-primary transition-colors">Lausanne</Link></li>
+            <li><Link to="/activation-kundalini-fribourg" className="text-foreground/60 hover:text-primary transition-colors">Fribourg</Link></li>
+            <li><Link to="/activation-kundalini-geneve" className="text-foreground/60 hover:text-primary transition-colors">Genève</Link></li>
+          </ul>
+        </nav>
+
         <nav aria-label="Accompagnements" className="pt-2">
           <p className="font-body text-xs uppercase tracking-widest text-foreground/50 mb-2">
             Accompagnements
