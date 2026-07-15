@@ -56,6 +56,18 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://www.activationkundalini.ch/blog/kundalini-burn-out-reconstruction-energetique</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.activationkundalini.ch/blog/fatigue-chronique-kundalini-circulation-energetique</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.activationkundalini.ch/blog/anxiete-retrouver-son-calme-activation-kundalini</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -78,72 +90,5 @@
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/blog/kundalini-burn-out-reconstruction-energetique</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/blog/fatigue-chronique-kundalini-circulation-energetique</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/boutique</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/soins-energetiques-canton-vaud</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/soins-energetiques-canton-fribourg</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/soins-energetiques-jura-bernois</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/soins-energetiques-canton-geneve</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/soins-energetiques-canton-jura</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/soins-energetiques-canton-valais</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/accompagnement-burn-out-suisse-romande</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/retrouver-energie-fatigue-chronique</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/apaiser-anxiete-angoisses</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.activationkundalini.ch/retrouver-elan-baisse-de-moral</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
