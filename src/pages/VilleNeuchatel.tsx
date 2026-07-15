@@ -4,27 +4,27 @@ const VilleNeuchatel = () => (
   <VillePage
     slug="/activation-kundalini-neuchatel"
     ville="Neuchâtel"
-    title="Activation Kundalini à Neuchâtel | Soins Énergétiques & Chamanisme — Bevaix"
-    description="Activation Kundalini à Neuchâtel : séances en présentiel à Bevaix (15 min du centre-ville) et à distance. Soins énergétiques, libération émotionnelle, accompagnement burn-out. Prix libre."
-    keywords="activation kundalini Neuchâtel, soins énergétiques Neuchâtel, guérisseur Neuchâtel, chamane Neuchâtel, éveil kundalini Bevaix, thérapeute énergétique Neuchâtel"
-    h1="Activation Kundalini à Neuchâtel"
-    intro="À quelques minutes du centre-ville de Neuchâtel, mon cabinet à Bevaix accueille les habitants du canton pour un travail énergétique profond : activation Kundalini, soins chamaniques et libération émotionnelle."
+    title="Activation Kundalini Neuchâtel | Magnétiseur & Soin Énergétique — Bevaix"
+    description="Activation Kundalini à Neuchâtel : magnétiseur, thérapeute énergétique et soin chamanique à Bevaix (15 min du centre). Libération émotionnelle, harmonisation des chakras. À distance possible. Prix libre."
+    keywords="activation kundalini Neuchâtel, magnétiseur Neuchâtel, soin énergétique Neuchâtel, énergéticienne autour de moi, thérapeute énergétique Neuchâtel, soin chamanique Neuchâtel, libération émotionnelle, harmonisation des chakras, montée de kundalini, guérisseur Neuchâtel"
+    h1="Activation Kundalini à Neuchâtel — Magnétiseur & Thérapeute Énergétique"
+    intro="Vous cherchez un magnétiseur, un thérapeute énergétique ou une énergéticienne autour de vous à Neuchâtel ? À quinze minutes du centre-ville, mon cabinet à Bevaix propose activation Kundalini, soins énergétiques, soins chamaniques et libération émotionnelle — en présentiel ou à distance."
     paragraphs={[
       {
-        heading: "Un cabinet à Bevaix, au cœur du canton de Neuchâtel",
-        text: "Basé à Bevaix, sur les rives du lac de Neuchâtel, j'accompagne les habitants de la ville de Neuchâtel, de La Chaux-de-Fonds, du Locle, de Boudry, de Colombier, de Peseux, de Cortaillod, de Saint-Blaise et de toute la région littorale. En quinze minutes de voiture depuis le centre-ville de Neuchâtel, vous accédez à un espace calme dédié entièrement à la reconnexion à soi. Les transports publics desservent également très bien Bevaix depuis la gare de Neuchâtel.",
+        heading: "Un cabinet à Bevaix pour tout le canton de Neuchâtel",
+        text: "Basé à Bevaix, sur les rives du lac, j'accueille les habitants de Neuchâtel, La Chaux-de-Fonds, Le Locle, Boudry, Colombier, Peseux, Cortaillod et Saint-Blaise. Que vous tapiez « énergéticienne autour de moi » ou « magnétiseur à Neuchâtel » dans Google, vous cherchez souvent la même chose : un praticien à la fois accessible et sérieux, capable de vous accompagner sur la durée. Le cabinet est à quinze minutes en voiture du centre de Neuchâtel, et parfaitement desservi par le train depuis la gare centrale.",
       },
       {
-        heading: "L'activation Kundalini — un travail rare en pays neuchâtelois",
-        text: "L'activation Kundalini est un processus d'alchimie respiratoire qui réveille l'énergie vitale endormie à la base de la colonne vertébrale. Encore peu répandue dans le canton de Neuchâtel, cette approche permet de relancer la circulation énergétique, de libérer les mémoires bloquées dans le corps subtil et de retrouver une clarté mentale et émotionnelle profonde. Le protocole se déroule habituellement sur une à trois séances personnalisées, selon votre sensibilité et votre rythme.",
+        heading: "Activation Kundalini — plus profond qu'un soin énergétique classique",
+        text: "L'activation Kundalini n'est pas un simple soin énergétique de surface ni du reiki. C'est un travail d'alchimie respiratoire qui réveille la montée de Kundalini — l'énergie vitale endormie à la base de la colonne vertébrale — et déclenche une véritable harmonisation des chakras. Le protocole se déroule sur 1 à 3 séances personnalisées. De nombreuses personnes à Neuchâtel viennent après avoir déjà exploré le reiki, la kinésiologie ou le kundalini yoga, et cherchent un travail plus incarné.",
       },
       {
-        heading: "Pour qui à Neuchâtel ?",
-        text: "Les personnes qui viennent me consulter à Neuchâtel traversent souvent une période charnière : épuisement professionnel dans les grandes entreprises horlogères ou hospitalières de la région, fatigue chronique, questionnement existentiel après un divorce ou un deuil, angoisses persistantes, ou simple soif de sens. L'accompagnement énergétique est complémentaire — jamais substitut — à un suivi médical ou psychologique.",
+        heading: "Soin chamanique & libération émotionnelle",
+        text: "En complément de l'activation Kundalini, je propose des soins chamaniques (recouvrement d'âme, dégagement d'entités, désenvoûtement) et un travail de libération émotionnelle profonde pour les mémoires bloquées, traumatismes, deuils non digérés. Utile en particulier pour les burn-out, la fatigue chronique et les angoisses persistantes.",
       },
       {
-        heading: "Séances en présentiel ou à distance",
-        text: "Vous pouvez venir en présentiel au cabinet de Bevaix, ou choisir la séance à distance depuis chez vous à Neuchâtel. L'énergie ne connaît pas les kilomètres : les séances par visioconférence ou téléphone sont pleinement efficaces. Tous les soins sont proposés en prix libre — l'argent n'est jamais un obstacle à la reconnexion à soi.",
+        heading: "Séances en présentiel à Bevaix ou à distance",
+        text: "Pour les Neuchâtelois qui préfèrent rester chez eux, les séances à distance (visioconférence ou téléphone) sont pleinement efficaces. Tous les soins sont proposés en prix libre, avec un prix indicatif de référence. L'accompagnement est complémentaire — jamais substitut — à un suivi médical ou psychologique.",
       },
     ]}
   />
