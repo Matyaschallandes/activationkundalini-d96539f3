@@ -56,6 +56,13 @@ const App = () => (
           <Route path="/soins-energetiques-canton-vaud" element={<CantonVaud />} />
           <Route path="/soins-energetiques-canton-fribourg" element={<CantonFribourg />} />
           <Route path="/soins-energetiques-jura-bernois" element={<CantonBerne />} />
+          <Route path="/soins-energetiques-canton-geneve" element={<CantonGeneve />} />
+          <Route path="/soins-energetiques-canton-jura" element={<CantonJura />} />
+          <Route path="/soins-energetiques-canton-valais" element={<CantonValais />} />
+          <Route path="/accompagnement-burn-out-suisse-romande" element={<BurnOutPage />} />
+          <Route path="/retrouver-energie-fatigue-chronique" element={<FatigueChroniquePage />} />
+          <Route path="/apaiser-anxiete-angoisses" element={<AnxietePage />} />
+          <Route path="/retrouver-elan-baisse-de-moral" element={<BaisseMoralPage />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
