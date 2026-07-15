@@ -31,6 +31,17 @@ const Footer = () => {
           </p>
         </div>
 
+        <nav aria-label="Zones desservies" className="pt-4">
+          <p className="font-body text-xs uppercase tracking-widest text-foreground/50 mb-2">
+            Zones desservies en Suisse romande
+          </p>
+          <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs">
+            <li><Link to="/soins-energetiques-canton-vaud" className="text-foreground/60 hover:text-primary transition-colors">Canton de Vaud</Link></li>
+            <li><Link to="/soins-energetiques-canton-fribourg" className="text-foreground/60 hover:text-primary transition-colors">Canton de Fribourg</Link></li>
+            <li><Link to="/soins-energetiques-jura-bernois" className="text-foreground/60 hover:text-primary transition-colors">Jura bernois &amp; Bienne</Link></li>
+          </ul>
+        </nav>
+
         <p className="font-body text-xs text-muted-foreground pt-2">
           © {new Date().getFullYear()} — Activation & Transformation Profonde
         </p>
