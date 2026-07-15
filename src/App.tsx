@@ -18,6 +18,9 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Boutique from "./pages/Boutique";
 import CheckoutReturn from "./pages/CheckoutReturn";
+import CantonVaud from "./pages/CantonVaud";
+import CantonFribourg from "./pages/CantonFribourg";
+import CantonBerne from "./pages/CantonBerne";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
@@ -43,6 +46,10 @@ const App = () => (
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/boutique" element={<Boutique />} />
           <Route path="/checkout/return" element={<CheckoutReturn />} />
+          <Route path="/soins-energetiques-canton-vaud" element={<CantonVaud />} />
+          <Route path="/soins-energetiques-canton-fribourg" element={<CantonFribourg />} />
+          <Route path="/soins-energetiques-jura-bernois" element={<CantonBerne />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
