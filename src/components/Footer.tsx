@@ -36,11 +36,27 @@ const Footer = () => {
             Zones desservies en Suisse romande
           </p>
           <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs">
-            <li><Link to="/soins-energetiques-canton-vaud" className="text-foreground/60 hover:text-primary transition-colors">Canton de Vaud</Link></li>
-            <li><Link to="/soins-energetiques-canton-fribourg" className="text-foreground/60 hover:text-primary transition-colors">Canton de Fribourg</Link></li>
+            <li><Link to="/soins-energetiques-canton-vaud" className="text-foreground/60 hover:text-primary transition-colors">Vaud</Link></li>
+            <li><Link to="/soins-energetiques-canton-fribourg" className="text-foreground/60 hover:text-primary transition-colors">Fribourg</Link></li>
+            <li><Link to="/soins-energetiques-canton-geneve" className="text-foreground/60 hover:text-primary transition-colors">Genève</Link></li>
+            <li><Link to="/soins-energetiques-canton-jura" className="text-foreground/60 hover:text-primary transition-colors">Jura</Link></li>
             <li><Link to="/soins-energetiques-jura-bernois" className="text-foreground/60 hover:text-primary transition-colors">Jura bernois &amp; Bienne</Link></li>
+            <li><Link to="/soins-energetiques-canton-valais" className="text-foreground/60 hover:text-primary transition-colors">Valais</Link></li>
           </ul>
         </nav>
+
+        <nav aria-label="Accompagnements" className="pt-2">
+          <p className="font-body text-xs uppercase tracking-widest text-foreground/50 mb-2">
+            Accompagnements
+          </p>
+          <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs">
+            <li><Link to="/accompagnement-burn-out-suisse-romande" className="text-foreground/60 hover:text-primary transition-colors">Burn-out</Link></li>
+            <li><Link to="/retrouver-energie-fatigue-chronique" className="text-foreground/60 hover:text-primary transition-colors">Fatigue chronique</Link></li>
+            <li><Link to="/apaiser-anxiete-angoisses" className="text-foreground/60 hover:text-primary transition-colors">Anxiété &amp; angoisses</Link></li>
+            <li><Link to="/retrouver-elan-baisse-de-moral" className="text-foreground/60 hover:text-primary transition-colors">Baisse de moral</Link></li>
+          </ul>
+        </nav>
+
 
         <p className="font-body text-xs text-muted-foreground pt-2">
           © {new Date().getFullYear()} — Activation & Transformation Profonde
