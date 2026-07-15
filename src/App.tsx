@@ -21,6 +21,13 @@ import CheckoutReturn from "./pages/CheckoutReturn";
 import CantonVaud from "./pages/CantonVaud";
 import CantonFribourg from "./pages/CantonFribourg";
 import CantonBerne from "./pages/CantonBerne";
+import CantonGeneve from "./pages/CantonGeneve";
+import CantonJura from "./pages/CantonJura";
+import CantonValais from "./pages/CantonValais";
+import BurnOutPage from "./pages/BurnOutPage";
+import FatigueChroniquePage from "./pages/FatigueChroniquePage";
+import AnxietePage from "./pages/AnxietePage";
+import BaisseMoralPage from "./pages/BaisseMoralPage";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
