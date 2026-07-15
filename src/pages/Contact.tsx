@@ -20,6 +20,17 @@ const Contact = () => {
         keywords="contact guérisseur énergétique Neuchâtel, activation kundalini contact Suisse"
         jsonLd={jsonLd}
       />
+      <header className="pt-24 pb-8 md:pt-32 md:pb-10 bg-background">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <p className="text-primary font-body tracking-[0.3em] uppercase text-xs mb-4">
+            Bevaix — Neuchâtel — Suisse romande
+          </p>
+          <h1 className="font-heading text-4xl md:text-6xl font-light text-foreground mb-4">
+            Contacter votre <span className="text-gradient-gold italic">guérisseur énergétique</span> à Neuchâtel
+          </h1>
+          <div className="glow-line w-20 mx-auto" />
+        </div>
+      </header>
       <CtaSection />
 
       
