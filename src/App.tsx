@@ -28,6 +28,10 @@ import BurnOutPage from "./pages/BurnOutPage";
 import FatigueChroniquePage from "./pages/FatigueChroniquePage";
 import AnxietePage from "./pages/AnxietePage";
 import BaisseMoralPage from "./pages/BaisseMoralPage";
+import VilleNeuchatel from "./pages/VilleNeuchatel";
+import VilleLausanne from "./pages/VilleLausanne";
+import VilleFribourg from "./pages/VilleFribourg";
+import VilleGeneve from "./pages/VilleGeneve";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
@@ -63,6 +67,10 @@ const App = () => (
           <Route path="/retrouver-energie-fatigue-chronique" element={<FatigueChroniquePage />} />
           <Route path="/apaiser-anxiete-angoisses" element={<AnxietePage />} />
           <Route path="/retrouver-elan-baisse-de-moral" element={<BaisseMoralPage />} />
+          <Route path="/activation-kundalini-neuchatel" element={<VilleNeuchatel />} />
+          <Route path="/activation-kundalini-lausanne" element={<VilleLausanne />} />
+          <Route path="/activation-kundalini-fribourg" element={<VilleFribourg />} />
+          <Route path="/activation-kundalini-geneve" element={<VilleGeneve />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
