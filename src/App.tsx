@@ -18,6 +18,9 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Boutique from "./pages/Boutique";
 import CheckoutReturn from "./pages/CheckoutReturn";
+import CantonVaud from "./pages/CantonVaud";
+import CantonFribourg from "./pages/CantonFribourg";
+import CantonBerne from "./pages/CantonBerne";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
