@@ -72,9 +72,12 @@ export function TshirtSection() {
               d'élévation intérieure et d'ancrage. Coupe droite, coton doux, logo couronné au dos et signature discrète
               sur le cœur.
             </p>
-            <p className="font-body text-foreground/70 leading-relaxed mb-6">
+            <p className="font-body text-foreground/70 leading-relaxed mb-2">
               Disponible en <strong>noir</strong> et en <strong>blanc</strong>. D'autres coloris sont disponibles sur
               demande — contactez-moi directement via WhatsApp.
+            </p>
+            <p className="font-body text-foreground/80 leading-relaxed mb-6">
+              <strong>Modèle pour femme et pour homme.</strong> Précisez votre choix lors de la commande pour recevoir la coupe adaptée.
             </p>
 
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted-foreground font-body tracking-wide uppercase mb-8">
