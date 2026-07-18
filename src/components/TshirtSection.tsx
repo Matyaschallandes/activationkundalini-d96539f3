@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ShieldCheck, Truck, Ruler, Shirt, Sparkles, WashingMachine } from "lucide-react";
+import { ShieldCheck, Truck, Ruler, Shirt, Sparkles, WashingMachine, Users } from "lucide-react";
 import { useStripeCheckout } from "@/hooks/useStripeCheckout";
 import { isPaymentsConfigured } from "@/lib/stripe";
 import tshirtBlack from "@/assets/tshirt-13lv-noir.png.asset.json";
@@ -11,20 +11,22 @@ const COLORS = [
   { key: "Noir", swatch: "#111111" },
   { key: "Blanc", swatch: "#f5f5f0" },
 ] as const;
+const GENDERS = ["Femme", "Homme"] as const;
 
 export function TshirtSection() {
   const { openCheckout, checkoutElement } = useStripeCheckout();
   const [size, setSize] = useState<string>("M");
   const [color, setColor] = useState<string>("Noir");
+  const [gender, setGender] = useState<string>("Homme");
   const [gallery, setGallery] = useState(tshirtBlack.url);
 
   const handleBuy = () => {
     openCheckout({
       priceId: "tshirt_13lv_chf_27",
       quantity: 1,
-      title: `T-shirt 13LV — ${color} / ${size}`,
+      title: `T-shirt 13LV — ${gender} / ${color} / ${size}`,
       collectShipping: true,
-      metadata: { product: "tshirt_13lv", size, color },
+      metadata: { product: "tshirt_13lv", size, color, gender },
       returnUrl: `${window.location.origin}/checkout/return?session_id={CHECKOUT_SESSION_ID}&product=tshirt_13lv`,
     });
   };
@@ -70,9 +72,12 @@ export function TshirtSection() {
               d'élévation intérieure et d'ancrage. Coupe droite, coton doux, logo couronné au dos et signature discrète
               sur le cœur.
             </p>
-            <p className="font-body text-foreground/70 leading-relaxed mb-6">
+            <p className="font-body text-foreground/70 leading-relaxed mb-2">
               Disponible en <strong>noir</strong> et en <strong>blanc</strong>. D'autres coloris sont disponibles sur
               demande — contactez-moi directement via WhatsApp.
+            </p>
+            <p className="font-body text-foreground/80 leading-relaxed mb-6">
+              <strong>Modèle pour femme et pour homme.</strong> Précisez votre choix lors de la commande pour recevoir la coupe adaptée.
             </p>
 
             <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-muted-foreground font-body tracking-wide uppercase mb-8">
@@ -80,6 +85,29 @@ export function TshirtSection() {
               <span className="inline-flex items-center gap-2"><Ruler className="w-3.5 h-3.5 text-primary" /> XS → XL</span>
               <span className="inline-flex items-center gap-2"><Truck className="w-3.5 h-3.5 text-primary" /> Livraison Suisse & UE</span>
               <span className="inline-flex items-center gap-2"><Sparkles className="w-3.5 h-3.5 text-primary" /> Édition limitée</span>
+            </div>
+
+            {/* Gender selector */}
+            <div className="mb-6">
+              <p className="font-body text-sm tracking-wide uppercase text-foreground/70 mb-3">
+                Pour : <span className="text-foreground font-semibold">{gender}</span>
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {GENDERS.map((g) => (
+                  <button
+                    key={g}
+                    onClick={() => setGender(g)}
+                    className={`min-w-[4.5rem] px-4 py-2 rounded-sm border font-body text-sm tracking-wider transition-all inline-flex items-center gap-2 ${
+                      gender === g
+                        ? "border-primary bg-primary/10 text-foreground font-semibold"
+                        : "border-primary/30 text-foreground/70 hover:border-primary/70"
+                    }`}
+                  >
+                    <Users className="w-3.5 h-3.5" />
+                    {g}
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Color selector */}
@@ -134,7 +162,7 @@ export function TshirtSection() {
                 onClick={handleBuy}
                 className="w-full md:w-auto bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-10 py-4 rounded-sm hover:shadow-gold transition-all duration-500"
               >
-                Commander — {color} / {size}
+                Commander — {gender} / {color} / {size}
               </button>
             ) : (
               <p className="text-sm text-muted-foreground italic">Paiement bientôt disponible.</p>
