@@ -4,6 +4,7 @@ import Seo from "@/components/Seo";
 import { useStripeCheckout } from "@/hooks/useStripeCheckout";
 import { PaymentTestModeBanner } from "@/components/PaymentTestModeBanner";
 import { isPaymentsConfigured } from "@/lib/stripe";
+import { TshirtSection } from "@/components/TshirtSection";
 import secretCover from "@/assets/secret-initie-cover.asset.json";
 import loisCover from "@/assets/lois-universelles-cover.asset.json";
 
@@ -195,6 +196,9 @@ const Boutique = () => {
           </div>
         </div>
       </section>
+
+      <TshirtSection />
+
 
       {checkoutElement}
     </Layout>
