@@ -87,6 +87,29 @@ export function TshirtSection() {
               <span className="inline-flex items-center gap-2"><Sparkles className="w-3.5 h-3.5 text-primary" /> Édition limitée</span>
             </div>
 
+            {/* Gender selector */}
+            <div className="mb-6">
+              <p className="font-body text-sm tracking-wide uppercase text-foreground/70 mb-3">
+                Pour : <span className="text-foreground font-semibold">{gender}</span>
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {GENDERS.map((g) => (
+                  <button
+                    key={g}
+                    onClick={() => setGender(g)}
+                    className={`min-w-[4.5rem] px-4 py-2 rounded-sm border font-body text-sm tracking-wider transition-all inline-flex items-center gap-2 ${
+                      gender === g
+                        ? "border-primary bg-primary/10 text-foreground font-semibold"
+                        : "border-primary/30 text-foreground/70 hover:border-primary/70"
+                    }`}
+                  >
+                    <Users className="w-3.5 h-3.5" />
+                    {g}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {/* Color selector */}
             <div className="mb-6">
               <p className="font-body text-sm tracking-wide uppercase text-foreground/70 mb-3">Couleur : <span className="text-foreground font-semibold">{color}</span></p>
