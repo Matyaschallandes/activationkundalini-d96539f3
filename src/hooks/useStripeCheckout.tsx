@@ -8,6 +8,8 @@ interface CheckoutOptions {
   customerEmail?: string;
   returnUrl?: string;
   title?: string;
+  collectShipping?: boolean;
+  metadata?: Record<string, string>;
 }
 
 export function useStripeCheckout() {

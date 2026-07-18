@@ -7,9 +7,11 @@ interface Props {
   quantity?: number;
   customerEmail?: string;
   returnUrl?: string;
+  collectShipping?: boolean;
+  metadata?: Record<string, string>;
 }
 
-export function StripeEmbeddedCheckout({ priceId, quantity, customerEmail, returnUrl }: Props) {
+export function StripeEmbeddedCheckout({ priceId, quantity, customerEmail, returnUrl, collectShipping, metadata }: Props) {
   const fetchClientSecret = async (): Promise<string> => {
     const finalReturnUrl =
       returnUrl ||
@@ -21,6 +23,8 @@ export function StripeEmbeddedCheckout({ priceId, quantity, customerEmail, retur
         customerEmail,
         returnUrl: finalReturnUrl,
         environment: getStripeEnvironment(),
+        collectShipping,
+        metadata,
       },
     });
     if (error || !data?.clientSecret) {
