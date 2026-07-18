@@ -162,7 +162,7 @@ export function TshirtSection() {
                 onClick={handleBuy}
                 className="w-full md:w-auto bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-10 py-4 rounded-sm hover:shadow-gold transition-all duration-500"
               >
-                Commander — {color} / {size}
+                Commander — {gender} / {color} / {size}
               </button>
             ) : (
               <p className="text-sm text-muted-foreground italic">Paiement bientôt disponible.</p>
