@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ShieldCheck, Truck, Ruler, Shirt, Sparkles, WashingMachine } from "lucide-react";
+import { ShieldCheck, Truck, Ruler, Shirt, Sparkles, WashingMachine, Users } from "lucide-react";
 import { useStripeCheckout } from "@/hooks/useStripeCheckout";
 import { isPaymentsConfigured } from "@/lib/stripe";
 import tshirtBlack from "@/assets/tshirt-13lv-noir.png.asset.json";
@@ -11,20 +11,22 @@ const COLORS = [
   { key: "Noir", swatch: "#111111" },
   { key: "Blanc", swatch: "#f5f5f0" },
 ] as const;
+const GENDERS = ["Femme", "Homme"] as const;
 
 export function TshirtSection() {
   const { openCheckout, checkoutElement } = useStripeCheckout();
   const [size, setSize] = useState<string>("M");
   const [color, setColor] = useState<string>("Noir");
+  const [gender, setGender] = useState<string>("Homme");
   const [gallery, setGallery] = useState(tshirtBlack.url);
 
   const handleBuy = () => {
     openCheckout({
       priceId: "tshirt_13lv_chf_27",
       quantity: 1,
-      title: `T-shirt 13LV — ${color} / ${size}`,
+      title: `T-shirt 13LV — ${gender} / ${color} / ${size}`,
       collectShipping: true,
-      metadata: { product: "tshirt_13lv", size, color },
+      metadata: { product: "tshirt_13lv", size, color, gender },
       returnUrl: `${window.location.origin}/checkout/return?session_id={CHECKOUT_SESSION_ID}&product=tshirt_13lv`,
     });
   };
