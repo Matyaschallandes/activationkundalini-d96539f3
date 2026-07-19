@@ -183,6 +183,26 @@ export function TshirtSection() {
               </ul>
             </div>
 
+            {/* À propos de la marque 13 ÉLEVÉ */}
+            <div className="mt-6 p-5 rounded-sm border border-primary/20 bg-card/40">
+              <p className="text-primary font-body tracking-[0.3em] uppercase text-xs mb-2">À propos de la marque</p>
+              <h4 className="font-heading text-xl text-foreground mb-3">
+                13 <span className="italic text-gradient-gold">ÉLEVÉ</span> — une marque, un état d'esprit
+              </h4>
+              <div className="space-y-3 font-body text-sm text-foreground/80 leading-relaxed">
+                <p>
+                  <strong>13 ÉLEVÉ (13LV)</strong> est une marque née de la passion pour la spiritualité, l'éveil de la conscience et la transformation personnelle. Le nombre 13 y est vu comme un symbole de <strong>renouveau</strong>, de passage vers un nouveau cycle et d'<strong>élévation intérieure</strong>. Il fait écho aux cycles de la Lune, qui rythment la nature tout au long de l'année, ainsi qu'à de nombreuses traditions spirituelles qui associent ce nombre à la métamorphose et à l'évolution.
+                </p>
+                <p>
+                  Le nom 13 ÉLEVÉ représente l'invitation à <strong>élever sa vibration</strong>, développer sa conscience et avancer en restant fidèle à soi-même. Chaque vêtement est conçu pour transmettre un message positif, inspirer le courage, la liberté et l'authenticité, et rappeler que chaque fin est le début d'un nouveau chemin.
+                </p>
+                <p>
+                  Plus qu'une marque de vêtements, 13 ÉLEVÉ est un état d'esprit : porter des créations qui reflètent une quête de sens, un lien avec la nature, les cycles de la vie et le désir de grandir intérieurement. <em>Rejoins le mouvement et affiche avec fierté les valeurs de transformation, de conscience et d'élévation.</em>
+                </p>
+              </div>
+            </div>
+
+
             <div className="mt-6 space-y-3 text-sm text-foreground/70">
               <div className="flex items-start gap-3">
                 <Truck className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
