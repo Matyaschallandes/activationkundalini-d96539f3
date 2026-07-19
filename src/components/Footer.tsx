@@ -57,6 +57,18 @@ const Footer = () => {
           </ul>
         </nav>
 
+        <nav aria-label="Soins à Neuchâtel" className="pt-2">
+          <p className="font-body text-xs uppercase tracking-widest text-foreground/50 mb-2">
+            Soins à Neuchâtel
+          </p>
+          <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs">
+            <li><Link to="/reiki-neuchatel" className="text-foreground/60 hover:text-primary transition-colors">Reiki Neuchâtel</Link></li>
+            <li><Link to="/lahochi-neuchatel" className="text-foreground/60 hover:text-primary transition-colors">Lahochi Neuchâtel</Link></li>
+            <li><Link to="/chamanisme-neuchatel" className="text-foreground/60 hover:text-primary transition-colors">Chamanisme Neuchâtel</Link></li>
+            <li><Link to="/kinesiologie-neuchatel" className="text-foreground/60 hover:text-primary transition-colors">Kinésiologie Neuchâtel</Link></li>
+          </ul>
+        </nav>
+
         <nav aria-label="Accompagnements" className="pt-2">
           <p className="font-body text-xs uppercase tracking-widest text-foreground/50 mb-2">
             Accompagnements
