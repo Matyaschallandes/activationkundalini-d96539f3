@@ -378,5 +378,34 @@ ${commonNav}
 </main>
 ${commonFooter}`,
   },
+  {
+    path: "/reiki-neuchatel",
+    title: "Reiki à Neuchâtel — Soin énergétique doux à Bevaix | Karmaequilego",
+    description: "Séance de Reiki à Neuchâtel avec Matyas Challandes à Bevaix. Reiki Kundalini pour libérer stress, fatigue et retrouver l'harmonie.",
+    canonical: `${BASE}/reiki-neuchatel`,
+    content: `${commonNav}<main><h1>Reiki à Neuchâtel — Un soin énergétique doux pour retrouver l'harmonie</h1><p>Séances de Reiki et Reiki Kundalini à Bevaix, canton de Neuchâtel, avec Matyas Challandes. Reiki traditionnel enrichi de la lignée Kundalini pour dénouer les blocages profonds, apaiser le système nerveux et relancer la circulation énergétique.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p></main>${commonFooter}`,
+  },
+  {
+    path: "/lahochi-neuchatel",
+    title: "Lahochi à Neuchâtel — Soin énergétique haute vibration | Karmaequilego",
+    description: "Séance de Lahochi à Neuchâtel avec Matyas Challandes à Bevaix. Soin haute fréquence pour libérer les blocages profonds.",
+    canonical: `${BASE}/lahochi-neuchatel`,
+    content: `${commonNav}<main><h1>Lahochi à Neuchâtel — Un soin de haute fréquence pour libérer les blocages profonds</h1><p>Le Lahochi est un soin énergétique multidimensionnel de haute vibration. Séances à Bevaix (Neuchâtel) et à distance dans toute la Suisse romande.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p></main>${commonFooter}`,
+  },
+  {
+    path: "/chamanisme-neuchatel",
+    title: "Chamanisme à Neuchâtel — Soins chamaniques à Bevaix | Karmaequilego",
+    description: "Soins chamaniques à Neuchâtel avec Matyas Challandes : désenvoûtement, recouvrement d'âme, dégagement d'entités, coupure de liens.",
+    canonical: `${BASE}/chamanisme-neuchatel`,
+    content: `${commonNav}<main><h1>Chamanisme à Neuchâtel — Soins chamaniques traditionnels à Bevaix</h1><p>Chamane à Bevaix (Neuchâtel), je pratique des soins chamaniques ciblés : recouvrement d'âme, désenvoûtement, dégagement d'entités, coupure de liens, nettoyage énergétique. En présentiel ou à distance dans toute la Suisse romande.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p></main>${commonFooter}`,
+  },
+  {
+    path: "/kinesiologie-neuchatel",
+    title: "Kinésiologie à Neuchâtel — Libération des mémoires cellulaires | Karmaequilego",
+    description: "Kinésiologie à Neuchâtel avec Matyas Challandes à Bevaix. Libération émotionnelle, mémoires cellulaires, stress, croyances limitantes.",
+    canonical: `${BASE}/kinesiologie-neuchatel`,
+    content: `${commonNav}<main><h1>Kinésiologie à Neuchâtel — Écouter le corps pour libérer ce qui bloque</h1><p>Kinésiologie à Bevaix (canton de Neuchâtel) avec Matyas Challandes. Test musculaire pour localiser les blocages, libérer stress, émotions et croyances limitantes. Approche combinée avec l'activation Kundalini et le chamanisme.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p></main>${commonFooter}`,
+  },
   ...citySnapshots,
 ];
+

@@ -32,6 +32,10 @@ import VilleNeuchatel from "./pages/VilleNeuchatel";
 import VilleLausanne from "./pages/VilleLausanne";
 import VilleFribourg from "./pages/VilleFribourg";
 import VilleGeneve from "./pages/VilleGeneve";
+import ReikiNeuchatel from "./pages/ReikiNeuchatel";
+import LahochiNeuchatel from "./pages/LahochiNeuchatel";
+import ChamanismeNeuchatel from "./pages/ChamanismeNeuchatel";
+import KinesiologieNeuchatel from "./pages/KinesiologieNeuchatel";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
@@ -71,6 +75,10 @@ const App = () => (
           <Route path="/activation-kundalini-lausanne" element={<VilleLausanne />} />
           <Route path="/activation-kundalini-fribourg" element={<VilleFribourg />} />
           <Route path="/activation-kundalini-geneve" element={<VilleGeneve />} />
+          <Route path="/reiki-neuchatel" element={<ReikiNeuchatel />} />
+          <Route path="/lahochi-neuchatel" element={<LahochiNeuchatel />} />
+          <Route path="/chamanisme-neuchatel" element={<ChamanismeNeuchatel />} />
+          <Route path="/kinesiologie-neuchatel" element={<KinesiologieNeuchatel />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
