@@ -5,6 +5,8 @@ import FrustrationsSection from "@/components/FrustrationsSection";
 import TransformationSection from "@/components/TransformationSection";
 import VideoSection from "@/components/VideoSection";
 import OffersImageSection from "@/components/OffersImageSection";
+import CtaSection from "@/components/CtaSection";
+import FaqSection, { faqJsonLd } from "@/components/FaqSection";
 
 const organizationLd = {
   "@context": "https://schema.org",
