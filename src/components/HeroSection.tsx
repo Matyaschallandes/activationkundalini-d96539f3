@@ -40,7 +40,7 @@ const HeroSection = () => {
                 onClick={() => setDialogOpen(true)}
                 className="bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-8 py-4 rounded-sm hover:shadow-gold transition-all duration-500"
               >
-                Réserver un appel découverte
+                Appel découverte gratuit (30 min)
               </button>
               <Link
                 to="/rendez-vous"

@@ -5,6 +5,8 @@ import FrustrationsSection from "@/components/FrustrationsSection";
 import TransformationSection from "@/components/TransformationSection";
 import VideoSection from "@/components/VideoSection";
 import OffersImageSection from "@/components/OffersImageSection";
+import CtaSection from "@/components/CtaSection";
+import FaqSection, { faqJsonLd } from "@/components/FaqSection";
 
 const organizationLd = {
   "@context": "https://schema.org",
@@ -56,13 +58,15 @@ const Index = () => {
         description="Guérisseur énergétique et chamane à Bevaix (Neuchâtel). Activation Kundalini, soins chamaniques (désenvoûtement, recouvrement d'âme, dégagement d'entités), burn-out, traumatismes. En présentiel et à distance en Suisse romande."
         path="/"
         keywords="anxiété, burn-out, dépression, stress, traumatisme, chamanisme, chamane Suisse romande, désenvoûtement, recouvrement d'âme, dégagement d'entités, vision intuitive, guérisseur énergétique, activation kundalini, soins énergétiques Neuchâtel, Bevaix"
-        jsonLd={[organizationLd, websiteLd]}
+        jsonLd={[organizationLd, websiteLd, faqJsonLd]}
       />
       <HeroSection />
       <FrustrationsSection />
       <VideoSection />
       <TransformationSection />
       <OffersImageSection />
+      <FaqSection />
+      <CtaSection />
     </Layout>
   );
 };
