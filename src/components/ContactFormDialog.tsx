@@ -77,14 +77,17 @@ const ContactFormDialog = ({ open, onOpenChange, offerName }: ContactFormDialogP
       <DialogContent className="sm:max-w-lg bg-card border-border">
         <DialogHeader>
           <DialogTitle className="font-heading text-2xl text-foreground">
-            {offerName ? `Réserver — ${offerName}` : "Réserver un appel découverte"}
+            {offerName ? `Réserver — ${offerName}` : "Réserver mon appel découverte gratuit (30 min)"}
           </DialogTitle>
           <DialogDescription className="font-body text-muted-foreground">
-            Remplis ce formulaire et je te recontacte rapidement.
+            Un entretien offert de 30 minutes pour découvrir ma technique, ressentir l'énergie avec un mini-soin gratuit, et identifier ensemble l'origine de vos blocages grâce au test énergétique.
           </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+          <p className="font-body text-xs text-muted-foreground italic">
+            Champs essentiels : prénom, nom, email et téléphone. Les informations de naissance sont facultatives.
+          </p>
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="prenom" className="font-body text-foreground/80">Prénom *</Label>
@@ -102,7 +105,7 @@ const ContactFormDialog = ({ open, onOpenChange, offerName }: ContactFormDialogP
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="telephone" className="font-body text-foreground/80">Téléphone</Label>
+            <Label htmlFor="telephone" className="font-body text-foreground/80">Téléphone *</Label>
             <Input id="telephone" type="tel" value={form.telephone} onChange={(e) => handleChange("telephone", e.target.value)} maxLength={20} className="bg-background border-border" />
           </div>
 
