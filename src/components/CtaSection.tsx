@@ -10,26 +10,30 @@ const CtaSection = () => {
 
       <div className="relative z-10 container mx-auto px-6 max-w-3xl text-center">
         <p className="text-primary font-body tracking-[0.3em] uppercase text-xs mb-4">
-          🔥 Prêt(e) ?
+          🎁 Offert · 30 minutes
         </p>
         <h2 className="font-heading text-4xl md:text-5xl font-light mb-6 text-foreground">
-          Si tu sens que ton feu sacré est prêt à{" "}
-          <span className="text-gradient-gold italic">s'activer…</span>
+          Réservez votre <span className="text-gradient-gold italic">appel découverte gratuit</span>
         </h2>
         <div className="glow-line w-24 mx-auto mb-8" />
 
-        <p className="font-body text-muted-foreground text-lg mb-4 leading-relaxed">
-          Réserve ton appel découverte et commençons ensemble ta transformation profonde.
+        <p className="font-body text-muted-foreground text-lg mb-6 leading-relaxed">
+          Un entretien offert de 30 minutes pour :
         </p>
+        <ul className="text-left max-w-xl mx-auto space-y-3 mb-8 font-body text-foreground/85">
+          <li className="flex gap-3"><span className="text-primary">→</span> Découvrir ma technique et poser toutes vos questions.</li>
+          <li className="flex gap-3"><span className="text-primary">→</span> Ressentir concrètement l'énergie grâce à un mini-soin gratuit.</li>
+          <li className="flex gap-3"><span className="text-primary">→</span> Identifier l'origine d'un blocage grâce au test énergétique.</li>
+        </ul>
         <p className="font-body text-muted-foreground/70 text-sm mb-12">
-          En présentiel ou à distance (Zoom · WhatsApp vidéo · sur photo)
+          En présentiel à Bevaix ou à distance (Zoom · WhatsApp vidéo · sur photo).
         </p>
 
         <button
           onClick={() => setDialogOpen(true)}
           className="inline-block bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-12 py-5 rounded-sm hover:shadow-gold transition-all duration-500"
         >
-          Réserve ton appel découverte maintenant
+          Réserver mon appel découverte gratuit
         </button>
       </div>
 
