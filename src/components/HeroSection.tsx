@@ -19,23 +19,26 @@ const HeroSection = () => {
           {/* Texte */}
           <div className="text-center md:text-left">
             <p className="text-foreground font-body font-semibold tracking-[0.3em] uppercase text-xs md:text-sm mb-6 animate-fade-in">
-              🔥 Guérisseur · Activation Kundalini · Chamanisme · Kinésiologie
+              Activation Kundalini · Chamanisme · Kinésiologie · Bevaix & Suisse romande
             </p>
 
             <h1 className="font-heading text-4xl md:text-6xl font-light leading-tight mb-6 animate-fade-in-up text-foreground">
-              Sortir du <span className="text-gradient-gold italic font-medium">burn-out</span>, de la fatigue et de la déconnexion — pour enfin vivre votre <span className="text-gradient-gold italic font-medium">mission de vie</span>.
+              Tu te sens <span className="text-gradient-gold italic font-medium">brisé(e)</span>, <span className="text-gradient-gold italic font-medium">éteint(e)</span>, <span className="text-gradient-gold italic font-medium">déconnecté(e)</span> de toi-même ?
             </h1>
 
             <p className="font-body text-foreground/90 text-base md:text-lg leading-relaxed mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              Vous vous sentez épuisé(e), désaligné(e), vide de sens ? Vous traversez un <strong>burn-out</strong>, une <strong>dépression</strong> ou une <strong>fatigue chronique</strong> qui ne passe plus ?
-              Je suis <strong>Matyas Challandes</strong>, guérisseur énergétique à Bevaix (Neuchâtel). J'accompagne les personnes déconnectées d'elles-mêmes à se réaligner, retrouver leur feu intérieur, et incarner la raison profonde pour laquelle elles sont venues sur Terre.
+              Tu traverses peut-être un <strong>burn-out</strong>, une <strong>dépression</strong>, une <strong>fatigue chronique</strong>, ou des <strong>addictions</strong> qui te rappellent sans cesse au passé. Tu donnes, tu tiens le coup, et pourtant tu ne trouves plus de sens. Tu as l'impression de vivre à côté de toi.
             </p>
 
-            <p className="font-body text-foreground/80 text-sm md:text-base leading-relaxed mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-              Ma spécialité : <span className="text-foreground font-semibold">l'activation Kundalini et le chamanisme</span> (désenvoûtement, recouvrement d'âme, dégagement d'entités). Je pratique aussi la <span className="text-foreground font-semibold">kinésiologie</span> pour libérer les mémoires cellulaires bloquées. En présentiel à Bevaix ou à distance dans toute la Suisse romande.
+            <p className="font-body text-foreground/90 text-base md:text-lg leading-relaxed mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+              Tu n'es pas seul(e). Et si tu es ici, ce n'est probablement pas un hasard.
             </p>
 
-            <div className="flex flex-wrap gap-3 justify-center md:justify-start opacity-0 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
+            <p className="font-body text-foreground/80 text-sm md:text-base leading-relaxed mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+              Je suis <strong>Matyas Challandes</strong>, guérisseur énergétique et chamane à Bevaix (Neuchâtel). J'accompagne les personnes qui ont perdu le fil — à travers l'<span className="text-foreground font-semibold">activation Kundalini</span>, le <span className="text-foreground font-semibold">chamanisme</span> (désenvoûtement, recouvrement d'âme, dégagement d'entités) et la <span className="text-foreground font-semibold">kinésiologie</span>. Mon rôle n'est pas de te "soigner" — c'est de te aider à réveiller la force qui dort en toi, pour que tu puisses te réaligner, reprendre ton élan, et avancer vers ta mission de vie.
+            </p>
+
+            <div className="flex flex-wrap gap-3 justify-center md:justify-start opacity-0 animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
               <button
                 onClick={() => setDialogOpen(true)}
                 className="bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-8 py-4 rounded-sm hover:shadow-gold transition-all duration-500"
