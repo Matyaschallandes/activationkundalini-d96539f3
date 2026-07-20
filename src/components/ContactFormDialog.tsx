@@ -35,8 +35,8 @@ const ContactFormDialog = ({ open, onOpenChange, offerName }: ContactFormDialogP
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.prenom || !form.nom || !form.email) {
-      toast.error("Merci de remplir au moins le prénom, le nom et l'email.");
+    if (!form.prenom || !form.nom || !form.email || !form.telephone) {
+      toast.error("Merci de remplir prénom, nom, email et téléphone.");
       return;
     }
 
