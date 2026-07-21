@@ -27,15 +27,19 @@ const HeroSection = () => {
             </h1>
 
             <p className="font-body text-foreground/90 text-base md:text-lg leading-relaxed mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              Tu traverses peut-être un <strong>burn-out</strong>, une <strong>dépression</strong>, une <strong>fatigue chronique</strong>, ou des <strong>addictions</strong> qui te rappellent sans cesse au passé. Tu donnes, tu tiens le coup, et pourtant tu ne trouves plus de sens. Tu as l'impression de vivre à côté de toi.
+              Tu traverses peut-être du <strong>stress</strong>, de l'<strong>anxiété</strong>, un <strong>burn-out</strong>, une <strong>fatigue</strong> qui ne passe plus, des <strong>traumatismes</strong>, des <strong>blocages émotionnels</strong> ou une profonde <strong>quête de sens</strong>. Tu donnes, tu tiens le coup, et pourtant tu as l'impression de vivre à côté de toi.
             </p>
 
             <p className="font-body text-foreground/90 text-base md:text-lg leading-relaxed mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
               Tu n'es pas seul(e). Et si tu es ici, ce n'est probablement pas un hasard.
             </p>
 
-            <p className="font-body text-foreground/80 text-sm md:text-base leading-relaxed mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-              Je suis <strong>Matyas Challandes</strong>, guérisseur énergétique et chamane à Bevaix (Neuchâtel). J'accompagne les personnes qui ont perdu le fil — à travers l'<span className="text-foreground font-semibold">activation Kundalini</span>, le <span className="text-foreground font-semibold">chamanisme</span> (désenvoûtement, recouvrement d'âme, dégagement d'entités) et la <span className="text-foreground font-semibold">kinésiologie</span>. Mon rôle n'est pas de te "soigner" — c'est de te aider à réveiller la force qui dort en toi, pour que tu puisses te réaligner, reprendre ton élan, et avancer vers ta mission de vie.
+            <p className="font-body text-foreground/80 text-sm md:text-base leading-relaxed mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+              Je suis <strong>Matyas Challandes</strong>, guérisseur énergétique et chamane à Bevaix (Neuchâtel). J'accompagne les personnes qui ont perdu le fil et qui veulent se reconnecter à leur plein pouvoir, leur plein potentiel et leur essence profonde.
+            </p>
+
+            <p className="font-body text-foreground/80 text-sm md:text-base leading-relaxed mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
+              Grâce à la <span className="text-foreground font-semibold">kinésiologie</span> (en formation) et aux <span className="text-foreground font-semibold">tests énergétiques</span>, j'identifie les déséquilibres à conscientiser avant la séance. J'associe ensuite la <span className="text-foreground font-semibold">respiration alchimique</span>, l'<span className="text-foreground font-semibold">activation de la Kundalini</span>, le <span className="text-foreground font-semibold">nettoyage énergétique</span> et des pratiques chamaniques — recouvrement d'âme, libération transgénérationnelle, libération des mémoires des vies antérieures et désenvoûtement. Mon rôle n'est pas de te "soigner" : c'est de t'aider à réveiller la force qui dort en toi, pour que tu puisses te réaligner, reprendre ton élan et avancer vers ta mission de vie.
             </p>
 
             <div className="flex flex-wrap gap-3 justify-center md:justify-start opacity-0 animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
@@ -70,9 +74,9 @@ const HeroSection = () => {
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.9s" }}>
           {[
-            "Burn-out, dépression ou fatigue chronique",
-            "Addictions ou déconnexion de soi-même",
-            "Envie de retrouver sa mission de vie",
+            "Stress, anxiété, burn-out ou fatigue",
+            "Traumatismes, blocages émotionnels ou quête de sens",
+            "Envie de se reconnecter à sa mission et son essence",
           ].map((text, i) => (
             <div key={i} className="border border-border rounded-sm px-6 py-4 bg-card/60 backdrop-blur-sm text-center">
               <p className="font-body text-sm text-foreground/85">{text}</p>
