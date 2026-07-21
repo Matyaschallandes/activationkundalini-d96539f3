@@ -27,7 +27,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="font-body text-foreground/90 text-base md:text-lg leading-relaxed mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-              Tu traverses peut-être du <strong>stress</strong>, de l'<strong>anxiété</strong>, un <strong>burn-out</strong>, une <strong>fatigue</strong> qui ne passe plus, des <strong>traumatismes</strong>, des <strong>blocages émotionnels</strong> ou une profonde <strong>quête de sens</strong>. Tu donnes, tu tiens le coup, et pourtant tu as l'impression de vivre à côté de toi.
+              Peut-être que le <strong>stress</strong>, l'<strong>anxiété</strong>, un <strong>burn-out</strong> ou une <strong>fatigue chronique</strong> ont fini par t'éloigner de toi-même. Peut-être que des <strong>traumatismes</strong>, des <strong>addictions</strong> ou des <strong>blocages émotionnels</strong> te font vivre à côté de ta vie, comme si quelque chose de profond s'était arrêté. Tu donnes, tu tiens le coup, et pourtant tu sens qu'il te manque un fil — une direction, une essence, un sens.
             </p>
 
             <p className="font-body text-foreground/90 text-base md:text-lg leading-relaxed mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
@@ -35,11 +35,11 @@ const HeroSection = () => {
             </p>
 
             <p className="font-body text-foreground/80 text-sm md:text-base leading-relaxed mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-              Je suis <strong>Matyas Challandes</strong>, guérisseur énergétique et chamane à Bevaix (Neuchâtel). J'accompagne les personnes qui ont perdu le fil et qui veulent se reconnecter à leur plein pouvoir, leur plein potentiel et leur essence profonde.
+              Je suis <strong>Matyas Challandes</strong>, guérisseur énergétique et chamane à Bevaix (Neuchâtel). Mon accompagnement mêle <span className="text-foreground font-semibold">kinésiologie</span> (en formation), <span className="text-foreground font-semibold">tests énergétiques</span>, <span className="text-foreground font-semibold">respiration alchimique</span>, <span className="text-foreground font-semibold">activation de la Kundalini</span>, <span className="text-foreground font-semibold">nettoyage énergétique</span> et pratiques chamaniques — recouvrement d'âme, libération transgénérationnelle, libération des mémoires des vies antérieures et désenvoûtement.
             </p>
 
             <p className="font-body text-foreground/80 text-sm md:text-base leading-relaxed mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
-              Grâce à la <span className="text-foreground font-semibold">kinésiologie</span> (en formation) et aux <span className="text-foreground font-semibold">tests énergétiques</span>, j'identifie les déséquilibres à conscientiser avant la séance. J'associe ensuite la <span className="text-foreground font-semibold">respiration alchimique</span>, l'<span className="text-foreground font-semibold">activation de la Kundalini</span>, le <span className="text-foreground font-semibold">nettoyage énergétique</span> et des pratiques chamaniques — recouvrement d'âme, libération transgénérationnelle, libération des mémoires des vies antérieures et désenvoûtement. Mon rôle n'est pas de te "soigner" : c'est de t'aider à réveiller la force qui dort en toi, pour que tu puisses te réaligner, reprendre ton élan et avancer vers ta mission de vie.
+              Ensemble, nous identifions les déséquilibres à conscientiser, nous libérons ce qui bloque ton élan, et nous réveillons la force qui dort en toi. Mon rôle n'est pas de te "soigner" : c'est de t'aider à te reconnecter à ton <strong>plein pouvoir</strong>, ton <strong>plein potentiel</strong> et ton <strong>essence profonde</strong>, pour que tu puisses reprendre alignment, avancer sereinement et réaliser ta mission de vie.
             </p>
 
             <div className="flex flex-wrap gap-3 justify-center md:justify-start opacity-0 animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
