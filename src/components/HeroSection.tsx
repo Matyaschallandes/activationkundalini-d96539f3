@@ -74,9 +74,9 @@ const HeroSection = () => {
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-4 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.9s" }}>
           {[
-            "Burn-out, dépression ou fatigue chronique",
-            "Addictions ou déconnexion de soi-même",
-            "Envie de retrouver sa mission de vie",
+            "Stress, anxiété, burn-out ou fatigue",
+            "Traumatismes, blocages émotionnels ou quête de sens",
+            "Envie de se reconnecter à sa mission et son essence",
           ].map((text, i) => (
             <div key={i} className="border border-border rounded-sm px-6 py-4 bg-card/60 backdrop-blur-sm text-center">
               <p className="font-body text-sm text-foreground/85">{text}</p>
