@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import FrustrationsSection from "@/components/FrustrationsSection";
 import TransformationSection from "@/components/TransformationSection";
 import VideoSection from "@/components/VideoSection";
+import SeanceOverviewSection from "@/components/SeanceOverviewSection";
 import OffersImageSection from "@/components/OffersImageSection";
 import CtaSection from "@/components/CtaSection";
 import FaqSection, { faqJsonLd } from "@/components/FaqSection";
@@ -62,6 +63,7 @@ const Index = () => {
       />
       <HeroSection />
       <FrustrationsSection />
+      <SeanceOverviewSection />
       <VideoSection />
       <TransformationSection />
       <OffersImageSection />
