@@ -22,8 +22,8 @@ const HeroSection = () => {
               Activation Kundalini · Chamanisme · Kinésiologie · Bevaix & Suisse romande
             </p>
 
-            <h1 className="font-heading text-4xl md:text-6xl font-light leading-tight mb-6 animate-fade-in-up text-foreground">
-              Tu te sens <span className="text-gradient-gold italic font-medium">brisé(e)</span>, <span className="text-gradient-gold italic font-medium">éteint(e)</span>, <span className="text-gradient-gold italic font-medium">déconnecté(e)</span> de toi-même ?
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-6 animate-fade-in-up text-foreground">
+              Tu te sens <span className="text-gradient-gold italic font-medium">brisé(e)</span>, <span className="text-gradient-gold italic font-medium">fatigué(e)</span>, <span className="text-gradient-gold italic font-medium">déconnecté(e)</span> de toi-même ? Je t'accompagne avec la <span className="text-gradient-gold italic font-medium">Kundalini</span>, la <span className="text-gradient-gold italic font-medium">kinésiologie</span> et le <span className="text-gradient-gold italic font-medium">chamanisme</span>.
             </h1>
 
             <p className="font-body text-foreground/90 text-base md:text-lg leading-relaxed mb-6 opacity-0 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
