@@ -36,6 +36,7 @@ import ReikiNeuchatel from "./pages/ReikiNeuchatel";
 import LahochiNeuchatel from "./pages/LahochiNeuchatel";
 import ChamanismeNeuchatel from "./pages/ChamanismeNeuchatel";
 import KinesiologieNeuchatel from "./pages/KinesiologieNeuchatel";
+import DeroulementSeance from "./pages/DeroulementSeance";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
@@ -79,6 +80,7 @@ const App = () => (
           <Route path="/lahochi-neuchatel" element={<LahochiNeuchatel />} />
           <Route path="/chamanisme-neuchatel" element={<ChamanismeNeuchatel />} />
           <Route path="/kinesiologie-neuchatel" element={<KinesiologieNeuchatel />} />
+          <Route path="/deroulement-seance" element={<DeroulementSeance />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
