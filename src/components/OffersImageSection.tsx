@@ -1,6 +1,6 @@
 import offresImage from "@/assets/offres-premium.png";
-import { Gift, Sparkles, Shield, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Gift } from "lucide-react";
+
 
 const OffersImageSection = () => {
   return (
@@ -23,54 +23,6 @@ const OffersImageSection = () => {
           />
         </div>
 
-        {/* Free Discovery Offer */}
-        <div className="relative rounded-lg border-2 border-primary/40 bg-card p-8 md:p-12 shadow-gold">
-          <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-gold text-primary-foreground font-body text-xs font-semibold tracking-[0.2em] uppercase px-5 py-2 rounded-sm whitespace-nowrap flex items-center gap-2">
-            <Gift className="w-3 h-3" /> Offert · 20 minutes
-          </div>
-
-          <div className="text-center mb-8 mt-2">
-            <h3 className="font-heading text-2xl md:text-3xl text-foreground mb-3">
-              Premier entretien <span className="text-gradient-gold italic">gratuit</span>
-            </h3>
-            <p className="font-body text-muted-foreground text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-              Un premier échange offert pour faire connaissance, ressentir l'énergie et découvrir ce qui bloque en toi.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center p-6 rounded-md bg-muted/40">
-              <Sparkles className="w-6 h-6 text-primary mx-auto mb-3" />
-              <p className="font-heading text-lg text-foreground mb-2">Échange 20 minutes</p>
-              <p className="font-body text-xs text-muted-foreground leading-relaxed">
-                Faire connaissance et clarifier ta demande
-              </p>
-            </div>
-            <div className="text-center p-6 rounded-md bg-muted/40">
-              <Zap className="w-6 h-6 text-primary mx-auto mb-3" />
-              <p className="font-heading text-lg text-foreground mb-2">Détection des 3 blocages</p>
-              <p className="font-body text-xs text-muted-foreground leading-relaxed">
-                Test énergétique pour révéler tes 3 blocages principaux
-              </p>
-            </div>
-            <div className="text-center p-6 rounded-md bg-muted/40">
-              <Shield className="w-6 h-6 text-primary mx-auto mb-3" />
-              <p className="font-heading text-lg text-foreground mb-2">Rituel de protection</p>
-              <p className="font-body text-xs text-muted-foreground leading-relaxed">
-                Bannissement énergétique offert
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Link
-              to="/rendez-vous"
-              className="inline-block bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-10 py-4 rounded-sm hover:shadow-gold transition-all duration-500"
-            >
-              Réserver mon entretien gratuit
-            </Link>
-          </div>
-        </div>
 
         {/* PDF Welcome Gift */}
         <div className="mt-12 rounded-lg border border-primary/30 bg-muted/30 p-8 md:p-10 text-center">
