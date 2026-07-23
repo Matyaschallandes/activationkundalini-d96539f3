@@ -1,6 +1,6 @@
 import offresImage from "@/assets/offres-premium.png";
-import { Gift, Sparkles, Shield, Zap } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Gift } from "lucide-react";
+
 
 const OffersImageSection = () => {
   return (
