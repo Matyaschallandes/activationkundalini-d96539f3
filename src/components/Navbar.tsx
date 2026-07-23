@@ -24,6 +24,23 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+      <a
+        href={GOOGLE_BUSINESS_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-2 h-8 bg-gradient-gold text-primary-foreground font-body text-xs tracking-wider hover:opacity-90 transition-opacity px-3"
+        aria-label="Voir la fiche Google Business Karmaequilego — noté 4.9 sur 5"
+      >
+        <span className="font-semibold">4.9 / 5</span>
+        <span className="flex items-center gap-0.5">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="w-3 h-3 fill-current" />
+          ))}
+        </span>
+        <span className="hidden sm:inline uppercase tracking-widest">sur Google</span>
+        <span className="sm:hidden uppercase tracking-widest">Google</span>
+        <ExternalLink className="w-3 h-3" />
+      </a>
       <div className="container mx-auto px-6 flex items-center justify-between h-16">
         <Link to="/" className="font-heading text-xl text-gradient-gold italic">
           Karmaequilego
