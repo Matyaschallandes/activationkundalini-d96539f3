@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ExternalLink } from "lucide-react";
+import { Menu, X, ExternalLink, Star } from "lucide-react";
+
+const GOOGLE_BUSINESS_URL = "https://www.google.com/search?q=Karmaequilego";
 
 const navItems = [
   { label: "Accueil", path: "/" },
