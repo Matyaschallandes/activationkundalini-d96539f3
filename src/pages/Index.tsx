@@ -55,8 +55,8 @@ const Index = () => {
   return (
     <Layout>
       <Seo
-        title="Guérisseur Énergétique & Chamane Suisse Romande | Kundalini, Chamanisme, Burn-out — Bevaix"
-        description="Guérisseur énergétique et chamane à Bevaix (Neuchâtel). Activation Kundalini, soins chamaniques (désenvoûtement, recouvrement d'âme, dégagement d'entités), burn-out, traumatismes. En présentiel et à distance en Suisse romande."
+        title="Guérisseur énergétique & chamane à Bevaix — Karmaequilego"
+        description="Matyas Challandes, praticien à Bevaix (Neuchâtel) : activation Kundalini, chamanisme, kinésiologie. Accompagnement burn-out, anxiété, traumatismes. Prix libre."
         path="/"
         keywords="anxiété, burn-out, dépression, stress, traumatisme, chamanisme, chamane Suisse romande, désenvoûtement, recouvrement d'âme, dégagement d'entités, vision intuitive, guérisseur énergétique, activation kundalini, soins énergétiques Neuchâtel, Bevaix"
         jsonLd={[organizationLd, websiteLd, faqJsonLd]}
