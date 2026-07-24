@@ -54,8 +54,8 @@ const Offres = () => {
   return (
     <Layout>
       <Seo
-        title="Offres & Tarifs — Soins Énergétiques, Kundalini, Kinésiologie | Prix Libre"
-        description="Découvrez les offres de soins énergétiques, activation Kundalini, kinésiologie et accompagnement burn-out en Suisse romande. Prix libre. Séances en présentiel à Bevaix ou à distance."
+        title="Offres & tarifs — Kundalini, soins, kinésiologie"
+        description="Offres de soins énergétiques, activation Kundalini, chamanisme et kinésiologie en Suisse romande. Prix libre. Présentiel à Bevaix ou à distance."
         path="/offres"
         keywords="tarifs soins énergétiques, prix activation kundalini, kinésiologie Neuchâtel, accompagnement burn out Suisse romande"
         jsonLd={jsonLd}

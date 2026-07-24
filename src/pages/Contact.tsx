@@ -14,8 +14,8 @@ const Contact = () => {
   return (
     <Layout>
       <Seo
-        title="Contact — Guérisseur Énergétique à Bevaix (Neuchâtel) | +41 76 244 55 52"
-        description="Contactez Matyas Challandes, guérisseur énergétique en Suisse romande. Adresse à Bevaix (Neuchâtel), téléphone, email et WhatsApp. Réponse rapide et bienveillante."
+        title="Contact — Guérisseur énergétique à Bevaix (Neuchâtel)"
+        description="Contact de Matyas Challandes à Bevaix (Neuchâtel) : téléphone, WhatsApp, email et adresse. Réponse rapide et bienveillante en Suisse romande."
         path="/contact"
         keywords="contact guérisseur énergétique Neuchâtel, activation kundalini contact Suisse"
         jsonLd={jsonLd}

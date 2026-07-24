@@ -4,8 +4,8 @@ const LahochiNeuchatel = () => (
   <VillePage
     slug="/lahochi-neuchatel"
     ville="Neuchâtel"
-    title="Lahochi à Neuchâtel — Soin énergétique haute vibration | Karmaequilego"
-    description="Séance de Lahochi à Neuchâtel avec Matyas Challandes à Bevaix. Soin énergétique haute vibration pour libérer les blocages, apaiser le corps et élever la conscience."
+    title="Lahochi à Neuchâtel — Soin énergétique haute vibration"
+    description="Séance de Lahochi à Neuchâtel avec Matyas Challandes à Bevaix. Soin haute vibration pour apaiser le corps et libérer les blocages. Prix libre."
     keywords="lahochi Neuchâtel, lahochi Bevaix, soin lahochi Suisse romande, praticien lahochi canton de Neuchâtel"
     h1="Lahochi à Neuchâtel — Un soin de haute fréquence pour libérer les blocages profonds"
     intro="Le Lahochi est une technique de soin énergétique de haute vibration transmise par des maîtres ascensionnés. Je pratique le Lahochi à Bevaix, dans le canton de Neuchâtel, en complément de l'activation Kundalini et du chamanisme."

@@ -4,8 +4,8 @@ const ReikiNeuchatel = () => (
   <VillePage
     slug="/reiki-neuchatel"
     ville="Neuchâtel"
-    title="Reiki à Neuchâtel — Soin énergétique doux à Bevaix | Karmaequilego"
-    description="Séance de Reiki à Neuchâtel avec Matyas Challandes, guérisseur énergétique à Bevaix. Reiki Kundalini pour libérer le stress, la fatigue et retrouver l'harmonie. Prix libre."
+    title="Reiki à Neuchâtel — Soin énergétique doux à Bevaix"
+    description="Séance de Reiki Kundalini à Neuchâtel avec Matyas Challandes à Bevaix. Détente profonde, apaisement du stress et de la fatigue. Prix libre."
     keywords="reiki Neuchâtel, reiki Bevaix, praticien reiki canton de Neuchâtel, reiki kundalini, soin énergétique doux Neuchâtel"
     h1="Reiki à Neuchâtel — Un soin énergétique doux pour retrouver l'harmonie"
     intro="Le Reiki est un soin énergétique japonais qui apaise le mental, relance la circulation vitale et soutient la libération émotionnelle. À Bevaix, dans le canton de Neuchâtel, je pratique un Reiki enrichi de la lignée Kundalini pour un travail plus profond."
