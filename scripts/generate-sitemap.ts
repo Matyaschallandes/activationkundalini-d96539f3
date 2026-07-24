@@ -37,13 +37,29 @@ const staticEntries: SitemapEntry[] = [
   { path: "/contact", changefreq: "yearly", priority: "0.6" },
   { path: "/rendez-vous", changefreq: "monthly", priority: "0.9" },
   { path: "/cercle-de-guerison", changefreq: "monthly", priority: "0.8" },
-  { path: "/page-une", changefreq: "monthly", priority: "0.6" },
+  { path: "/deroulement-seance", changefreq: "monthly", priority: "0.8" },
   { path: "/blog", changefreq: "weekly", priority: "0.9" },
+  { path: "/boutique", changefreq: "monthly", priority: "0.7" },
   { path: "/activation-kundalini-neuchatel", changefreq: "monthly", priority: "0.9" },
   { path: "/activation-kundalini-lausanne", changefreq: "monthly", priority: "0.9" },
   { path: "/activation-kundalini-fribourg", changefreq: "monthly", priority: "0.9" },
   { path: "/activation-kundalini-geneve", changefreq: "monthly", priority: "0.9" },
+  { path: "/soins-energetiques-canton-vaud", changefreq: "monthly", priority: "0.8" },
+  { path: "/soins-energetiques-canton-fribourg", changefreq: "monthly", priority: "0.8" },
+  { path: "/soins-energetiques-canton-geneve", changefreq: "monthly", priority: "0.8" },
+  { path: "/soins-energetiques-canton-jura", changefreq: "monthly", priority: "0.8" },
+  { path: "/soins-energetiques-canton-valais", changefreq: "monthly", priority: "0.8" },
+  { path: "/soins-energetiques-jura-bernois", changefreq: "monthly", priority: "0.8" },
+  { path: "/accompagnement-burn-out-suisse-romande", changefreq: "monthly", priority: "0.8" },
+  { path: "/retrouver-energie-fatigue-chronique", changefreq: "monthly", priority: "0.8" },
+  { path: "/apaiser-anxiete-angoisses", changefreq: "monthly", priority: "0.8" },
+  { path: "/retrouver-elan-baisse-de-moral", changefreq: "monthly", priority: "0.8" },
+  { path: "/reiki-neuchatel", changefreq: "monthly", priority: "0.8" },
+  { path: "/lahochi-neuchatel", changefreq: "monthly", priority: "0.8" },
+  { path: "/chamanisme-neuchatel", changefreq: "monthly", priority: "0.8" },
+  { path: "/kinesiologie-neuchatel", changefreq: "monthly", priority: "0.8" },
 ];
+
 
 async function fetchBlogPosts(): Promise<SitemapEntry[]> {
   try {
