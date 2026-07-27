@@ -406,6 +406,20 @@ ${commonFooter}`,
     canonical: `${BASE}/kinesiologie-neuchatel`,
     content: `${commonNav}<main><h1>Kinésiologie à Neuchâtel — Écouter le corps pour libérer ce qui bloque</h1><p>Kinésiologie à Bevaix (canton de Neuchâtel) avec Matyas Challandes. Test musculaire pour localiser les blocages, libérer stress, émotions et croyances limitantes. Approche combinée avec l'activation Kundalini et le chamanisme.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p></main>${commonFooter}`,
   },
+  {
+    path: "/kundalini-solstice",
+    title: "Kundalini & Solstice — Rituel énergétique de bascule saisonnière | Karmaequilego",
+    description: "Solstice d'été, solstice d'hiver : comment aligner l'activation Kundalini avec les portails énergétiques de l'année. Séances en Suisse romande.",
+    canonical: `${BASE}/kundalini-solstice`,
+    content: `${commonNav}<main><h1>Kundalini & Solstice — rituel énergétique de bascule saisonnière</h1><p>Les solstices (21 juin, 21 décembre) sont des portails énergétiques puissants où l'énergie Kundalini circule plus facilement. Séances renforcées autour des quatre portails de l'année à Bevaix (Neuchâtel) et à distance dans toute la Suisse romande.</p><h2>Les 4 grands portails de l'année</h2><ul><li>Solstice d'hiver — renaissance de la lumière intérieure</li><li>Équinoxe de printemps — activation du feu de vie</li><li>Solstice d'été — apogée solaire et ouverture du cœur</li><li>Équinoxe d'automne — récolte et libération karmique</li></ul><p><a href="/rendez-vous">Réserver une séance de solstice</a> · <a href="/rituel-equinoxe">Voir le rituel d'équinoxe</a>.</p></main>${commonFooter}`,
+  },
+  {
+    path: "/rituel-equinoxe",
+    title: "Rituel énergétique d'équinoxe — Nettoyage & alignement saisonnier | Karmaequilego",
+    description: "Équinoxes de printemps et d'automne : rituel de nettoyage énergétique, libération karmique et alignement. Bevaix (Neuchâtel) et à distance en Suisse romande.",
+    canonical: `${BASE}/rituel-equinoxe`,
+    content: `${commonNav}<main><h1>Rituel énergétique d'équinoxe — nettoyage et alignement saisonnier</h1><p>Les équinoxes (21 mars, 21 septembre) sont des moments d'équilibre parfait entre lumière et obscurité. Rituel de libération, nettoyage énergétique et alignement à la mission de vie. Séances à Bevaix (Neuchâtel) et à distance en Suisse romande.</p><p><a href="/rendez-vous">Réserver un rituel d'équinoxe</a> · <a href="/kundalini-solstice">Voir la page Solstice</a>.</p></main>${commonFooter}`,
+  },
   ...citySnapshots,
 ];
 
