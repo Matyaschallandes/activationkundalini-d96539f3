@@ -12,6 +12,7 @@ const navItems = [
   { label: "Mon histoire", path: "/mon-histoire" },
   { label: "À propos", path: "/a-propos" },
   { label: "Cercle de guérison", path: "/cercle-de-guerison" },
+  { label: "Photos", path: "/photos" },
   { label: "Blog", path: "/blog" },
   { label: "Boutique", path: "/boutique" },
   { label: "Rendez-vous", path: "/rendez-vous" },

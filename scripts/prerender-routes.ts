@@ -420,6 +420,13 @@ ${commonFooter}`,
     canonical: `${BASE}/rituel-equinoxe`,
     content: `${commonNav}<main><h1>Rituel énergétique d'équinoxe — nettoyage et alignement saisonnier</h1><p>Les équinoxes (21 mars, 21 septembre) sont des moments d'équilibre parfait entre lumière et obscurité. Rituel de libération, nettoyage énergétique et alignement à la mission de vie. Séances à Bevaix (Neuchâtel) et à distance en Suisse romande.</p><p><a href="/rendez-vous">Réserver un rituel d'équinoxe</a> · <a href="/kundalini-solstice">Voir la page Solstice</a>.</p></main>${commonFooter}`,
   },
+  {
+    path: "/photos",
+    title: "Photos — Cercles de Guérison & Séances Kundalini | Bevaix, Neuchâtel",
+    description: "Photos des cercles de guérison collectifs et séances d'activation Kundalini animés par Matyas Challandes à Bevaix (Neuchâtel). Respiration alchimique, toucher énergétique, libération émotionnelle.",
+    canonical: `${BASE}/photos`,
+    content: `${commonNav}<main><h1>Le Cercle de Guérison en images</h1><p>Instants capturés pendant les cercles collectifs à Bevaix (Neuchâtel) : respiration alchimique, accompagnement par le toucher et activation de l'énergie vitale, dans un cadre sécurisé et bienveillant.</p><p><a href="/cercle-de-guerison">Découvrir le cercle de guérison</a> · <a href="/rendez-vous">Prendre rendez-vous</a>.</p></main>${commonFooter}`,
+  },
   ...citySnapshots,
 ];
 
