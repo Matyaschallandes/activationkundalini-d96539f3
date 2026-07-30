@@ -1,5 +1,7 @@
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
+import CercleGallery from "@/components/CercleGallery";
+import { cerclePhotos } from "@/data/cerclePhotos";
 import { MessageCircle, Users, Sparkles, Flame, Globe, Bell, Bed, Wind, Wand2, Heart } from "lucide-react";
 
 
@@ -166,6 +168,14 @@ const CercleGuerison = () => {
             <p className="font-body text-sm text-muted-foreground text-center italic mt-6">
               Chaque intégration est unique et se poursuit parfois plusieurs jours après le cercle.
             </p>
+          </div>
+
+          {/* Galerie photos */}
+          <div className="mb-12">
+            <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-8 text-center">
+              Le cercle en images
+            </h2>
+            <CercleGallery photos={cerclePhotos} />
           </div>
 
           {/* Tarif */}
