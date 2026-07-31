@@ -87,6 +87,7 @@ const App = () => (
           <Route path="/deroulement-seance" element={<DeroulementSeance />} />
           <Route path="/kundalini-solstice" element={<KundaliniSolstice />} />
           <Route path="/rituel-equinoxe" element={<RituelEquinoxe />} />
+          <Route path="/photos" element={<Photos />} />
           <Route path="/carnet-de-preparation" element={<CarnetPreparation />} />
 
           <Route path="*" element={<NotFound />} />
