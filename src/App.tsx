@@ -40,6 +40,7 @@ import DeroulementSeance from "./pages/DeroulementSeance";
 import KundaliniSolstice from "./pages/KundaliniSolstice";
 import RituelEquinoxe from "./pages/RituelEquinoxe";
 import Photos from "./pages/Photos";
+import CarnetPreparation from "./pages/CarnetPreparation";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
