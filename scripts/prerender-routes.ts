@@ -427,6 +427,13 @@ ${commonFooter}`,
     canonical: `${BASE}/photos`,
     content: `${commonNav}<main><h1>Le Cercle de Guérison en images</h1><p>Instants capturés pendant les cercles collectifs à Bevaix (Neuchâtel) : respiration alchimique, accompagnement par le toucher et activation de l'énergie vitale, dans un cadre sécurisé et bienveillant.</p><p><a href="/cercle-de-guerison">Découvrir le cercle de guérison</a> · <a href="/rendez-vous">Prendre rendez-vous</a>.</p></main>${commonFooter}`,
   },
+  {
+    path: "/carnet-de-preparation",
+    title: "Carnet de préparation en ligne — Avant ta séance d'activation Kundalini | Karmaequilego",
+    description: "Remplis en ligne ton carnet de préparation avant ta séance d'activation Kundalini : libération des mémoires, croyances limitantes, message du corps, clés d'harmonisation et PDF personnalisé à télécharger.",
+    canonical: `${BASE}/carnet-de-preparation`,
+    content: `${commonNav}<main><h1>Carnet de préparation en ligne à ta séance d'activation Kundalini</h1><p>Ce carnet prépare le corps et le mental à libérer les mémoires avant le soin énergétique. En neuf étapes guidées, tu clarifies ce que tu choisis de libérer, la version de toi que tu souhaites incarner, les peurs et croyances limitantes qui te retiennent, le message de ton corps et ton engagement des 72 heures.</p><h2>Ce que tu reçois à la fin</h2><p>Une lecture énergétique symbolique de tes réponses (centres énergétiques les plus sollicités, thèmes repérés), des clés d'harmonisation personnalisées, un tableau pour remplacer tes programmes limitants par de nouvelles vérités, un protocole de préparation des 72 heures, et ton carnet complet en PDF à télécharger.</p><h2>Confidentialité</h2><p>Tes réponses sont sauvegardées dans ton navigateur et transmises uniquement à Matyas Challandes pour préparer ta séance. Support de bien-être et de développement personnel, sans visée médicale.</p><p><a href="/deroulement-seance">Voir le déroulement d'une séance</a> · <a href="/rendez-vous">Prendre rendez-vous</a>.</p></main>${commonFooter}`,
+  },
   ...citySnapshots,
 ];
 
