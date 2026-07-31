@@ -40,6 +40,7 @@ import DeroulementSeance from "./pages/DeroulementSeance";
 import KundaliniSolstice from "./pages/KundaliniSolstice";
 import RituelEquinoxe from "./pages/RituelEquinoxe";
 import Photos from "./pages/Photos";
+import CarnetPreparation from "./pages/CarnetPreparation";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
@@ -87,6 +88,7 @@ const App = () => (
           <Route path="/kundalini-solstice" element={<KundaliniSolstice />} />
           <Route path="/rituel-equinoxe" element={<RituelEquinoxe />} />
           <Route path="/photos" element={<Photos />} />
+          <Route path="/carnet-de-preparation" element={<CarnetPreparation />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

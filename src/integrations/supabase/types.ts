@@ -79,6 +79,45 @@ export type Database = {
         }
         Relationships: []
       }
+      carnet_submissions: {
+        Row: {
+          analysis: Json
+          answers: Json
+          created_at: string
+          date_naissance: string | null
+          email: string
+          id: string
+          intensity: number | null
+          nom: string
+          prenom: string
+          telephone: string | null
+        }
+        Insert: {
+          analysis?: Json
+          answers?: Json
+          created_at?: string
+          date_naissance?: string | null
+          email: string
+          id?: string
+          intensity?: number | null
+          nom: string
+          prenom: string
+          telephone?: string | null
+        }
+        Update: {
+          analysis?: Json
+          answers?: Json
+          created_at?: string
+          date_naissance?: string | null
+          email?: string
+          id?: string
+          intensity?: number | null
+          nom?: string
+          prenom?: string
+          telephone?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

@@ -9,6 +9,7 @@ const navItems = [
   { label: "La Kundalini", path: "/la-kundalini" },
   { label: "Offres", path: "/offres" },
   { label: "Déroulement séance", path: "/deroulement-seance" },
+  { label: "Carnet de préparation", path: "/carnet-de-preparation" },
   { label: "Mon histoire", path: "/mon-histoire" },
   { label: "À propos", path: "/a-propos" },
   { label: "Cercle de guérison", path: "/cercle-de-guerison" },
