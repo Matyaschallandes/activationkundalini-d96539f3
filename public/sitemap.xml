@@ -56,6 +56,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.activationkundalini.ch/suivi-post-seance</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.activationkundalini.ch/photos</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
