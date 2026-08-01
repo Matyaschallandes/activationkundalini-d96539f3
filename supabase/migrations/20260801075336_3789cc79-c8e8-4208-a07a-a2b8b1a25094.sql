@@ -1,0 +1,1 @@
+delete from public.suivi_seance where message = 'Test du suivi post-séance.';
