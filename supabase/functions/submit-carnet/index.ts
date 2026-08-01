@@ -104,7 +104,42 @@ serve(async (req) => {
         }),
       });
       if (!res.ok) console.error("Resend error:", await res.text());
+
+      // Confirmation + rappels de préparation envoyés au client
+      const clientHtml = `
+        <p>Bonjour ${esc(identity.prenom)},</p>
+        <p>Ton carnet de préparation est bien arrivé 🌿 Je le lis avant notre rencontre.</p>
+        <h3>Tes rappels pour les 72 heures qui précèdent la séance</h3>
+        <ul>
+          <li>Bois davantage d'eau, allège l'alimentation le jour même.</li>
+          <li>Réduis alcool, écrans tardifs et sollicitations inutiles.</li>
+          <li>Prends 5 minutes de respiration lente matin et soir.</li>
+          <li>Note tes rêves et ce qui remonte : tout fait partie du mouvement.</li>
+          <li>Viens en vêtements confortables, sans attente particulière.</li>
+        </ul>
+        <p>Une question avant la séance ? Réponds simplement à cet email ou écris-moi au
+        +41 76 244 55 52.</p>
+        <p>À très vite,<br/>Matyas Challandes</p>
+        <p style="font-size:12px;color:#888">Accompagnement de bien-être et de développement
+        personnel, sans visée médicale ni diagnostic.</p>
+      `;
+      const resClient = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${RESEND_API_KEY}`,
+        },
+        body: JSON.stringify({
+          from: "Karmaequilego <onboarding@resend.dev>",
+          to: [String(identity.email)],
+          reply_to: "matyas.challandes@gmail.com",
+          subject: "Ton carnet de préparation est bien reçu 🌿",
+          html: clientHtml,
+        }),
+      });
+      if (!resClient.ok) console.error("Resend client error:", await resClient.text());
     }
+
 
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
