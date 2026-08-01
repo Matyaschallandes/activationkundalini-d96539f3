@@ -39,6 +39,7 @@ const staticEntries: SitemapEntry[] = [
   { path: "/cercle-de-guerison", changefreq: "monthly", priority: "0.8" },
   { path: "/deroulement-seance", changefreq: "monthly", priority: "0.8" },
   { path: "/carnet-de-preparation", changefreq: "monthly", priority: "0.8" },
+  { path: "/suivi-post-seance", changefreq: "monthly", priority: "0.6" },
   { path: "/photos", changefreq: "monthly", priority: "0.6" },
   { path: "/blog", changefreq: "weekly", priority: "0.9" },
   { path: "/boutique", changefreq: "monthly", priority: "0.7" },
