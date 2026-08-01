@@ -86,6 +86,7 @@ export type Database = {
           created_at: string
           date_naissance: string | null
           email: string
+          followup_sent_at: string | null
           id: string
           intensity: number | null
           nom: string
@@ -98,6 +99,7 @@ export type Database = {
           created_at?: string
           date_naissance?: string | null
           email: string
+          followup_sent_at?: string | null
           id?: string
           intensity?: number | null
           nom: string
@@ -110,10 +112,56 @@ export type Database = {
           created_at?: string
           date_naissance?: string | null
           email?: string
+          followup_sent_at?: string | null
           id?: string
           intensity?: number | null
           nom?: string
           prenom?: string
+          telephone?: string | null
+        }
+        Relationships: []
+      }
+      suivi_seance: {
+        Row: {
+          changements: string | null
+          created_at: string
+          email: string
+          id: string
+          intensite: number | null
+          message: string | null
+          moment: string | null
+          nom: string
+          prenom: string
+          ressenti_emotionnel: string | null
+          ressenti_physique: string | null
+          telephone: string | null
+        }
+        Insert: {
+          changements?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          intensite?: number | null
+          message?: string | null
+          moment?: string | null
+          nom: string
+          prenom: string
+          ressenti_emotionnel?: string | null
+          ressenti_physique?: string | null
+          telephone?: string | null
+        }
+        Update: {
+          changements?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          intensite?: number | null
+          message?: string | null
+          moment?: string | null
+          nom?: string
+          prenom?: string
+          ressenti_emotionnel?: string | null
+          ressenti_physique?: string | null
           telephone?: string | null
         }
         Relationships: []

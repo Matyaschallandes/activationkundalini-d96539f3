@@ -17,3 +17,9 @@ verify_jwt = false
 
 [functions.submit-carnet]
 verify_jwt = false
+
+[functions.submit-suivi]
+verify_jwt = false
+
+[functions.send-followups]
+verify_jwt = false
