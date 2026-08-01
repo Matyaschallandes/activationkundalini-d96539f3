@@ -81,6 +81,17 @@ const Footer = () => {
           </ul>
         </nav>
 
+        <nav aria-label="Avant et après ta séance" className="pt-2">
+          <p className="font-body text-xs uppercase tracking-widest text-foreground/50 mb-2">
+            Avant &amp; après ta séance
+          </p>
+          <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs">
+            <li><Link to="/carnet-de-preparation" className="text-foreground/60 hover:text-primary transition-colors">Carnet de préparation</Link></li>
+            <li><Link to="/suivi-post-seance" className="text-foreground/60 hover:text-primary transition-colors">Suivi post-séance</Link></li>
+            <li><Link to="/deroulement-seance" className="text-foreground/60 hover:text-primary transition-colors">Déroulement d'une séance</Link></li>
+          </ul>
+        </nav>
+
 
         <p className="font-body text-xs text-muted-foreground pt-2">
           © {new Date().getFullYear()} — Activation & Transformation Profonde
