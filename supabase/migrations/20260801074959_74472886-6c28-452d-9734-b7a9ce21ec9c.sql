@@ -1,0 +1,1 @@
+delete from public.carnet_submissions where answers ? 'Test' or email = 't@t.com';
