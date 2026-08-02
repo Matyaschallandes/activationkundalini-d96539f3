@@ -41,6 +41,9 @@ import KundaliniSolstice from "./pages/KundaliniSolstice";
 import RituelEquinoxe from "./pages/RituelEquinoxe";
 import Photos from "./pages/Photos";
 import CarnetPreparation from "./pages/CarnetPreparation";
+import AdminFiches from "./pages/AdminFiches";
+import Unsubscribe from "./pages/Unsubscribe";
+
 import SuiviPostSeance from "./pages/SuiviPostSeance";
 import WhatsAppButton from "./components/WhatsAppButton";
 
