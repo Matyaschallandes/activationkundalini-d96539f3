@@ -91,6 +91,9 @@ const App = () => (
           <Route path="/photos" element={<Photos />} />
           <Route path="/carnet-de-preparation" element={<CarnetPreparation />} />
           <Route path="/suivi-post-seance" element={<SuiviPostSeance />} />
+          <Route path="/admin-fiches" element={<AdminFiches />} />
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
+
 
           <Route path="*" element={<NotFound />} />
         </Routes>
