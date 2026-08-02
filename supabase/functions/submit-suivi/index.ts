@@ -58,33 +58,30 @@ serve(async (req) => {
     });
     if (dbError) console.error("DB error:", dbError);
 
-    const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
-    if (RESEND_API_KEY) {
-      const html = `
-        <h2>Suivi post-séance — ${esc(prenom)} ${esc(nom)}</h2>
-        <p>Email : ${esc(email)}<br/>Téléphone : ${esc(telephone) || "—"}<br/>
-        Moment : ${esc(moment) || "—"}<br/>Intensité actuelle : ${esc(intensite)}/10</p>
-        <h3>Ressenti physique</h3><p>${esc(ressentiPhysique)}</p>
-        <h3>Ressenti émotionnel</h3><p>${esc(ressentiEmotionnel)}</p>
-        <h3>Changements observés</h3><p>${esc(changements)}</p>
-        <h3>Message</h3><p>${esc(message)}</p>
-      `;
-      const res = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${RESEND_API_KEY}`,
+    const reponses = [
+      { question: "Ressenti physique", reponse: String(ressentiPhysique ?? "") },
+      { question: "Ressenti émotionnel", reponse: String(ressentiEmotionnel ?? "") },
+      { question: "Changements observés", reponse: String(changements ?? "") },
+      { question: "Intensité actuelle", reponse: `${intensite ?? "—"} / 10` },
+      { question: "Message", reponse: String(message ?? "") },
+    ].filter((r) => r.reponse.trim() && r.reponse.trim() !== "—");
+
+    const { error: mailError } = await supabase.functions.invoke("send-transactional-email", {
+      body: {
+        templateName: "suivi-fiche",
+        recipientEmail: "matyas.challandes@gmail.com",
+        templateData: {
+          prenom,
+          nom,
+          email,
+          telephone: telephone ?? "",
+          moment: moment ?? "—",
+          reponses,
         },
-        body: JSON.stringify({
-          from: "Karmaequilego <onboarding@resend.dev>",
-          to: ["matyas.challandes@gmail.com"],
-          reply_to: String(email),
-          subject: `Suivi post-séance — ${prenom} ${nom}`,
-          html,
-        }),
-      });
-      if (!res.ok) console.error("Resend error:", await res.text());
-    }
+      },
+    });
+    if (mailError) console.error("Mail error:", mailError);
+
 
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },

@@ -41,6 +41,9 @@ import KundaliniSolstice from "./pages/KundaliniSolstice";
 import RituelEquinoxe from "./pages/RituelEquinoxe";
 import Photos from "./pages/Photos";
 import CarnetPreparation from "./pages/CarnetPreparation";
+import AdminFiches from "./pages/AdminFiches";
+import Unsubscribe from "./pages/Unsubscribe";
+
 import SuiviPostSeance from "./pages/SuiviPostSeance";
 import WhatsAppButton from "./components/WhatsAppButton";
 
@@ -91,6 +94,9 @@ const App = () => (
           <Route path="/photos" element={<Photos />} />
           <Route path="/carnet-de-preparation" element={<CarnetPreparation />} />
           <Route path="/suivi-post-seance" element={<SuiviPostSeance />} />
+          <Route path="/admin-fiches" element={<AdminFiches />} />
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
+
 
           <Route path="*" element={<NotFound />} />
         </Routes>

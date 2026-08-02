@@ -49,96 +49,64 @@ serve(async (req) => {
       console.error("DB error:", dbError);
     }
 
-    const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
-    if (RESEND_API_KEY) {
-      const answerRows = Object.entries(answers ?? {})
-        .filter(([, v]) => String(v ?? "").trim())
-        .map(([k, v]) => `<p><strong>${esc(k)}</strong><br/>${esc(v)}</p>`)
-        .join("");
+    const LABELS: Record<string, string> = {
+      liberer: "Ce que je choisis de libérer",
+      incarner: "Qui je choisis d'incarner",
+      peur: "Quelle peur me retient ?",
+      risque: "Que risque-t-il d'arriver si je réussis ?",
+      perdre: "Que vais-je perdre si je change ?",
+      resistance: "Quelle partie de moi résiste encore ?",
+      croyance1: "Je crois que…",
+      croyance2: "Je ne mérite pas…",
+      croyance3: "Je dois toujours…",
+      croyance4: "Je ne suis pas assez…",
+      pensees_soi: "Pensées envers moi-même",
+      amour_soi: "Est-ce que je m'aime vraiment ?",
+      pensees_autres: "Pensées envers les autres",
+      energie_emise: "Énergie que je veux émettre",
+      victime: "Situations où je me sens victime",
+      responsabilite: "Ma part pour sortir de ce rôle",
+      pardon_autres: "Ai-je pardonné aux autres ?",
+      pardon_soi: "Me suis-je pardonné ?",
+      corps_zone: "Zone de tension dans le corps",
+      corps_message: "Message de cette zone",
+      moi_aligne: "Conseil de mon Moi aligné",
+      talents: "Mes qualités et talents",
+      synchronicites: "Ce que mes synchronicités m'enseignent",
+      engagement: "Mon engagement des 72 h",
+    };
 
-      const chakraRows = (analysis?.chakras ?? [])
-        .map((c: { name: string; score: number; theme: string }) =>
-          `<li>${esc(c.name)} (score ${esc(c.score)}) — ${esc(c.theme)}</li>`
-        )
-        .join("");
+    const reponses = Object.entries(answers ?? {})
+      .filter(([, v]) => String(v ?? "").trim())
+      .map(([k, v]) => ({ question: LABELS[k] ?? k, reponse: String(v) }));
 
-      const reframeRows = (analysis?.reframes ?? [])
-        .map((r: { limitante: string; nouvelle: string }) =>
-          `<li>« ${esc(r.limitante)} » → « ${esc(r.nouvelle)} »</li>`
-        )
-        .join("");
+    const send = (templateName: string, recipientEmail: string, templateData: unknown) =>
+      supabase.functions
+        .invoke("send-transactional-email", {
+          body: { templateName, recipientEmail, templateData },
+        })
+        .then(({ error }) => {
+          if (error) console.error(`${templateName} error:`, error);
+        })
+        .catch((e) => console.error(`${templateName} threw:`, e));
 
-      const html = `
-        <h2>Nouvelle fiche client — Carnet de préparation</h2>
-        <p><strong>${esc(identity.prenom)} ${esc(identity.nom)}</strong><br/>
-        Email : ${esc(identity.email)}<br/>
-        Téléphone : ${esc(identity.telephone) || "—"}<br/>
-        Naissance : ${esc(identity.dateNaissance) || "—"}<br/>
-        Intensité ressentie : ${esc(intensity)}/10</p>
-        <hr/>
-        <h3>Lecture énergétique</h3>
-        <p>Centre principal : <strong>${esc(analysis?.primaryChakra)}</strong></p>
-        <p>Thèmes : ${esc((analysis?.themes ?? []).join(" · "))}</p>
-        <ul>${chakraRows}</ul>
-        <h3>Programmes limitants à transformer</h3>
-        <ul>${reframeRows}</ul>
-        <h3>Pistes d'accompagnement</h3>
-        <ul>${(analysis?.cles ?? []).map((c: string) => `<li>${esc(c)}</li>`).join("")}</ul>
-        <hr/>
-        <h3>Réponses complètes</h3>
-        ${answerRows}
-      `;
+    await Promise.all([
+      send("carnet-fiche", "matyas.challandes@gmail.com", {
+        prenom: identity.prenom,
+        nom: identity.nom,
+        email: identity.email,
+        telephone: identity.telephone ?? "",
+        intensity: typeof intensity === "number" ? intensity : 0,
+        chakra: analysis?.primaryChakra ?? "—",
+        themes: (analysis?.themes ?? []).join(" · "),
+        cles: analysis?.cles ?? [],
+        reponses,
+      }),
+      send("carnet-confirmation", String(identity.email), {
+        prenom: identity.prenom,
+      }),
+    ]);
 
-      const res = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${RESEND_API_KEY}`,
-        },
-        body: JSON.stringify({
-          from: "Karmaequilego <onboarding@resend.dev>",
-          to: ["matyas.challandes@gmail.com"],
-          reply_to: identity.email,
-          subject: `Carnet de préparation — ${identity.prenom} ${identity.nom}`,
-          html,
-        }),
-      });
-      if (!res.ok) console.error("Resend error:", await res.text());
-
-      // Confirmation + rappels de préparation envoyés au client
-      const clientHtml = `
-        <p>Bonjour ${esc(identity.prenom)},</p>
-        <p>Ton carnet de préparation est bien arrivé 🌿 Je le lis avant notre rencontre.</p>
-        <h3>Tes rappels pour les 72 heures qui précèdent la séance</h3>
-        <ul>
-          <li>Bois davantage d'eau, allège l'alimentation le jour même.</li>
-          <li>Réduis alcool, écrans tardifs et sollicitations inutiles.</li>
-          <li>Prends 5 minutes de respiration lente matin et soir.</li>
-          <li>Note tes rêves et ce qui remonte : tout fait partie du mouvement.</li>
-          <li>Viens en vêtements confortables, sans attente particulière.</li>
-        </ul>
-        <p>Une question avant la séance ? Réponds simplement à cet email ou écris-moi au
-        +41 76 244 55 52.</p>
-        <p>À très vite,<br/>Matyas Challandes</p>
-        <p style="font-size:12px;color:#888">Accompagnement de bien-être et de développement
-        personnel, sans visée médicale ni diagnostic.</p>
-      `;
-      const resClient = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${RESEND_API_KEY}`,
-        },
-        body: JSON.stringify({
-          from: "Karmaequilego <onboarding@resend.dev>",
-          to: [String(identity.email)],
-          reply_to: "matyas.challandes@gmail.com",
-          subject: "Ton carnet de préparation est bien reçu 🌿",
-          html: clientHtml,
-        }),
-      });
-      if (!resClient.ok) console.error("Resend client error:", await resClient.text());
-    }
 
 
     return new Response(JSON.stringify({ success: true }), {
