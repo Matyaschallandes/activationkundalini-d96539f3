@@ -240,6 +240,10 @@ const CarnetPreparation = () => {
                 <p className="font-body text-sm text-muted-foreground leading-relaxed">
                   {CARNET_STEPS[stepIndex - 1].subtitle}
                 </p>
+                <p className="font-body text-xs text-muted-foreground/80 italic mt-2">
+                  Aucune question n'est obligatoire : tu réponds à ce qui te parle. Plus tu remplis,
+                  plus tu ouvres de dossiers avant la libération et l'activation Kundalini.
+                </p>
               </div>
               {CARNET_STEPS[stepIndex - 1].questions.map((q) => (
                 <div key={q.id} className="space-y-2">
