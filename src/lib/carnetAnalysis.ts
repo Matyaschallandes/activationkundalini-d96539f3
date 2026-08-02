@@ -333,39 +333,76 @@ export const CARNET_STEPS: { title: string; subtitle: string; questions: CarnetQ
     ],
   },
   {
-    title: "5. Le message de mon corps",
+    title: "5. Les pensées que j'ai envers moi-même",
+    subtitle:
+      "Comment est-ce que je me parle intérieurement ? Est-ce que je m'aime vraiment ? Tout ce que nous émettons finit par nous revenir : la douceur envers soi est le premier acte de guérison.",
+    questions: [
+      { id: "pensees_soi", step: 5, title: "Ce que je me dis de moi, en silence", rows: 5 },
+      { id: "amour_soi", step: 5, title: "Est-ce que je m'aime vraiment ? Qu'est-ce qui m'empêche de m'aimer ?", rows: 4 },
+    ],
+  },
+  {
+    title: "6. Les pensées que j'ai envers les autres",
+    subtitle:
+      "Jalousie, rancune, jugement, colère : quand nous envoyons de la mauvaise énergie à quelqu'un, c'est comme si nous nous l'envoyions à nous-même, car nous sommes tous issus de la même source. Ce que nous émettons nous revient : amour pour amour, haine pour haine.",
+    questions: [
+      { id: "pensees_autres", step: 6, title: "Envers qui ai-je de la jalousie, du jugement, de la rancune ou de la colère ?", rows: 5 },
+      { id: "energie_emise", step: 6, title: "Quelle énergie ai-je envie d'émettre à la place ?", rows: 4 },
+    ],
+  },
+  {
+    title: "7. Sortir du rôle de victime",
+    subtitle:
+      "Où est-ce que je me sens victime des autres, de la vie, des circonstances ? Tout ce que nous avons reçu a une raison : peut-être un karma qui cherche à se rééquilibrer. Reconnaître sa part de pouvoir, c'est reprendre sa souveraineté — sans jamais nier ce qui a été vécu.",
+    questions: [
+      { id: "victime", step: 7, title: "Dans quelles situations est-ce que je me sens victime ?", rows: 5 },
+      { id: "responsabilite", step: 7, title: "Quelle part puis-je reprendre pour sortir de ce rôle ?", rows: 4 },
+    ],
+  },
+  {
+    title: "8. Le pardon",
+    subtitle:
+      "Le pardon ne veut pas dire accepter ce qui s'est passé : il libère l'énergie retenue. Tu peux en parler ici si tu le souhaites, à ton rythme.",
+    questions: [
+      { id: "pardon_autres", step: 8, title: "Ai-je pardonné aux personnes qui m'ont fait du tort ?", rows: 4 },
+      { id: "pardon_soi", step: 8, title: "Me suis-je pardonné pour ce que j'ai fait ou pas fait ?", rows: 4 },
+    ],
+  },
+  {
+    title: "9. Le message de mon corps",
     subtitle:
       "Ferme les yeux quelques instants. Où ressens-tu une tension ? Si cette zone pouvait parler, que te dirait-elle ?",
     questions: [
-      { id: "corps_zone", step: 5, title: "Où se situe la tension dans mon corps ?", rows: 2 },
-      { id: "corps_message", step: 5, title: "Le message de cette zone", rows: 5 },
+      { id: "corps_zone", step: 9, title: "Où se situe la tension dans mon corps ?", rows: 2 },
+      { id: "corps_message", step: 9, title: "Le message de cette zone", rows: 5 },
     ],
   },
   {
-    title: "6. Rencontre avec mon Moi aligné",
+    title: "10. Rencontre avec mon Moi aligné",
     subtitle: "Visualise ta version idéale. Comment marche-t-elle ? Comment parle-t-elle ?",
     questions: [
-      { id: "moi_aligne", step: 6, title: "Le conseil que me donne mon Moi aligné", rows: 6 },
+      { id: "moi_aligne", step: 10, title: "Le conseil que me donne mon Moi aligné", rows: 6 },
     ],
   },
   {
-    title: "7. Mes dons, mes qualités et mes talents",
+    title: "11. Mes dons, mes qualités et mes talents",
     subtitle:
       "Que disent souvent les autres de toi ? Dans quels domaines pourrais-tu naturellement exceller ?",
-    questions: [{ id: "talents", step: 7, title: "Mes qualités et talents", rows: 6 }],
+    questions: [{ id: "talents", step: 11, title: "Mes qualités et talents", rows: 6 }],
   },
   {
-    title: "8. Les synchronicités de ma vie",
+    title: "12. Les synchronicités de ma vie",
     subtitle:
       "Repense aux rencontres importantes, aux passions de ton enfance et aux épreuves qui t'ont transformé(e).",
     questions: [
-      { id: "synchronicites", step: 8, title: "Ce qu'elles cherchent à m'enseigner", rows: 6 },
+      { id: "synchronicites", step: 12, title: "Ce qu'elles cherchent à m'enseigner", rows: 6 },
     ],
   },
   {
-    title: "9. Mon engagement",
+    title: "13. Mon engagement",
     subtitle:
       "Quelle action concrète vas-tu réaliser dans les 72 prochaines heures pour honorer cette transformation ?",
-    questions: [{ id: "engagement", step: 9, title: "Mon engagement des 72 h", rows: 4 }],
+    questions: [{ id: "engagement", step: 13, title: "Mon engagement des 72 h", rows: 4 }],
   },
 ];
+
