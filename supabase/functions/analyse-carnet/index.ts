@@ -58,6 +58,7 @@ const schema = strObj({
     niveau: { type: "string", enum: ["Léger", "Modéré", "Important", "Intense"] },
     message: S,
   }),
+  lecture_detaillee: ARR(strObj({ question: S, ce_que_tu_as_ecrit: S, ce_que_cela_revele: S })),
   themes: ARR(strObj({ titre: S, ce_que_montrent_tes_reponses: S })),
   correlations: ARR(strObj({ lien: S, explication: S, a_explorer: ARR(S) })),
   croyances: ARR(strObj({ ancienne: S, ce_qui_alimente: S, nouvelle: S })),
@@ -74,6 +75,7 @@ const schema = strObj({
   plan: strObj({ aujourdhui: S, cette_semaine: S, avant_la_seance: S }),
   seance: ARR(S),
   lecture_energetique: S,
+  synthese_finale: S,
 });
 
 const SYSTEM = `Tu es l'assistant d'introspection de Karmaequilego (Matyas Challandes, Suisse).
