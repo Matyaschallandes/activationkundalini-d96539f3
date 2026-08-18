@@ -127,13 +127,36 @@ const CarnetPreparation = () => {
         },
       });
       if (error) throw error;
+      const id = (data as { id?: string } | null)?.id ?? null;
+      setSubmissionId(id);
       setDone(true);
-      toast.success("Ton carnet a bien été transmis à Matyas 🙏");
+      toast.success("Ton carnet a bien été enregistré 🙏");
+      await runAiAnalysis(id);
     } catch (e) {
       console.error(e);
       toast.error("L'envoi n'a pas abouti. Tu peux télécharger ton PDF et l'envoyer par email.");
     } finally {
       setSending(false);
+    }
+  };
+
+  const runAiAnalysis = async (id: string | null) => {
+    setPhase("analyzing");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    try {
+      const { data, error } = await supabase.functions.invoke("analyse-carnet", {
+        body: { identity, answers, intensity, submissionId: id },
+      });
+      if (error) throw error;
+      if (!data?.analysis) throw new Error("Analyse vide");
+      setAiAnalysis(data.analysis as AiCarnetAnalysis);
+      setPhase("miroir");
+    } catch (e) {
+      console.error(e);
+      toast.error(
+        "Ta lecture personnalisée n'a pas pu être générée pour le moment. Ton carnet est bien enregistré."
+      );
+      setPhase("form");
     }
   };
 
