@@ -413,7 +413,7 @@ const CarnetPreparation = () => {
                   ) : done ? (
                     <CheckCircle2 className="w-4 h-4 text-primary" />
                   ) : null}
-                  {done ? "Carnet transmis" : "Envoyer à Matyas"}
+                  {done ? "Voir ma lecture personnalisée" : "Découvrir ma lecture personnalisée"}
                 </button>
               </div>
 
