@@ -102,7 +102,7 @@ export function generateCarnetPdf(
   rule();
   CARNET_STEPS.forEach((step) => {
     const hasContent = step.questions.some((q) => (answers[q.id] || "").trim());
-    if (!hasContent) return;
+    if (!hasContent && !step.practiceContent) return;
     ensure(20);
     doc.setFont("helvetica", "bold");
     doc.setFontSize(12);
@@ -110,6 +110,13 @@ export function generateCarnetPdf(
     const t = doc.splitTextToSize(step.title, maxW);
     doc.text(t, M, y);
     y += t.length * 6 + 2;
+    if (step.practiceContent) {
+      const pc = step.practiceContent;
+      pc.paragraphs.forEach((p) => body(p, { soft: true, size: 10 }));
+      pc.bullets.forEach((b) => body(`• ${b}`, { soft: true, size: 10 }));
+      pc.closing.forEach((p) => body(p, { soft: true, size: 10 }));
+      body(`« ${pc.quote} »`, { italic: true, soft: true, size: 10 });
+    }
     step.questions.forEach((q) => {
       const val = (answers[q.id] || "").trim();
       if (!val) return;
