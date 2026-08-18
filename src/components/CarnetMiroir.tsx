@@ -82,7 +82,14 @@ const Body = ({ children }: { children: React.ReactNode }) => (
   <p className="font-body text-sm text-foreground/80 leading-relaxed">{children}</p>
 );
 
-const CarnetMiroir = ({ analysis, submissionId, prenom }: Props) => {
+const CarnetMiroir = ({
+  analysis,
+  submissionId,
+  prenom,
+  identity,
+  answers,
+  intensity = 0,
+}: Props) => {
   const [resonance, setResonance] = useState("");
   const [intention, setIntention] = useState("");
   const [saving, setSaving] = useState(false);
