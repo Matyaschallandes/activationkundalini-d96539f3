@@ -22,10 +22,21 @@ import {
   KeyRound,
 } from "lucide-react";
 
+type Identity = {
+  prenom: string;
+  nom: string;
+  email: string;
+  telephone?: string;
+  dateNaissance?: string;
+};
+
 type Props = {
   analysis: AiCarnetAnalysis;
   submissionId: string | null;
   prenom?: string;
+  identity?: Identity;
+  answers?: Record<string, string>;
+  intensity?: number;
 };
 
 const Section = ({
