@@ -1,5 +1,6 @@
 import { jsPDF } from "jspdf";
 import { CARNET_STEPS, CarnetAnalysis } from "./carnetAnalysis";
+import { AiCarnetAnalysis } from "./carnetAiTypes";
 
 type Identity = {
   prenom: string;
@@ -7,6 +8,12 @@ type Identity = {
   email: string;
   telephone?: string;
   dateNaissance?: string;
+};
+
+export type CarnetPdfExtras = {
+  ai?: AiCarnetAnalysis | null;
+  resonance?: string | null;
+  intention?: string | null;
 };
 
 const GOLD: [number, number, number] = [176, 137, 60];
