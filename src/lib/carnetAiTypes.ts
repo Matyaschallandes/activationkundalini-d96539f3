@@ -4,6 +4,8 @@
 export type AiCarnetAnalysis = {
   synthese: string[];
   intensite: { niveau: string; message: string };
+  lecture_detaillee?: { question: string; ce_que_tu_as_ecrit: string; ce_que_cela_revele: string }[];
+  synthese_finale?: string;
   themes: { titre: string; ce_que_montrent_tes_reponses: string }[];
   correlations: { lien: string; explication: string; a_explorer: string[] }[];
   croyances: { ancienne: string; ce_qui_alimente: string; nouvelle: string }[];
