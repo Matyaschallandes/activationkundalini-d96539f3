@@ -245,6 +245,30 @@ const CarnetPreparation = () => {
                   plus tu ouvres de dossiers avant la libération et l'activation Kundalini.
                 </p>
               </div>
+              {CARNET_STEPS[stepIndex - 1].practiceContent && (
+                <div className="space-y-3 border border-border rounded-sm p-5 bg-muted/30">
+                  {CARNET_STEPS[stepIndex - 1].practiceContent!.paragraphs.map((p, i) => (
+                    <p key={`p${i}`} className="font-body text-sm text-foreground/80 leading-relaxed">
+                      {p}
+                    </p>
+                  ))}
+                  <ul className="space-y-1 pl-5">
+                    {CARNET_STEPS[stepIndex - 1].practiceContent!.bullets.map((b, i) => (
+                      <li key={`b${i}`} className="font-body text-sm text-foreground/80 list-disc">
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                  {CARNET_STEPS[stepIndex - 1].practiceContent!.closing.map((p, i) => (
+                    <p key={`c${i}`} className="font-body text-sm text-foreground/80 leading-relaxed">
+                      {p}
+                    </p>
+                  ))}
+                  <p className="font-body text-sm italic text-primary border-l-2 border-primary/40 pl-4">
+                    « {CARNET_STEPS[stepIndex - 1].practiceContent!.quote} »
+                  </p>
+                </div>
+              )}
               {CARNET_STEPS[stepIndex - 1].questions.map((q) => (
                 <div key={q.id} className="space-y-2">
                   <Label htmlFor={q.id} className="font-body text-foreground/80">

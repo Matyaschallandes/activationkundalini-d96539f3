@@ -283,7 +283,14 @@ export type CarnetQuestion = {
   rows?: number;
 };
 
-export const CARNET_STEPS: { title: string; subtitle: string; questions: CarnetQuestion[] }[] = [
+export type CarnetStep = {
+  title: string;
+  subtitle: string;
+  questions: CarnetQuestion[];
+  practiceContent?: { paragraphs: string[]; bullets: string[]; closing: string[]; quote: string };
+};
+
+export const CARNET_STEPS: CarnetStep[] = [
   {
     title: "1. Ce que je choisis de libérer",
     subtitle:
@@ -403,6 +410,112 @@ export const CARNET_STEPS: { title: string; subtitle: string; questions: CarnetQ
     subtitle:
       "Quelle action concrète vas-tu réaliser dans les 72 prochaines heures pour honorer cette transformation ?",
     questions: [{ id: "engagement", step: 13, title: "Mon engagement des 72 h", rows: 4 }],
+  },
+  {
+    title: "14. Explorer ce qui me retient véritablement",
+    subtitle:
+      "Ces questions ouvrent des couches plus subtiles. Réponds seulement à ce qui résonne en toi, sans forcer.",
+    questions: [
+      {
+        id: "gain_rester",
+        step: 14,
+        title: "Qu'est-ce que je gagne, même inconsciemment, à rester dans ma situation actuelle ?",
+        placeholder: "Écris librement, sans filtre…",
+        rows: 5,
+      },
+      {
+        id: "gain_eviter",
+        step: 14,
+        title: "Qu'est-ce que cela m'évite de vivre, de décider ou de risquer ?",
+        placeholder: "(facultatif)",
+        rows: 4,
+      },
+      {
+        id: "douleur_protegee",
+        step: 14,
+        title: "Quelle douleur ancienne est-ce que je continue à protéger au lieu de la laisser partir ?",
+        placeholder: "Écris librement, sans filtre…",
+        rows: 5,
+      },
+      {
+        id: "masque_devenu",
+        step: 14,
+        title:
+          "Quelle partie de moi ai-je dû devenir pour être aimé(e), accepté(e) ou ne pas être rejeté(e) ?",
+        placeholder: "Écris librement, sans filtre…",
+        rows: 5,
+      },
+    ],
+  },
+  {
+    title: "15. Au cœur de mon manque et de mes échappatoires",
+    subtitle:
+      "Continue avec authenticité. Ces questions touchent souvent le cœur de ce qui se répète dans ta vie.",
+    questions: [
+      {
+        id: "nose_pas",
+        step: 15,
+        title: "Qu'est-ce que je n'ose toujours pas dire, faire ou être, par peur des conséquences ?",
+        placeholder: "Écris librement, sans filtre…",
+        rows: 5,
+      },
+      {
+        id: "sans_rejet",
+        step: 15,
+        title:
+          "Si je savais avec certitude que je ne serais plus jamais rejeté(e), abandonné(e) ou jugé(e), qui serais-je vraiment ?",
+        placeholder: "Écris librement, sans filtre…",
+        rows: 5,
+      },
+      {
+        id: "manque_profond",
+        step: 15,
+        title:
+          "Qu'est-ce qui me manque profondément aujourd'hui, et que j'essaie de combler à travers mes habitudes, mes relations ou mes comportements ?",
+        placeholder: "Écris librement, sans filtre…",
+        rows: 5,
+      },
+      {
+        id: "echappatoires",
+        step: 15,
+        title:
+          "Quand je ressens un vide, une douleur ou une émotion difficile, vers quoi est-ce que je me tourne automatiquement pour ne plus la ressentir ?",
+        placeholder: "Exemples : nourriture, cigarette, alcool, téléphone, achats, relations, travail, isolement, contrôle…",
+        rows: 5,
+      },
+    ],
+  },
+  {
+    title: "16. Écouter et apaiser une émotion",
+    subtitle:
+      "Une courte pratique d'écoute intérieure. Tu peux la faire maintenant ou y revenir à ton rythme.",
+    practiceContent: {
+      paragraphs: [
+        "Lorsque tu es au calme et bien ancré(e), choisis une émotion qui te touche actuellement. Porte ton attention sur l'endroit où tu la ressens dans ton corps.",
+        "Imagine cette émotion comme une couleur, une forme ou une matière.",
+        "Puis dialogue doucement avec elle :",
+      ],
+      bullets: [
+        "Que veux-tu me faire comprendre ?",
+        "De quoi as-tu besoin ?",
+        "Comment puis-je t'apaiser ?",
+      ],
+      closing: [
+        "Ne cherche pas à fabriquer une réponse. Laisse simplement venir ce qui vient.",
+        "Note ensuite les messages, sensations ou prises de conscience qui apparaissent.",
+        "Ne force rien. Le but n'est pas de combattre l'émotion, mais de l'écouter.",
+      ],
+      quote: "Une émotion peut être une porte vers une partie de moi qui demande à être entendue.",
+    },
+    questions: [
+      {
+        id: "emotion_ecoute",
+        step: 16,
+        title: "Mes messages, sensations ou prises de conscience",
+        placeholder: "Note ce qui vient, sans filtre ni jugement…",
+        rows: 6,
+      },
+    ],
   },
 ];
 

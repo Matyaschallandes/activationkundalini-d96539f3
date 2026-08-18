@@ -74,6 +74,15 @@ serve(async (req) => {
       talents: "Mes qualités et talents",
       synchronicites: "Ce que mes synchronicités m'enseignent",
       engagement: "Mon engagement des 72 h",
+      gain_rester: "Ce que je gagne à rester dans ma situation actuelle",
+      gain_eviter: "Ce que cela m'évite de vivre, décider ou risquer",
+      douleur_protegee: "Douleur ancienne que je continue à protéger",
+      masque_devenu: "Partie de moi que j'ai dû devenir pour être aimé(e)",
+      nose_pas: "Ce que je n'ose pas dire, faire ou être",
+      sans_rejet: "Qui je serais sans peur du rejet ou du jugement",
+      manque_profond: "Ce qui me manque profondément",
+      echappatoires: "Vers quoi je me tourne pour ne plus ressentir",
+      emotion_ecoute: "Écoute d'une émotion — messages et prises de conscience",
     };
 
     const reponses = Object.entries(answers ?? {})
