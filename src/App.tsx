@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import LaKundalini from "./pages/LaKundalini";
 import LectureAme from "./pages/LectureAme";
 import Offres from "./pages/Offres";
+import OffreDecouverte from "./pages/OffreDecouverte";
 import APropos from "./pages/APropos";
 import MonHistoire from "./pages/MonHistoire";
 import Contact from "./pages/Contact";
