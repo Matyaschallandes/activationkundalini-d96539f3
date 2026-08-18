@@ -404,8 +404,14 @@ const CarnetPreparation = () => {
                   Télécharger mon carnet PDF
                 </button>
                 <button
-                  onClick={handleSend}
-                  disabled={sending || done}
+                  onClick={() =>
+                    done
+                      ? aiAnalysis
+                        ? setPhase("miroir")
+                        : runAiAnalysis(submissionId)
+                      : handleSend()
+                  }
+                  disabled={sending}
                   className="flex-1 inline-flex items-center justify-center gap-2 border border-primary text-foreground font-body tracking-wider uppercase text-sm py-3 rounded-sm hover:bg-primary/10 transition-all disabled:opacity-60"
                 >
                   {sending ? (
