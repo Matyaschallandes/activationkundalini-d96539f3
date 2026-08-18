@@ -110,7 +110,16 @@ const CarnetMiroir = ({
       return;
     }
     setSaved(true);
-    toast.success("Tes notes ont été transmises à Matyas 🙏");
+    toast.success("Ton carnet complet a été transmis à Matyas 🙏");
+  };
+
+  const downloadFullPdf = () => {
+    if (!identity || !answers) return;
+    generateCarnetPdf(identity, answers, analyseCarnet(answers), intensity, {
+      ai: analysis,
+      resonance,
+      intention,
+    });
   };
 
   return (
