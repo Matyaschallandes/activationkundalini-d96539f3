@@ -110,7 +110,7 @@ const CarnetPreparation = () => {
     }
     setSending(true);
     try {
-      const { error } = await supabase.functions.invoke("submit-carnet", {
+      const { data, error } = await supabase.functions.invoke("submit-carnet", {
         body: {
           identity,
           answers,
