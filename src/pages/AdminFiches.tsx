@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { generateCarnetPdf } from "@/lib/carnetPdf";
 import { analyseCarnet } from "@/lib/carnetAnalysis";
+import { AiCarnetAnalysis } from "@/lib/carnetAiTypes";
+import { CARNET_STEPS } from "@/lib/carnetAnalysis";
 
 type Carnet = {
   id: string;
