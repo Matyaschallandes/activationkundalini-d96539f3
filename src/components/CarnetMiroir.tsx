@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiCarnetAnalysis } from "@/lib/carnetAiTypes";
+import { generateCarnetPdf } from "@/lib/carnetPdf";
+import { analyseCarnet } from "@/lib/carnetAnalysis";
+import { Download } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
