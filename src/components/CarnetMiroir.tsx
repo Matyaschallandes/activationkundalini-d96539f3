@@ -428,14 +428,29 @@ const CarnetMiroir = ({
               placeholder="L'intention que je pose pour notre rencontre…"
             />
           </div>
-          <button
-            onClick={saveNotes}
-            disabled={saving}
-            className="inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-6 py-3 rounded-sm hover:shadow-gold transition-all disabled:opacity-60"
-          >
-            {saving && <Loader2 className="w-4 h-4 animate-spin" />}
-            {saved ? "Notes enregistrées" : "Envoyer mes notes à Matyas"}
-          </button>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <button
+              onClick={saveNotes}
+              disabled={saving}
+              className="inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-6 py-3 rounded-sm hover:shadow-gold transition-all disabled:opacity-60"
+            >
+              {saving && <Loader2 className="w-4 h-4 animate-spin" />}
+              {saved ? "Carnet complet envoyé" : "Envoyer mon carnet complet à Matyas"}
+            </button>
+            {identity && answers && (
+              <button
+                onClick={downloadFullPdf}
+                className="inline-flex items-center justify-center gap-2 border border-primary/40 text-primary font-body font-semibold tracking-wider uppercase text-sm px-6 py-3 rounded-sm hover:bg-primary/5 transition-all"
+              >
+                <Download className="w-4 h-4" />
+                Télécharger mon carnet complet (PDF)
+              </button>
+            )}
+          </div>
+          <p className="font-body text-xs text-muted-foreground">
+            Le PDF réunit en un seul document : tes questions-réponses, ta synthèse, ton analyse
+            complète et tes clés de guérison.
+          </p>
         </div>
       </Section>
 
