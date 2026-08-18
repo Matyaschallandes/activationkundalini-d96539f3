@@ -225,6 +225,17 @@ export function generateCarnetPdf(
       body(`Niveau d'intensité perçu : ${ai.intensite.niveau}`, { italic: true });
       body(ai.intensite.message);
     }
+    if (ai.lecture_detaillee?.length) {
+      y += 2;
+      title("Analyse détaillée de tes réponses", 13);
+      ai.lecture_detaillee.forEach((d) => {
+        ensure(24);
+        body(d.question, { italic: true, soft: true, size: 10 });
+        body(`Ce que tu as écrit : ${d.ce_que_tu_as_ecrit}`, { soft: true, size: 10 });
+        body(d.ce_que_cela_revele);
+        y += 1;
+      });
+    }
     if (ai.themes?.length) {
       y += 2;
       title("Les grands thèmes", 13);
@@ -333,6 +344,11 @@ export function generateCarnetPdf(
       y += 2;
       title("Lecture symbolique et énergétique", 13);
       body(ai.lecture_energetique);
+    }
+    if (ai.synthese_finale) {
+      y += 2;
+      title("Synthèse globale", 13);
+      body(ai.synthese_finale);
     }
   }
 
