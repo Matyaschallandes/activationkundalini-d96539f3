@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import LaKundalini from "./pages/LaKundalini";
 import LectureAme from "./pages/LectureAme";
 import Offres from "./pages/Offres";
+import OffreDecouverte from "./pages/OffreDecouverte";
 import APropos from "./pages/APropos";
 import MonHistoire from "./pages/MonHistoire";
 import Contact from "./pages/Contact";
@@ -60,6 +61,7 @@ const App = () => (
           <Route path="/la-kundalini" element={<LaKundalini />} />
           <Route path="/lecture-ame" element={<LectureAme />} />
           <Route path="/offres" element={<Offres />} />
+          <Route path="/offre-decouverte-gratuite" element={<OffreDecouverte />} />
           <Route path="/a-propos" element={<APropos />} />
           <Route path="/mon-histoire" element={<MonHistoire />} />
           <Route path="/contact" element={<Contact />} />

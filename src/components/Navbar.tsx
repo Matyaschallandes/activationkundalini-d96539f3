@@ -7,6 +7,7 @@ const GOOGLE_BUSINESS_URL = "https://www.google.com/search?q=Karmaequilego";
 const navItems = [
   { label: "Accueil", path: "/" },
   { label: "La Kundalini", path: "/la-kundalini" },
+  { label: "✨ Offre découverte gratuite", path: "/offre-decouverte-gratuite" },
   { label: "Offres", path: "/offres" },
   { label: "Déroulement séance", path: "/deroulement-seance" },
   { label: "Carnet de préparation", path: "/carnet-de-preparation" },
