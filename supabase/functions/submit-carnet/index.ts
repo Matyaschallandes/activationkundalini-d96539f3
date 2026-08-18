@@ -43,7 +43,7 @@ serve(async (req) => {
       answers: answers ?? {},
       analysis: analysis ?? {},
       intensity: typeof intensity === "number" ? intensity : null,
-    });
+    }).select("id").single();
 
     if (dbError) {
       console.error("DB error:", dbError);
