@@ -17,6 +17,10 @@ type Carnet = {
   date_naissance: string | null;
   answers: Record<string, string>;
   intensity: number | null;
+  ai_analysis: AiCarnetAnalysis | null;
+  intensity_level: string | null;
+  client_resonance: string | null;
+  client_intention: string | null;
 };
 
 type Suivi = {
