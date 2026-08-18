@@ -283,7 +283,14 @@ export type CarnetQuestion = {
   rows?: number;
 };
 
-export const CARNET_STEPS: { title: string; subtitle: string; questions: CarnetQuestion[] }[] = [
+export type CarnetStep = {
+  title: string;
+  subtitle: string;
+  questions: CarnetQuestion[];
+  practiceContent?: { paragraphs: string[]; bullets: string[]; closing: string[]; quote: string };
+};
+
+export const CARNET_STEPS: CarnetStep[] = [
   {
     title: "1. Ce que je choisis de libérer",
     subtitle:
