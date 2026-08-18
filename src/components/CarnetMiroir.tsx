@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiCarnetAnalysis } from "@/lib/carnetAiTypes";
+import { generateCarnetPdf } from "@/lib/carnetPdf";
+import { analyseCarnet } from "@/lib/carnetAnalysis";
+import { Download } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { supabase } from "@/integrations/supabase/client";
@@ -19,10 +22,21 @@ import {
   KeyRound,
 } from "lucide-react";
 
+type Identity = {
+  prenom: string;
+  nom: string;
+  email: string;
+  telephone?: string;
+  dateNaissance?: string;
+};
+
 type Props = {
   analysis: AiCarnetAnalysis;
   submissionId: string | null;
   prenom?: string;
+  identity?: Identity;
+  answers?: Record<string, string>;
+  intensity?: number;
 };
 
 const Section = ({
@@ -68,7 +82,14 @@ const Body = ({ children }: { children: React.ReactNode }) => (
   <p className="font-body text-sm text-foreground/80 leading-relaxed">{children}</p>
 );
 
-const CarnetMiroir = ({ analysis, submissionId, prenom }: Props) => {
+const CarnetMiroir = ({
+  analysis,
+  submissionId,
+  prenom,
+  identity,
+  answers,
+  intensity = 0,
+}: Props) => {
   const [resonance, setResonance] = useState("");
   const [intention, setIntention] = useState("");
   const [saving, setSaving] = useState(false);
@@ -89,7 +110,16 @@ const CarnetMiroir = ({ analysis, submissionId, prenom }: Props) => {
       return;
     }
     setSaved(true);
-    toast.success("Tes notes ont été transmises à Matyas 🙏");
+    toast.success("Ton carnet complet a été transmis à Matyas 🙏");
+  };
+
+  const downloadFullPdf = () => {
+    if (!identity || !answers) return;
+    generateCarnetPdf(identity, answers, analyseCarnet(answers), intensity, {
+      ai: analysis,
+      resonance,
+      intention,
+    });
   };
 
   return (
@@ -398,14 +428,29 @@ const CarnetMiroir = ({ analysis, submissionId, prenom }: Props) => {
               placeholder="L'intention que je pose pour notre rencontre…"
             />
           </div>
-          <button
-            onClick={saveNotes}
-            disabled={saving}
-            className="inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-6 py-3 rounded-sm hover:shadow-gold transition-all disabled:opacity-60"
-          >
-            {saving && <Loader2 className="w-4 h-4 animate-spin" />}
-            {saved ? "Notes enregistrées" : "Envoyer mes notes à Matyas"}
-          </button>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <button
+              onClick={saveNotes}
+              disabled={saving}
+              className="inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-6 py-3 rounded-sm hover:shadow-gold transition-all disabled:opacity-60"
+            >
+              {saving && <Loader2 className="w-4 h-4 animate-spin" />}
+              {saved ? "Carnet complet envoyé" : "Envoyer mon carnet complet à Matyas"}
+            </button>
+            {identity && answers && (
+              <button
+                onClick={downloadFullPdf}
+                className="inline-flex items-center justify-center gap-2 border border-primary/40 text-primary font-body font-semibold tracking-wider uppercase text-sm px-6 py-3 rounded-sm hover:bg-primary/5 transition-all"
+              >
+                <Download className="w-4 h-4" />
+                Télécharger mon carnet complet (PDF)
+              </button>
+            )}
+          </div>
+          <p className="font-body text-xs text-muted-foreground">
+            Le PDF réunit en un seul document : tes questions-réponses, ta synthèse, ton analyse
+            complète et tes clés de guérison.
+          </p>
         </div>
       </Section>
 

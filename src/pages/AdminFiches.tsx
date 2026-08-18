@@ -217,7 +217,12 @@ const AdminFiches = () => {
       },
       answers,
       analyseCarnet(answers),
-      c.intensity ?? 0
+      c.intensity ?? 0,
+      {
+        ai: c.ai_analysis,
+        resonance: c.client_resonance,
+        intention: c.client_intention,
+      }
     );
   };
 

@@ -207,6 +207,9 @@ const CarnetPreparation = () => {
             analysis={aiAnalysis}
             submissionId={submissionId}
             prenom={identity.prenom}
+            identity={identity}
+            answers={answers}
+            intensity={intensity}
           />
           <div className="text-center mt-12">
             <button
