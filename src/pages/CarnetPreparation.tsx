@@ -180,6 +180,50 @@ const CarnetPreparation = () => {
         jsonLd={jsonLd}
       />
 
+      {phase === "analyzing" && (
+        <section className="container mx-auto px-6 py-28 max-w-2xl text-center">
+          <div className="mx-auto w-16 h-16 rounded-full border border-primary/40 bg-primary/5 flex items-center justify-center mb-8 animate-pulse">
+            <Sparkles className="w-7 h-7 text-primary" />
+          </div>
+          <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-4">
+            Ton carnet a été enregistré.
+          </h1>
+          <p className="font-body text-muted-foreground leading-relaxed max-w-lg mx-auto">
+            Nous allons maintenant mettre en lumière les principaux thèmes qui ressortent de tes
+            réponses…
+          </p>
+          <div className="mt-10 h-1 w-full max-w-sm mx-auto bg-border rounded-full overflow-hidden">
+            <div className="h-full w-1/3 bg-gradient-gold animate-pulse" />
+          </div>
+          <p className="font-body text-xs text-muted-foreground mt-6 italic">
+            Lecture transversale de l'ensemble de tes réponses — quelques instants.
+          </p>
+        </section>
+      )}
+
+      {phase === "miroir" && aiAnalysis && (
+        <section className="container mx-auto px-6 py-14 max-w-3xl">
+          <CarnetMiroir
+            analysis={aiAnalysis}
+            submissionId={submissionId}
+            prenom={identity.prenom}
+          />
+          <div className="text-center mt-12">
+            <button
+              onClick={() => setPhase("form")}
+              className="font-body text-sm text-primary underline"
+            >
+              Revoir mes réponses
+            </button>
+          </div>
+          <p className="font-body text-xs text-muted-foreground text-center mt-8 leading-relaxed">
+            Ce carnet est un support de bien-être et de développement personnel. Il ne remplace ni
+            un avis, ni un diagnostic, ni un traitement médical.
+          </p>
+        </section>
+      )}
+
+      {phase === "form" && (
       <section className="container mx-auto px-6 py-12 max-w-3xl">
         <header className="text-center mb-10">
           <p className="font-body text-xs uppercase tracking-[0.3em] text-primary mb-4">
