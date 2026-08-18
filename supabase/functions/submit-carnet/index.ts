@@ -118,7 +118,7 @@ serve(async (req) => {
 
 
 
-    return new Response(JSON.stringify({ success: true }), {
+    return new Response(JSON.stringify({ success: true, id: inserted?.id ?? null }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {
