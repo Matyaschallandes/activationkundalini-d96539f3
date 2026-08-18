@@ -206,6 +206,151 @@ export function generateCarnetPdf(
   body("• Rappelle-toi ton intention en une phrase simple.");
   body("• Après la séance : eau, repos, marche, et note ce qui émerge dans les jours suivants.");
 
+  // ---- Lecture personnalisée (IA) : miroir intérieur
+  const ai = extras.ai;
+  if (ai) {
+    newPage();
+    title("Ta lecture personnalisée — Ton miroir intérieur");
+    body(
+      "Reflet de tes réponses d'aujourd'hui, dans le domaine du bien-être et de l'introspection : ni diagnostic, ni avis médical ou psychologique.",
+      { italic: true, soft: true, size: 9 }
+    );
+    rule();
+
+    if (ai.synthese?.length) {
+      title("Synthèse générale", 13);
+      ai.synthese.forEach((p3) => body(p3));
+    }
+    if (ai.intensite) {
+      body(`Niveau d'intensité perçu : ${ai.intensite.niveau}`, { italic: true });
+      body(ai.intensite.message);
+    }
+    if (ai.themes?.length) {
+      y += 2;
+      title("Les grands thèmes", 13);
+      ai.themes.forEach((t) => {
+        body(`• ${t.titre}`);
+        body(t.ce_que_montrent_tes_reponses, { soft: true, size: 10 });
+      });
+    }
+    if (ai.correlations?.length) {
+      y += 2;
+      title("Les liens qui apparaissent", 13);
+      ai.correlations.forEach((c) => {
+        body(`• ${c.lien}`);
+        body(c.explication, { soft: true, size: 10 });
+        (c.a_explorer ?? []).forEach((q) => body(`— ${q}`, { italic: true, size: 10 }));
+      });
+    }
+    if (ai.croyances?.length) {
+      y += 2;
+      title("Croyances à l'œuvre", 13);
+      ai.croyances.forEach((b) => {
+        body(`Ancienne : « ${b.ancienne} »`, { soft: true });
+        body(`Ce qui l'alimente : ${b.ce_qui_alimente}`, { size: 10 });
+        body(`Nouvelle possibilité : « ${b.nouvelle} »`, { italic: true });
+        y += 1;
+      });
+    }
+    if (ai.emotions?.length) {
+      y += 2;
+      title("Émotions dominantes", 13);
+      ai.emotions.forEach((e) => {
+        body(`• ${e.emotion}`);
+        body(`Déclencheur : ${e.declencheur}`, { soft: true, size: 10 });
+        body(`Ce qu'elle protège : ${e.protege}`, { soft: true, size: 10 });
+        body(`Accueillir : ${e.accueillir}`, { soft: true, size: 10 });
+      });
+    }
+    if (ai.mecanismes?.length) {
+      y += 2;
+      title("Stratégies de protection", 13);
+      ai.mecanismes.forEach((m) => {
+        body(`• ${m.comportement}`);
+        body(`Bénéfice : ${m.benefice_court_terme}`, { soft: true, size: 10 });
+        body(`Coût : ${m.cout_long_terme}`, { soft: true, size: 10 });
+        body(`Alternative : ${m.alternative}`, { soft: true, size: 10 });
+      });
+    }
+    if (ai.besoins?.length) {
+      y += 2;
+      title("Besoins actuels", 13);
+      ai.besoins.forEach((b) => body(`• ${b.besoin} — ${b.pourquoi}`));
+    }
+    if (ai.ressources?.length) {
+      y += 2;
+      title("Forces et ressources", 13);
+      ai.ressources.forEach((r) => body(`• ${r.ressource} — ${r.pourquoi}`));
+    }
+    if (ai.tensions?.length) {
+      y += 2;
+      title("Tensions intérieures", 13);
+      ai.tensions.forEach((t) => {
+        body(`Ce qui veut avancer : ${t.partie_qui_avance}`, { size: 10 });
+        body(`Ce qui veut protéger : ${t.partie_qui_protege}`, { size: 10 });
+        body(`Réconciliation : ${t.reconciliation}`, { soft: true, size: 10 });
+        y += 1;
+      });
+    }
+    if (ai.axe) {
+      y += 2;
+      title("Ton axe principal", 13);
+      body(`« ${ai.axe.phrase} »`, { italic: true });
+      body(ai.axe.pourquoi);
+    }
+    if (ai.cles?.length) {
+      y += 2;
+      title("Tes clés de guérison", 13);
+      ai.cles.forEach((k, i) => {
+        body(`${i + 1}. ${k.nom}`);
+        body(`Pourquoi : ${k.pourquoi}`, { soft: true, size: 10 });
+        body(`Pratique : ${k.pratique}`, { soft: true, size: 10 });
+        body(`Ancrage : « ${k.ancrage} »`, { italic: true, size: 10 });
+        y += 1;
+      });
+    }
+    if (ai.exercices?.length) {
+      y += 2;
+      title("Tes exercices personnalisés", 13);
+      ai.exercices.forEach((e) => {
+        body(`• ${e.titre}`);
+        body(e.deroule, { soft: true, size: 10 });
+      });
+    }
+    if (ai.plan) {
+      y += 2;
+      title("Tes prochains petits pas", 13);
+      body(`Aujourd'hui : ${ai.plan.aujourdhui}`);
+      body(`Cette semaine : ${ai.plan.cette_semaine}`);
+      body(`Avant la séance : ${ai.plan.avant_la_seance}`);
+    }
+    if (ai.seance?.length) {
+      y += 2;
+      title("À explorer ensemble en séance", 13);
+      ai.seance.forEach((s) => body(`• ${s}`));
+    }
+    if (ai.lecture_energetique) {
+      y += 2;
+      title("Lecture symbolique et énergétique", 13);
+      body(ai.lecture_energetique);
+    }
+  }
+
+  if (extras.resonance?.trim() || extras.intention?.trim()) {
+    y += 4;
+    ensure(30);
+    title("Ce que tu souhaites partager", 13);
+    rule();
+    if (extras.resonance?.trim()) {
+      body("Ce qui résonne le plus pour moi :", { soft: true, size: 10 });
+      body(extras.resonance.trim());
+    }
+    if (extras.intention?.trim()) {
+      body("Ce que je souhaite travailler pendant ma séance :", { soft: true, size: 10 });
+      body(extras.intention.trim());
+    }
+  }
+
   y += 8;
   body(
     "Karmaequilego · Matyas Challandes · +41 76 244 55 52 · www.activationkundalini.ch",
