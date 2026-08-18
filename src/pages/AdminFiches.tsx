@@ -110,22 +110,23 @@ const AdminFiches = () => {
               </h2>
               <div className="space-y-3">
                 {carnets.map((c) => (
-                  <div
-                    key={c.id}
-                    className="rounded-lg border border-border bg-card p-4 flex flex-wrap items-center justify-between gap-3"
-                  >
-                    <div className="font-body text-sm">
-                      <p className="text-foreground font-medium">
-                        {c.prenom} {c.nom}
-                      </p>
-                      <p className="text-muted-foreground">
-                        {c.email} {c.telephone ? `· ${c.telephone}` : ""} ·{" "}
-                        {new Date(c.created_at).toLocaleDateString("fr-CH")}
-                      </p>
+                  <div key={c.id} className="rounded-lg border border-border bg-card p-4">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <div className="font-body text-sm">
+                        <p className="text-foreground font-medium">
+                          {c.prenom} {c.nom}
+                          {c.intensity_level ? ` · Intensité : ${c.intensity_level}` : ""}
+                        </p>
+                        <p className="text-muted-foreground">
+                          {c.email} {c.telephone ? `· ${c.telephone}` : ""} ·{" "}
+                          {new Date(c.created_at).toLocaleDateString("fr-CH")}
+                        </p>
+                      </div>
+                      <Button variant="outline" size="sm" onClick={() => downloadPdf(c)}>
+                        Télécharger le PDF
+                      </Button>
                     </div>
-                    <Button variant="outline" size="sm" onClick={() => downloadPdf(c)}>
-                      Télécharger le PDF
-                    </Button>
+                    <TherapistView carnet={c} />
                   </div>
                 ))}
               </div>
