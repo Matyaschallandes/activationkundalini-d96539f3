@@ -506,6 +506,7 @@ const CarnetPreparation = () => {
           avis, ni un diagnostic, ni un traitement médical.
         </p>
       </section>
+      )}
     </Layout>
   );
 };
