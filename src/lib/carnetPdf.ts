@@ -345,6 +345,11 @@ export function generateCarnetPdf(
       title("Lecture symbolique et énergétique", 13);
       body(ai.lecture_energetique);
     }
+    if (ai.synthese_finale) {
+      y += 2;
+      title("Synthèse globale", 13);
+      body(ai.synthese_finale);
+    }
   }
 
   if (extras.resonance?.trim() || extras.intention?.trim()) {
