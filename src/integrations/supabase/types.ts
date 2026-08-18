@@ -81,40 +81,55 @@ export type Database = {
       }
       carnet_submissions: {
         Row: {
+          ai_analysis: Json | null
+          analysed_at: string | null
           analysis: Json
           answers: Json
+          client_intention: string | null
+          client_resonance: string | null
           created_at: string
           date_naissance: string | null
           email: string
           followup_sent_at: string | null
           id: string
           intensity: number | null
+          intensity_level: string | null
           nom: string
           prenom: string
           telephone: string | null
         }
         Insert: {
+          ai_analysis?: Json | null
+          analysed_at?: string | null
           analysis?: Json
           answers?: Json
+          client_intention?: string | null
+          client_resonance?: string | null
           created_at?: string
           date_naissance?: string | null
           email: string
           followup_sent_at?: string | null
           id?: string
           intensity?: number | null
+          intensity_level?: string | null
           nom: string
           prenom: string
           telephone?: string | null
         }
         Update: {
+          ai_analysis?: Json | null
+          analysed_at?: string | null
           analysis?: Json
           answers?: Json
+          client_intention?: string | null
+          client_resonance?: string | null
           created_at?: string
           date_naissance?: string | null
           email?: string
           followup_sent_at?: string | null
           id?: string
           intensity?: number | null
+          intensity_level?: string | null
           nom?: string
           prenom?: string
           telephone?: string | null

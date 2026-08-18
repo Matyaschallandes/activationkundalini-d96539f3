@@ -38,3 +38,9 @@ verify_jwt = false
 
 [functions.handle-email-suppression]
 verify_jwt = false
+
+[functions.analyse-carnet]
+verify_jwt = false
+
+[functions.save-carnet-notes]
+verify_jwt = false

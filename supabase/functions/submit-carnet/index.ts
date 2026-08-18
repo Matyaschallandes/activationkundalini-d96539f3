@@ -34,7 +34,7 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    const { error: dbError } = await supabase.from("carnet_submissions").insert({
+    const { data: inserted, error: dbError } = await supabase.from("carnet_submissions").insert({
       prenom: String(identity.prenom).slice(0, 100),
       nom: String(identity.nom).slice(0, 100),
       email: String(identity.email).slice(0, 255),
@@ -43,7 +43,7 @@ serve(async (req) => {
       answers: answers ?? {},
       analysis: analysis ?? {},
       intensity: typeof intensity === "number" ? intensity : null,
-    });
+    }).select("id").single();
 
     if (dbError) {
       console.error("DB error:", dbError);
@@ -118,7 +118,7 @@ serve(async (req) => {
 
 
 
-    return new Response(JSON.stringify({ success: true }), {
+    return new Response(JSON.stringify({ success: true, id: inserted?.id ?? null }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (error) {

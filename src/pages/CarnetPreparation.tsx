@@ -10,6 +10,8 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { analyseCarnet, CARNET_STEPS } from "@/lib/carnetAnalysis";
 import { generateCarnetPdf } from "@/lib/carnetPdf";
+import CarnetMiroir from "@/components/CarnetMiroir";
+import { AiCarnetAnalysis } from "@/lib/carnetAiTypes";
 import { Download, ChevronLeft, ChevronRight, Sparkles, Loader2, CheckCircle2 } from "lucide-react";
 
 const STORAGE_KEY = "carnet-preparation-draft";
@@ -47,6 +49,9 @@ const CarnetPreparation = () => {
   const [stepIndex, setStepIndex] = useState(0);
   const [sending, setSending] = useState(false);
   const [done, setDone] = useState(false);
+  const [phase, setPhase] = useState<"form" | "analyzing" | "miroir">("form");
+  const [aiAnalysis, setAiAnalysis] = useState<AiCarnetAnalysis | null>(null);
+  const [submissionId, setSubmissionId] = useState<string | null>(null);
 
   const totalSteps = CARNET_STEPS.length + 2; // identité + étapes + synthèse
   const progress = Math.round(((stepIndex + 1) / totalSteps) * 100);
@@ -105,7 +110,7 @@ const CarnetPreparation = () => {
     }
     setSending(true);
     try {
-      const { error } = await supabase.functions.invoke("submit-carnet", {
+      const { data, error } = await supabase.functions.invoke("submit-carnet", {
         body: {
           identity,
           answers,
@@ -122,13 +127,36 @@ const CarnetPreparation = () => {
         },
       });
       if (error) throw error;
+      const id = (data as { id?: string } | null)?.id ?? null;
+      setSubmissionId(id);
       setDone(true);
-      toast.success("Ton carnet a bien été transmis à Matyas 🙏");
+      toast.success("Ton carnet a bien été enregistré 🙏");
+      await runAiAnalysis(id);
     } catch (e) {
       console.error(e);
       toast.error("L'envoi n'a pas abouti. Tu peux télécharger ton PDF et l'envoyer par email.");
     } finally {
       setSending(false);
+    }
+  };
+
+  const runAiAnalysis = async (id: string | null) => {
+    setPhase("analyzing");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    try {
+      const { data, error } = await supabase.functions.invoke("analyse-carnet", {
+        body: { identity, answers, intensity, submissionId: id },
+      });
+      if (error) throw error;
+      if (!data?.analysis) throw new Error("Analyse vide");
+      setAiAnalysis(data.analysis as AiCarnetAnalysis);
+      setPhase("miroir");
+    } catch (e) {
+      console.error(e);
+      toast.error(
+        "Ta lecture personnalisée n'a pas pu être générée pour le moment. Ton carnet est bien enregistré."
+      );
+      setPhase("form");
     }
   };
 
@@ -152,6 +180,50 @@ const CarnetPreparation = () => {
         jsonLd={jsonLd}
       />
 
+      {phase === "analyzing" && (
+        <section className="container mx-auto px-6 py-28 max-w-2xl text-center">
+          <div className="mx-auto w-16 h-16 rounded-full border border-primary/40 bg-primary/5 flex items-center justify-center mb-8 animate-pulse">
+            <Sparkles className="w-7 h-7 text-primary" />
+          </div>
+          <h1 className="font-heading text-3xl md:text-4xl text-foreground mb-4">
+            Ton carnet a été enregistré.
+          </h1>
+          <p className="font-body text-muted-foreground leading-relaxed max-w-lg mx-auto">
+            Nous allons maintenant mettre en lumière les principaux thèmes qui ressortent de tes
+            réponses…
+          </p>
+          <div className="mt-10 h-1 w-full max-w-sm mx-auto bg-border rounded-full overflow-hidden">
+            <div className="h-full w-1/3 bg-gradient-gold animate-pulse" />
+          </div>
+          <p className="font-body text-xs text-muted-foreground mt-6 italic">
+            Lecture transversale de l'ensemble de tes réponses — quelques instants.
+          </p>
+        </section>
+      )}
+
+      {phase === "miroir" && aiAnalysis && (
+        <section className="container mx-auto px-6 py-14 max-w-3xl">
+          <CarnetMiroir
+            analysis={aiAnalysis}
+            submissionId={submissionId}
+            prenom={identity.prenom}
+          />
+          <div className="text-center mt-12">
+            <button
+              onClick={() => setPhase("form")}
+              className="font-body text-sm text-primary underline"
+            >
+              Revoir mes réponses
+            </button>
+          </div>
+          <p className="font-body text-xs text-muted-foreground text-center mt-8 leading-relaxed">
+            Ce carnet est un support de bien-être et de développement personnel. Il ne remplace ni
+            un avis, ni un diagnostic, ni un traitement médical.
+          </p>
+        </section>
+      )}
+
+      {phase === "form" && (
       <section className="container mx-auto px-6 py-12 max-w-3xl">
         <header className="text-center mb-10">
           <p className="font-body text-xs uppercase tracking-[0.3em] text-primary mb-4">
@@ -376,8 +448,14 @@ const CarnetPreparation = () => {
                   Télécharger mon carnet PDF
                 </button>
                 <button
-                  onClick={handleSend}
-                  disabled={sending || done}
+                  onClick={() =>
+                    done
+                      ? aiAnalysis
+                        ? setPhase("miroir")
+                        : runAiAnalysis(submissionId)
+                      : handleSend()
+                  }
+                  disabled={sending}
                   className="flex-1 inline-flex items-center justify-center gap-2 border border-primary text-foreground font-body tracking-wider uppercase text-sm py-3 rounded-sm hover:bg-primary/10 transition-all disabled:opacity-60"
                 >
                   {sending ? (
@@ -385,7 +463,7 @@ const CarnetPreparation = () => {
                   ) : done ? (
                     <CheckCircle2 className="w-4 h-4 text-primary" />
                   ) : null}
-                  {done ? "Carnet transmis" : "Envoyer à Matyas"}
+                  {done ? "Voir ma lecture personnalisée" : "Découvrir ma lecture personnalisée"}
                 </button>
               </div>
 
@@ -428,6 +506,7 @@ const CarnetPreparation = () => {
           avis, ni un diagnostic, ni un traitement médical.
         </p>
       </section>
+      )}
     </Layout>
   );
 };
