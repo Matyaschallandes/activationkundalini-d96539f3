@@ -39,6 +39,149 @@ type Suivi = {
   message: string | null;
 };
 
+const QUESTION_LABELS: Record<string, string> = Object.fromEntries(
+  CARNET_STEPS.flatMap((s) => s.questions.map((q) => [q.id, q.title]))
+);
+
+const Block = ({ title, children }: { title: string; children: React.ReactNode }) => (
+  <div className="mt-4">
+    <p className="font-body text-[11px] uppercase tracking-[0.18em] text-primary/80 mb-1">
+      {title}
+    </p>
+    <div className="font-body text-sm text-foreground/80 space-y-1">{children}</div>
+  </div>
+);
+
+const TherapistView = ({ carnet }: { carnet: Carnet }) => {
+  const [open, setOpen] = useState(false);
+  const a = carnet.ai_analysis;
+
+  return (
+    <div className="mt-3 border-t border-border/60 pt-3">
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className="font-body text-sm text-primary underline"
+      >
+        {open ? "Masquer la fiche complète" : "Voir la fiche thérapeute"}
+      </button>
+
+      {open && (
+        <div className="mt-4">
+          {a ? (
+            <>
+              <Block title="Synthèse">
+                {(a.synthese ?? []).map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </Block>
+              {a.axe && (
+                <Block title="Axe principal">
+                  <p className="text-foreground font-medium">{a.axe.phrase}</p>
+                  <p>{a.axe.pourquoi}</p>
+                </Block>
+              )}
+              {a.themes?.length > 0 && (
+                <Block title="Thèmes">
+                  {a.themes.map((t, i) => (
+                    <p key={i}>
+                      <strong>{t.titre}</strong> — {t.ce_que_montrent_tes_reponses}
+                    </p>
+                  ))}
+                </Block>
+              )}
+              {a.correlations?.length > 0 && (
+                <Block title="Corrélations">
+                  {a.correlations.map((c, i) => (
+                    <p key={i}>
+                      <strong>{c.lien}</strong> — {c.explication}
+                    </p>
+                  ))}
+                </Block>
+              )}
+              {a.croyances?.length > 0 && (
+                <Block title="Croyances">
+                  {a.croyances.map((b, i) => (
+                    <p key={i}>
+                      « {b.ancienne} » → {b.nouvelle}
+                    </p>
+                  ))}
+                </Block>
+              )}
+              {a.emotions?.length > 0 && (
+                <Block title="Émotions">
+                  <p>{a.emotions.map((e) => e.emotion).join(" · ")}</p>
+                </Block>
+              )}
+              {a.mecanismes?.length > 0 && (
+                <Block title="Mécanismes de protection">
+                  {a.mecanismes.map((m, i) => (
+                    <p key={i}>
+                      <strong>{m.comportement}</strong> — coût : {m.cout_long_terme}
+                    </p>
+                  ))}
+                </Block>
+              )}
+              {a.besoins?.length > 0 && (
+                <Block title="Besoins">
+                  <p>{a.besoins.map((b) => b.besoin).join(" · ")}</p>
+                </Block>
+              )}
+              {a.ressources?.length > 0 && (
+                <Block title="Ressources">
+                  <p>{a.ressources.map((r) => r.ressource).join(" · ")}</p>
+                </Block>
+              )}
+              {a.cles?.length > 0 && (
+                <Block title="Clés proposées">
+                  {a.cles.map((k, i) => (
+                    <p key={i}>
+                      {i + 1}. {k.nom} — {k.pratique}
+                    </p>
+                  ))}
+                </Block>
+              )}
+              {a.seance?.length > 0 && (
+                <Block title="À explorer en séance">
+                  {a.seance.map((s, i) => (
+                    <p key={i}>• {s}</p>
+                  ))}
+                </Block>
+              )}
+            </>
+          ) : (
+            <p className="font-body text-sm text-muted-foreground">
+              Pas encore de lecture personnalisée générée pour ce carnet.
+            </p>
+          )}
+
+          {(carnet.client_resonance || carnet.client_intention) && (
+            <Block title="Réactions du client">
+              {carnet.client_resonance && (
+                <p className="whitespace-pre-wrap">Résonance : {carnet.client_resonance}</p>
+              )}
+              {carnet.client_intention && (
+                <p className="whitespace-pre-wrap">
+                  Souhaite travailler : {carnet.client_intention}
+                </p>
+              )}
+            </Block>
+          )}
+
+          <Block title="Réponses originales">
+            {Object.entries(carnet.answers ?? {})
+              .filter(([, v]) => String(v ?? "").trim())
+              .map(([k, v]) => (
+                <p key={k} className="whitespace-pre-wrap">
+                  <strong>{QUESTION_LABELS[k] ?? k} :</strong> {v}
+                </p>
+              ))}
+          </Block>
+        </div>
+      )}
+    </div>
+  );
+};
+
 const AdminFiches = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
