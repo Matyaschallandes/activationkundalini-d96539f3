@@ -24,7 +24,8 @@ export function generateCarnetPdf(
   identity: Identity,
   answers: Record<string, string>,
   analysis: CarnetAnalysis,
-  intensity: number
+  intensity: number,
+  extras: CarnetPdfExtras = {}
 ) {
   const doc = new jsPDF({ unit: "mm", format: "a4" });
   const W = 210;
