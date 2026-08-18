@@ -49,6 +49,9 @@ const CarnetPreparation = () => {
   const [stepIndex, setStepIndex] = useState(0);
   const [sending, setSending] = useState(false);
   const [done, setDone] = useState(false);
+  const [phase, setPhase] = useState<"form" | "analyzing" | "miroir">("form");
+  const [aiAnalysis, setAiAnalysis] = useState<AiCarnetAnalysis | null>(null);
+  const [submissionId, setSubmissionId] = useState<string | null>(null);
 
   const totalSteps = CARNET_STEPS.length + 2; // identité + étapes + synthèse
   const progress = Math.round(((stepIndex + 1) / totalSteps) * 100);
