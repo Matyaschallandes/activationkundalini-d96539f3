@@ -6,27 +6,23 @@ const GOOGLE_BUSINESS_URL = "https://www.google.com/search?q=Karmaequilego";
 
 const navItems = [
   { label: "Accueil", path: "/" },
-  { label: "La Kundalini", path: "/la-kundalini" },
-  { label: "✨ Offre découverte gratuite", path: "/offre-decouverte-gratuite" },
-  { label: "Offres", path: "/offres" },
-  { label: "Déroulement séance", path: "/deroulement-seance" },
-  { label: "Carnet de préparation", path: "/carnet-de-preparation" },
-  { label: "Mon histoire", path: "/mon-histoire" },
+  { label: "L'accompagnement", path: "/offres" },
   { label: "À propos", path: "/a-propos" },
-  { label: "Cercle de guérison", path: "/cercle-de-guerison" },
-  { label: "Photos", path: "/photos" },
-  { label: "Blog", path: "/blog" },
-  { label: "Boutique", path: "/boutique" },
-  { label: "Rendez-vous", path: "/rendez-vous" },
-  { label: "Contact", path: "/contact" },
+  { label: "Témoignages", path: "/#temoignages" },
+  { label: "FAQ", path: "/#faq" },
 ];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { pathname } = useLocation();
 
+  const linkClass = (path: string) =>
+    `font-body text-sm tracking-wider uppercase transition-colors duration-300 ${
+      pathname === path ? "text-primary" : "text-foreground/70 hover:text-foreground"
+    }`;
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
       <a
         href={GOOGLE_BUSINESS_URL}
         target="_blank"
@@ -44,79 +40,95 @@ const Navbar = () => {
         <span className="sm:hidden uppercase tracking-widest">Google</span>
         <ExternalLink className="w-3 h-3" />
       </a>
+
       <div className="container mx-auto px-6 flex items-center justify-between h-16">
         <Link to="/" className="font-heading text-xl text-gradient-gold italic">
           Karmaequilego
         </Link>
 
         {/* Desktop */}
-        <ul className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
-            <li key={item.path}>
-              <Link
-                to={item.path}
-                className={`font-body text-sm tracking-wider uppercase transition-colors duration-300 ${
-                  pathname === item.path
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {item.label}
-              </Link>
-            </li>
-          ))}
-          <li>
-            <a
-              href="https://karmaequilego-humandesign.lovable.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-body text-sm tracking-wider uppercase text-primary hover:text-foreground transition-colors duration-300"
-            >
-              Lecture d&apos;âme holistique gratuite
-              <ExternalLink className="w-3 h-3" />
-            </a>
-          </li>
-        </ul>
+        <div className="hidden md:flex items-center gap-8">
+          <ul className="flex items-center gap-7">
+            {navItems.map((item) => (
+              <li key={item.path}>
+                {item.path.includes("#") ? (
+                  <a href={item.path} className={linkClass(item.path)}>
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link to={item.path} className={linkClass(item.path)}>
+                    {item.label}
+                  </Link>
+                )}
+              </li>
+            ))}
+          </ul>
+          <Link
+            to="/offre-decouverte-gratuite"
+            className="bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-xs px-5 py-3 rounded-sm hover:shadow-gold transition-all duration-300"
+          >
+            Découverte gratuite
+          </Link>
+        </div>
 
         {/* Mobile toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-foreground"
-          aria-label="Menu"
-        >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-3">
+          <Link
+            to="/offre-decouverte-gratuite"
+            className="bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-[11px] px-3 py-2 rounded-sm"
+          >
+            Découverte
+          </Link>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="text-foreground"
+            aria-label="Menu"
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border">
-          <ul className="flex flex-col items-center py-6 gap-6">
+          <ul className="flex flex-col items-center py-6 gap-5">
             {navItems.map((item) => (
               <li key={item.path}>
-                <Link
-                  to={item.path}
-                  onClick={() => setMobileOpen(false)}
-                  className={`font-body text-sm tracking-wider uppercase transition-colors ${
-                    pathname === item.path
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {item.label}
-                </Link>
+                {item.path.includes("#") ? (
+                  <a
+                    href={item.path}
+                    onClick={() => setMobileOpen(false)}
+                    className={linkClass(item.path)}
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.path}
+                    onClick={() => setMobileOpen(false)}
+                    className={linkClass(item.path)}
+                  >
+                    {item.label}
+                  </Link>
+                )}
               </li>
             ))}
             <li>
-              <a
-                href="https://karmaequilego-humandesign.lovable.app"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/offre-decouverte-gratuite"
                 onClick={() => setMobileOpen(false)}
-                className="inline-flex items-center gap-1.5 font-body text-sm tracking-wider uppercase text-primary hover:text-foreground transition-colors"
+                className="inline-block bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-xs px-6 py-3 rounded-sm"
               >
-                Lecture d&apos;âme holistique gratuite
-                <ExternalLink className="w-3 h-3" />
+                Découverte gratuite
+              </Link>
+            </li>
+            <li>
+              <a
+                href="tel:+41762445552"
+                className="font-body text-sm tracking-wider uppercase text-primary"
+              >
+                Appeler Matyas
               </a>
             </li>
           </ul>
