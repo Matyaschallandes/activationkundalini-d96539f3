@@ -102,6 +102,24 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Secondary bar (desktop) */}
+      <div className="hidden md:block border-t border-border/40 bg-background/70">
+        <ul className="container mx-auto px-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-1 py-2">
+          {secondaryItems.map((item) => (
+            <li key={item.path}>
+              <Link
+                to={item.path}
+                className={`font-body text-[11px] tracking-wider uppercase transition-colors ${
+                  pathname === item.path ? "text-primary" : "text-foreground/55 hover:text-foreground"
+                }`}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border">
