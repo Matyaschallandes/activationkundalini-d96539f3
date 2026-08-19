@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import SeoKeywords from "./SeoKeywords";
+import MobileCtaBar from "./MobileCtaBar";
 import { PaymentTestModeBanner } from "./PaymentTestModeBanner";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -10,6 +11,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Navbar />
       <main className="flex-1 pt-24 overflow-hidden">{children}</main>
       <Footer />
+      <div className="h-14 md:hidden" aria-hidden />
+      <MobileCtaBar />
       <SeoKeywords />
     </div>
   );

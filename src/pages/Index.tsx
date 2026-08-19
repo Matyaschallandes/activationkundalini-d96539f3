@@ -1,21 +1,22 @@
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
-import HeroSection from "@/components/HeroSection";
-import FrustrationsSection from "@/components/FrustrationsSection";
-import TransformationSection from "@/components/TransformationSection";
-import VideoSection from "@/components/VideoSection";
-import SeanceOverviewSection from "@/components/SeanceOverviewSection";
-import OffersImageSection from "@/components/OffersImageSection";
-import CtaSection from "@/components/CtaSection";
-import FaqSection, { faqJsonLd } from "@/components/FaqSection";
+import HeroTunnel from "@/components/home/HeroTunnel";
+import RecognizeSection from "@/components/home/RecognizeSection";
+import DiscoverySection from "@/components/home/DiscoverySection";
+import TrustSection from "@/components/home/TrustSection";
+import HowItWorks from "@/components/home/HowItWorks";
+import AboutMatyas from "@/components/home/AboutMatyas";
+import ToolsSection from "@/components/home/ToolsSection";
+import FaqShort, { homeFaqJsonLd } from "@/components/home/FaqShort";
+import FinalCta from "@/components/home/FinalCta";
 
 const organizationLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": "https://www.activationkundalini.ch/#organization",
   "name": "Karmaequilego — Activation Kundalini & Soins Énergétiques",
-  "alternateName": "Matyas Challandes — Guérisseur Énergétique",
-  "description": "Guérisseur énergétique et chamane en Suisse romande : activation kundalini, soins chamaniques (désenvoûtement, recouvrement d'âme, dégagement d'entités), accompagnement burn-out, traumatismes, angoisses et reconnexion à soi.",
+  "alternateName": "Matyas Challandes — Accompagnement énergétique",
+  "description": "Accompagnement énergétique en Suisse romande : découverte gratuite d'une heure en visioconférence pour explorer et mettre en lumière vos blocages. Activation Kundalini, chamanisme, kinésiologie, biorésonance.",
   "url": "https://www.activationkundalini.ch",
   "telephone": "+41762445552",
   "email": "matyas.challandes@gmail.com",
@@ -23,12 +24,10 @@ const organizationLd = {
   "image": "https://www.activationkundalini.ch/og-image.jpg",
   "areaServed": ["Bevaix", "La Grande Béroche", "Neuchâtel", "Suisse romande", "Lausanne", "Genève", "Zurich", "Fribourg", "Vaud", "Suisse"],
   "serviceType": [
-    "Activation Kundalini", "Guérisseur énergétique", "Soins énergétiques",
-    "Chamanisme", "Soins chamaniques", "Désenvoûtement", "Recouvrement d'âme",
-    "Dégagement d'entités", "Vision intuitive", "Protection énergétique",
-    "Accompagnement burn-out", "Libération des traumatismes", "Gestion des angoisses",
-    "Reconnexion à soi", "Harmonisation des chakras", "Libération karmique",
-    "Kinésiologie", "Soins à distance"
+    "Activation Kundalini", "Soins énergétiques", "Chamanisme", "Kinésiologie",
+    "Biorésonance", "Reiki Kundalini", "Human Design", "Lecture d'âme",
+    "Accompagnement burn-out", "Libération des blocages émotionnels",
+    "Harmonisation des chakras", "Soins à distance"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -55,23 +54,23 @@ const Index = () => {
   return (
     <Layout>
       <Seo
-        title="Guérisseur énergétique & chamane à Bevaix — Karmaequilego"
-        description="Matyas Challandes, praticien à Bevaix (Neuchâtel) : activation Kundalini, chamanisme, kinésiologie. Accompagnement burn-out, anxiété, traumatismes. Prix libre."
+        title="Découverte gratuite 1h — Comprendre ce qui vous bloque | Karmaequilego"
+        description="Vous tournez en rond malgré vos efforts ? Une heure offerte en visioconférence avec Matyas Challandes pour explorer vos blocages et repartir avec une première clé. Sans engagement."
         path="/"
-        keywords="anxiété, burn-out, dépression, stress, traumatisme, chamanisme, chamane Suisse romande, désenvoûtement, recouvrement d'âme, dégagement d'entités, vision intuitive, guérisseur énergétique, activation kundalini, soins énergétiques Neuchâtel, Bevaix"
-        jsonLd={[organizationLd, websiteLd, faqJsonLd]}
+        keywords="découverte gratuite, blocages émotionnels, activation kundalini, chamanisme, kinésiologie, biorésonance, soins énergétiques Neuchâtel, Bevaix, Suisse romande"
+        jsonLd={[organizationLd, websiteLd, homeFaqJsonLd]}
       />
-      <HeroSection />
-      <FrustrationsSection />
-      <SeanceOverviewSection />
-      <VideoSection />
-      <TransformationSection />
-      <OffersImageSection />
-      <FaqSection />
-      <CtaSection />
+      <HeroTunnel />
+      <RecognizeSection />
+      <DiscoverySection />
+      <TrustSection />
+      <HowItWorks />
+      <AboutMatyas />
+      <ToolsSection />
+      <FaqShort />
+      <FinalCta />
     </Layout>
   );
 };
 
 export default Index;
-
