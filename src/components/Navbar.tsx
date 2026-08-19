@@ -7,9 +7,22 @@ const GOOGLE_BUSINESS_URL = "https://www.google.com/search?q=Karmaequilego";
 const navItems = [
   { label: "Accueil", path: "/" },
   { label: "L'accompagnement", path: "/offres" },
+  { label: "La Kundalini", path: "/la-kundalini" },
   { label: "À propos", path: "/a-propos" },
-  { label: "Témoignages", path: "/#temoignages" },
-  { label: "FAQ", path: "/#faq" },
+  { label: "Contact", path: "/contact" },
+];
+
+const secondaryItems = [
+  { label: "Mon histoire", path: "/mon-histoire" },
+  { label: "Déroulement d'une séance", path: "/deroulement-seance" },
+  { label: "Cercle de guérison", path: "/cercle-de-guerison" },
+  { label: "Photos", path: "/photos" },
+  { label: "Blog", path: "/blog" },
+  { label: "Boutique", path: "/boutique" },
+  { label: "Rendez-vous", path: "/rendez-vous" },
+  { label: "Carnet de préparation", path: "/carnet-de-preparation" },
+  { label: "Suivi post-séance", path: "/suivi-post-seance" },
+  { label: "Lecture d'âme", path: "/lecture-ame" },
 ];
 
 const Navbar = () => {
