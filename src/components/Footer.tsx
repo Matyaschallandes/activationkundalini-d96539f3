@@ -31,6 +31,29 @@ const Footer = () => {
           </p>
         </div>
 
+        <nav aria-label="Le site" className="pt-4">
+          <p className="font-body text-xs uppercase tracking-widest text-foreground/50 mb-2">
+            Explorer le site
+          </p>
+          <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs">
+            <li><Link to="/offre-decouverte-gratuite" className="text-foreground/60 hover:text-primary transition-colors">Découverte gratuite</Link></li>
+            <li><Link to="/la-kundalini" className="text-foreground/60 hover:text-primary transition-colors">La Kundalini</Link></li>
+            <li><Link to="/offres" className="text-foreground/60 hover:text-primary transition-colors">Offres</Link></li>
+            <li><Link to="/mon-histoire" className="text-foreground/60 hover:text-primary transition-colors">Mon histoire</Link></li>
+            <li><Link to="/cercle-de-guerison" className="text-foreground/60 hover:text-primary transition-colors">Cercle de guérison</Link></li>
+            <li><Link to="/photos" className="text-foreground/60 hover:text-primary transition-colors">Photos</Link></li>
+            <li><Link to="/blog" className="text-foreground/60 hover:text-primary transition-colors">Blog</Link></li>
+            <li><Link to="/boutique" className="text-foreground/60 hover:text-primary transition-colors">Boutique</Link></li>
+            <li><Link to="/rendez-vous" className="text-foreground/60 hover:text-primary transition-colors">Rendez-vous</Link></li>
+            <li><Link to="/contact" className="text-foreground/60 hover:text-primary transition-colors">Contact</Link></li>
+            <li>
+              <a href="https://karmaequilego-humandesign.lovable.app" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors">
+                Lecture d&apos;âme gratuite
+              </a>
+            </li>
+          </ul>
+        </nav>
+
         <nav aria-label="Zones desservies" className="pt-4">
           <p className="font-body text-xs uppercase tracking-widest text-foreground/50 mb-2">
             Zones desservies en Suisse romande
