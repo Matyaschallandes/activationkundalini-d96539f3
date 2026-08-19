@@ -145,6 +145,25 @@ const Navbar = () => {
                 )}
               </li>
             ))}
+            <li className="w-full px-6 pt-2">
+              <div className="border-t border-border/60 pt-4">
+                <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+                  {secondaryItems.map((item) => (
+                    <li key={item.path}>
+                      <Link
+                        to={item.path}
+                        onClick={() => setMobileOpen(false)}
+                        className={`font-body text-[11px] tracking-wider uppercase ${
+                          pathname === item.path ? "text-primary" : "text-foreground/60"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
             <li>
               <Link
                 to="/offre-decouverte-gratuite"
