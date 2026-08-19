@@ -7,9 +7,22 @@ const GOOGLE_BUSINESS_URL = "https://www.google.com/search?q=Karmaequilego";
 const navItems = [
   { label: "Accueil", path: "/" },
   { label: "L'accompagnement", path: "/offres" },
+  { label: "La Kundalini", path: "/la-kundalini" },
   { label: "À propos", path: "/a-propos" },
-  { label: "Témoignages", path: "/#temoignages" },
-  { label: "FAQ", path: "/#faq" },
+  { label: "Contact", path: "/contact" },
+];
+
+const secondaryItems = [
+  { label: "Mon histoire", path: "/mon-histoire" },
+  { label: "Déroulement d'une séance", path: "/deroulement-seance" },
+  { label: "Cercle de guérison", path: "/cercle-de-guerison" },
+  { label: "Photos", path: "/photos" },
+  { label: "Blog", path: "/blog" },
+  { label: "Boutique", path: "/boutique" },
+  { label: "Rendez-vous", path: "/rendez-vous" },
+  { label: "Carnet de préparation", path: "/carnet-de-preparation" },
+  { label: "Suivi post-séance", path: "/suivi-post-seance" },
+  { label: "Lecture d'âme", path: "/lecture-ame" },
 ];
 
 const Navbar = () => {
@@ -89,6 +102,24 @@ const Navbar = () => {
         </div>
       </div>
 
+      {/* Secondary bar (desktop) */}
+      <div className="hidden md:block border-t border-border/40 bg-background/70">
+        <ul className="container mx-auto px-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-1 py-2">
+          {secondaryItems.map((item) => (
+            <li key={item.path}>
+              <Link
+                to={item.path}
+                className={`font-body text-[11px] tracking-wider uppercase transition-colors ${
+                  pathname === item.path ? "text-primary" : "text-foreground/55 hover:text-foreground"
+                }`}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-background/95 backdrop-blur-md border-b border-border">
@@ -114,6 +145,25 @@ const Navbar = () => {
                 )}
               </li>
             ))}
+            <li className="w-full px-6 pt-2">
+              <div className="border-t border-border/60 pt-4">
+                <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+                  {secondaryItems.map((item) => (
+                    <li key={item.path}>
+                      <Link
+                        to={item.path}
+                        onClick={() => setMobileOpen(false)}
+                        className={`font-body text-[11px] tracking-wider uppercase ${
+                          pathname === item.path ? "text-primary" : "text-foreground/60"
+                        }`}
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </li>
             <li>
               <Link
                 to="/offre-decouverte-gratuite"
