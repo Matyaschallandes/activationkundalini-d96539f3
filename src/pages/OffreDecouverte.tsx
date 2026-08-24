@@ -24,12 +24,41 @@ const HUMAN_DESIGN_URL = "https://karmaequilego-humandesign.lovable.app";
 const CARNET_PATH = "/carnet-de-preparation";
 const KOALENDAR_URL = "https://koalendar.com/e/Activationkundalini";
 
-const blocages = [
-  { icon: "📅", title: "L'année", desc: "À quelle période cela semble-t-il être lié ?" },
-  { icon: "🌱", title: "L'événement", desc: "Quel événement ou contexte peut être associé ?" },
-  { icon: "🌀", title: "Le chakra", desc: "Quelle zone énergétique est concernée ?" },
-  { icon: "💭", title: "L'émotion", desc: "Quelle émotion semble être au cœur du mécanisme ?" },
-  { icon: "💔", title: "La blessure", desc: "Quelle blessure ou quel schéma est à explorer ?" },
+const originesBlocage = [
+  { icon: "🔮", title: "Vie antérieure", desc: "Une mémoire issue d'une incarnation passée qui continue d'influencer votre présent." },
+  { icon: "🧬", title: "Transgénérationnel", desc: "Un schéma ou une blessure héritée de votre lignée familiale." },
+  { icon: "👶", title: "Mémoire de naissance", desc: "Une empreinte émotionnelle liée à votre venue au monde." },
+  { icon: "🤰", title: "In utero", desc: "Une trace énergétique vécue pendant la vie intra-utérine." },
+  { icon: "💥", title: "Traumatique", desc: "Un choc ou un événement qui a marqué votre corps et votre énergie." },
+  { icon: "🌫️", title: "Dissociation", desc: "Un mécanisme de protection qui a coupé le lien avec une partie de vous." },
+];
+
+const testEnergetiqueSteps = [
+  {
+    icon: "🤲",
+    title: "Je me connecte à vous",
+    desc: "Par ma main et mon aura, j'établis d'abord un lien énergétique avec vous. C'est depuis cette connexion que tout le travail commence.",
+  },
+  {
+    icon: "❓",
+    title: "Je questionne l'énergie",
+    desc: "Je demande ce qui vous bloque : quelle date, quelle émotion, quelle origine ? Vie antérieure, transgénérationnel, mémoire de naissance, in utero, traumatisme, dissociation… les informations viennent.",
+  },
+  {
+    icon: "🎯",
+    title: "Je cible exactement le blocage",
+    desc: "Grâce au test énergétique, j'identifie avec précision ce qui bloque chez vous — souvent une date précise et un événement bien défini.",
+  },
+  {
+    icon: "🔄",
+    title: "Nous revivons l'événement",
+    desc: "Ensemble, nous revisitons ce moment pour comprendre son message et refaire circuler l'énergie là où elle était figée.",
+  },
+  {
+    icon: "✨",
+    title: "Les fragments d'âme reviennent",
+    desc: "Quand l'événement est trop dur, des parties de nous-mêmes s'en vont. Nous les récupérons : les fragments reviennent dans le corps et l'énergie circule à nouveau librement.",
+  },
 ];
 
 const visio = [
