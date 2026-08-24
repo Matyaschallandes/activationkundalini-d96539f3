@@ -233,32 +233,73 @@ const OffreDecouverte = () => {
         </div>
       </section>
 
-      {/* 5. DÉTECTION DES BLOCAGES */}
+      {/* 5. DÉTECTION DES BLOCAGES — TEST ÉNERGÉTIQUE */}
       <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-6 max-w-5xl">
           <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground text-center mb-6">
-            🔎 Nous allons chercher ensemble <span className="text-gradient-gold italic">ce qui bloque</span>
+            🔎 Le test énergétique — <span className="text-gradient-gold italic">cibler ce qui bloque</span>
           </h2>
           <div className="glow-line w-20 mx-auto mb-8" />
-          <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-12">
-            Grâce à des tests énergétiques, nous explorons les principaux éléments associés au blocage.
+          <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-12 leading-relaxed">
+            Au cœur de la séance, je réalise un test énergétique avec ma main et mon aura. C'est un
+            travail de précision : je me connecte à vous, puis je questionne l'énergie pour identifier
+            exactement ce qui bloque — et d'où cela vient.
           </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
-            {blocages.map((b) => (
+
+          {/* Les étapes du test énergétique */}
+          <div className="space-y-5 mb-16">
+            {testEnergetiqueSteps.map((s) => (
               <div
-                key={b.title}
-                className="group text-center border border-border hover:border-primary/40 rounded-sm p-6 bg-card/60 backdrop-blur-sm transition-all duration-500 hover:shadow-gold"
+                key={s.title}
+                className="group border border-border hover:border-primary/40 rounded-sm p-6 md:p-8 bg-card/60 backdrop-blur-sm transition-all duration-500 hover:shadow-gold"
               >
-                <div className="text-3xl mb-3">{b.icon}</div>
-                <h3 className="font-heading text-lg text-foreground mb-2">{b.title}</h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
+                <div className="flex gap-4 md:gap-6 items-start">
+                  <span className="text-3xl md:text-4xl shrink-0">{s.icon}</span>
+                  <div>
+                    <h3 className="font-heading text-xl md:text-2xl text-foreground mb-2">{s.title}</h3>
+                    <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">{s.desc}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
-          <p className="font-body text-sm text-muted-foreground/80 italic text-center max-w-2xl mx-auto mt-10">
-            L'objectif n'est pas de chercher une vérité absolue, mais d'utiliser ces explorations comme
-            des clés pour mieux comprendre ce qui se joue en vous.
-          </p>
+
+          {/* Les origines possibles du blocage */}
+          <div className="border-t border-border pt-12">
+            <h3 className="font-heading text-2xl md:text-3xl text-foreground text-center mb-3">
+              Les <span className="text-gradient-gold italic">origines</span> que nous explorons
+            </h3>
+            <div className="glow-line w-20 mx-auto mb-10" />
+            <p className="font-body text-muted-foreground text-center max-w-2xl mx-auto mb-10 leading-relaxed">
+              Le test énergétique permet de remonter à la source du blocage. Voici les origines les plus
+              fréquentes que je recherche :
+            </p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {originesBlocage.map((o) => (
+                <div
+                  key={o.title}
+                  className="group text-center border border-border hover:border-primary/40 rounded-sm p-6 bg-card/60 backdrop-blur-sm transition-all duration-500 hover:shadow-gold"
+                >
+                  <div className="text-3xl mb-3">{o.icon}</div>
+                  <h4 className="font-heading text-lg text-foreground mb-2">{o.title}</h4>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">{o.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Message clé */}
+          <div className="mt-16 border border-primary/30 rounded-sm bg-muted/30 p-8 md:p-10 text-center">
+            <p className="font-heading text-xl md:text-2xl text-foreground italic leading-relaxed mb-4">
+              « Ça marche à tous les coups. Les fragments reviennent dans le corps, l'énergie circule à
+              nouveau librement — une fois le message compris et digéré. »
+            </p>
+            <p className="font-body text-sm text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Tout au long de la vie, nous perdons des fragments d'âme quand certaines expériences sont
+              trop difficiles à vivre. La séance permet de les récupérer et de rétablir la libre
+              circulation de votre énergie.
+            </p>
+          </div>
         </div>
       </section>
 
