@@ -9,8 +9,8 @@ const steps = [
   },
   {
     n: "02",
-    title: "Nous cherchons ce qui se cache derrière le blocage",
-    text: "À partir de vos ressentis, de votre histoire et des outils que j'utilise, nous identifions les principaux mécanismes qui peuvent être à l'œuvre.",
+    title: "Je détèle l'événement à l'origine du blocage",
+    text: "Par mon test énergétique de l'aura, je remonte directement à la source — une date, une émotion, un événement précis. C'est l'énergie elle-même qui me guide, pas vos ressentis.",
   },
   {
     n: "03",
