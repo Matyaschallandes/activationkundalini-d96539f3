@@ -9,8 +9,8 @@ const steps = [
   },
   {
     n: "02",
-    title: "Je détecte l'événement à l'origine du blocage",
-    text: "Par mon test énergétique de l'aura, je remonte directement à la source — une date, une émotion, un événement précis. C'est l'énergie elle-même qui me guide, pas vos ressentis.",
+    title: "Je remonte à l'événement source",
+    text: "Connecté à vous par mon test énergétique de l'aura, je suis l'énergie jusqu'à l'origine du blocage : un trauma, un accident, un choc émotionnel, une dissociation, une naissance difficile, ou même une mémoire d'avant la naissance. Une fois l'événement identifié, j'engage un dialogue avec cette partie de vous — souvent elle porte un message à faire passer. L'accueillir et l'écouter permet de la réintégrer, pour que l'énergie circule à nouveau librement.",
   },
   {
     n: "03",
