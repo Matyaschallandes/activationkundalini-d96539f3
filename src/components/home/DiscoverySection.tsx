@@ -9,7 +9,7 @@ const steps = [
   },
   {
     n: "02",
-    title: "Je détèle l'événement à l'origine du blocage",
+    title: "Je détecte l'événement à l'origine du blocage",
     text: "Par mon test énergétique de l'aura, je remonte directement à la source — une date, une émotion, un événement précis. C'est l'énergie elle-même qui me guide, pas vos ressentis.",
   },
   {
