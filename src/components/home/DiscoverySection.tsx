@@ -10,7 +10,7 @@ const steps = [
   {
     n: "02",
     title: "Je remonte à l'événement source",
-    text: "Connecté à vous par mon test énergétique de l'aura, je suis l'énergie jusqu'à l'origine du blocage : un trauma, un accident, un choc émotionnel, une dissociation, une naissance difficile, ou même une mémoire d'avant la naissance. Une fois l'événement identifié, j'engage un dialogue avec cette partie de vous — souvent elle porte un message à faire passer. L'accueillir et l'écouter permet de la réintégrer, pour que l'énergie circule à nouveau librement.",
+    text: "Connecté à vous par mon test énergétique de l'aura, je suis l'énergie jusqu'à l'origine du blocage : un trauma, un accident, un choc émotionnel, une dissociation, une naissance difficile, ou même une mémoire d'avant la naissance. Une fois l'événement identifié, je vous invite à entrer en dialogue avec ces parties de vous — qui ont souvent un message à vous transmettre. Les écouter et les accueillir permet de les réintégrer, pour que l'énergie circule à nouveau librement.",
   },
   {
     n: "03",
