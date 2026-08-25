@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import CercleGallery from "@/components/CercleGallery";
 import { cerclePhotos } from "@/data/cerclePhotos";
-import { MessageCircle, Users, Sparkles, Flame, Globe, Bell, Bed, Wind, Wand2, Heart } from "lucide-react";
+import { MessageCircle, Users, Sparkles, Flame, Globe, Bed, Wind, Wand2, Heart } from "lucide-react";
 
 
 const phoneNumber = "41762445552";
@@ -34,28 +34,23 @@ const steps = [
     text: "Une méditation guidée pour calmer le mental, revenir dans le corps, renforcer l'ancrage à la Terre et favoriser la stabilité intérieure. Étape essentielle pour accueillir les libérations avec douceur.",
   },
   {
-    icon: Bell,
-    title: "3. Harmonisation vibratoire aux bols chantants",
-    text: "Chantal vous accompagne aux bols chantants. Les vibrations sonores favorisent la détente profonde, l'apaisement du système nerveux, l'harmonisation énergétique, le relâchement émotionnel et l'ouverture du cœur.",
-  },
-  {
     icon: Bed,
-    title: "4. Installation et confort",
+    title: "3. Installation et confort",
     text: "Les participants s'allongent confortablement sur un tapis de yoga avec coussin et couverture, dans un maximum de confort, de sécurité et de détente.",
   },
   {
     icon: Wind,
-    title: "5. Respiration alchimique & ouverture des mémoires",
+    title: "4. Respiration alchimique & ouverture des mémoires",
     text: "20 à 30 minutes de respiration consciente active par la bouche pour libérer les premiers blocages, faire circuler l'énergie, préparer le système nerveux et ouvrir progressivement les mémoires émotionnelles. Certaines émotions peuvent remonter — cela fait partie du processus de libération.",
   },
   {
     icon: Wand2,
-    title: "6. Nettoyage énergétique profond",
+    title: "5. Nettoyage énergétique profond",
     text: "Un travail énergétique plus profond nettoie et libère les charges émotionnelles et stagnations. Sensation de légèreté, apaisement, meilleure circulation, ouverture du cœur, reconnexion à soi.",
   },
   {
     icon: Sparkles,
-    title: "7. Activation progressive de la Kundalini",
+    title: "6. Activation progressive de la Kundalini",
     text: "Environ 30 minutes dédiées à l'activation douce et progressive de l'énergie vitale, dans le respect du rythme naturel de chacun. Vibrations, mouvements spontanés, chaleur, libérations émotionnelles, états de bien-être et expansion intérieure peuvent être ressentis. Chaque expérience est unique.",
   },
 ];
@@ -75,9 +70,9 @@ const CercleGuerison = () => {
     <Layout>
       <Seo
         title="Cercle de Guérison Collectif — Respiration & Kundalini | Bevaix, Neuchâtel"
-        description="Cercle de guérison mensuel à Bevaix (Neuchâtel) : respiration alchimique, bols chantants et activation Kundalini animés par Matyas et Chantal. Participation au chapeau."
+        description="Cercle de guérison mensuel à Bevaix (Neuchâtel) : respiration alchimique, nettoyage énergétique et activation Kundalini animés par Matyas Challandes. Participation au chapeau."
         path="/cercle-de-guerison"
-        keywords="cercle de guérison Neuchâtel, respiration alchimique Suisse, bols chantants Bevaix"
+        keywords="cercle de guérison Neuchâtel, respiration alchimique Suisse, activation kundalini Bevaix"
       />
 
       <section className="py-24 md:py-32 bg-background">
@@ -96,7 +91,7 @@ const CercleGuerison = () => {
           {/* Intro */}
           <div className="bg-gradient-card border border-border rounded-sm p-8 md:p-10 mb-12 space-y-4">
             <p className="font-body text-muted-foreground leading-relaxed">
-              Avec <span className="text-foreground font-medium">Chantal</span> et moi-même, nous vous accueillons dans un cercle énergétique profond, bienveillant et sécurisé, conçu pour vous accompagner dans un processus de guérison intérieure, de libération émotionnelle et de reconnexion à votre énergie vitale.
+              Je vous accueille dans un cercle énergétique profond, bienveillant et sécurisé, conçu pour vous accompagner dans un processus de guérison intérieure, de libération émotionnelle et de reconnexion à votre énergie vitale.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed">
               À travers la respiration consciente, le son, l'ancrage et le travail énergétique, nous créons un espace où le corps, le cœur et l'esprit peuvent relâcher ce qui n'a plus lieu d'être et retrouver davantage d'harmonie.
