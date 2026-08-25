@@ -94,7 +94,7 @@ const CercleGuerison = () => {
               Je vous accueille dans un cercle énergétique profond, bienveillant et sécurisé, conçu pour vous accompagner dans un processus de guérison intérieure, de libération émotionnelle et de reconnexion à votre énergie vitale.
             </p>
             <p className="font-body text-muted-foreground leading-relaxed">
-              À travers la respiration consciente, le son, l'ancrage et le travail énergétique, nous créons un espace où le corps, le cœur et l'esprit peuvent relâcher ce qui n'a plus lieu d'être et retrouver davantage d'harmonie.
+              À travers la respiration consciente, l'ancrage, le nettoyage énergétique et l'activation de l'énergie vitale, nous créons un espace où le corps, le cœur et l'esprit peuvent relâcher ce qui n'a plus lieu d'être et retrouver davantage d'harmonie.
             </p>
           </div>
 
