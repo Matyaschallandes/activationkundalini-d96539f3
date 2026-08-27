@@ -135,8 +135,45 @@ const OffreDecouverte = () => {
           >
             Je veux profiter de l'offre gratuite
           </button>
+
+          {/* Liens rapides */}
+          <div className="mt-10 grid sm:grid-cols-3 gap-3 max-w-3xl mx-auto text-left">
+            <Link
+              to={CARNET_PATH}
+              className="flex items-center gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
+            >
+              <BookOpen className="w-5 h-5 text-primary shrink-0" />
+              <span className="font-body text-sm text-foreground">
+                Carnet de préparation
+                <span className="block text-xs text-muted-foreground">À remplir en ligne</span>
+              </span>
+            </Link>
+            <Link
+              to="/lecture-ame"
+              className="flex items-center gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
+            >
+              <Sparkles className="w-5 h-5 text-primary shrink-0" />
+              <span className="font-body text-sm text-foreground">
+                Lecture d'âme
+                <span className="block text-xs text-muted-foreground">Human Design</span>
+              </span>
+            </Link>
+            <a
+              href={KOALENDAR_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
+            >
+              <Calendar className="w-5 h-5 text-primary shrink-0" />
+              <span className="font-body text-sm text-foreground">
+                Prendre rendez-vous
+                <span className="block text-xs text-muted-foreground">Calendrier en ligne</span>
+              </span>
+            </a>
+          </div>
         </div>
       </section>
+
 
       {/* 2. COMPRENDRE AVANT DE CHANGER */}
       <section className="py-20 md:py-28 bg-background">
