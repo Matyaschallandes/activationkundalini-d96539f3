@@ -36,10 +36,41 @@ const DeroulementSeance = () => {
             Chaque séance est entièrement personnalisée. Je ne suis pas un protocole tout fait : c'est ton corps qui guide chaque étape. Mon rôle est d'agir comme un canal et un facilitateur, en écoutant ce que ton corps est prêt à révéler, à comprendre et à libérer.
           </p>
 
+          {/* Timeline résumé */}
+          <section className="mb-16">
+            <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-2 flex items-center gap-3">
+              <Sprout className="w-6 h-6 text-primary" />
+              La séance en un coup d'œil
+            </h2>
+            <p className="font-body text-foreground/70 text-sm mb-8 italic">
+              Durée : 1h30 à 3h — chaque étape s'adapte à ce que ton corps révèle.
+            </p>
+            <ol className="relative border-l border-primary/30 pl-8 space-y-7">
+              {[
+                { n: "01", t: "Accueil & écoute", d: "Tu déposes ce que tu vis, tes intentions et ce que tu souhaites transformer." },
+                { n: "02", t: "Ancrage & méditation", d: "Quelques exercices pour calmer le mental et revenir dans le corps." },
+                { n: "03", t: "Tests énergétiques & kinésiologiques", d: "Le corps guide : ce qui est prêt à émerger, être libéré ou transformé." },
+                { n: "04", t: "Respiration alchimique", d: "Respiration profonde et continue pour libérer mémoires, émotions et tensions." },
+                { n: "05", t: "Travail énergétique & chamanique", d: "Nettoyage, liens toxiques, mémoires transgénérationnelles, recouvrement d'âme, tambour." },
+                { n: "06", t: "Activation de la Kundalini", d: "L'énergie de vie se déploie naturellement en fin de séance." },
+                { n: "07", t: "Échange & intégration", d: "Partage des ressentis, puis un rapport personnalisé et des outils pour continuer chez toi." },
+              ].map((step) => (
+                <li key={step.n} className="relative">
+                  <span className="absolute -left-[2.6rem] flex items-center justify-center w-9 h-9 rounded-full bg-gradient-gold text-primary-foreground font-heading text-sm font-semibold shadow-md">
+                    {step.n}
+                  </span>
+                  <h3 className="font-heading text-lg text-foreground mb-1">{step.t}</h3>
+                  <p className="font-body text-foreground/75 leading-relaxed text-[15px]">{step.d}</p>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          {/* Détail des étapes */}
           <section className="mb-12">
             <h2 className="font-heading text-2xl md:text-3xl text-foreground mb-6 flex items-center gap-3">
               <Sprout className="w-6 h-6 text-primary" />
-              Déroulement d'une séance (1h30 à 3h)
+              Déroulement détaillé (1h30 à 3h)
             </h2>
             <div className="space-y-4 font-body text-foreground/80 leading-relaxed">
               <p>Nous commençons toujours par un temps d'échange afin que tu puisses déposer ce que tu vis, tes difficultés, tes émotions, tes intentions et ce que tu souhaites transformer.</p>
