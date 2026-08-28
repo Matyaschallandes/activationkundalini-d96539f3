@@ -4,7 +4,7 @@ const KinesiologieNeuchatel = () => (
   <VillePage
     slug="/kinesiologie-neuchatel"
     ville="Neuchâtel"
-    title="Kinésiologie à Neuchâtel — Libération émotionnelle"
+    title="Kinésiologie à Neuchâtel | Karmaequilego"
     description="Kinésiologie à Neuchâtel avec Matyas Challandes à Bevaix : libération des blocages émotionnels, mémoires cellulaires, stress et croyances limitantes."
     keywords="kinésiologie Neuchâtel, kinésiologue Bevaix, kinésiologie Suisse romande, libération émotionnelle Neuchâtel, mémoires cellulaires"
     h1="Kinésiologie à Neuchâtel — Écouter le corps pour libérer ce qui bloque"
