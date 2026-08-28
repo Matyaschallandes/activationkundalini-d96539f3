@@ -62,40 +62,65 @@ const HeroTunnel = () => {
               </ul>
             </div>
 
-            {/* Liens rapides */}
-            <div className="grid sm:grid-cols-3 gap-3 mb-8 text-left">
-              <Link
-                to={CARNET_PATH}
-                className="flex items-center gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
-              >
-                <BookOpen className="w-5 h-5 text-primary shrink-0" />
-                <span className="font-body text-sm text-foreground">
-                  Carnet de préparation
-                  <span className="block text-xs text-muted-foreground">À remplir en ligne</span>
-                </span>
-              </Link>
-              <Link
-                to="/lecture-ame"
-                className="flex items-center gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
-              >
-                <Sparkles className="w-5 h-5 text-primary shrink-0" />
-                <span className="font-body text-sm text-foreground">
-                  Lecture d'âme
-                  <span className="block text-xs text-muted-foreground">Human Design</span>
-                </span>
-              </Link>
+            {/* Étapes rapides */}
+            <div className="space-y-3 mb-8 text-left">
+              {/* 1. Prendre contact & rendez-vous */}
               <a
                 href={KOALENDAR_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
+                className="flex items-start gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
               >
-                <Calendar className="w-5 h-5 text-primary shrink-0" />
+                <span className="font-heading text-lg text-primary shrink-0 leading-none pt-0.5">1</span>
+                <Calendar className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="font-body text-sm text-foreground">
-                  Prendre rendez-vous
-                  <span className="block text-xs text-muted-foreground">Calendrier en ligne</span>
+                  <strong>Prendre contact & fixer un rendez-vous</strong>
+                  <span className="block text-xs text-muted-foreground mt-0.5">Réservez votre créneau directement sur le calendrier en ligne.</span>
                 </span>
               </a>
+
+              {/* 2. Carnet de préparation */}
+              <Link
+                to={CARNET_PATH}
+                className="flex items-start gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
+              >
+                <span className="font-heading text-lg text-primary shrink-0 leading-none pt-0.5">2</span>
+                <BookOpen className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <span className="font-body text-sm text-foreground">
+                  <strong>Remplir le carnet de préparation</strong>
+                  <span className="block text-xs text-muted-foreground mt-0.5">
+                    Il ouvre les tiroirs de l'inconscient pour préparer à libérer ce qui est prêt à l'être. Pas obligatoire, mais très conseillé.
+                  </span>
+                </span>
+              </Link>
+
+              {/* 3. Lecture d'âme */}
+              <Link
+                to="/lecture-ame"
+                className="flex items-start gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
+              >
+                <span className="font-heading text-lg text-primary shrink-0 leading-none pt-0.5">3</span>
+                <Sparkles className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <span className="font-body text-sm text-foreground">
+                  <strong>Lecture d'âme — Human Design</strong>
+                  <span className="block text-xs text-muted-foreground mt-0.5">
+                    Mieux comprendre comment vous fonctionnez et pourquoi vous êtes né(e). Très conseillé : pendant l'activation, cela aide à reconnecter avec la personne que vous êtes censé(e) incarner.
+                  </span>
+                </span>
+              </Link>
+            </div>
+
+            {/* Déroulement de la séance */}
+            <div className="border border-border bg-card/50 backdrop-blur-sm rounded-sm p-5 mb-8 text-left">
+              <p className="font-body font-semibold text-sm text-foreground mb-3">
+                Le jour du rendez-vous :
+              </p>
+              <ol className="font-body text-sm text-foreground/80 leading-relaxed space-y-1.5 list-decimal list-inside">
+                <li>Vous me parlez de ce qui se passe dans votre vie.</li>
+                <li>Nous discutons du carnet de préparation et de la lecture d'âme si vous le souhaitez.</li>
+                <li>Je fais la détection de vos blocages (test énergétique).</li>
+                <li>Nous terminons par une activation Kundalini, un soin chamanique — ou les deux.</li>
+              </ol>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-center md:justify-start">
