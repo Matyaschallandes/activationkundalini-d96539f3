@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Phone, Video, Clock, Gift } from "lucide-react";
+import { Phone, Video, Clock, Gift, BookOpen, Calendar, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import matyasPhoto from "@/assets/matyas-photo.jpg";
 import ContactFormDialog from "../ContactFormDialog";
+
+const CARNET_PATH = "/carnet-de-preparation";
+const KOALENDAR_URL = "https://koalendar.com/e/Activationkundalini";
 
 const HeroTunnel = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -42,9 +45,14 @@ const HeroTunnel = () => {
               <p className="font-body font-semibold tracking-[0.25em] uppercase text-xs text-primary mb-3">
                 Découverte gratuite
               </p>
-              <p className="font-body text-foreground/90 text-base md:text-lg leading-relaxed mb-5">
+              <p className="font-body text-foreground/90 text-base md:text-lg leading-relaxed mb-4">
                 1 heure pour faire le point sur ce que vous vivez, comprendre vos principaux
                 blocages et repartir avec une première clé de compréhension.
+              </p>
+              <p className="font-body text-foreground/85 text-sm md:text-base leading-relaxed mb-5">
+                La séance se termine par un <strong>soin énergétique chamanique</strong> et/ou une{" "}
+                <strong>activation Kundalini de 15 minutes</strong>, pour découvrir concrètement
+                l'énergie et ressentir son effet.
               </p>
               <ul className="flex flex-wrap gap-x-5 gap-y-2 font-body text-sm text-foreground/75">
                 <li className="flex items-center gap-1.5"><Gift className="w-4 h-4 text-primary" /> Gratuit</li>
@@ -52,6 +60,42 @@ const HeroTunnel = () => {
                 <li className="flex items-center gap-1.5"><Video className="w-4 h-4 text-primary" /> En visioconférence</li>
                 <li className="flex items-center gap-1.5"><span className="text-primary">✦</span> Sans engagement</li>
               </ul>
+            </div>
+
+            {/* Liens rapides */}
+            <div className="grid sm:grid-cols-3 gap-3 mb-8 text-left">
+              <Link
+                to={CARNET_PATH}
+                className="flex items-center gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
+              >
+                <BookOpen className="w-5 h-5 text-primary shrink-0" />
+                <span className="font-body text-sm text-foreground">
+                  Carnet de préparation
+                  <span className="block text-xs text-muted-foreground">À remplir en ligne</span>
+                </span>
+              </Link>
+              <Link
+                to="/lecture-ame"
+                className="flex items-center gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
+              >
+                <Sparkles className="w-5 h-5 text-primary shrink-0" />
+                <span className="font-body text-sm text-foreground">
+                  Lecture d'âme
+                  <span className="block text-xs text-muted-foreground">Human Design</span>
+                </span>
+              </Link>
+              <a
+                href={KOALENDAR_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
+              >
+                <Calendar className="w-5 h-5 text-primary shrink-0" />
+                <span className="font-body text-sm text-foreground">
+                  Prendre rendez-vous
+                  <span className="block text-xs text-muted-foreground">Calendrier en ligne</span>
+                </span>
+              </a>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-center md:justify-start">
