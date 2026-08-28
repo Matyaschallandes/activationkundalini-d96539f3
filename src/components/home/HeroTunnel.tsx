@@ -18,6 +18,9 @@ const HeroTunnel = () => {
       <div className="relative z-10 container mx-auto px-6 py-20 md:py-28 max-w-5xl">
         <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-12 items-center">
           <div className="text-center md:text-left">
+            <p className="font-body tracking-[0.25em] uppercase text-xs text-primary mb-4">
+              Activation Kundalini à Neuchâtel · Chamanisme &amp; Kinésiologie
+            </p>
             <h1 className="font-heading text-3xl md:text-5xl lg:text-[3.4rem] font-light leading-[1.15] mb-6 text-foreground">
               Vous avez l'impression de tourner en rond{" "}
               <span className="text-gradient-gold italic font-medium">malgré tous vos efforts</span> ?
@@ -25,6 +28,14 @@ const HeroTunnel = () => {
 
             <p className="font-body text-foreground/85 text-lg md:text-xl leading-relaxed mb-10">
               Et si vous pouviez enfin mettre des mots sur ce qui vous bloque ?
+            </p>
+
+            <p className="font-body text-foreground/75 leading-relaxed mb-10">
+              Je m'appelle Matyas Challandes. À Bevaix, dans le canton de Neuchâtel, j'accompagne
+              par l'<Link to="/la-kundalini" className="text-primary underline underline-offset-4">Activation Kundalini</Link>,
+              le <Link to="/chamanisme-neuchatel" className="text-primary underline underline-offset-4">chamanisme</Link> et
+              la <Link to="/kinesiologie-neuchatel" className="text-primary underline underline-offset-4">kinésiologie</Link>,
+              en présentiel ou à distance dans toute la Suisse romande.
             </p>
 
             <div className="border border-primary/30 bg-card/80 backdrop-blur-sm rounded-sm p-6 md:p-8 mb-8 text-left">
