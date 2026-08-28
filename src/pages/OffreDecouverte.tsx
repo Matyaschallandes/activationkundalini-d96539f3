@@ -86,9 +86,9 @@ const pourQui = [
 
 const timeline = [
   { n: "1", title: "Je découvre", desc: "Je découvre l'offre gratuite." },
-  { n: "2", title: "Je remplis", desc: "Je remplis mon carnet de préparation de 20 questions directement en ligne." },
+  { n: "2", title: "Je remplis", desc: <>Je remplis mon <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">carnet de préparation</Link> de 20 questions directement en ligne.</> },
   { n: "3", title: "Nous explorons", desc: "Nous faisons ensemble l'exploration énergétique en visioconférence." },
-  { n: "4", title: "Je comprends", desc: "J'approfondis avec ma lecture d'âme Human Design." },
+  { n: "4", title: "Je comprends", desc: <>J'approfondis avec ma <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a> Human Design.</> },
   { n: "5", title: "Je libère", desc: "La séance se termine par un mini-soin énergétique de 15 minutes." },
 ];
 
@@ -498,13 +498,13 @@ const OffreDecouverte = () => {
             </h2>
             <p className="font-body text-muted-foreground mb-8">1 heure environ en visioconférence</p>
             <ul className="text-left max-w-md mx-auto space-y-3 font-body text-foreground/85 mb-10">
-              <li>📖 Carnet de préparation de 20 questions</li>
+              <li>📖 <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">Carnet de préparation</Link> de 20 questions</li>
               <li>🔎 Exploration énergétique personnalisée</li>
               <li className="pl-6 text-sm text-muted-foreground">📅 Année / événement</li>
               <li className="pl-6 text-sm text-muted-foreground">🌀 Chakra</li>
               <li className="pl-6 text-sm text-muted-foreground">💭 Émotion</li>
               <li className="pl-6 text-sm text-muted-foreground">💔 Blessure</li>
-              <li>🧬 Lecture d'âme Human Design de 60 pages</li>
+              <li>🧬 <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">Lecture d'âme</a> Human Design de 60 pages</li>
               <li>🌿 Mini-soin énergétique de 15 minutes</li>
             </ul>
             <p className="font-heading text-2xl md:text-4xl text-gradient-gold italic">
