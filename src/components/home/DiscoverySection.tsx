@@ -23,7 +23,7 @@ const inclus = [
   { icon: NotebookPen, label: "Un carnet de préparation avec des clés de compréhension" },
   { icon: Compass, label: "Une détection énergétique personnalisée des principaux blocages" },
   { icon: Sparkles, label: "Une lecture d'âme / Human Design" },
-  { icon: HandHeart, label: "Un mini-soin énergétique de 15 minutes" },
+  { icon: HandHeart, label: "Un soin énergétique chamanique et/ou une activation Kundalini de 15 minutes" },
 ];
 
 const DiscoverySection = () => (
