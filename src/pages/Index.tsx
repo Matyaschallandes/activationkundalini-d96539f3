@@ -1,8 +1,9 @@
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import HeroTunnel from "@/components/home/HeroTunnel";
-import RecognizeSection from "@/components/home/RecognizeSection";
 import TrustSection from "@/components/home/TrustSection";
+import BlocagesSection from "@/components/home/BlocagesSection";
+import RecognizeSection from "@/components/home/RecognizeSection";
 import AboutMatyas from "@/components/home/AboutMatyas";
 import ToolsSection from "@/components/home/ToolsSection";
 import FaqShort, { homeFaqJsonLd } from "@/components/home/FaqShort";
@@ -59,8 +60,9 @@ const Index = () => {
         jsonLd={[organizationLd, websiteLd, homeFaqJsonLd]}
       />
       <HeroTunnel />
-      <RecognizeSection />
       <TrustSection />
+      <BlocagesSection />
+      <RecognizeSection />
       <AboutMatyas />
       <ToolsSection />
       <FaqShort />
