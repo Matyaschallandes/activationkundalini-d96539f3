@@ -63,6 +63,7 @@ const Index = () => {
       <HeroTunnel />
       <TrustSection />
       <BlocagesSection />
+      <KundaliniSection />
       <RecognizeSection />
       <AboutMatyas />
       <ToolsSection />
