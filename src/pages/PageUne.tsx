@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
+import { KOALENDAR_URL } from "@/lib/links";
 
 const PageUne = () => {
   return (
@@ -117,10 +118,28 @@ const PageUne = () => {
           </p>
 
           <h2 className="font-heading text-3xl font-light mb-6 text-foreground">
-            Prendre rendez-vous pour un soin énergétique
+            Prendre{" "}
+            <a
+              href={KOALENDAR_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-4 hover:text-primary/80"
+            >
+              rendez-vous
+            </a>{" "}
+            pour un soin énergétique
           </h2>
           <p className="font-body text-foreground/70 leading-relaxed mb-4">
-            Si vous ressentez le besoin de vous libérer de douleurs, de blocages ou de retrouver un équilibre intérieur, il est possible de prendre rendez-vous pour une séance de soin énergétique.
+            Si vous ressentez le besoin de vous libérer de douleurs, de blocages ou de retrouver un équilibre intérieur, il est possible de prendre{" "}
+            <a
+              href={KOALENDAR_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-4 hover:text-primary/80"
+            >
+              rendez-vous
+            </a>{" "}
+            pour une séance de soin énergétique.
           </p>
           <p className="font-body text-foreground/70 leading-relaxed mb-4">
             Les séances permettent de :
@@ -141,7 +160,16 @@ const PageUne = () => {
             ))}
           </ul>
           <p className="font-body text-foreground/70 leading-relaxed mb-12">
-            Prendre rendez-vous pour un soin énergétique est une étape vers une transformation profonde et un mieux-être durable.
+            Prendre{" "}
+            <a
+              href={KOALENDAR_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-4 hover:text-primary/80"
+            >
+              rendez-vous
+            </a>{" "}
+            pour un soin énergétique est une étape vers une transformation profonde et un mieux-être durable.
           </p>
 
           <p className="font-body text-foreground/40 text-xs">

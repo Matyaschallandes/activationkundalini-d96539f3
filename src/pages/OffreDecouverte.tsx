@@ -13,6 +13,7 @@ import {
   Heart,
   Globe,
 } from "lucide-react";
+import { CARNET_PATH, KOALENDAR_URL, HUMAN_DESIGN_URL } from "@/lib/links";
 
 const PHONE_DISPLAY = "+41 76 244 55 52";
 const WHATSAPP_URL = `https://wa.me/41762445552?text=${encodeURIComponent(
@@ -20,9 +21,6 @@ const WHATSAPP_URL = `https://wa.me/41762445552?text=${encodeURIComponent(
 )}`;
 const EMAIL = "matyas.challandes@gmail.com";
 const EMAIL_URL = `mailto:${EMAIL}?subject=${encodeURIComponent("Offre découverte gratuite")}`;
-const HUMAN_DESIGN_URL = "https://karmaequilego-humandesign.lovable.app";
-const CARNET_PATH = "/carnet-de-preparation";
-const KOALENDAR_URL = "https://koalendar.com/e/Activationkundalini";
 
 const originesBlocage = [
   { icon: "🔮", title: "Vie antérieure", desc: "Une mémoire issue d'une incarnation passée qui continue d'influencer votre présent." },
@@ -88,9 +86,9 @@ const pourQui = [
 
 const timeline = [
   { n: "1", title: "Je découvre", desc: "Je découvre l'offre gratuite." },
-  { n: "2", title: "Je remplis", desc: "Je remplis mon carnet de préparation de 20 questions directement en ligne." },
+  { n: "2", title: "Je remplis", desc: <>Je remplis mon <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">carnet de préparation</Link> de 20 questions directement en ligne.</> },
   { n: "3", title: "Nous explorons", desc: "Nous faisons ensemble l'exploration énergétique en visioconférence." },
-  { n: "4", title: "Je comprends", desc: "J'approfondis avec ma lecture d'âme Human Design." },
+  { n: "4", title: "Je comprends", desc: <>J'approfondis avec ma <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a> Human Design.</> },
   { n: "5", title: "Je libère", desc: "La séance se termine par un mini-soin énergétique de 15 minutes." },
 ];
 
@@ -148,8 +146,10 @@ const OffreDecouverte = () => {
                 <span className="block text-xs text-muted-foreground">À remplir en ligne</span>
               </span>
             </Link>
-            <Link
-              to="/lecture-ame"
+            <a
+              href={HUMAN_DESIGN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
             >
               <Sparkles className="w-5 h-5 text-primary shrink-0" />
@@ -157,7 +157,7 @@ const OffreDecouverte = () => {
                 Lecture d'âme
                 <span className="block text-xs text-muted-foreground">Human Design</span>
               </span>
-            </Link>
+            </a>
             <a
               href={KOALENDAR_URL}
               target="_blank"
@@ -200,12 +200,13 @@ const OffreDecouverte = () => {
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] max-w-full rounded-full bg-primary/5 blur-[120px]" />
         <div className="relative z-10 container mx-auto px-6 max-w-4xl">
           <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground text-center mb-6">
-            📖 Votre carnet de préparation — <span className="text-gradient-gold italic">20 questions</span>
+            📖 Votre <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">carnet de préparation</Link> — <span className="text-gradient-gold italic">20 questions</span>
           </h2>
           <div className="glow-line w-20 mx-auto mb-10" />
           <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
             <p>
-              Avant la séance, vous remplissez directement en ligne un carnet de préparation composé de
+              Avant la séance, vous remplissez directement en ligne un{" "}
+              <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">carnet de préparation</Link> composé de
               20 questions.
             </p>
             <p>
@@ -346,11 +347,11 @@ const OffreDecouverte = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] max-w-full rounded-full bg-primary/8 blur-[130px] animate-glow-pulse" />
         <div className="relative z-10 container mx-auto px-6 max-w-3xl text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground mb-6">
-            🌀 Votre lecture d'âme — <span className="text-gradient-gold italic">Human Design</span>
+            🌀 Votre <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a> — <span className="text-gradient-gold italic">Human Design</span>
           </h2>
           <div className="glow-line w-20 mx-auto mb-8" />
           <p className="font-body text-muted-foreground leading-relaxed mb-10">
-            Découvrez également une lecture d'âme Human Design de 60 pages pour approfondir la
+            Découvrez également une <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a> Human Design de 60 pages pour approfondir la
             compréhension de votre fonctionnement, de vos potentiels, de vos mécanismes et de votre
             chemin personnel.
           </p>
@@ -498,13 +499,13 @@ const OffreDecouverte = () => {
             </h2>
             <p className="font-body text-muted-foreground mb-8">1 heure environ en visioconférence</p>
             <ul className="text-left max-w-md mx-auto space-y-3 font-body text-foreground/85 mb-10">
-              <li>📖 Carnet de préparation de 20 questions</li>
+              <li>📖 <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">Carnet de préparation</Link> de 20 questions</li>
               <li>🔎 Exploration énergétique personnalisée</li>
               <li className="pl-6 text-sm text-muted-foreground">📅 Année / événement</li>
               <li className="pl-6 text-sm text-muted-foreground">🌀 Chakra</li>
               <li className="pl-6 text-sm text-muted-foreground">💭 Émotion</li>
               <li className="pl-6 text-sm text-muted-foreground">💔 Blessure</li>
-              <li>🧬 Lecture d'âme Human Design de 60 pages</li>
+              <li>🧬 <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">Lecture d'âme</a> Human Design de 60 pages</li>
               <li>🌿 Mini-soin énergétique de 15 minutes</li>
             </ul>
             <p className="font-heading text-2xl md:text-4xl text-gradient-gold italic">

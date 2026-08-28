@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ExternalLink, Star } from "lucide-react";
+import { HUMAN_DESIGN_URL } from "@/lib/links";
 
 const GOOGLE_BUSINESS_URL = "https://www.google.com/search?q=Karmaequilego";
 
@@ -23,7 +24,7 @@ const secondaryItems = [
   { label: "Rendez-vous", path: "/rendez-vous" },
   { label: "Carnet de préparation", path: "/carnet-de-preparation" },
   { label: "Suivi post-séance", path: "/suivi-post-seance" },
-  { label: "Lecture d'âme", path: "/lecture-ame" },
+  { label: "Lecture d'âme", path: HUMAN_DESIGN_URL, external: true },
 ];
 
 const Navbar = () => {
@@ -108,14 +109,25 @@ const Navbar = () => {
         <ul className="container mx-auto px-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-1 py-2">
           {secondaryItems.map((item) => (
             <li key={item.path}>
-              <Link
-                to={item.path}
-                className={`font-body text-[11px] tracking-wider uppercase transition-colors ${
-                  pathname === item.path ? "text-primary" : "text-foreground/55 hover:text-foreground"
-                }`}
-              >
-                {item.label}
-              </Link>
+              {(item as any).external ? (
+                <a
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-[11px] tracking-wider uppercase transition-colors text-foreground/55 hover:text-foreground"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  to={item.path}
+                  className={`font-body text-[11px] tracking-wider uppercase transition-colors ${
+                    pathname === item.path ? "text-primary" : "text-foreground/55 hover:text-foreground"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>
@@ -151,15 +163,27 @@ const Navbar = () => {
                 <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2">
                   {secondaryItems.map((item) => (
                     <li key={item.path}>
-                      <Link
-                        to={item.path}
-                        onClick={() => setMobileOpen(false)}
-                        className={`font-body text-[11px] tracking-wider uppercase ${
-                          pathname === item.path ? "text-primary" : "text-foreground/60"
-                        }`}
-                      >
-                        {item.label}
-                      </Link>
+                      {(item as any).external ? (
+                        <a
+                          href={item.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMobileOpen(false)}
+                          className="font-body text-[11px] tracking-wider uppercase text-foreground/60"
+                        >
+                          {item.label}
+                        </a>
+                      ) : (
+                        <Link
+                          to={item.path}
+                          onClick={() => setMobileOpen(false)}
+                          className={`font-body text-[11px] tracking-wider uppercase ${
+                            pathname === item.path ? "text-primary" : "text-foreground/60"
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

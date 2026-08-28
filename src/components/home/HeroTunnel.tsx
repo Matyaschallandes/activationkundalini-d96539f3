@@ -4,9 +4,7 @@ import { Phone, Video, Clock, Gift, BookOpen, Calendar, Sparkles } from "lucide-
 import heroBg from "@/assets/hero-bg.jpg";
 import matyasPhoto from "@/assets/matyas-photo.jpg";
 import ContactFormDialog from "../ContactFormDialog";
-
-const CARNET_PATH = "/carnet-de-preparation";
-const KOALENDAR_URL = "https://koalendar.com/e/Activationkundalini";
+import { CARNET_PATH, KOALENDAR_URL, HUMAN_DESIGN_URL } from "@/lib/links";
 
 const HeroTunnel = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -95,8 +93,10 @@ const HeroTunnel = () => {
               </Link>
 
               {/* 3. Lecture d'âme */}
-              <Link
-                to="/lecture-ame"
+              <a
+                href={HUMAN_DESIGN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-start gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
               >
                 <span className="font-heading text-lg text-primary shrink-0 leading-none pt-0.5">3</span>
@@ -107,17 +107,17 @@ const HeroTunnel = () => {
                     Mieux comprendre comment vous fonctionnez et pourquoi vous êtes né(e). Très conseillé : pendant l'activation, cela aide à reconnecter avec la personne que vous êtes censé(e) incarner.
                   </span>
                 </span>
-              </Link>
+              </a>
             </div>
 
             {/* Déroulement de la séance */}
             <div className="border border-border bg-card/50 backdrop-blur-sm rounded-sm p-5 mb-8 text-left">
               <p className="font-body font-semibold text-sm text-foreground mb-3">
-                Le jour du rendez-vous :
+                Le jour du <a href={KOALENDAR_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">rendez-vous</a> :
               </p>
               <ol className="font-body text-sm text-foreground/80 leading-relaxed space-y-1.5 list-decimal list-inside">
                 <li>Vous me parlez de ce qui se passe dans votre vie.</li>
-                <li>Nous discutons du carnet de préparation et de la lecture d'âme si vous le souhaitez.</li>
+                <li>Nous discutons du <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">carnet de préparation</Link> et de la <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a> si vous le souhaitez.</li>
                 <li>Je fais la détection de vos blocages (test énergétique).</li>
                 <li>Nous terminons par une activation Kundalini, un soin chamanique — ou les deux.</li>
               </ol>

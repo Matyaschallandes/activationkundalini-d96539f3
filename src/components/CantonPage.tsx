@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import { Link } from "react-router-dom";
+import { HUMAN_DESIGN_URL } from "@/lib/links";
 
 export type CantonPageProps = {
   slug: string;
@@ -137,7 +138,15 @@ const CantonPage = ({
           </p>
 
           <h3 className="font-heading text-2xl font-light mt-8 mb-3 text-foreground">
-            Lecture d'âme & guidance
+            <a
+              href={HUMAN_DESIGN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary underline underline-offset-4 hover:text-primary/80"
+            >
+              Lecture d'âme
+            </a>{" "}
+            & guidance
           </h3>
           <p className="font-body text-foreground/75 leading-relaxed mb-4">
             Une écoute intuitive de votre trajectoire pour éclairer les questions importantes, identifier les schémas répétitifs et retrouver un axe personnel aligné avec votre chemin de vie.
