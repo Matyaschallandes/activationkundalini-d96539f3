@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Phone, Video, Clock, Gift } from "lucide-react";
+import { Phone, Video, Clock, Gift, BookOpen, Calendar, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import matyasPhoto from "@/assets/matyas-photo.jpg";
 import ContactFormDialog from "../ContactFormDialog";
+
+const CARNET_PATH = "/carnet-de-preparation";
+const KOALENDAR_URL = "https://koalendar.com/e/Activationkundalini";
 
 const HeroTunnel = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
