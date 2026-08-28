@@ -1,6 +1,55 @@
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
+import MaillageInterne from "@/components/MaillageInterne";
 import { Flame, Zap, Sparkles, Heart, Eye, Shield, TreePine, Sun, Hand, Brain, Bird, Star } from "lucide-react";
+
+const faqs = [
+  {
+    q: "Qu'est-ce que l'Activation Kundalini ?",
+    a: "L'Activation Kundalini est un accompagnement énergétique qui vise à éveiller, en douceur et par transmission, l'énergie vitale présente à la base de la colonne vertébrale. Il ne s'agit ni d'un acte médical ni d'une thérapie, mais d'une expérience de reconnexion à soi.",
+  },
+  {
+    q: "Comment se déroule une séance d'Activation Kundalini à Neuchâtel ?",
+    a: "La séance dure environ 1h15 à Bevaix, dans le canton de Neuchâtel. Elle commence par un temps d'échange, puis un ancrage et une respiration guidée, avant la transmission énergétique. Un temps d'intégration clôture la rencontre.",
+  },
+  {
+    q: "À qui s'adresse l'Activation Kundalini ?",
+    a: "Elle s'adresse aux personnes qui souhaitent explorer ce qui les freine, retrouver de l'élan ou approfondir leur chemin intérieur. Elle ne remplace en aucun cas un suivi médical ou psychologique.",
+  },
+  {
+    q: "Peut-on faire une séance d'Activation Kundalini à distance ?",
+    a: "Oui. Les séances à distance se déroulent en visioconférence, avec le même cadre qu'en présentiel. Elles conviennent aux personnes de Lausanne, Genève, Fribourg ou hors de Suisse.",
+  },
+];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+const serviceLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Activation Kundalini à Neuchâtel",
+  serviceType: "Activation Kundalini",
+  provider: { "@id": "https://www.activationkundalini.ch/#organization" },
+  areaServed: ["Bevaix", "Neuchâtel", "Suisse romande"],
+  url: "https://www.activationkundalini.ch/la-kundalini",
+};
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.activationkundalini.ch/" },
+    { "@type": "ListItem", position: 2, name: "Activation Kundalini", item: "https://www.activationkundalini.ch/la-kundalini" },
+  ],
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -17,25 +66,31 @@ const LaKundalini = () => {
   return (
     <Layout>
       <Seo
-        title="Qu'est-ce que la Kundalini ? Éveil & Activation Énergétique — Suisse Romande"
-        description="Comprendre la Kundalini : origine, éveil, chakras et facilitation énergétique. Activation Kundalini par transmission à Bevaix (Neuchâtel) et à distance. Guide complet."
+        title="Activation Kundalini à Neuchâtel | Karmaequilego"
+        description="Activation Kundalini à Neuchâtel avec Matyas Challandes, à Bevaix : comprendre l'énergie Kundalini, le déroulement d'une séance, à qui elle s'adresse. Présentiel et à distance."
         path="/la-kundalini"
-        keywords="kundalini, éveil kundalini, activation kundalini, énergie vitale, chakras, facilitation énergétique Suisse romande"
-        jsonLd={jsonLd}
+        keywords="activation kundalini Neuchâtel, activation kundalini Suisse, séance activation kundalini, énergie kundalini, accompagnement kundalini"
+        jsonLd={[jsonLd, serviceLd, faqLd, breadcrumbLd]}
       />
 
       {/* Hero */}
       <section className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-6 max-w-4xl">
           <p className="text-primary font-body tracking-[0.3em] uppercase text-xs text-center mb-4">
-            🔥 Comprendre
+            🔥 Karmaequilego — Bevaix, canton de Neuchâtel
           </p>
           <h1 className="font-heading text-4xl md:text-6xl text-center font-light mb-4 text-foreground">
-            La <span className="text-gradient-gold italic">Kundalini</span> et la facilitation
+            Activation <span className="text-gradient-gold italic">Kundalini</span> à Neuchâtel
           </h1>
           <div className="glow-line w-24 mx-auto mb-6" />
-          <p className="text-center text-primary font-body text-lg md:text-xl italic">
-            Éveiller l'énergie vitale par transmission
+          <p className="text-center text-primary font-body text-lg md:text-xl italic mb-6">
+            Éveiller l'énergie vitale par transmission — en présentiel à Bevaix ou à distance
+          </p>
+          <p className="text-center font-body text-foreground/75 leading-relaxed max-w-2xl mx-auto">
+            Matyas Challandes accompagne, à Bevaix dans le canton de Neuchâtel, des personnes qui
+            souhaitent explorer l'Activation Kundalini. Cette page rassemble l'essentiel : ce
+            qu'est cette énergie, comment se déroule une séance, à qui elle s'adresse et ce que
+            l'on peut ressentir. Il ne s'agit ni d'un soin médical ni d'une promesse de guérison.
           </p>
         </div>
       </section>
@@ -415,6 +470,25 @@ const LaKundalini = () => {
           </a>
         </div>
       </section>
+
+      {/* FAQ */}
+      <section className="py-16 md:py-24 bg-background">
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2 className="font-heading text-3xl md:text-4xl font-light mb-8 text-foreground">
+            Questions fréquentes sur l'Activation Kundalini
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((f, i) => (
+              <div key={i} className="border-b border-border/40 pb-5">
+                <h3 className="font-heading text-xl text-foreground mb-2">{f.q}</h3>
+                <p className="font-body text-foreground/75 leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <MaillageInterne exclude={["/la-kundalini"]} />
     </Layout>
   );
 };

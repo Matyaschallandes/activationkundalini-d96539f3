@@ -54,10 +54,10 @@ const Index = () => {
   return (
     <Layout>
       <Seo
-        title="Découverte gratuite 1h — Comprendre ce qui vous bloque | Karmaequilego"
-        description="Vous tournez en rond malgré vos efforts ? Une heure offerte en visioconférence avec Matyas Challandes pour explorer vos blocages et repartir avec une première clé. Sans engagement."
+        title="Activation Kundalini à Neuchâtel | Chamanisme &amp; Kinésiologie — Karmaequilego"
+        description="Matyas Challandes, praticien à Bevaix (canton de Neuchâtel) : Activation Kundalini, chamanisme et kinésiologie. Découverte gratuite d'une heure, en présentiel ou à distance."
         path="/"
-        keywords="découverte gratuite, blocages émotionnels, activation kundalini, chamanisme, kinésiologie, biorésonance, soins énergétiques Neuchâtel, Bevaix, Suisse romande"
+        keywords="activation kundalini Neuchâtel, chamanisme Neuchâtel, kinésiologie Neuchâtel, Karmaequilego, Matyas Challandes, Bevaix"
         jsonLd={[organizationLd, websiteLd, homeFaqJsonLd]}
       />
       <HeroTunnel />

@@ -4,7 +4,7 @@ const ChamanismeNeuchatel = () => (
   <VillePage
     slug="/chamanisme-neuchatel"
     ville="Neuchâtel"
-    title="Chamanisme à Neuchâtel — Soins chamaniques à Bevaix"
+    title="Chamanisme à Neuchâtel | Soins chamaniques — Karmaequilego"
     description="Soins chamaniques à Neuchâtel avec Matyas Challandes à Bevaix : désenvoûtement, recouvrement d'âme, dégagement d'entités, coupure de liens. Prix libre."
     keywords="chamanisme Neuchâtel, chamane Neuchâtel, chamane Suisse romande, désenvoûtement Neuchâtel, recouvrement d'âme, dégagement d'entités, soin chamanique Bevaix"
     h1="Chamanisme à Neuchâtel — Soins chamaniques traditionnels à Bevaix"

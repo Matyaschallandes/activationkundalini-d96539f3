@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import { Link } from "react-router-dom";
+import MaillageInterne from "@/components/MaillageInterne";
 
 export type VillePageProps = {
   slug: string;
@@ -107,6 +108,8 @@ const VillePage = ({
           </div>
         </div>
       </section>
+
+      <MaillageInterne exclude={[slug]} />
     </Layout>
   );
 };
