@@ -113,11 +113,11 @@ const HeroTunnel = () => {
             {/* Déroulement de la séance */}
             <div className="border border-border bg-card/50 backdrop-blur-sm rounded-sm p-5 mb-8 text-left">
               <p className="font-body font-semibold text-sm text-foreground mb-3">
-                Le jour du rendez-vous :
+                Le jour du <a href={KOALENDAR_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">rendez-vous</a> :
               </p>
               <ol className="font-body text-sm text-foreground/80 leading-relaxed space-y-1.5 list-decimal list-inside">
                 <li>Vous me parlez de ce qui se passe dans votre vie.</li>
-                <li>Nous discutons du carnet de préparation et de la lecture d'âme si vous le souhaitez.</li>
+                <li>Nous discutons du <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">carnet de préparation</Link> et de la <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a> si vous le souhaitez.</li>
                 <li>Je fais la détection de vos blocages (test énergétique).</li>
                 <li>Nous terminons par une activation Kundalini, un soin chamanique — ou les deux.</li>
               </ol>
