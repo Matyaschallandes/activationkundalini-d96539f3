@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import { Link } from "react-router-dom";
+import { HUMAN_DESIGN_URL } from "@/lib/links";
 
 const RituelEquinoxe = () => (
   <Layout>
@@ -40,7 +41,12 @@ const RituelEquinoxe = () => (
 
       <h2 className="font-heading text-2xl md:text-3xl mt-12 mb-4 text-foreground">Accompagnement personnalisé autour de l'équinoxe</h2>
       <p className="font-body text-foreground/80 leading-relaxed mb-6">
-        Je propose des séances spéciales autour des équinoxes : <strong>lecture d'âme saisonnière</strong>, <strong>activation Kundalini d'alignement</strong>, <strong>rituel chamanique de libération</strong>. En cabinet à Bevaix (Neuchâtel) ou en visio dans toute la Suisse romande.
+        Je propose des séances spéciales autour des équinoxes : <strong><a
+          href={HUMAN_DESIGN_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary underline underline-offset-4 hover:text-primary/80"
+        >lecture d'âme</a> saisonnière</strong>, <strong>activation Kundalini d'alignement</strong>, <strong>rituel chamanique de libération</strong>. En cabinet à Bevaix (Neuchâtel) ou en visio dans toute la Suisse romande.
       </p>
 
       <div className="mt-12 flex flex-wrap gap-4">

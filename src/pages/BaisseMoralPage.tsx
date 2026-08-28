@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import { Link } from "react-router-dom";
+import { HUMAN_DESIGN_URL } from "@/lib/links";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -75,7 +76,16 @@ const BaisseMoralPage = () => (
           Aucune brusquerie. Chaque séance respecte ton état du moment. On avance à ton rythme, avec beaucoup de bienveillance.
         </p>
 
-        <h3 className="font-heading text-2xl font-light mt-8 mb-3 text-foreground">Lecture d'âme</h3>
+        <h3 className="font-heading text-2xl font-light mt-8 mb-3 text-foreground">
+          <a
+            href={HUMAN_DESIGN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline underline-offset-4 hover:text-primary/80"
+          >
+            Lecture d'âme
+          </a>
+        </h3>
         <p className="font-body text-foreground/75 leading-relaxed mb-4">
           Parfois, une lecture intuitive de ta trajectoire aide à faire émerger un sens qui te ramène à toi et remet un souffle sur les braises encore chaudes.
         </p>
@@ -84,9 +94,9 @@ const BaisseMoralPage = () => (
           <Link to="/rendez-vous" className="inline-flex items-center px-8 py-4 border border-primary/40 rounded-full font-body text-sm tracking-widest uppercase text-primary hover:bg-primary/10 transition">
             Prendre rendez-vous
           </Link>
-          <Link to="/lecture-ame" className="inline-flex items-center px-8 py-4 border border-border rounded-full font-body text-sm tracking-widest uppercase text-foreground hover:bg-card/50 transition">
+          <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-4 border border-border rounded-full font-body text-sm tracking-widest uppercase text-foreground hover:bg-card/50 transition">
             Découvrir la lecture d'âme
-          </Link>
+          </a>
         </div>
 
         <p className="font-body text-foreground/50 text-xs italic mt-16">

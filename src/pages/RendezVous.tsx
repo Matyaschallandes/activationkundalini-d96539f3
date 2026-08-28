@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import { Calendar, MessageCircle, Camera, FileText, Smartphone, Mail, Building2 } from "lucide-react";
+import { HUMAN_DESIGN_URL } from "@/lib/links";
 
 const phoneNumber = "41762445552";
 const whatsappMessage = encodeURIComponent(
@@ -166,11 +167,28 @@ const RendezVous = () => {
             <div className="flex items-center gap-3 mb-4">
               <Camera className="w-6 h-6 text-primary" />
               <h2 className="font-heading text-2xl text-foreground">
-                Lecture d'âme & soin découverte à distance
+                <a
+                  href={HUMAN_DESIGN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary underline underline-offset-4 hover:text-primary/80"
+                >
+                  Lecture d'âme
+                </a>{" "}
+                & soin découverte à distance
               </h2>
             </div>
             <p className="font-body text-muted-foreground mb-6 leading-relaxed">
-              Si vous souhaitez une <span className="text-foreground font-medium">lecture d'âme</span> ou un{" "}
+              Si vous souhaitez une{" "}
+              <a
+                href={HUMAN_DESIGN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline underline-offset-4 hover:text-primary/80"
+              >
+                lecture d'âme
+              </a>{" "}
+              ou un{" "}
               <span className="text-foreground font-medium">soin découverte à distance</span>, voici la marche à suivre :
             </p>
             <ul className="space-y-3 mb-6">

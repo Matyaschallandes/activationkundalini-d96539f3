@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import { Link } from "react-router-dom";
+import { HUMAN_DESIGN_URL } from "@/lib/links";
 
 const jsonLd = [
   {
@@ -111,7 +112,16 @@ const BurnOutPage = () => (
 
         <h3 className="font-heading text-2xl font-light mt-8 mb-3 text-foreground">3. Retrouver son axe et son sens</h3>
         <p className="font-body text-foreground/75 leading-relaxed mb-4">
-          Un burn-out est presque toujours le signe qu'on a longtemps vécu à côté de soi. La lecture d'âme et l'activation Kundalini aident à reconnecter avec ce qui a du sens, avec ses vrais besoins et ses vraies limites.
+          Un burn-out est presque toujours le signe qu'on a longtemps vécu à côté de soi. La{" "}
+          <a
+            href={HUMAN_DESIGN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary underline underline-offset-4 hover:text-primary/80"
+          >
+            lecture d'âme
+          </a>{" "}
+          et l'activation Kundalini aident à reconnecter avec ce qui a du sens, avec ses vrais besoins et ses vraies limites.
         </p>
 
         <h2 className="font-heading text-3xl md:text-4xl font-light mt-14 mb-6 text-foreground">

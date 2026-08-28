@@ -1,9 +1,10 @@
 import { Sparkles, Eye, Flame, Shield, Users, Feather } from "lucide-react";
+import { HUMAN_DESIGN_URL } from "@/lib/links";
 
 const features = [
   { icon: Sparkles, title: "Soins énergétiques puissants" },
   { icon: Flame, title: "Activation kundalini progressive" },
-  { icon: Eye, title: "Lecture d'âme — comprendre qui tu es avant l'activation" },
+  { icon: Eye, title: "Lecture d'âme — comprendre qui tu es avant l'activation", isLectureAme: true },
   { icon: Feather, title: "Soins chamaniques — désenvoûtement, recouvrement d'âme, dégagement d'entités" },
   { icon: Shield, title: "Protocole transformation 21 jours" },
   { icon: Users, title: "Bannissements énergétiques illimités" },
@@ -28,7 +29,23 @@ const MethodSection = () => {
               className="group p-8 rounded-sm border border-border bg-gradient-card hover:border-primary/30 hover:shadow-gold transition-all duration-500 text-center"
             >
               <f.icon className="w-8 h-8 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="font-heading text-xl text-foreground">{f.title}</h3>
+              <h3 className="font-heading text-xl text-foreground">
+                {(f as any).isLectureAme ? (
+                  <>
+                    <a
+                      href={HUMAN_DESIGN_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary underline underline-offset-4 hover:text-primary/80"
+                    >
+                      Lecture d'âme
+                    </a>
+                    {" — comprendre qui tu es avant l'activation"}
+                  </>
+                ) : (
+                  f.title
+                )}
+              </h3>
             </div>
           ))}
         </div>
