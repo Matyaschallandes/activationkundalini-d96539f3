@@ -200,12 +200,13 @@ const OffreDecouverte = () => {
         <div className="absolute bottom-0 right-0 w-[500px] h-[500px] max-w-full rounded-full bg-primary/5 blur-[120px]" />
         <div className="relative z-10 container mx-auto px-6 max-w-4xl">
           <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground text-center mb-6">
-            📖 Votre carnet de préparation — <span className="text-gradient-gold italic">20 questions</span>
+            📖 Votre <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">carnet de préparation</Link> — <span className="text-gradient-gold italic">20 questions</span>
           </h2>
           <div className="glow-line w-20 mx-auto mb-10" />
           <div className="space-y-5 font-body text-muted-foreground leading-relaxed">
             <p>
-              Avant la séance, vous remplissez directement en ligne un carnet de préparation composé de
+              Avant la séance, vous remplissez directement en ligne un{" "}
+              <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">carnet de préparation</Link> composé de
               20 questions.
             </p>
             <p>
@@ -346,11 +347,11 @@ const OffreDecouverte = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] max-w-full rounded-full bg-primary/8 blur-[130px] animate-glow-pulse" />
         <div className="relative z-10 container mx-auto px-6 max-w-3xl text-center">
           <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground mb-6">
-            🌀 Votre lecture d'âme — <span className="text-gradient-gold italic">Human Design</span>
+            🌀 Votre <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a> — <span className="text-gradient-gold italic">Human Design</span>
           </h2>
           <div className="glow-line w-20 mx-auto mb-8" />
           <p className="font-body text-muted-foreground leading-relaxed mb-10">
-            Découvrez également une lecture d'âme Human Design de 60 pages pour approfondir la
+            Découvrez également une <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a> Human Design de 60 pages pour approfondir la
             compréhension de votre fonctionnement, de vos potentiels, de vos mécanismes et de votre
             chemin personnel.
           </p>
