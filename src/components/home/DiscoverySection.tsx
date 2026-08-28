@@ -34,7 +34,11 @@ const DiscoverySection = () => {
           (très conseillé)
         </>
       ),
-      text: "La lecture d'âme Human Design aide à mieux comprendre comment vous fonctionnez et pourquoi vous êtes né(e). Très conseillé : pendant l'activation, cela permet de reconnecter avec la personne que vous êtes censé(e) incarner.",
+      text: (
+        <>
+          La <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a> Human Design aide à mieux comprendre comment vous fonctionnez et pourquoi vous êtes né(e). Très conseillé : pendant l'activation, cela permet de reconnecter avec la personne que vous êtes censé(e) incarner.
+        </>
+      ),
     },
     {
       n: "04",
