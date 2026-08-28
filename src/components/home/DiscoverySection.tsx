@@ -26,20 +26,6 @@ const DiscoverySection = () => {
           se joue derrière vos blocages.
         </p>
 
-        <div className="space-y-8 mb-16">
-          {steps.map((s) => (
-            <div key={s.n} className="flex gap-5 md:gap-8 items-start">
-              <span className="font-heading text-3xl md:text-4xl text-primary/60 shrink-0 leading-none pt-1">
-                {s.n}
-              </span>
-              <div>
-                <h3 className="font-heading text-xl md:text-2xl text-foreground mb-2">{s.title}</h3>
-                <p className="font-body text-foreground/75 leading-relaxed">{s.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
         <div className="border border-border bg-card/70 rounded-sm p-7 md:p-9">
           <h3 className="font-heading text-xl text-foreground mb-5">Ce que contient l'expérience</h3>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
