@@ -146,8 +146,10 @@ const OffreDecouverte = () => {
                 <span className="block text-xs text-muted-foreground">À remplir en ligne</span>
               </span>
             </Link>
-            <Link
-              to="/lecture-ame"
+            <a
+              href={HUMAN_DESIGN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
             >
               <Sparkles className="w-5 h-5 text-primary shrink-0" />
@@ -155,7 +157,7 @@ const OffreDecouverte = () => {
                 Lecture d'âme
                 <span className="block text-xs text-muted-foreground">Human Design</span>
               </span>
-            </Link>
+            </a>
             <a
               href={KOALENDAR_URL}
               target="_blank"
