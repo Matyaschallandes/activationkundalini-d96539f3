@@ -60,8 +60,9 @@ const Index = () => {
         jsonLd={[organizationLd, websiteLd, homeFaqJsonLd]}
       />
       <HeroTunnel />
-      <RecognizeSection />
       <TrustSection />
+      <BlocagesSection />
+      <RecognizeSection />
       <AboutMatyas />
       <ToolsSection />
       <FaqShort />
