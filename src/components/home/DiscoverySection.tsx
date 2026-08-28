@@ -3,67 +3,6 @@ import { NotebookPen, Compass, Sparkles, HandHeart, Calendar } from "lucide-reac
 import { CARNET_PATH, KOALENDAR_URL, HUMAN_DESIGN_URL } from "@/lib/links";
 
 const DiscoverySection = () => {
-  const steps = [
-    {
-      n: "01",
-      title: (
-        <>
-          Vous prenez contact & fixez le{" "}
-          <a href={KOALENDAR_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">rendez-vous</a>
-        </>
-      ),
-      text: "Vous réservez votre créneau directement sur le calendrier en ligne. C'est la première étape — prendre contact avec moi et bloquer une date.",
-    },
-    {
-      n: "02",
-      title: (
-        <>
-          Vous remplissez le{" "}
-          <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">carnet de préparation</Link>{" "}
-          (très conseillé)
-        </>
-      ),
-      text: "Le carnet ouvre les tiroirs de l'inconscient et prépare à libérer ce qui est prêt à être libéré. Il n'est pas obligatoire, mais il est très conseillé de le remplir avant la séance.",
-    },
-    {
-      n: "03",
-      title: (
-        <>
-          Vous accédez à votre{" "}
-          <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a>{" "}
-          (très conseillé)
-        </>
-      ),
-      text: (
-        <>
-          La <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a> Human Design aide à mieux comprendre comment vous fonctionnez et pourquoi vous êtes né(e). Très conseillé : pendant l'activation, cela permet de reconnecter avec la personne que vous êtes censé(e) incarner.
-        </>
-      ),
-    },
-    {
-      n: "04",
-      title: "Nous échangeons sur ce que vous vivez",
-      text: (
-        <>
-          Le jour du{" "}
-          <a href={KOALENDAR_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">rendez-vous</a>, vous me parlez de ce qui se passe dans votre vie. Nous discutons du{" "}
-          <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">carnet de préparation</Link> et de la{" "}
-          <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a> si vous le souhaitez.
-        </>
-      ),
-    },
-    {
-      n: "05",
-      title: "Je détecte vos blocages",
-      text: "Connecté à vous par mon test énergétique de l'aura, je suis l'énergie jusqu'à l'origine du blocage : un trauma, un accident, un choc émotionnel, une dissociation, une naissance difficile, ou même une mémoire d'avant la naissance. Une fois l'événement identifié, je vous invite à entrer en dialogue avec ces parties de vous — qui ont souvent un message à vous transmettre.",
-    },
-    {
-      n: "06",
-      title: "Activation Kundalini, soin chamanique — ou les deux",
-      text: "La séance se termine par un soin énergétique chamanique et/ou une activation Kundalini de 15 minutes, pour découvrir concrètement l'énergie et ressentir son effet.",
-    },
-  ];
-
   const inclus = [
     { icon: NotebookPen, label: <>Un <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">carnet de préparation</Link> avec des clés de compréhension</> },
     { icon: Compass, label: "Une détection énergétique personnalisée des principaux blocages" },
@@ -86,20 +25,6 @@ const DiscoverySection = () => {
           Je vous propose une première rencontre gratuite d'une heure pour explorer ensemble ce qui
           se joue derrière vos blocages.
         </p>
-
-        <div className="space-y-8 mb-16">
-          {steps.map((s) => (
-            <div key={s.n} className="flex gap-5 md:gap-8 items-start">
-              <span className="font-heading text-3xl md:text-4xl text-primary/60 shrink-0 leading-none pt-1">
-                {s.n}
-              </span>
-              <div>
-                <h3 className="font-heading text-xl md:text-2xl text-foreground mb-2">{s.title}</h3>
-                <p className="font-body text-foreground/75 leading-relaxed">{s.text}</p>
-              </div>
-            </div>
-          ))}
-        </div>
 
         <div className="border border-border bg-card/70 rounded-sm p-7 md:p-9">
           <h3 className="font-heading text-xl text-foreground mb-5">Ce que contient l'expérience</h3>
