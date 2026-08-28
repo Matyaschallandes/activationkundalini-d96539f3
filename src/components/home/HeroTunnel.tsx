@@ -93,8 +93,10 @@ const HeroTunnel = () => {
               </Link>
 
               {/* 3. Lecture d'âme */}
-              <Link
-                to="/lecture-ame"
+              <a
+                href={HUMAN_DESIGN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-start gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
               >
                 <span className="font-heading text-lg text-primary shrink-0 leading-none pt-0.5">3</span>
@@ -105,7 +107,7 @@ const HeroTunnel = () => {
                     Mieux comprendre comment vous fonctionnez et pourquoi vous êtes né(e). Très conseillé : pendant l'activation, cela aide à reconnecter avec la personne que vous êtes censé(e) incarner.
                   </span>
                 </span>
-              </Link>
+              </a>
             </div>
 
             {/* Déroulement de la séance */}
