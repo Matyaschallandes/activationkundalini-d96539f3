@@ -1,6 +1,5 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import SeoKeywords from "./SeoKeywords";
 import MobileCtaBar from "./MobileCtaBar";
 import { PaymentTestModeBanner } from "./PaymentTestModeBanner";
 
@@ -13,7 +12,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <Footer />
       <div className="h-14 md:hidden" aria-hidden />
       <MobileCtaBar />
-      <SeoKeywords />
     </div>
   );
 };
