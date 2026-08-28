@@ -13,6 +13,7 @@ import {
   Heart,
   Globe,
 } from "lucide-react";
+import { CARNET_PATH, KOALENDAR_URL, HUMAN_DESIGN_URL } from "@/lib/links";
 
 const PHONE_DISPLAY = "+41 76 244 55 52";
 const WHATSAPP_URL = `https://wa.me/41762445552?text=${encodeURIComponent(
@@ -20,9 +21,6 @@ const WHATSAPP_URL = `https://wa.me/41762445552?text=${encodeURIComponent(
 )}`;
 const EMAIL = "matyas.challandes@gmail.com";
 const EMAIL_URL = `mailto:${EMAIL}?subject=${encodeURIComponent("Offre découverte gratuite")}`;
-const HUMAN_DESIGN_URL = "https://karmaequilego-humandesign.lovable.app";
-const CARNET_PATH = "/carnet-de-preparation";
-const KOALENDAR_URL = "https://koalendar.com/e/Activationkundalini";
 
 const originesBlocage = [
   { icon: "🔮", title: "Vie antérieure", desc: "Une mémoire issue d'une incarnation passée qui continue d'influencer votre présent." },
