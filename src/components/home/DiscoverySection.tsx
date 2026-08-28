@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import { NotebookPen, Compass, Sparkles, HandHeart } from "lucide-react";
+import { NotebookPen, Compass, Sparkles, HandHeart, Calendar } from "lucide-react";
+
+const KOALENDAR_URL = "https://koalendar.com/e/Activationkundalini";
 
 const steps = [
   {
