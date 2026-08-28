@@ -4,9 +4,7 @@ import { Phone, Video, Clock, Gift, BookOpen, Calendar, Sparkles } from "lucide-
 import heroBg from "@/assets/hero-bg.jpg";
 import matyasPhoto from "@/assets/matyas-photo.jpg";
 import ContactFormDialog from "../ContactFormDialog";
-
-const CARNET_PATH = "/carnet-de-preparation";
-const KOALENDAR_URL = "https://koalendar.com/e/Activationkundalini";
+import { CARNET_PATH, KOALENDAR_URL, HUMAN_DESIGN_URL } from "@/lib/links";
 
 const HeroTunnel = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
