@@ -4,18 +4,33 @@ import { NotebookPen, Compass, Sparkles, HandHeart } from "lucide-react";
 const steps = [
   {
     n: "01",
-    title: "Vous me parlez de ce que vous vivez",
-    text: "Un échange simple et sans jugement.",
+    title: "Vous prenez contact & fixez le rendez-vous",
+    text: "Vous réservez votre créneau directement sur le calendrier en ligne. C'est la première étape — prendre contact avec moi et bloquer une date.",
   },
   {
     n: "02",
-    title: "Je remonte à l'événement source",
-    text: "Connecté à vous par mon test énergétique de l'aura, je suis l'énergie jusqu'à l'origine du blocage : un trauma, un accident, un choc émotionnel, une dissociation, une naissance difficile, ou même une mémoire d'avant la naissance. Une fois l'événement identifié, je vous invite à entrer en dialogue avec ces parties de vous — qui ont souvent un message à vous transmettre. Les écouter et les accueillir permet de les réintégrer, pour que l'énergie circule à nouveau librement.",
+    title: "Vous remplissez le carnet de préparation (très conseillé)",
+    text: "Le carnet ouvre les tiroirs de l'inconscient et prépare à libérer ce qui est prêt à être libéré. Il n'est pas obligatoire, mais il est très conseillé de le remplir avant la séance.",
   },
   {
     n: "03",
-    title: "Vous repartez avec une première clé",
-    text: "Vous recevez des pistes personnalisées pour mieux comprendre votre fonctionnement et commencer à avancer.",
+    title: "Vous accédez à votre lecture d'âme (très conseillé)",
+    text: "La lecture d'âme Human Design aide à mieux comprendre comment vous fonctionnez et pourquoi vous êtes né(e). Très conseillé : pendant l'activation, cela permet de reconnecter avec la personne que vous êtes censé(e) incarner.",
+  },
+  {
+    n: "04",
+    title: "Nous échangeons sur ce que vous vivez",
+    text: "Le jour du rendez-vous, vous me parlez de ce qui se passe dans votre vie. Nous discutons du carnet de préparation et de la lecture d'âme si vous le souhaitez.",
+  },
+  {
+    n: "05",
+    title: "Je détecte vos blocages",
+    text: "Connecté à vous par mon test énergétique de l'aura, je suis l'énergie jusqu'à l'origine du blocage : un trauma, un accident, un choc émotionnel, une dissociation, une naissance difficile, ou même une mémoire d'avant la naissance. Une fois l'événement identifié, je vous invite à entrer en dialogue avec ces parties de vous — qui ont souvent un message à vous transmettre.",
+  },
+  {
+    n: "06",
+    title: "Activation Kundalini, soin chamanique — ou les deux",
+    text: "La séance se termine par un soin énergétique chamanique et/ou une activation Kundalini de 15 minutes, pour découvrir concrètement l'énergie et ressentir son effet.",
   },
 ];
 
