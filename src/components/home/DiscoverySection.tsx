@@ -89,12 +89,20 @@ const DiscoverySection = () => (
         </p>
       </div>
 
-      <div className="text-center mt-10">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+        <a
+          href={KOALENDAR_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-10 py-5 rounded-sm hover:shadow-gold transition-all duration-500"
+        >
+          <Calendar className="w-4 h-4" /> Prendre rendez-vous
+        </a>
         <Link
           to="/offre-decouverte-gratuite"
-          className="inline-block bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-10 py-5 rounded-sm hover:shadow-gold transition-all duration-500"
+          className="inline-flex items-center justify-center border border-primary/50 text-foreground font-body font-semibold tracking-wider uppercase text-sm px-9 py-5 rounded-sm hover:bg-primary/10 transition-all duration-500"
         >
-          Je réserve ma découverte gratuite
+          En savoir plus sur l'offre
         </Link>
       </div>
     </div>
