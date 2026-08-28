@@ -60,29 +60,30 @@ const HeroTunnel = () => {
               </ul>
             </div>
 
-            {/* Étapes rapides */}
-            <div className="space-y-3 mb-8 text-left">
-              {/* 1. Prendre contact & rendez-vous */}
+            <div className="mb-8 text-left">
+              <h2 className="font-heading text-2xl text-foreground mb-5">Les étapes de votre parcours</h2>
+              <ol className="relative space-y-0 border-l border-primary/30 ml-5">
+              <li className="relative pb-5 pl-8">
+                <span className="absolute -left-5 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-background font-heading text-primary">1</span>
               <a
                 href={KOALENDAR_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
               >
-                <span className="font-heading text-lg text-primary shrink-0 leading-none pt-0.5">1</span>
                 <Calendar className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="font-body text-sm text-foreground">
                   <strong>Prendre contact & fixer un rendez-vous</strong>
                   <span className="block text-xs text-muted-foreground mt-0.5">Réservez votre créneau directement sur le calendrier en ligne.</span>
                 </span>
               </a>
-
-              {/* 2. Carnet de préparation */}
+              </li>
+              <li className="relative pb-5 pl-8">
+                <span className="absolute -left-5 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-background font-heading text-primary">2</span>
               <Link
                 to={CARNET_PATH}
                 className="flex items-start gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
               >
-                <span className="font-heading text-lg text-primary shrink-0 leading-none pt-0.5">2</span>
                 <BookOpen className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="font-body text-sm text-foreground">
                   <strong>Remplir le carnet de préparation</strong>
@@ -91,15 +92,15 @@ const HeroTunnel = () => {
                   </span>
                 </span>
               </Link>
-
-              {/* 3. Lecture d'âme */}
+              </li>
+              <li className="relative pb-5 pl-8">
+                <span className="absolute -left-5 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-background font-heading text-primary">3</span>
               <a
                 href={HUMAN_DESIGN_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 border border-primary/30 hover:border-primary bg-card/60 backdrop-blur-sm rounded-sm p-4 transition-all duration-300"
               >
-                <span className="font-heading text-lg text-primary shrink-0 leading-none pt-0.5">3</span>
                 <Sparkles className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="font-body text-sm text-foreground">
                   <strong>Lecture d'âme — Human Design</strong>
@@ -108,18 +109,20 @@ const HeroTunnel = () => {
                   </span>
                 </span>
               </a>
-            </div>
-
-            {/* Déroulement de la séance */}
-            <div className="border border-border bg-card/50 backdrop-blur-sm rounded-sm p-5 mb-8 text-left">
-              <p className="font-body font-semibold text-sm text-foreground mb-3">
-                Le jour du <a href={KOALENDAR_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">rendez-vous</a> :
-              </p>
-              <ol className="font-body text-sm text-foreground/80 leading-relaxed space-y-1.5 list-decimal list-inside">
-                <li>Vous me parlez de ce qui se passe dans votre vie.</li>
-                <li>Nous discutons du <Link to={CARNET_PATH} className="text-primary underline underline-offset-4 hover:text-primary/80">carnet de préparation</Link> et de la <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">lecture d'âme</a> si vous le souhaitez.</li>
-                <li>Je fais la détection de vos blocages (test énergétique).</li>
-                <li>Nous terminons par une activation Kundalini, un soin chamanique — ou les deux.</li>
+              </li>
+              {[
+                ["4", "Échange au début de la séance", "Vous me parlez de ce qui se passe dans votre vie. Nous revenons sur vos préparations si vous le souhaitez."],
+                ["5", "Détection des blocages", "Je réalise le test énergétique afin de cibler ce qui vous bloque."],
+                ["6", "Activation ou soin", "Nous terminons par une activation Kundalini, un soin chamanique — ou les deux."],
+              ].map(([number, title, text], index) => (
+                <li key={number} className={`relative pl-8 ${index < 2 ? "pb-5" : ""}`}>
+                  <span className="absolute -left-5 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-background font-heading text-primary">{number}</span>
+                  <div className="border border-primary/30 bg-card/60 backdrop-blur-sm rounded-sm p-4">
+                    <strong className="font-body text-sm text-foreground">{title}</strong>
+                    <p className="font-body text-xs text-muted-foreground mt-1 leading-relaxed">{text}</p>
+                  </div>
+                </li>
+              ))}
               </ol>
             </div>
 

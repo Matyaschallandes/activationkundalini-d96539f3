@@ -2,9 +2,7 @@ import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import HeroTunnel from "@/components/home/HeroTunnel";
 import RecognizeSection from "@/components/home/RecognizeSection";
-import DiscoverySection from "@/components/home/DiscoverySection";
 import TrustSection from "@/components/home/TrustSection";
-import HowItWorks from "@/components/home/HowItWorks";
 import AboutMatyas from "@/components/home/AboutMatyas";
 import ToolsSection from "@/components/home/ToolsSection";
 import FaqShort, { homeFaqJsonLd } from "@/components/home/FaqShort";
@@ -62,9 +60,7 @@ const Index = () => {
       />
       <HeroTunnel />
       <RecognizeSection />
-      <DiscoverySection />
       <TrustSection />
-      <HowItWorks />
       <AboutMatyas />
       <ToolsSection />
       <FaqShort />
