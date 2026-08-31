@@ -260,6 +260,15 @@ export function generateCarnetPdf(
     if (extras.intention?.trim()) body(`Mon intention : ${extras.intention.trim()}`);
   }
 
+  if (ai?.synthese_finale && ai?.synthese?.length) {
+    y += 3;
+    ensure(40);
+    title("Le fil rouge de ton carnet", 13);
+    rule();
+    body(ai.synthese_finale);
+  }
+
+
   y += 8;
   ensure(20);
   body("Karmaequilego · Matyas Challandes · +41 76 244 55 52 · www.activationkundalini.ch", {
