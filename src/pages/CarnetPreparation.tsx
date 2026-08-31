@@ -9,10 +9,9 @@ import { Slider } from "@/components/ui/slider";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { analyseCarnet, CARNET_STEPS } from "@/lib/carnetAnalysis";
-import { generateCarnetPdf } from "@/lib/carnetPdf";
 import CarnetMiroir from "@/components/CarnetMiroir";
 import { AiCarnetAnalysis } from "@/lib/carnetAiTypes";
-import { Download, ChevronLeft, ChevronRight, Sparkles, Loader2, CheckCircle2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sparkles, Loader2, CheckCircle2 } from "lucide-react";
 
 const STORAGE_KEY = "carnet-preparation-draft";
 
@@ -95,11 +94,6 @@ const CarnetPreparation = () => {
   const goPrev = () => {
     setStepIndex((i) => Math.max(i - 1, 0));
     window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const handleDownload = () => {
-    generateCarnetPdf(identity, answers, analysis, intensity);
-    toast.success("Ton carnet personnalisé est téléchargé 🌿");
   };
 
   const handleSend = async () => {
@@ -238,7 +232,7 @@ const CarnetPreparation = () => {
           <p className="font-body text-muted-foreground leading-relaxed">
             Ce carnet prépare ton corps et ton mental à libérer les mémoires avant le soin
             énergétique. Réponds avec authenticité : il n'existe aucune bonne ou mauvaise réponse.
-            À la fin, tu télécharges ton carnet personnalisé avec tes clés d'harmonisation.
+            À la fin, un seul bouton : ta lecture complète en PDF (tes questions-réponses, ta synthèse et tes clés d'harmonisation).
           </p>
         </header>
 
