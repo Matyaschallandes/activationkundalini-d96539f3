@@ -41,7 +41,16 @@ const LABELS: Record<string, string> = {
   manque_profond: "Ce qui me manque profondément",
   echappatoires: "Vers quoi je me tourne pour ne plus ressentir",
   emotion_ecoute: "Écoute d'une émotion — messages et prises de conscience",
+  enfant_blessures: "Parties blessées de mon enfant intérieur et situations où elles se manifestent",
+  enfant_besoins: "Ce dont mon enfant intérieur aurait besoin pour se sentir entendu et en sécurité",
+  peurs_protegent: "Mes plus grandes peurs et ce qu'elles cherchent à protéger",
+  peurs_oser: "Ce que j'oserais faire si mes peurs ne dirigeaient plus mes choix",
+  manque_actuel: "Ce que je ressens comme un manque et ce qu'il cherche à me faire comprendre",
+  besoin_reel: "Ce dont j'ai réellement besoin au fond de moi",
+  synthese_offrir:
+    "Ce qu'une partie de moi attend de l'extérieur alors qu'elle aurait besoin que je me l'offre",
 };
+
 
 const strObj = (props: Record<string, unknown>) => ({
   type: "object",
