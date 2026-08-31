@@ -143,6 +143,25 @@ export function generateCarnetPdf(
     body(ai.synthese_finale);
   }
 
+  // ---------- Tes questions et tes réponses
+  const filled = Object.entries(answers ?? {}).filter(([, v]) => String(v ?? "").trim());
+  if (filled.length) {
+    newPage();
+    title("Tes questions et tes réponses");
+    body("Le reflet fidèle de ce que tu as écrit aujourd'hui.", { soft: true, italic: true, size: 9.5 });
+    rule();
+    filled.forEach(([id, value]) => {
+      const q = QUESTION_LABELS[id] ?? id;
+      const text = String(value).trim();
+      const shown = text.length > 700 ? `${text.slice(0, 700)}…` : text;
+      ensure(20);
+      body(q, { soft: true, size: 9 });
+      body(shown, { size: 9.5 });
+      y += 1;
+    });
+  }
+
+
   // ---------- Thèmes & émotions
   const themes = take(ai?.themes, 3);
   const emotions = take(ai?.emotions, 2);
