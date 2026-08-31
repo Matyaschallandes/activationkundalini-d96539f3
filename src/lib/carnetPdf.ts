@@ -1,6 +1,11 @@
 import { jsPDF } from "jspdf";
-import { CarnetAnalysis } from "./carnetAnalysis";
+import { CarnetAnalysis, CARNET_STEPS } from "./carnetAnalysis";
 import { AiCarnetAnalysis } from "./carnetAiTypes";
+
+const QUESTION_LABELS: Record<string, string> = Object.fromEntries(
+  CARNET_STEPS.flatMap((s) => s.questions.map((q) => [q.id, q.title]))
+);
+
 
 type Identity = {
   prenom: string;
