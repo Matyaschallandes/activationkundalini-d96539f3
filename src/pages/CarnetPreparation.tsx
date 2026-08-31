@@ -9,10 +9,9 @@ import { Slider } from "@/components/ui/slider";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { analyseCarnet, CARNET_STEPS } from "@/lib/carnetAnalysis";
-import { generateCarnetPdf } from "@/lib/carnetPdf";
 import CarnetMiroir from "@/components/CarnetMiroir";
 import { AiCarnetAnalysis } from "@/lib/carnetAiTypes";
-import { Download, ChevronLeft, ChevronRight, Sparkles, Loader2, CheckCircle2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sparkles, Loader2, CheckCircle2 } from "lucide-react";
 
 const STORAGE_KEY = "carnet-preparation-draft";
 
@@ -95,11 +94,6 @@ const CarnetPreparation = () => {
   const goPrev = () => {
     setStepIndex((i) => Math.max(i - 1, 0));
     window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const handleDownload = () => {
-    generateCarnetPdf(identity, answers, analysis, intensity);
-    toast.success("Ton carnet personnalisé est téléchargé 🌿");
   };
 
   const handleSend = async () => {
@@ -238,7 +232,7 @@ const CarnetPreparation = () => {
           <p className="font-body text-muted-foreground leading-relaxed">
             Ce carnet prépare ton corps et ton mental à libérer les mémoires avant le soin
             énergétique. Réponds avec authenticité : il n'existe aucune bonne ou mauvaise réponse.
-            À la fin, tu télécharges ton carnet personnalisé avec tes clés d'harmonisation.
+            À la fin, un seul bouton : ta lecture complète en PDF (tes questions-réponses, ta synthèse et tes clés d'harmonisation).
           </p>
         </header>
 
@@ -442,14 +436,7 @@ const CarnetPreparation = () => {
                 </ul>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <button
-                  onClick={handleDownload}
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm py-3 rounded-sm hover:shadow-gold transition-all"
-                >
-                  <Download className="w-4 h-4" />
-                  Télécharger mon carnet PDF
-                </button>
+              <div className="pt-2">
                 <button
                   onClick={() =>
                     done
@@ -459,16 +446,23 @@ const CarnetPreparation = () => {
                       : handleSend()
                   }
                   disabled={sending}
-                  className="flex-1 inline-flex items-center justify-center gap-2 border border-primary text-foreground font-body tracking-wider uppercase text-sm py-3 rounded-sm hover:bg-primary/10 transition-all disabled:opacity-60"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm py-4 rounded-sm hover:shadow-gold transition-all disabled:opacity-60"
                 >
                   {sending ? (
                     <Loader2 className="w-4 h-4 animate-spin" />
                   ) : done ? (
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                  ) : null}
-                  {done ? "Voir ma lecture personnalisée" : "Découvrir ma lecture personnalisée"}
+                    <CheckCircle2 className="w-4 h-4" />
+                  ) : (
+                    <Sparkles className="w-4 h-4" />
+                  )}
+                  {done ? "Voir ma lecture complète" : "Générer ma lecture complète"}
                 </button>
+                <p className="font-body text-xs text-muted-foreground text-center mt-3">
+                  Ta lecture complète s'affiche ensuite, avec un seul bouton pour télécharger le PDF
+                  (questions-réponses + synthèse).
+                </p>
               </div>
+
 
               <p className="font-body text-sm text-muted-foreground text-center">
                 Prêt(e) à réserver ?{" "}

@@ -1,6 +1,11 @@
 import { jsPDF } from "jspdf";
-import { CarnetAnalysis } from "./carnetAnalysis";
+import { CarnetAnalysis, CARNET_STEPS } from "./carnetAnalysis";
 import { AiCarnetAnalysis } from "./carnetAiTypes";
+
+const QUESTION_LABELS: Record<string, string> = Object.fromEntries(
+  CARNET_STEPS.flatMap((s) => s.questions.map((q) => [q.id, q.title]))
+);
+
 
 type Identity = {
   prenom: string;
@@ -138,6 +143,25 @@ export function generateCarnetPdf(
     body(ai.synthese_finale);
   }
 
+  // ---------- Tes questions et tes réponses
+  const filled = Object.entries(answers ?? {}).filter(([, v]) => String(v ?? "").trim());
+  if (filled.length) {
+    newPage();
+    title("Tes questions et tes réponses");
+    body("Le reflet fidèle de ce que tu as écrit aujourd'hui.", { soft: true, italic: true, size: 9.5 });
+    rule();
+    filled.forEach(([id, value]) => {
+      const q = QUESTION_LABELS[id] ?? id;
+      const text = String(value).trim();
+      const shown = text.length > 700 ? `${text.slice(0, 700)}…` : text;
+      ensure(20);
+      body(q, { soft: true, size: 9 });
+      body(shown, { size: 9.5 });
+      y += 1;
+    });
+  }
+
+
   // ---------- Thèmes & émotions
   const themes = take(ai?.themes, 3);
   const emotions = take(ai?.emotions, 2);
@@ -235,6 +259,15 @@ export function generateCarnetPdf(
     if (extras.resonance?.trim()) body(`Ce qui résonne : ${extras.resonance.trim()}`);
     if (extras.intention?.trim()) body(`Mon intention : ${extras.intention.trim()}`);
   }
+
+  if (ai?.synthese_finale && ai?.synthese?.length) {
+    y += 3;
+    ensure(40);
+    title("Le fil rouge de ton carnet", 13);
+    rule();
+    body(ai.synthese_finale);
+  }
+
 
   y += 8;
   ensure(20);

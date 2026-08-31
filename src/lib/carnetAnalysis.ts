@@ -517,5 +517,80 @@ export const CARNET_STEPS: CarnetStep[] = [
       },
     ],
   },
+  {
+    title: "17. Mon enfant intérieur",
+    subtitle:
+      "Une partie de toi plus jeune porte encore certaines blessures. Laisse-la s'exprimer avec douceur.",
+    questions: [
+      {
+        id: "enfant_blessures",
+        step: 17,
+        title:
+          "Quelles parties blessées de mon enfant intérieur cherchent aujourd'hui à me parler, et dans quelles situations se manifestent-elles ?",
+        placeholder: "Les moments où je réagis comme un enfant blessé…",
+        rows: 5,
+      },
+      {
+        id: "enfant_besoins",
+        step: 17,
+        title:
+          "De quoi cet enfant aurait-il besoin aujourd'hui pour se sentir entendu, rassuré, aimé et en sécurité ?",
+        rows: 5,
+      },
+    ],
+  },
+  {
+    title: "18. Mes peurs",
+    subtitle: "Derrière chaque peur se cache souvent une tentative de protection.",
+    questions: [
+      {
+        id: "peurs_protegent",
+        step: 18,
+        title:
+          "Quelles sont mes plus grandes peurs, et qu'est-ce qu'elles cherchent réellement à protéger en moi ?",
+        rows: 5,
+      },
+      {
+        id: "peurs_oser",
+        step: 18,
+        title: "Qu'est-ce que je pourrais oser faire si ces peurs ne dirigeaient plus mes choix ?",
+        rows: 5,
+      },
+    ],
+  },
+  {
+    title: "19. Mes manques",
+    subtitle: "Le manque indique souvent une direction, pas un défaut.",
+    questions: [
+      {
+        id: "manque_actuel",
+        step: 19,
+        title:
+          "Qu'est-ce que je ressens comme un manque dans ma vie aujourd'hui, et qu'est-ce que ce manque cherche profondément à me faire comprendre ?",
+        rows: 5,
+      },
+      {
+        id: "besoin_reel",
+        step: 19,
+        title:
+          "Derrière ce que je cherche à recevoir des autres ou de la vie, de quoi ai-je réellement besoin au fond de moi ?",
+        rows: 5,
+      },
+    ],
+  },
+  {
+    title: "20. Ma question de synthèse",
+    subtitle: "Prends le temps. Cette seule question peut éclairer tout le reste du carnet.",
+    questions: [
+      {
+        id: "synthese_offrir",
+        step: 20,
+        title:
+          "Qu'est-ce qu'une partie de moi attend encore de l'extérieur, alors qu'elle aurait peut-être besoin que je commence à me l'offrir à moi-même ?",
+        rows: 6,
+      },
+    ],
+  },
 ];
+
 
