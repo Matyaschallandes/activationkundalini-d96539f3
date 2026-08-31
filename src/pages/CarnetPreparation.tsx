@@ -442,14 +442,7 @@ const CarnetPreparation = () => {
                 </ul>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <button
-                  onClick={handleDownload}
-                  className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm py-3 rounded-sm hover:shadow-gold transition-all"
-                >
-                  <Download className="w-4 h-4" />
-                  Télécharger mon carnet PDF
-                </button>
+              <div className="pt-2">
                 <button
                   onClick={() =>
                     done
@@ -459,16 +452,23 @@ const CarnetPreparation = () => {
                       : handleSend()
                   }
                   disabled={sending}
-                  className="flex-1 inline-flex items-center justify-center gap-2 border border-primary text-foreground font-body tracking-wider uppercase text-sm py-3 rounded-sm hover:bg-primary/10 transition-all disabled:opacity-60"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm py-4 rounded-sm hover:shadow-gold transition-all disabled:opacity-60"
                 >
                   {sending ? (
                     <Loader2 className="w-4 h-4 animate-spin" />
                   ) : done ? (
-                    <CheckCircle2 className="w-4 h-4 text-primary" />
-                  ) : null}
-                  {done ? "Voir ma lecture personnalisée" : "Découvrir ma lecture personnalisée"}
+                    <CheckCircle2 className="w-4 h-4" />
+                  ) : (
+                    <Sparkles className="w-4 h-4" />
+                  )}
+                  {done ? "Voir ma lecture complète" : "Générer ma lecture complète"}
                 </button>
+                <p className="font-body text-xs text-muted-foreground text-center mt-3">
+                  Ta lecture complète s'affiche ensuite, avec un seul bouton pour télécharger le PDF
+                  (questions-réponses + synthèse).
+                </p>
               </div>
+
 
               <p className="font-body text-sm text-muted-foreground text-center">
                 Prêt(e) à réserver ?{" "}
