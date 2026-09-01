@@ -147,6 +147,27 @@ const TherapistView = ({ carnet }: { carnet: Carnet }) => {
                   ))}
                 </Block>
               )}
+              {a.lecture_detaillee?.length ? (
+                <Block title="Lecture détaillée (question par question)">
+                  {a.lecture_detaillee.map((l, i) => (
+                    <p key={i} className="whitespace-pre-wrap">
+                      <strong>{l.question}</strong> — {l.ce_que_tu_as_ecrit}
+                      <br />
+                      {l.ce_que_cela_revele}
+                    </p>
+                  ))}
+                </Block>
+              ) : null}
+              {a.lecture_energetique && (
+                <Block title="Lecture énergétique">
+                  <p className="whitespace-pre-wrap">{a.lecture_energetique}</p>
+                </Block>
+              )}
+              {a.synthese_finale && (
+                <Block title="Synthèse finale">
+                  <p className="whitespace-pre-wrap">{a.synthese_finale}</p>
+                </Block>
+              )}
             </>
           ) : (
             <p className="font-body text-sm text-muted-foreground">
