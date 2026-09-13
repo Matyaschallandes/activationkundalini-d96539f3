@@ -20,6 +20,7 @@ import {
   Footprints,
   Loader2,
   KeyRound,
+  Target,
 } from "lucide-react";
 
 type Identity = {

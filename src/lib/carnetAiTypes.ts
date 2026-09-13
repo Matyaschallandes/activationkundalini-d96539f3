@@ -24,5 +24,14 @@ export type AiCarnetAnalysis = {
   exercices: { titre: string; deroule: string }[];
   plan: { aujourdhui: string; cette_semaine: string; avant_la_seance: string };
   seance: string[];
+  objectifs_smart?: {
+    objectif: string;
+    specifique: string;
+    mesurable: string;
+    acceptable: string;
+    realisable: string;
+    temps: string;
+    pourquoi: string;
+  }[];
   lecture_energetique: string;
 };

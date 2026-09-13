@@ -49,6 +49,8 @@ const LABELS: Record<string, string> = {
   besoin_reel: "Ce dont j'ai réellement besoin au fond de moi",
   synthese_offrir:
     "Ce qu'une partie de moi attend de l'extérieur alors qu'elle aurait besoin que je me l'offre",
+  objectif_principal: "Objectif principal pour la séance",
+  objectif_autres: "Autres objectifs à explorer",
 };
 
 
@@ -83,6 +85,15 @@ const schema = strObj({
   exercices: ARR(strObj({ titre: S, deroule: S })),
   plan: strObj({ aujourdhui: S, cette_semaine: S, avant_la_seance: S }),
   seance: ARR(S),
+  objectifs_smart: ARR(strObj({
+    objectif: S,
+    specifique: S,
+    mesurable: S,
+    acceptable: S,
+    realisable: S,
+    temps: S,
+    pourquoi: S,
+  })),
   lecture_energetique: S,
   synthese_finale: S,
 });
@@ -119,7 +130,8 @@ CONTENU ATTENDU (sois GÉNÉREUX et DÉTAILLÉ : ce texte devient un document PD
 - cles : 6 à 8 clés de guérison personnalisées, chacune avec pourquoi (détaillé), pratique concrète et ancrage.
 - exercices : 4 à 6 exercices concrets adaptés au carnet, déroulé pas à pas.
 - plan : petits pas simples et réalistes, sans pression, formulés en 2 à 4 phrases chacun.
-- seance : 4 à 6 sujets à explorer ensemble.
+  - seance : 4 à 6 sujets à explorer ensemble.
+  - objectifs_smart : 3 à 5 objectifs SMART (Spécifique, Mesurable, Acceptable, Réalisable, Temps) proposés à partir de l'ensemble du carnet ET des objectifs formulés par la personne au début. Chaque objectif doit être concret et actionnable pour la séance. « Spécifique » = l'objectif en une phrase claire. « Mesurable » = comment on saura que c'est atteint. « Acceptable » = la personne est prête à s'y engager. « Réalisable » = c'est dans son champ de possibilité. « Temps » = horizon temporel (souvent « lors de la séance » ou « dans les jours qui suivent »). « pourquoi » = ce qui relie cet objectif au carnet. Si la personne a formulé des objectifs au début, base-toi dessus et affine-les en SMART.
 - lecture_energetique : paragraphe symbolique développé (8 à 12 phrases), explicitement non médical.
 - synthese_finale : conclusion globale chaleureuse et pertinente (10 à 15 phrases) qui relie TOUT le carnet en un seul fil rouge, nomme le mouvement de fond, et ouvre sur la séance.
 
