@@ -292,7 +292,28 @@ export type CarnetStep = {
 
 export const CARNET_STEPS: CarnetStep[] = [
   {
-    title: "1. Ce que je choisis de libérer",
+    title: "1. Mes objectifs pour la séance",
+    subtitle:
+      "Avant de plonger dans le carnet, prends un instant pour poser tes intentions. En kinésiologie, quand un objectif touche le vrai sujet, le corps réagit : c'est le signe que nous sommes sur la bonne voie. Nous équilibrerons ensuite le corps pour qu'il n'y ait plus de stress face à cet objectif.",
+    questions: [
+      {
+        id: "objectif_principal",
+        step: 1,
+        title: "Quel est ton objectif principal pour cette séance ?",
+        placeholder: "Ex : me libérer d'une peur, retrouver ma confiance, apaiser une colère, me reconnecter à moi-même…",
+        rows: 5,
+      },
+      {
+        id: "objectif_autres",
+        step: 1,
+        title: "Y a-t-il d'autres objectifs que tu souhaites explorer ?",
+        placeholder: "(facultatif)",
+        rows: 4,
+      },
+    ],
+  },
+  {
+    title: "2. Ce que je choisis de libérer",
     subtitle:
       "Exemples : peurs, culpabilité, honte, colère, tristesse, besoin de contrôle, relations toxiques, dépendances, croyances limitantes, manque de confiance, blessures d'enfance, schémas répétitifs, stress, perfectionnisme.",
     questions: [
@@ -306,7 +327,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "2. Qui je choisis d'incarner",
+    title: "3. Qui je choisis d'incarner",
     subtitle:
       "Imagine la version la plus alignée de toi-même. Exemples : Je suis libre. Je suis confiant(e). Je suis authentique. Je suis serein(e).",
     questions: [
@@ -320,7 +341,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "3. Ce qui m'empêche encore",
+    title: "4. Ce qui m'empêche encore",
     subtitle: "Réponds spontanément, sans chercher la bonne réponse.",
     questions: [
       { id: "peur", step: 3, title: "Quelle peur me retient ?", rows: 3 },
@@ -330,7 +351,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "4. Les croyances que je souhaite transformer",
+    title: "5. Les croyances que je souhaite transformer",
     subtitle: "Complète spontanément, puis demande-toi : « Est-ce vraiment vrai ? »",
     questions: [
       { id: "croyance1", step: 4, title: "Je crois que…", rows: 2 },
@@ -340,7 +361,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "5. Les pensées que j'ai envers moi-même",
+    title: "6. Les pensées que j'ai envers moi-même",
     subtitle:
       "Comment est-ce que je me parle intérieurement ? Est-ce que je m'aime vraiment ? Tout ce que nous émettons finit par nous revenir : la douceur envers soi est le premier acte de guérison.",
     questions: [
@@ -349,7 +370,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "6. Les pensées que j'ai envers les autres",
+    title: "7. Les pensées que j'ai envers les autres",
     subtitle:
       "Jalousie, rancune, jugement, colère : quand nous envoyons de la mauvaise énergie à quelqu'un, c'est comme si nous nous l'envoyions à nous-même, car nous sommes tous issus de la même source. Ce que nous émettons nous revient : amour pour amour, haine pour haine.",
     questions: [
@@ -358,7 +379,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "7. Sortir du rôle de victime",
+    title: "8. Sortir du rôle de victime",
     subtitle:
       "Où est-ce que je me sens victime des autres, de la vie, des circonstances ? Tout ce que nous avons reçu a une raison : peut-être un karma qui cherche à se rééquilibrer. Reconnaître sa part de pouvoir, c'est reprendre sa souveraineté — sans jamais nier ce qui a été vécu.",
     questions: [
@@ -367,7 +388,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "8. Le pardon",
+    title: "9. Le pardon",
     subtitle:
       "Le pardon ne veut pas dire accepter ce qui s'est passé : il libère l'énergie retenue. Tu peux en parler ici si tu le souhaites, à ton rythme.",
     questions: [
@@ -376,7 +397,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "9. Le message de mon corps",
+    title: "10. Le message de mon corps",
     subtitle:
       "Ferme les yeux quelques instants. Où ressens-tu une tension ? Si cette zone pouvait parler, que te dirait-elle ?",
     questions: [
@@ -385,20 +406,20 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "10. Rencontre avec mon Moi aligné",
+    title: "11. Rencontre avec mon Moi aligné",
     subtitle: "Visualise ta version idéale. Comment marche-t-elle ? Comment parle-t-elle ?",
     questions: [
       { id: "moi_aligne", step: 10, title: "Le conseil que me donne mon Moi aligné", rows: 6 },
     ],
   },
   {
-    title: "11. Mes dons, mes qualités et mes talents",
+    title: "12. Mes dons, mes qualités et mes talents",
     subtitle:
       "Que disent souvent les autres de toi ? Dans quels domaines pourrais-tu naturellement exceller ?",
     questions: [{ id: "talents", step: 11, title: "Mes qualités et talents", rows: 6 }],
   },
   {
-    title: "12. Les synchronicités de ma vie",
+    title: "13. Les synchronicités de ma vie",
     subtitle:
       "Repense aux rencontres importantes, aux passions de ton enfance et aux épreuves qui t'ont transformé(e).",
     questions: [
@@ -406,13 +427,13 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "13. Mon engagement",
+    title: "14. Mon engagement",
     subtitle:
       "Quelle action concrète vas-tu réaliser dans les 72 prochaines heures pour honorer cette transformation ?",
     questions: [{ id: "engagement", step: 13, title: "Mon engagement des 72 h", rows: 4 }],
   },
   {
-    title: "14. Explorer ce qui me retient véritablement",
+    title: "15. Explorer ce qui me retient véritablement",
     subtitle:
       "Ces questions ouvrent des couches plus subtiles. Réponds seulement à ce qui résonne en toi, sans forcer.",
     questions: [
@@ -448,7 +469,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "15. Au cœur de mon manque et de mes échappatoires",
+    title: "16. Au cœur de mon manque et de mes échappatoires",
     subtitle:
       "Continue avec authenticité. Ces questions touchent souvent le cœur de ce qui se répète dans ta vie.",
     questions: [
@@ -486,7 +507,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "16. Écouter et apaiser une émotion",
+    title: "17. Écouter et apaiser une émotion",
     subtitle:
       "Une courte pratique d'écoute intérieure. Tu peux la faire maintenant ou y revenir à ton rythme.",
     practiceContent: {
@@ -518,7 +539,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "17. Mon enfant intérieur",
+    title: "18. Mon enfant intérieur",
     subtitle:
       "Une partie de toi plus jeune porte encore certaines blessures. Laisse-la s'exprimer avec douceur.",
     questions: [
@@ -540,7 +561,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "18. Mes peurs",
+    title: "19. Mes peurs",
     subtitle: "Derrière chaque peur se cache souvent une tentative de protection.",
     questions: [
       {
@@ -559,7 +580,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "19. Mes manques",
+    title: "20. Mes manques",
     subtitle: "Le manque indique souvent une direction, pas un défaut.",
     questions: [
       {
@@ -579,7 +600,7 @@ export const CARNET_STEPS: CarnetStep[] = [
     ],
   },
   {
-    title: "20. Ma question de synthèse",
+    title: "21. Ma question de synthèse",
     subtitle: "Prends le temps. Cette seule question peut éclairer tout le reste du carnet.",
     questions: [
       {

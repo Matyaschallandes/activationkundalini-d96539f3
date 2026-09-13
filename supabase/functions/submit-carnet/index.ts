@@ -83,6 +83,8 @@ serve(async (req) => {
       manque_profond: "Ce qui me manque profondément",
       echappatoires: "Vers quoi je me tourne pour ne plus ressentir",
       emotion_ecoute: "Écoute d'une émotion — messages et prises de conscience",
+      objectif_principal: "Objectif principal pour la séance",
+      objectif_autres: "Autres objectifs à explorer",
     };
 
     const reponses = Object.entries(answers ?? {})
