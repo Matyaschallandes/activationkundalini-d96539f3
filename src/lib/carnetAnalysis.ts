@@ -297,14 +297,14 @@ export const CARNET_STEPS: CarnetStep[] = [
       "Avant de plonger dans le carnet, prends un instant pour poser tes intentions. En kinésiologie, quand un objectif touche le vrai sujet, le corps réagit : c'est le signe que nous sommes sur la bonne voie. Nous équilibrerons ensuite le corps pour qu'il n'y ait plus de stress face à cet objectif.",
     practiceContent: {
       paragraphs: [
-        "La méthode SMART aide à formuler un objectif clair et atteignable. SMART signifie :",
+        "La méthode SMART aide à formuler un objectif clair et atteignable. Chaque lettre signifie :",
       ],
       bullets: [
-        "Spécifique — l'objectif est clair et précis (pas vague comme « aller mieux », mais « apaiser ma peur de parler en public »).",
-        "Mesurable — on peut savoir quand il est atteint (un ressenti, un comportement, une situation concrète).",
-        "Acceptable — tu te sens prêt(e) à t'y engager, ça résonne pour toi.",
-        "Réalisable — c'est dans ton champ de possibilité, pas un idéal hors de portée.",
-        "Temps — il a un horizon : lors de la séance, dans les jours qui suivent, etc.",
+        "Spécifique — l'objectif va dans une direction bien précise, pas vague (pas « aller mieux », mais « apaiser ma peur de parler en public »).",
+        "Mesurable — on peut déterminer quand il est atteint : un ressenti, un comportement, une situation concrète.",
+        "Acceptable — c'est possible et positif pour toi, tu te sens prêt(e) à t'y engager.",
+        "Réalisable — ce n'est pas impossible, ça reste dans ton champ de possibilité.",
+        "Temps — il est mesurable dans le temps : dans 2 mois, 1 semaine, lors de la séance, etc.",
       ],
       closing: [
         "Tu n'as pas besoin de tout formuler toi-même en SMART : pose ton intention avec tes mots, et à partir de tout ce que tu écriras dans le carnet, une série d'objectifs SMART te sera proposée dans ta lecture finale.",
