@@ -251,6 +251,26 @@ export function generateCarnetPdf(
     seance.forEach((s) => body(`• ${s}`));
   }
 
+  const objectifs = ai?.objectifs_smart;
+  if (objectifs?.length) {
+    y += 3;
+    ensure(50);
+    title("Tes objectifs pour la séance (SMART)", 13);
+    body("Objectifs concrets pour orienter notre travail ensemble.", { soft: true, size: 9.5 });
+    rule();
+    objectifs.forEach((o, i) => {
+      ensure(55);
+      body(`${i + 1}. ${o.objectif}`, { size: 10.5 });
+      body(`Spécifique : ${o.specifique}`, { soft: true, size: 9 });
+      body(`Mesurable : ${o.mesurable}`, { soft: true, size: 9 });
+      body(`Acceptable : ${o.acceptable}`, { soft: true, size: 9 });
+      body(`Réalisable : ${o.realisable}`, { soft: true, size: 9 });
+      body(`Temps : ${o.temps}`, { soft: true, size: 9 });
+      body(`Pourquoi : ${o.pourquoi}`, { soft: true, size: 9 });
+      y += 2;
+    });
+  }
+
   if (extras.intention?.trim() || extras.resonance?.trim()) {
     y += 3;
     ensure(30);

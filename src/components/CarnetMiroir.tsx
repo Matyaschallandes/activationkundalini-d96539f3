@@ -405,6 +405,45 @@ const CarnetMiroir = ({
         </Section>
       )}
 
+      {analysis.objectifs_smart?.length > 0 && (
+        <Section icon={Target} title="Tes objectifs pour la séance (SMART)">
+          <p className="font-body text-sm text-muted-foreground italic mb-4">
+            Des objectifs concrets, clairs et datés pour orienter notre travail — issus de ce qui ressort de ton carnet.
+          </p>
+          {analysis.objectifs_smart.map((o, i) => (
+            <Card key={i}>
+              <h4 className="font-heading text-xl text-primary mb-3">{i + 1}. {o.objectif}</h4>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <SubLabel>Spécifique</SubLabel>
+                  <Body>{o.specifique}</Body>
+                </div>
+                <div>
+                  <SubLabel>Mesurable</SubLabel>
+                  <Body>{o.mesurable}</Body>
+                </div>
+                <div>
+                  <SubLabel>Acceptable</SubLabel>
+                  <Body>{o.acceptable}</Body>
+                </div>
+                <div>
+                  <SubLabel>Réalisable</SubLabel>
+                  <Body>{o.realisable}</Body>
+                </div>
+                <div>
+                  <SubLabel>Temps</SubLabel>
+                  <Body>{o.temps}</Body>
+                </div>
+              </div>
+              <div className="mt-4 border-t border-border/60 pt-4">
+                <SubLabel>Pourquoi cet objectif</SubLabel>
+                <Body>{o.pourquoi}</Body>
+              </div>
+            </Card>
+          ))}
+        </Section>
+      )}
+
       <Section icon={Feather} title="Ce que tu souhaites me partager">
         <div className="space-y-5">
           <div className="space-y-2">
