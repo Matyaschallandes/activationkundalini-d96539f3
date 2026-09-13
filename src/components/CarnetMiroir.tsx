@@ -407,18 +407,6 @@ const CarnetMiroir = ({
 
       {analysis.objectifs_smart?.length > 0 && (
         <Section icon={Target} title="Tes objectifs pour la séance (SMART)">
-          <div className="rounded-sm border border-border bg-muted/30 p-5 mb-2">
-            <p className="font-body text-sm text-foreground/80 leading-relaxed mb-3">
-              La méthode <strong>SMART</strong> aide à formuler un objectif clair et atteignable. Chaque lettre signifie :
-            </p>
-            <ul className="space-y-1.5 pl-5">
-              <li className="font-body text-sm text-foreground/80 list-disc"><strong>Spécifique</strong> — l'objectif est clair et précis, pas vague.</li>
-              <li className="font-body text-sm text-foreground/80 list-disc"><strong>Mesurable</strong> — on peut savoir quand il est atteint.</li>
-              <li className="font-body text-sm text-foreground/80 list-disc"><strong>Acceptable</strong> — tu te sens prêt(e) à t'y engager.</li>
-              <li className="font-body text-sm text-foreground/80 list-disc"><strong>Réalisable</strong> — c'est dans ton champ de possibilité.</li>
-              <li className="font-body text-sm text-foreground/80 list-disc"><strong>Temps</strong> — il a un horizon concret (la séance, les jours suivants…).</li>
-            </ul>
-          </div>
           <p className="font-body text-sm text-muted-foreground italic mb-4">
             Des objectifs concrets, clairs et datés pour orienter notre travail — issus de ce qui ressort de ton carnet.
           </p>

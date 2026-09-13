@@ -255,8 +255,7 @@ export function generateCarnetPdf(
   if (objectifs?.length) {
     y += 3;
     ensure(50);
-    title("Tes objectifs pour la séance (SMART)", 13);
-    body("Objectifs concrets pour orienter notre travail ensemble.", { soft: true, size: 9.5 });
+    title("Tes objectifs pour la séance", 13);
     rule();
     objectifs.forEach((o, i) => {
       ensure(55);
