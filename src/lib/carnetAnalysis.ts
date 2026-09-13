@@ -307,7 +307,7 @@ export const CARNET_STEPS: CarnetStep[] = [
         "Temps — il a un horizon : lors de la séance, dans les jours qui suivent, etc.",
       ],
       closing: [
-        "Tu n'as pas besoin de toutformuler toi-même en SMART : pose ton intention avec tes mots, et à partir de tout ce que tu écriras dans le carnet, une série d'objectifs SMART te sera proposée dans ta lecture finale.",
+        "Tu n'as pas besoin de tout formuler toi-même en SMART : pose ton intention avec tes mots, et à partir de tout ce que tu écriras dans le carnet, une série d'objectifs SMART te sera proposée dans ta lecture finale.",
       ],
       quote: "Un objectif clair donne une direction au corps et à l'énergie.",
     },
