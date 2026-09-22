@@ -66,8 +66,8 @@ const LaKundalini = () => {
   return (
     <Layout>
       <Seo
-        title="Activation Kundalini à Neuchâtel | Karmaequilego"
-        description="Activation Kundalini à Neuchâtel avec Matyas Challandes, à Bevaix : comprendre l'énergie Kundalini, le déroulement d'une séance, à qui elle s'adresse. Présentiel et à distance."
+        title="Activation Kundalini : ce qui se passe vraiment | Suisse — 1h offerte"
+        description="Activation Kundalini en Suisse romande : comment l'énergie remonte la colonne, ce que le corps libère, le déroulement d'une séance, à qui elle s'adresse. Bevaix (Neuchâtel) ou à distance. Première heure offerte."
         path="/la-kundalini"
         keywords="activation kundalini Neuchâtel, activation kundalini Suisse, séance activation kundalini, énergie kundalini, accompagnement kundalini"
         jsonLd={[jsonLd, serviceLd, faqLd, breadcrumbLd]}

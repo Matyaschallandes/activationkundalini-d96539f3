@@ -54,8 +54,8 @@ const Index = () => {
   return (
     <Layout>
       <Seo
-        title="Activation Kundalini à Neuchâtel | Chamanisme &amp; Kinésiologie — Karmaequilego"
-        description="Matyas Challandes, praticien à Bevaix (canton de Neuchâtel) : Activation Kundalini, chamanisme et kinésiologie. Découverte gratuite d'une heure, en présentiel ou à distance."
+        title="Guérisseur &amp; Chamane à Neuchâtel — Activation Kundalini | 1h offerte"
+        description="Tu te sens vidé(e), bloqué(e) ? Matyas Challandes, guérisseur et chamane à Bevaix (Neuchâtel) : activation Kundalini, soins chamaniques, kinésiologie. Première heure découverte offerte, en présentiel ou à distance. ★ 4,9/5 sur Google."
         path="/"
         keywords="activation kundalini Neuchâtel, chamanisme Neuchâtel, kinésiologie Neuchâtel, Karmaequilego, Matyas Challandes, Bevaix"
         jsonLd={[organizationLd, websiteLd, homeFaqJsonLd]}
