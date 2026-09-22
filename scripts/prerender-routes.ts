@@ -175,7 +175,7 @@ ${commonFooter}`,
   },
   {
     path: "/a-propos",
-    title: "À propos — Matyas Challandes, Guérisseur Énergétique & Chamane | Bevaix, Neuchâtel",
+    title: "Matyas Challandes — Guérisseur & Chamane à Bevaix, Neuchâtel",
     description:
       "Matyas Challandes, guérisseur énergétique et chamane à Bevaix (Neuchâtel). Parcours, formations (Kundalini, chamanisme, kinésiologie), approche des soins en Suisse romande.",
     canonical: `${BASE}/a-propos`,
@@ -274,7 +274,7 @@ ${commonFooter}`,
   },
   {
     path: "/accompagnement-burn-out-suisse-romande",
-    title: "Accompagnement Burn-out en Suisse Romande | Soins Énergétiques Kundalini",
+    title: "Burn-out : retrouver son énergie — Suisse romande | 1h offerte",
     description:
       "Accompagnement énergétique du burn-out en Suisse romande : activation Kundalini, libération émotionnelle, reconstruction énergétique. Bevaix (Neuchâtel), à distance.",
     canonical: `${BASE}/accompagnement-burn-out-suisse-romande`,
@@ -291,7 +291,7 @@ ${commonFooter}`,
   },
   {
     path: "/retrouver-energie-fatigue-chronique",
-    title: "Fatigue Chronique — Retrouver son Énergie | Soins Kundalini Suisse Romande",
+    title: "Fatigue chronique : et si l'énergie ne circulait plus ? | 1h offerte",
     description:
       "Fatigue chronique : accompagnement énergétique par l'activation Kundalini pour relancer la circulation vitale et retrouver l'élan. Bevaix (Neuchâtel), à distance.",
     canonical: `${BASE}/retrouver-energie-fatigue-chronique`,
@@ -306,7 +306,7 @@ ${commonFooter}`,
   },
   {
     path: "/apaiser-anxiete-angoisses",
-    title: "Apaiser l'Anxiété & les Angoisses | Soins Énergétiques Suisse Romande",
+    title: "Anxiété & angoisses : apaiser le corps | Suisse romande, 1h offerte",
     description:
       "Accompagnement énergétique de l'anxiété et des angoisses : activation Kundalini, ancrage, harmonisation. Bevaix (Neuchâtel), Suisse romande, à distance.",
     canonical: `${BASE}/apaiser-anxiete-angoisses`,
@@ -321,7 +321,7 @@ ${commonFooter}`,
   },
   {
     path: "/retrouver-elan-baisse-de-moral",
-    title: "Baisse de Moral — Retrouver l'Élan | Soins Énergétiques Suisse Romande",
+    title: "Baisse de moral : retrouver l'élan | Suisse romande, 1h offerte",
     description:
       "Retrouver l'élan de vie face à la baisse de moral et à la démotivation. Activation Kundalini, soins énergétiques. Bevaix (Neuchâtel), Suisse romande.",
     canonical: `${BASE}/retrouver-elan-baisse-de-moral`,
@@ -394,14 +394,14 @@ ${commonFooter}`,
   },
   {
     path: "/chamanisme-neuchatel",
-    title: "Chamanisme à Neuchâtel — Soins chamaniques à Bevaix | Karmaequilego",
+    title: "Chamane à Neuchâtel — Recouvrement d'âme & désenvoûtement | Bevaix",
     description: "Soins chamaniques à Neuchâtel avec Matyas Challandes : désenvoûtement, recouvrement d'âme, dégagement d'entités, coupure de liens.",
     canonical: `${BASE}/chamanisme-neuchatel`,
     content: `${commonNav}<main><h1>Chamanisme à Neuchâtel — Soins chamaniques traditionnels à Bevaix</h1><p>Chamane à Bevaix (Neuchâtel), je pratique des soins chamaniques ciblés : recouvrement d'âme, désenvoûtement, dégagement d'entités, coupure de liens, nettoyage énergétique. En présentiel ou à distance dans toute la Suisse romande.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p></main>${commonFooter}`,
   },
   {
     path: "/kinesiologie-neuchatel",
-    title: "Kinésiologie à Neuchâtel — Libération des mémoires cellulaires | Karmaequilego",
+    title: "Kinésiologie à Neuchâtel — Trouver la cause du blocage | Bevaix",
     description: "Kinésiologie à Neuchâtel avec Matyas Challandes à Bevaix. Libération émotionnelle, mémoires cellulaires, stress, croyances limitantes.",
     canonical: `${BASE}/kinesiologie-neuchatel`,
     content: `${commonNav}<main><h1>Kinésiologie à Neuchâtel — Écouter le corps pour libérer ce qui bloque</h1><p>Kinésiologie à Bevaix (canton de Neuchâtel) avec Matyas Challandes. Test musculaire pour localiser les blocages, libérer stress, émotions et croyances limitantes. Approche combinée avec l'activation Kundalini et le chamanisme.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p></main>${commonFooter}`,
