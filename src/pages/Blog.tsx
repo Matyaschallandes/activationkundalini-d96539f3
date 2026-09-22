@@ -33,8 +33,8 @@ const Blog = () => {
   return (
     <Layout>
       <Seo
-        title="Blog — Kundalini, Éveil Énergétique & Guérison | Karmaequilego"
-        description="Articles sur l'activation Kundalini, la guérison énergétique, la kinésiologie, la reconnexion à soi, la gestion du burn-out et la libération des blocages. Par Matyas Challandes."
+        title="Blog Kundalini & Chamanisme — Comprendre l'éveil énergétique"
+        description="Réponses concrètes aux questions qu'on me pose : combien de temps dure une activation Kundalini, ce qu'on ressent après, différence entre Kundalini, soins énergétiques et chamanisme, burn-out et fatigue chronique."
         path="/blog"
         keywords="blog kundalini, guérison énergétique, reconnexion à soi, burn out, angoisse"
         jsonLd={{ "@context": "https://schema.org", "@type": "Blog", "url": "https://www.activationkundalini.ch/blog", "name": "Blog Karmaequilego", "inLanguage": "fr-CH", "publisher": { "@id": "https://www.activationkundalini.ch/#organization" } }}

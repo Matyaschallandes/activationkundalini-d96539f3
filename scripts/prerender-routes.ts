@@ -69,9 +69,9 @@ ${commonFooter}`,
 export const routes: RouteSnapshot[] = [
   {
     path: "/",
-    title: "Guérisseur Énergétique & Chamane Suisse Romande | Kundalini, Chamanisme, Burn-out — Bevaix",
+    title: "Guérisseur & Chamane à Neuchâtel — Activation Kundalini | 1h offerte",
     description:
-      "Guérisseur énergétique et chamane à Bevaix (Neuchâtel). Activation Kundalini, soins chamaniques (désenvoûtement, recouvrement d'âme, dégagement d'entités), burn-out, traumatismes. En présentiel et à distance en Suisse romande.",
+      "Tu te sens vidé(e), bloqué(e) ? Matyas Challandes, guérisseur et chamane à Bevaix (Neuchâtel) : activation Kundalini, soins chamaniques, kinésiologie. Première heure découverte offerte, en présentiel ou à distance. ★ 4,9/5 sur Google.",
     canonical: `${BASE}/`,
     content: `
 ${commonNav}
@@ -117,19 +117,33 @@ ${commonFooter}`,
   },
   {
     path: "/la-kundalini",
-    title: "Activation Kundalini en Suisse Romande | Éveil Énergétique — Bevaix, Neuchâtel",
+    title: "Activation Kundalini : ce qui se passe vraiment | Suisse — 1h offerte",
     description:
-      "Activation Kundalini par alchimie respiratoire à Bevaix (Neuchâtel). Éveil de l'énergie vitale, harmonisation des chakras, libération karmique. Séances en Suisse romande et à distance.",
+      "Activation Kundalini en Suisse romande : comment l'énergie remonte la colonne, ce que le corps libère, le déroulement d'une séance, à qui elle s'adresse. Bevaix (Neuchâtel) ou à distance. Première heure offerte.",
     canonical: `${BASE}/la-kundalini`,
     content: `
 ${commonNav}
 <main>
-  <h1>L'Activation Kundalini — Éveil de l'énergie vitale</h1>
-  <p>La Kundalini est l'énergie de vie fondamentale qui sommeille à la base de la colonne vertébrale. Son activation, à travers l'alchimie respiratoire, permet de relancer la circulation énergétique, d'harmoniser les chakras et de libérer les mémoires et blocages inscrits dans le corps subtil.</p>
-  <h2>Le processus en 1 à 3 séances</h2>
-  <p>Chaque activation est personnalisée. Le protocole se déroule habituellement en 1 à 3 séances d'alchimie respiratoire, selon la sensibilité et le rythme de chaque personne. Le corps se réajuste progressivement, les émotions se dénouent, l'énergie circule à nouveau librement.</p>
-  <h2>Pour qui ?</h2>
-  <p>Toute personne en quête de reconnexion à soi, traversant un burn-out, une fatigue chronique, une baisse de moral, des angoisses, ou souhaitant approfondir son chemin spirituel. <a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p>
+  <h1>Activation Kundalini — ce qui se passe vraiment pendant une séance</h1>
+  <p>La Kundalini est l'énergie de vie qui sommeille à la base de la colonne vertébrale. Lorsqu'elle est activée, elle remonte le long de la colonne et vient dissoudre les blocages sur son passage : le corps peut alors décharger ce qu'il n'a jamais pu exprimer. Séances à Bevaix (canton de Neuchâtel) et à distance partout en Suisse romande, en prix libre. <a href="/offre-decouverte-gratuite">Première heure découverte offerte</a>.</p>
+
+  <h2>Qu'est-ce que l'activation Kundalini ?</h2>
+  <p>Ce n'est pas une croyance à adopter, mais une expérience corporelle. Par l'alchimie respiratoire, la respiration devient le levier qui relance la circulation énergétique. L'énergie monte, rencontre les zones figées — bassin, ventre, plexus, gorge — et les remet en mouvement. Beaucoup de personnes ressentent des vagues de chaleur, des tremblements légers, des larmes qui viennent sans raison, puis un grand calme.</p>
+
+  <h2>Pourquoi je nettoie d'abord, puis j'active</h2>
+  <p>Un blocage empêche l'énergie de circuler, et là où il y a un blocage il y a une fissure : des énergies parasites peuvent s'y fixer. Certains blocages viennent d'avant la naissance, d'une lignée familiale, d'un événement vécu à trois ou quatre ans, parfois d'un pacte passé avec l'ombre. Des fragments de soi ont pu quitter le corps pour se protéger. C'est pourquoi je commence par le <a href="/chamanisme-neuchatel">travail chamanique et énergétique</a> — recouvrement d'âme, réintégration des fragments, désenvoûtement, dégagement — puis j'active la Kundalini sur un terrain dégagé.</p>
+
+  <h2>Comment se déroule une séance</h2>
+  <p>Nous prenons d'abord contact et fixons un rendez-vous. Tu remplis si tu le souhaites le <a href="/carnet-de-preparation">carnet de préparation en ligne</a> : il ouvre les tiroirs de l'inconscient et prépare à libérer ce qui est prêt à l'être. Tu peux aussi faire ta lecture d'âme. Le jour de la séance, nous parlons de ce qui se passe dans ta vie, puis je fais la détection des blocages par test énergétique et par <a href="/kinesiologie-neuchatel">kinésiologie</a> — j'arrive à dater le blocage, à nommer l'émotion et sa cause. Et tout à la fin vient l'activation Kundalini, un soin chamanique, ou les deux.</p>
+
+  <h2>Combien de temps, combien de séances ?</h2>
+  <p>Compte environ deux heures pour une séance complète. Le protocole se déroule habituellement en 1 à 3 séances, selon la sensibilité et le rythme de chacun. Après la séance, il est fréquent de ressentir une grande fatigue le premier jour, puis une clarté et une légèreté qui s'installent sur une à deux semaines. Boire beaucoup d'eau, dormir, marcher : le corps continue son travail.</p>
+
+  <h2>À qui l'activation Kundalini s'adresse-t-elle ?</h2>
+  <p>Aux personnes qui traversent un <a href="/accompagnement-burn-out-suisse-romande">burn-out</a>, une <a href="/retrouver-energie-fatigue-chronique">fatigue chronique</a>, des <a href="/apaiser-anxiete-angoisses">angoisses</a>, une <a href="/retrouver-elan-baisse-de-moral">baisse de moral</a>, un deuil, un traumatisme ancien — et à celles qui veulent simplement se reconnecter à qui elles sont venues incarner.</p>
+
+  <h2>Commencer</h2>
+  <p><a href="/offre-decouverte-gratuite">Offre découverte gratuite (1 heure)</a> · <a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/deroulement-seance">Le déroulement détaillé d'une séance</a> · <a href="/blog">Articles sur la Kundalini</a>.</p>
 </main>
 ${commonFooter}`,
   },
@@ -175,7 +189,7 @@ ${commonFooter}`,
   },
   {
     path: "/a-propos",
-    title: "À propos — Matyas Challandes, Guérisseur Énergétique & Chamane | Bevaix, Neuchâtel",
+    title: "Matyas Challandes — Guérisseur & Chamane à Bevaix, Neuchâtel",
     description:
       "Matyas Challandes, guérisseur énergétique et chamane à Bevaix (Neuchâtel). Parcours, formations (Kundalini, chamanisme, kinésiologie), approche des soins en Suisse romande.",
     canonical: `${BASE}/a-propos`,
@@ -255,9 +269,9 @@ ${commonFooter}`,
   },
   {
     path: "/blog",
-    title: "Blog — Kundalini, Soins Énergétiques & Chamanisme | Karmaequilego",
+    title: "Blog Kundalini & Chamanisme — Comprendre l'éveil énergétique",
     description:
-      "Articles sur l'activation Kundalini, les soins énergétiques, le chamanisme, le burn-out, la fatigue chronique et l'éveil spirituel en Suisse romande.",
+      "Réponses concrètes aux questions qu'on me pose : combien de temps dure une activation Kundalini, ce qu'on ressent après, différence entre Kundalini, soins énergétiques et chamanisme, burn-out et fatigue chronique.",
     canonical: `${BASE}/blog`,
     content: `
 ${commonNav}
@@ -274,7 +288,7 @@ ${commonFooter}`,
   },
   {
     path: "/accompagnement-burn-out-suisse-romande",
-    title: "Accompagnement Burn-out en Suisse Romande | Soins Énergétiques Kundalini",
+    title: "Burn-out : retrouver son énergie — Suisse romande | 1h offerte",
     description:
       "Accompagnement énergétique du burn-out en Suisse romande : activation Kundalini, libération émotionnelle, reconstruction énergétique. Bevaix (Neuchâtel), à distance.",
     canonical: `${BASE}/accompagnement-burn-out-suisse-romande`,
@@ -291,7 +305,7 @@ ${commonFooter}`,
   },
   {
     path: "/retrouver-energie-fatigue-chronique",
-    title: "Fatigue Chronique — Retrouver son Énergie | Soins Kundalini Suisse Romande",
+    title: "Fatigue chronique : et si l'énergie ne circulait plus ? | 1h offerte",
     description:
       "Fatigue chronique : accompagnement énergétique par l'activation Kundalini pour relancer la circulation vitale et retrouver l'élan. Bevaix (Neuchâtel), à distance.",
     canonical: `${BASE}/retrouver-energie-fatigue-chronique`,
@@ -306,7 +320,7 @@ ${commonFooter}`,
   },
   {
     path: "/apaiser-anxiete-angoisses",
-    title: "Apaiser l'Anxiété & les Angoisses | Soins Énergétiques Suisse Romande",
+    title: "Anxiété & angoisses : apaiser le corps | Suisse romande, 1h offerte",
     description:
       "Accompagnement énergétique de l'anxiété et des angoisses : activation Kundalini, ancrage, harmonisation. Bevaix (Neuchâtel), Suisse romande, à distance.",
     canonical: `${BASE}/apaiser-anxiete-angoisses`,
@@ -321,7 +335,7 @@ ${commonFooter}`,
   },
   {
     path: "/retrouver-elan-baisse-de-moral",
-    title: "Baisse de Moral — Retrouver l'Élan | Soins Énergétiques Suisse Romande",
+    title: "Baisse de moral : retrouver l'élan | Suisse romande, 1h offerte",
     description:
       "Retrouver l'élan de vie face à la baisse de moral et à la démotivation. Activation Kundalini, soins énergétiques. Bevaix (Neuchâtel), Suisse romande.",
     canonical: `${BASE}/retrouver-elan-baisse-de-moral`,
@@ -344,8 +358,8 @@ ${commonFooter}`,
     ] as const
   ).map(([slug, canton, villes]) => ({
     path: `/soins-energetiques-canton-${slug}`,
-    title: `Soins Énergétiques Canton de ${canton} | Activation Kundalini Suisse Romande`,
-    description: `Soins énergétiques et activation Kundalini pour le canton de ${canton} (${villes}). Séances en présentiel à Bevaix et à distance partout en Suisse romande.`,
+    title: `Soins Énergétiques ${canton} — Kundalini & Chamanisme | 1h offerte`,
+    description: `Soins énergétiques, activation Kundalini et soins chamaniques pour le canton de ${canton} (${villes}). Première heure découverte offerte, à distance ou en présentiel à Bevaix (NE). Prix libre. ★ 4,9/5 sur Google.`,
     canonical: `${BASE}/soins-energetiques-canton-${slug}`,
     content: `
 ${commonNav}
@@ -365,9 +379,9 @@ ${commonFooter}`,
   })),
   {
     path: "/soins-energetiques-jura-bernois",
-    title: "Soins Énergétiques Jura Bernois & Berne Francophone | Kundalini Suisse Romande",
+    title: "Soins Énergétiques Jura Bernois & Bienne — Kundalini | 1h offerte",
     description:
-      "Soins énergétiques et activation Kundalini pour le Jura bernois et la partie francophone du canton de Berne (Moutier, Saint-Imier, Bienne). Bevaix et à distance.",
+      "Soins énergétiques, activation Kundalini et soins chamaniques pour le Jura bernois et Berne francophone (Moutier, Saint-Imier, Tavannes, Bienne). Première heure offerte, à distance ou à Bevaix (NE). Prix libre.",
     canonical: `${BASE}/soins-energetiques-jura-bernois`,
     content: `
 ${commonNav}
@@ -380,8 +394,8 @@ ${commonFooter}`,
   },
   {
     path: "/reiki-neuchatel",
-    title: "Reiki à Neuchâtel — Soin énergétique doux à Bevaix | Karmaequilego",
-    description: "Séance de Reiki à Neuchâtel avec Matyas Challandes à Bevaix. Reiki Kundalini pour libérer stress, fatigue et retrouver l'harmonie.",
+    title: "Reiki à Neuchâtel — Séance douce à Bevaix | 1h offerte, prix libre",
+    description: "Séance de Reiki et Reiki Kundalini à Bevaix, canton de Neuchâtel : apaiser le stress, la fatigue et le mental. Première heure découverte offerte. Prix libre, présentiel ou à distance.",
     canonical: `${BASE}/reiki-neuchatel`,
     content: `${commonNav}<main><h1>Reiki à Neuchâtel — Un soin énergétique doux pour retrouver l'harmonie</h1><p>Séances de Reiki et Reiki Kundalini à Bevaix, canton de Neuchâtel, avec Matyas Challandes. Reiki traditionnel enrichi de la lignée Kundalini pour dénouer les blocages profonds, apaiser le système nerveux et relancer la circulation énergétique.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p></main>${commonFooter}`,
   },
@@ -394,14 +408,14 @@ ${commonFooter}`,
   },
   {
     path: "/chamanisme-neuchatel",
-    title: "Chamanisme à Neuchâtel — Soins chamaniques à Bevaix | Karmaequilego",
+    title: "Chamane à Neuchâtel — Recouvrement d'âme & désenvoûtement | Bevaix",
     description: "Soins chamaniques à Neuchâtel avec Matyas Challandes : désenvoûtement, recouvrement d'âme, dégagement d'entités, coupure de liens.",
     canonical: `${BASE}/chamanisme-neuchatel`,
     content: `${commonNav}<main><h1>Chamanisme à Neuchâtel — Soins chamaniques traditionnels à Bevaix</h1><p>Chamane à Bevaix (Neuchâtel), je pratique des soins chamaniques ciblés : recouvrement d'âme, désenvoûtement, dégagement d'entités, coupure de liens, nettoyage énergétique. En présentiel ou à distance dans toute la Suisse romande.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p></main>${commonFooter}`,
   },
   {
     path: "/kinesiologie-neuchatel",
-    title: "Kinésiologie à Neuchâtel — Libération des mémoires cellulaires | Karmaequilego",
+    title: "Kinésiologie à Neuchâtel — Trouver la cause du blocage | Bevaix",
     description: "Kinésiologie à Neuchâtel avec Matyas Challandes à Bevaix. Libération émotionnelle, mémoires cellulaires, stress, croyances limitantes.",
     canonical: `${BASE}/kinesiologie-neuchatel`,
     content: `${commonNav}<main><h1>Kinésiologie à Neuchâtel — Écouter le corps pour libérer ce qui bloque</h1><p>Kinésiologie à Bevaix (canton de Neuchâtel) avec Matyas Challandes. Test musculaire pour localiser les blocages, libérer stress, émotions et croyances limitantes. Approche combinée avec l'activation Kundalini et le chamanisme.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p></main>${commonFooter}`,

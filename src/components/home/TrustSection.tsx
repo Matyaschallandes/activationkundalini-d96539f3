@@ -21,15 +21,27 @@ const TrustSection = () => (
         Avis vérifiés sur la fiche Google Business Karmaequilego
       </p>
 
-      <a
-        href={GOOGLE_REVIEWS_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 border border-primary/50 text-foreground font-body font-medium tracking-wider uppercase text-sm px-7 py-3 rounded-sm hover:bg-primary/10 transition-all duration-300"
-      >
-        Lire les avis Google
-        <ExternalLink className="w-4 h-4" />
-      </a>
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        <a
+          href={GOOGLE_REVIEWS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 border border-primary/50 text-foreground font-body font-medium tracking-wider uppercase text-sm px-7 py-3 rounded-sm hover:bg-primary/10 transition-all duration-300"
+        >
+          Lire les avis Google
+          <ExternalLink className="w-4 h-4" />
+        </a>
+        <a
+          href={GOOGLE_REVIEWS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 border border-border text-muted-foreground font-body font-medium tracking-wider uppercase text-sm px-7 py-3 rounded-sm hover:text-foreground hover:border-primary/50 transition-all duration-300"
+        >
+          Laisser un avis
+          <Star className="w-4 h-4" />
+        </a>
+      </div>
+
 
       <p className="font-body text-foreground/85 text-lg leading-relaxed mt-12 max-w-2xl mx-auto">
         Vous n'avez pas besoin de savoir exactement ce qui vous bloque avant de venir. C'est

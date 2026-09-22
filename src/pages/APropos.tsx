@@ -19,7 +19,7 @@ const APropos = () => {
   return (
     <Layout>
       <Seo
-        title="À propos — Matyas Challandes, praticien à Bevaix"
+        title="Matyas Challandes — Guérisseur & Chamane à Bevaix, Neuchâtel"
         description="Matyas Challandes, praticien énergétique et chamane à Bevaix (Neuchâtel) : activation Kundalini, soins chamaniques, kinésiologie et accompagnement en Suisse romande."
         path="/a-propos"
         keywords="Matyas Challandes, guérisseur énergétique Neuchâtel, chamane Suisse romande, désenvoûtement, recouvrement d'âme, dégagement d'entités, praticien kundalini"
