@@ -124,12 +124,26 @@ ${commonFooter}`,
     content: `
 ${commonNav}
 <main>
-  <h1>L'Activation Kundalini — Éveil de l'énergie vitale</h1>
-  <p>La Kundalini est l'énergie de vie fondamentale qui sommeille à la base de la colonne vertébrale. Son activation, à travers l'alchimie respiratoire, permet de relancer la circulation énergétique, d'harmoniser les chakras et de libérer les mémoires et blocages inscrits dans le corps subtil.</p>
-  <h2>Le processus en 1 à 3 séances</h2>
-  <p>Chaque activation est personnalisée. Le protocole se déroule habituellement en 1 à 3 séances d'alchimie respiratoire, selon la sensibilité et le rythme de chaque personne. Le corps se réajuste progressivement, les émotions se dénouent, l'énergie circule à nouveau librement.</p>
-  <h2>Pour qui ?</h2>
-  <p>Toute personne en quête de reconnexion à soi, traversant un burn-out, une fatigue chronique, une baisse de moral, des angoisses, ou souhaitant approfondir son chemin spirituel. <a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p>
+  <h1>Activation Kundalini — ce qui se passe vraiment pendant une séance</h1>
+  <p>La Kundalini est l'énergie de vie qui sommeille à la base de la colonne vertébrale. Lorsqu'elle est activée, elle remonte le long de la colonne et vient dissoudre les blocages sur son passage : le corps peut alors décharger ce qu'il n'a jamais pu exprimer. Séances à Bevaix (canton de Neuchâtel) et à distance partout en Suisse romande, en prix libre. <a href="/offre-decouverte-gratuite">Première heure découverte offerte</a>.</p>
+
+  <h2>Qu'est-ce que l'activation Kundalini ?</h2>
+  <p>Ce n'est pas une croyance à adopter, mais une expérience corporelle. Par l'alchimie respiratoire, la respiration devient le levier qui relance la circulation énergétique. L'énergie monte, rencontre les zones figées — bassin, ventre, plexus, gorge — et les remet en mouvement. Beaucoup de personnes ressentent des vagues de chaleur, des tremblements légers, des larmes qui viennent sans raison, puis un grand calme.</p>
+
+  <h2>Pourquoi je nettoie d'abord, puis j'active</h2>
+  <p>Un blocage empêche l'énergie de circuler, et là où il y a un blocage il y a une fissure : des énergies parasites peuvent s'y fixer. Certains blocages viennent d'avant la naissance, d'une lignée familiale, d'un événement vécu à trois ou quatre ans, parfois d'un pacte passé avec l'ombre. Des fragments de soi ont pu quitter le corps pour se protéger. C'est pourquoi je commence par le <a href="/chamanisme-neuchatel">travail chamanique et énergétique</a> — recouvrement d'âme, réintégration des fragments, désenvoûtement, dégagement — puis j'active la Kundalini sur un terrain dégagé.</p>
+
+  <h2>Comment se déroule une séance</h2>
+  <p>Nous prenons d'abord contact et fixons un rendez-vous. Tu remplis si tu le souhaites le <a href="/carnet-de-preparation">carnet de préparation en ligne</a> : il ouvre les tiroirs de l'inconscient et prépare à libérer ce qui est prêt à l'être. Tu peux aussi faire ta lecture d'âme. Le jour de la séance, nous parlons de ce qui se passe dans ta vie, puis je fais la détection des blocages par test énergétique et par <a href="/kinesiologie-neuchatel">kinésiologie</a> — j'arrive à dater le blocage, à nommer l'émotion et sa cause. Et tout à la fin vient l'activation Kundalini, un soin chamanique, ou les deux.</p>
+
+  <h2>Combien de temps, combien de séances ?</h2>
+  <p>Compte environ deux heures pour une séance complète. Le protocole se déroule habituellement en 1 à 3 séances, selon la sensibilité et le rythme de chacun. Après la séance, il est fréquent de ressentir une grande fatigue le premier jour, puis une clarté et une légèreté qui s'installent sur une à deux semaines. Boire beaucoup d'eau, dormir, marcher : le corps continue son travail.</p>
+
+  <h2>À qui l'activation Kundalini s'adresse-t-elle ?</h2>
+  <p>Aux personnes qui traversent un <a href="/accompagnement-burn-out-suisse-romande">burn-out</a>, une <a href="/retrouver-energie-fatigue-chronique">fatigue chronique</a>, des <a href="/apaiser-anxiete-angoisses">angoisses</a>, une <a href="/retrouver-elan-baisse-de-moral">baisse de moral</a>, un deuil, un traumatisme ancien — et à celles qui veulent simplement se reconnecter à qui elles sont venues incarner.</p>
+
+  <h2>Commencer</h2>
+  <p><a href="/offre-decouverte-gratuite">Offre découverte gratuite (1 heure)</a> · <a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/deroulement-seance">Le déroulement détaillé d'une séance</a> · <a href="/blog">Articles sur la Kundalini</a>.</p>
 </main>
 ${commonFooter}`,
   },
