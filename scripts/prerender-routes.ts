@@ -69,9 +69,9 @@ ${commonFooter}`,
 export const routes: RouteSnapshot[] = [
   {
     path: "/",
-    title: "Guérisseur Énergétique & Chamane Suisse Romande | Kundalini, Chamanisme, Burn-out — Bevaix",
+    title: "Guérisseur & Chamane à Neuchâtel — Activation Kundalini | 1h offerte",
     description:
-      "Guérisseur énergétique et chamane à Bevaix (Neuchâtel). Activation Kundalini, soins chamaniques (désenvoûtement, recouvrement d'âme, dégagement d'entités), burn-out, traumatismes. En présentiel et à distance en Suisse romande.",
+      "Tu te sens vidé(e), bloqué(e) ? Matyas Challandes, guérisseur et chamane à Bevaix (Neuchâtel) : activation Kundalini, soins chamaniques, kinésiologie. Première heure découverte offerte, en présentiel ou à distance. ★ 4,9/5 sur Google.",
     canonical: `${BASE}/`,
     content: `
 ${commonNav}
@@ -117,9 +117,9 @@ ${commonFooter}`,
   },
   {
     path: "/la-kundalini",
-    title: "Activation Kundalini en Suisse Romande | Éveil Énergétique — Bevaix, Neuchâtel",
+    title: "Activation Kundalini : ce qui se passe vraiment | Suisse — 1h offerte",
     description:
-      "Activation Kundalini par alchimie respiratoire à Bevaix (Neuchâtel). Éveil de l'énergie vitale, harmonisation des chakras, libération karmique. Séances en Suisse romande et à distance.",
+      "Activation Kundalini en Suisse romande : comment l'énergie remonte la colonne, ce que le corps libère, le déroulement d'une séance, à qui elle s'adresse. Bevaix (Neuchâtel) ou à distance. Première heure offerte.",
     canonical: `${BASE}/la-kundalini`,
     content: `
 ${commonNav}
@@ -255,9 +255,9 @@ ${commonFooter}`,
   },
   {
     path: "/blog",
-    title: "Blog — Kundalini, Soins Énergétiques & Chamanisme | Karmaequilego",
+    title: "Blog Kundalini & Chamanisme — Comprendre l'éveil énergétique",
     description:
-      "Articles sur l'activation Kundalini, les soins énergétiques, le chamanisme, le burn-out, la fatigue chronique et l'éveil spirituel en Suisse romande.",
+      "Réponses concrètes aux questions qu'on me pose : combien de temps dure une activation Kundalini, ce qu'on ressent après, différence entre Kundalini, soins énergétiques et chamanisme, burn-out et fatigue chronique.",
     canonical: `${BASE}/blog`,
     content: `
 ${commonNav}
@@ -344,8 +344,8 @@ ${commonFooter}`,
     ] as const
   ).map(([slug, canton, villes]) => ({
     path: `/soins-energetiques-canton-${slug}`,
-    title: `Soins Énergétiques Canton de ${canton} | Activation Kundalini Suisse Romande`,
-    description: `Soins énergétiques et activation Kundalini pour le canton de ${canton} (${villes}). Séances en présentiel à Bevaix et à distance partout en Suisse romande.`,
+    title: `Soins Énergétiques ${canton} — Kundalini & Chamanisme | 1h offerte`,
+    description: `Soins énergétiques, activation Kundalini et soins chamaniques pour le canton de ${canton} (${villes}). Première heure découverte offerte, à distance ou en présentiel à Bevaix (NE). Prix libre. ★ 4,9/5 sur Google.`,
     canonical: `${BASE}/soins-energetiques-canton-${slug}`,
     content: `
 ${commonNav}
@@ -365,9 +365,9 @@ ${commonFooter}`,
   })),
   {
     path: "/soins-energetiques-jura-bernois",
-    title: "Soins Énergétiques Jura Bernois & Berne Francophone | Kundalini Suisse Romande",
+    title: "Soins Énergétiques Jura Bernois & Bienne — Kundalini | 1h offerte",
     description:
-      "Soins énergétiques et activation Kundalini pour le Jura bernois et la partie francophone du canton de Berne (Moutier, Saint-Imier, Bienne). Bevaix et à distance.",
+      "Soins énergétiques, activation Kundalini et soins chamaniques pour le Jura bernois et Berne francophone (Moutier, Saint-Imier, Tavannes, Bienne). Première heure offerte, à distance ou à Bevaix (NE). Prix libre.",
     canonical: `${BASE}/soins-energetiques-jura-bernois`,
     content: `
 ${commonNav}
@@ -380,8 +380,8 @@ ${commonFooter}`,
   },
   {
     path: "/reiki-neuchatel",
-    title: "Reiki à Neuchâtel — Soin énergétique doux à Bevaix | Karmaequilego",
-    description: "Séance de Reiki à Neuchâtel avec Matyas Challandes à Bevaix. Reiki Kundalini pour libérer stress, fatigue et retrouver l'harmonie.",
+    title: "Reiki à Neuchâtel — Séance douce à Bevaix | 1h offerte, prix libre",
+    description: "Séance de Reiki et Reiki Kundalini à Bevaix, canton de Neuchâtel : apaiser le stress, la fatigue et le mental. Première heure découverte offerte. Prix libre, présentiel ou à distance.",
     canonical: `${BASE}/reiki-neuchatel`,
     content: `${commonNav}<main><h1>Reiki à Neuchâtel — Un soin énergétique doux pour retrouver l'harmonie</h1><p>Séances de Reiki et Reiki Kundalini à Bevaix, canton de Neuchâtel, avec Matyas Challandes. Reiki traditionnel enrichi de la lignée Kundalini pour dénouer les blocages profonds, apaiser le système nerveux et relancer la circulation énergétique.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p></main>${commonFooter}`,
   },
