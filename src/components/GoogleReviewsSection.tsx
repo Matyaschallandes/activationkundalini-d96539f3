@@ -139,7 +139,7 @@ const GoogleReviewsSection = () => {
         </div>
 
         <a
-          href={GOOGLE_REVIEWS_URL}
+          href={GOOGLE_BUSINESS_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-8 py-3 rounded-sm hover:shadow-gold transition-all duration-300 mt-10"
