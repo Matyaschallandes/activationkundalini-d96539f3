@@ -1,8 +1,7 @@
 import { Star, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-
-const GOOGLE_REVIEWS_URL = "https://www.google.com/search?q=Karmaequilego#lrd=0x0:0x0,1,,,";
+import { GOOGLE_BUSINESS_URL } from "@/lib/links";
 
 const reviews = [
   {
