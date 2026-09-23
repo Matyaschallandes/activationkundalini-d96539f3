@@ -1,7 +1,5 @@
 import { Star, ExternalLink } from "lucide-react";
-
-const GOOGLE_REVIEWS_URL =
-  "https://www.google.com/search?q=Karmaequilego";
+import { GOOGLE_BUSINESS_URL } from "@/lib/links";
 
 const GoogleReviewsBadge = () => {
   return (
@@ -24,7 +22,7 @@ const GoogleReviewsBadge = () => {
         </p>
 
         <a
-          href={GOOGLE_REVIEWS_URL}
+          href={GOOGLE_BUSINESS_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-8 py-3 rounded-sm hover:shadow-gold transition-all duration-300"

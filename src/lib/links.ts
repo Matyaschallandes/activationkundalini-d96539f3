@@ -14,3 +14,10 @@ export const CARNET_PATH = "/carnet-de-preparation";
 
 /** Prise de rendez-vous — calendrier Koalendar. */
 export const KOALENDAR_URL = "https://koalendar.com/e/Activationkundalini";
+
+/**
+ * Fiche Google Business Karmaequilego — lien de partage officiel.
+ * Ouvre le panneau de connaissances Google où l'on peut lire les avis
+ * et en laisser un nouveau.
+ */
+export const GOOGLE_BUSINESS_URL = "https://share.google/TuE8esq8CbHIdQH2E";

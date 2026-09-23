@@ -1,7 +1,6 @@
 import { Star, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const GOOGLE_REVIEWS_URL = "https://www.google.com/search?q=Karmaequilego";
+import { GOOGLE_BUSINESS_URL } from "@/lib/links";
 
 const TrustSection = () => (
   <section id="temoignages" className="py-20 md:py-28 bg-muted/20">
@@ -23,7 +22,7 @@ const TrustSection = () => (
 
       <div className="flex flex-wrap items-center justify-center gap-3">
         <a
-          href={GOOGLE_REVIEWS_URL}
+          href={GOOGLE_BUSINESS_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 border border-primary/50 text-foreground font-body font-medium tracking-wider uppercase text-sm px-7 py-3 rounded-sm hover:bg-primary/10 transition-all duration-300"
@@ -32,7 +31,7 @@ const TrustSection = () => (
           <ExternalLink className="w-4 h-4" />
         </a>
         <a
-          href={GOOGLE_REVIEWS_URL}
+          href={GOOGLE_BUSINESS_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 border border-border text-muted-foreground font-body font-medium tracking-wider uppercase text-sm px-7 py-3 rounded-sm hover:text-foreground hover:border-primary/50 transition-all duration-300"

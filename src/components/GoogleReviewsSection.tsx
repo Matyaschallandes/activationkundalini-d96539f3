@@ -1,8 +1,7 @@
 import { Star, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-
-const GOOGLE_REVIEWS_URL = "https://www.google.com/search?q=Karmaequilego#lrd=0x0:0x0,1,,,";
+import { GOOGLE_BUSINESS_URL } from "@/lib/links";
 
 const reviews = [
   {
@@ -140,7 +139,7 @@ const GoogleReviewsSection = () => {
         </div>
 
         <a
-          href={GOOGLE_REVIEWS_URL}
+          href={GOOGLE_BUSINESS_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-8 py-3 rounded-sm hover:shadow-gold transition-all duration-300 mt-10"
