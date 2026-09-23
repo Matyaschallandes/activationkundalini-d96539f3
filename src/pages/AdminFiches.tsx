@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { generateCarnetPdf } from "@/lib/carnetPdf";
+import { generateSuiviPdf, type Suivi } from "@/lib/suiviPdf";
 import { analyseCarnet } from "@/lib/carnetAnalysis";
 import { AiCarnetAnalysis } from "@/lib/carnetAiTypes";
 import { CARNET_STEPS } from "@/lib/carnetAnalysis";
@@ -23,20 +24,6 @@ type Carnet = {
   intensity_level: string | null;
   client_resonance: string | null;
   client_intention: string | null;
-};
-
-type Suivi = {
-  id: string;
-  created_at: string;
-  prenom: string;
-  nom: string;
-  email: string;
-  moment: string | null;
-  ressenti_physique: string | null;
-  ressenti_emotionnel: string | null;
-  changements: string | null;
-  intensite: number | null;
-  message: string | null;
 };
 
 const QUESTION_LABELS: Record<string, string> = Object.fromEntries(
@@ -308,10 +295,16 @@ const AdminFiches = () => {
               <div className="space-y-3">
                 {suivis.map((s) => (
                   <div key={s.id} className="rounded-lg border border-border bg-card p-4">
-                    <p className="font-body text-sm text-foreground font-medium">
-                      {s.prenom} {s.nom} — {s.moment ?? "—"} ·{" "}
-                      {new Date(s.created_at).toLocaleDateString("fr-CH")}
-                    </p>
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                      <p className="font-body text-sm text-foreground font-medium">
+                        {s.prenom} {s.nom} — {s.moment ?? "—"} ·{" "}
+                        {new Date(s.created_at).toLocaleDateString("fr-CH")}
+                        {typeof s.intensite === "number" ? ` · Intensité ${s.intensite}/10` : ""}
+                      </p>
+                      <Button variant="outline" size="sm" onClick={() => generateSuiviPdf(s)}>
+                        Télécharger le PDF
+                      </Button>
+                    </div>
                     <p className="font-body text-sm text-muted-foreground whitespace-pre-wrap mt-2">
                       {[s.ressenti_physique, s.ressenti_emotionnel, s.changements, s.message]
                         .filter(Boolean)
