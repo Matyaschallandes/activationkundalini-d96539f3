@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { GOOGLE_MAPS_URL } from "@/lib/links";
 
 
 const Footer = () => {
@@ -26,9 +27,9 @@ const Footer = () => {
 
         <div className="flex items-center justify-center gap-2 text-sm">
           <MapPin className="w-3.5 h-3.5 text-foreground/70" />
-          <p className="font-body text-foreground/70">
+          <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="font-body text-foreground/70 hover:text-primary transition-colors">
             Matyas Challandes · Chemin du Cuard 22, 2022 Bevaix
-          </p>
+          </a>
         </div>
 
         <nav aria-label="Le site" className="pt-4">
