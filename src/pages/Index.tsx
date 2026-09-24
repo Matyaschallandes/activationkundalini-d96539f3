@@ -3,6 +3,7 @@ import Seo from "@/components/Seo";
 import HeroTunnel from "@/components/home/HeroTunnel";
 import TrustSection from "@/components/home/TrustSection";
 import BlocagesSection from "@/components/home/BlocagesSection";
+import DialogueSection from "@/components/home/DialogueSection";
 import KundaliniSection from "@/components/home/KundaliniSection";
 import RecognizeSection from "@/components/home/RecognizeSection";
 import AboutMatyas from "@/components/home/AboutMatyas";
@@ -63,6 +64,7 @@ const Index = () => {
       <HeroTunnel />
       <TrustSection />
       <BlocagesSection />
+      <DialogueSection />
       <KundaliniSection />
       <RecognizeSection />
       <AboutMatyas />
