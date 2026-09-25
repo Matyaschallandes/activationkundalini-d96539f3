@@ -15,7 +15,7 @@ const TrustSection = () => (
           <Star key={i} className="w-6 h-6 text-yellow-400 fill-yellow-400" />
         ))}
       </div>
-      <p className="font-heading text-3xl text-foreground mb-1">4.9 / 5</p>
+      <p className="font-heading text-3xl text-foreground mb-1">4,9/5</p>
       <p className="font-body text-sm text-muted-foreground mb-8">
         Avis vérifiés sur la fiche Google Business Karmaequilego
       </p>

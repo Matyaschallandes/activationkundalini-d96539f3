@@ -9,7 +9,7 @@ const GoogleReviewsBadge = () => {
           Avis clients
         </p>
         <h2 className="font-heading text-4xl md:text-5xl font-light mb-8 text-foreground">
-          Noté <span className="text-gradient-gold italic">4.9/5</span> sur Google
+          Noté <span className="text-gradient-gold italic">4,9/5</span> sur Google
         </h2>
 
         <div className="flex items-center justify-center gap-1.5 mb-3">
