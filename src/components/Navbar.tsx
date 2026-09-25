@@ -43,7 +43,7 @@ const Navbar = () => {
         className="flex items-center justify-center gap-2 h-8 bg-gradient-gold text-primary-foreground font-body text-xs tracking-wider hover:opacity-90 transition-opacity px-3"
         aria-label="Voir la fiche Google Business Karmaequilego — noté 4.9 sur 5"
       >
-        <span className="font-semibold">4.9 / 5</span>
+        <span className="font-semibold">4,9/5</span>
         <span className="flex items-center gap-0.5">
           {[...Array(5)].map((_, i) => (
             <Star key={i} className="w-3 h-3 fill-current" />

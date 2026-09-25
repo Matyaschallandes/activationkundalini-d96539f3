@@ -23,7 +23,7 @@ export const KOALENDAR_URL = "https://koalendar.com/e/Activationkundalini";
 export const GOOGLE_BUSINESS_URL = "https://share.google/TuE8esq8CbHIdQH2E";
 
 /**
- * Fiche Google Maps Karmaequilego (Chem. de Cuard 22, 2022 Bevaix).
+ * Fiche Google Maps Karmaequilego (Chemin du Cuard 22, 2022 Bevaix).
  * Lien d'itinéraire/localisation conseillé par Google pour le référencement
  * local : un lien sortant vers la fiche Maps depuis le site renforce la
  * géolocalisation et facilite l'accès mobile aux directions.

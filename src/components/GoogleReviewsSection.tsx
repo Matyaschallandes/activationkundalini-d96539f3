@@ -80,7 +80,7 @@ const GoogleReviewsSection = () => {
           ))}
         </div>
         <p className="text-muted-foreground font-body text-sm mb-10">
-          4.9/5 — basé sur 20 avis Google
+          4,9/5 — basé sur 20 avis Google
         </p>
 
         {/* Carousel */}
