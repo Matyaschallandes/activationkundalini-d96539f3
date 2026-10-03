@@ -28,4 +28,4 @@ export const GOOGLE_BUSINESS_URL = "https://share.google/TuE8esq8CbHIdQH2E";
  * local : un lien sortant vers la fiche Maps depuis le site renforce la
  * géolocalisation et facilite l'accès mobile aux directions.
  */
-export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/6md9g1bgrd45BXvU6";
+export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/L3gL1Wqiye5LJ1Lq8";
