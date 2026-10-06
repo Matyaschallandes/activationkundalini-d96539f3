@@ -59,6 +59,7 @@ const staticEntries: SitemapEntry[] = [
   { path: "/apaiser-anxiete-angoisses", changefreq: "monthly", priority: "0.8" },
   { path: "/retrouver-elan-baisse-de-moral", changefreq: "monthly", priority: "0.8" },
   { path: "/reiki-neuchatel", changefreq: "monthly", priority: "0.8" },
+  { path: "/therapeute-neuchatel", changefreq: "monthly", priority: "0.9" },
   { path: "/lahochi-neuchatel", changefreq: "monthly", priority: "0.8" },
   { path: "/chamanisme-neuchatel", changefreq: "monthly", priority: "0.8" },
   { path: "/kinesiologie-neuchatel", changefreq: "monthly", priority: "0.8" },
