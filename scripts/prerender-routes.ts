@@ -400,6 +400,13 @@ ${commonFooter}`,
     content: `${commonNav}<main><h1>Reiki à Neuchâtel — Un soin énergétique doux pour retrouver l'harmonie</h1><p>Séances de Reiki et Reiki Kundalini à Bevaix, canton de Neuchâtel, avec Matyas Challandes. Reiki traditionnel enrichi de la lignée Kundalini pour dénouer les blocages profonds, apaiser le système nerveux et relancer la circulation énergétique.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/offres">Voir les offres</a>.</p></main>${commonFooter}`,
   },
   {
+    path: "/therapeute-neuchatel",
+    title: "Thérapeute à Neuchâtel — Soins énergétiques & chamanisme | 1h offerte",
+    description: "Tu cherches un thérapeute à Neuchâtel ? Matyas Challandes, guérisseur et chamane à Bevaix : activation Kundalini, soins chamaniques, kinésiologie. Première heure découverte offerte, prix libre.",
+    canonical: `${BASE}/therapeute-neuchatel`,
+    content: `${commonNav}<main><h1>Thérapeute à Neuchâtel — Un accompagnement qui va à la racine</h1><p>Matyas Challandes, guérisseur et chamane à Bevaix, à 15 minutes de Neuchâtel. Chamanisme, activation Kundalini et kinésiologie pour détecter et libérer les blocages à la racine. Première heure découverte offerte, prix libre, présentiel ou à distance.</p><p><a href="/offre-decouverte-gratuite">Heure découverte offerte</a> · <a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/carnet-de-preparation">Carnet de préparation</a>.</p></main>${commonFooter}`,
+  },
+  {
     path: "/lahochi-neuchatel",
     title: "Lahochi à Neuchâtel — Soin énergétique haute vibration | Karmaequilego",
     description: "Séance de Lahochi à Neuchâtel avec Matyas Challandes à Bevaix. Soin haute fréquence pour libérer les blocages profonds.",

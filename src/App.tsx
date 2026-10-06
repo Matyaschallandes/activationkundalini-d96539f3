@@ -35,6 +35,7 @@ import VilleLausanne from "./pages/VilleLausanne";
 import VilleFribourg from "./pages/VilleFribourg";
 import VilleGeneve from "./pages/VilleGeneve";
 import ReikiNeuchatel from "./pages/ReikiNeuchatel";
+import TherapeuteNeuchatel from "./pages/TherapeuteNeuchatel";
 import LahochiNeuchatel from "./pages/LahochiNeuchatel";
 import ChamanismeNeuchatel from "./pages/ChamanismeNeuchatel";
 import KinesiologieNeuchatel from "./pages/KinesiologieNeuchatel";
@@ -89,6 +90,7 @@ const App = () => (
           <Route path="/activation-kundalini-fribourg" element={<VilleFribourg />} />
           <Route path="/activation-kundalini-geneve" element={<VilleGeneve />} />
           <Route path="/reiki-neuchatel" element={<ReikiNeuchatel />} />
+          <Route path="/therapeute-neuchatel" element={<TherapeuteNeuchatel />} />
           <Route path="/lahochi-neuchatel" element={<LahochiNeuchatel />} />
           <Route path="/chamanisme-neuchatel" element={<ChamanismeNeuchatel />} />
           <Route path="/kinesiologie-neuchatel" element={<KinesiologieNeuchatel />} />
