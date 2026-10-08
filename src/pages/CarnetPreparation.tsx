@@ -231,10 +231,11 @@ const CarnetPreparation = () => {
           </h1>
           <p className="font-body text-muted-foreground leading-relaxed">
             Ce carnet prépare ton corps et ton mental à libérer les mémoires avant le soin
-            énergétique. Commence par poser tes objectifs, puis réponds avec authenticité :
-            il n'existe aucune bonne ou mauvaise réponse. À la fin, un seul bouton : ta lecture
-            complète en PDF (tes questions-réponses, ta synthèse, tes clés d'harmonisation et tes
-            objectifs SMART pour la séance).
+            énergétique. Compte environ <strong>20 minutes</strong> pour le remplir : tu peux le
+            faire d'un trait ou y revenir plus tard, tes réponses sont sauvegardées
+            automatiquement. Tu n'es pas obligé de répondre à toutes les questions — mais plus tu
+            en remplis, mieux la séance est préparée. À la fin, un seul bouton : ta lecture
+            complète en PDF.
           </p>
         </header>
 
