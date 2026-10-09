@@ -7,7 +7,7 @@ const whatsappUrl = `https://wa.me/41762445552?text=${encodeURIComponent("Bonjou
 const emailUrl = `mailto:matyas.challandes@gmail.com?subject=${encodeURIComponent("Offre spéciale fin d’année — ma photo")}&body=${encodeURIComponent("Bonjour Matyas,\n\nJe souhaite profiter de l’offre découverte gratuite.\n\nMon prénom et nom :\nMon numéro de téléphone :\n\nJe joins à cet email une photo de profil récente, prise aujourd’hui.\n\nMerci !")}`;
 
 const YearEndOffer = () => (
-  <section aria-labelledby="year-end-offer-title" className="bg-background pb-10 md:pb-14">
+  <section aria-labelledby="year-end-offer-title" className="bg-background pb-10 pt-8 md:pb-14">
     <div className="container mx-auto max-w-6xl px-4 md:px-6">
       <h2 id="year-end-offer-title" className="py-5 text-center font-heading text-3xl font-semibold text-primary md:text-4xl">
         Offre spéciale fin d’année — découverte gratuite
