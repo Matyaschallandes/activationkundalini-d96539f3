@@ -10,6 +10,7 @@ import AboutMatyas from "@/components/home/AboutMatyas";
 import ToolsSection from "@/components/home/ToolsSection";
 import FaqShort, { homeFaqJsonLd } from "@/components/home/FaqShort";
 import FinalCta from "@/components/home/FinalCta";
+import YearEndOffer from "@/components/home/YearEndOffer";
 
 const organizationLd = {
   "@context": "https://schema.org",
@@ -61,6 +62,7 @@ const Index = () => {
         keywords="activation kundalini Neuchâtel, chamanisme Neuchâtel, kinésiologie Neuchâtel, Karmaequilego, Matyas Challandes, Bevaix"
         jsonLd={[organizationLd, websiteLd, homeFaqJsonLd]}
       />
+      <YearEndOffer />
       <HeroTunnel />
       <TrustSection />
       <BlocagesSection />
