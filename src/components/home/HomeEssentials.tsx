@@ -43,7 +43,7 @@ const HomeEssentials = () => (
         </p>
         <p className="font-body text-foreground/80 leading-relaxed">
           Pour aller plus loin : <Link to="/la-kundalini" className="text-primary underline">tout savoir sur l'activation Kundalini</Link>,{" "}
-          <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline">ta lecture d'âme Human Design</Link>,{" "}
+          <a href={HUMAN_DESIGN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline">ta lecture d'âme Human Design</a>,{" "}
           <Link to="/seances-a-distance-suisse-romande" className="text-primary underline">les séances à distance en Suisse romande</Link>,{" "}
           <Link to="/accompagnement-burn-out-suisse-romande" className="text-primary underline">l'accompagnement du burn-out</Link>,{" "}
           <Link to="/retrouver-energie-fatigue-chronique" className="text-primary underline">la fatigue chronique</Link>,{" "}

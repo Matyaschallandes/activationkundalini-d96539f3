@@ -1,26 +1,12 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const faqs = [
-  {
-    q: "Est-ce vraiment gratuit ?",
-    a: "Oui. Cette première rencontre d'une heure est offerte, sans condition d'achat et sans engagement.",
-  },
-  {
-    q: "Combien de temps dure la rencontre ?",
-    a: "Environ une heure : le temps d'échanger, d'explorer ce qui se joue et de repartir avec une première clé de compréhension.",
-  },
-  {
-    q: "Est-ce que c'est en visioconférence ?",
-    a: "Oui, la découverte se déroule en visioconférence (Zoom ou WhatsApp vidéo). Le présentiel à Bevaix reste possible pour les séances qui suivent.",
-  },
-  {
-    q: "Dois-je savoir exactement ce qui me bloque ?",
-    a: "Non. Venez simplement avec ce que vous ressentez aujourd'hui : mettre en lumière les mécanismes fait partie de la rencontre.",
-  },
-  {
-    q: "Est-ce que je suis obligé de continuer après la découverte ?",
-    a: "Non. Cette première rencontre est sans engagement. Elle vous permet simplement de découvrir mon approche et de voir si elle vous correspond.",
-  },
+  { q: "Combien de temps dure une séance ?", a: "Compte environ 1h30 à 2h : un temps d'échange, l'exploration des blocages, puis le soin énergétique et/ou l'activation Kundalini. La première heure découverte est offerte." },
+  { q: "Comment fonctionne le prix libre ?", a: "Tu donnes ce qui te semble juste selon tes moyens. Des prix de référence sont indiqués sur la page Offres, mais l'argent ne doit jamais être un obstacle." },
+  { q: "En présentiel ou à distance ?", a: "Les deux. Je te reçois au cabinet à Bevaix (Neuchâtel) ou à distance, en visioconférence ou par téléphone, partout en Suisse romande." },
+  { q: "Combien de séances faut-il ?", a: "Souvent 1 à 3 séances suffisent pour sentir un changement, mais chaque personne est différente. On en parle ensemble, sans engagement." },
+  { q: "Qu'est-ce que ça ne remplace pas ?", a: "Les séances sont un accompagnement complémentaire. Elles ne remplacent pas un avis, un diagnostic ou un suivi médical ou psychologique, ni un traitement en cours." },
+  { q: "Y a-t-il des contre-indications ?", a: "L'activation Kundalini n'est pas recommandée en cas de grossesse, d'épilepsie, de troubles bipolaires ou psychotiques, ou de prise de psychotropes puissants. En cas de doute, parles-en à ton médecin avant de réserver." },
 ];
 
 export const homeFaqJsonLd = {
@@ -37,7 +23,7 @@ const FaqShort = () => (
   <section id="faq" className="py-20 md:py-28 bg-muted/20">
     <div className="container mx-auto px-6 max-w-3xl">
       <h2 className="font-heading text-3xl md:text-4xl font-light text-center mb-3 text-foreground">
-        Vos <span className="text-gradient-gold italic">questions</span>
+        Tes <span className="text-gradient-gold italic">questions</span>
       </h2>
       <div className="glow-line w-20 mx-auto mb-10" />
 
