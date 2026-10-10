@@ -11,36 +11,36 @@ import ToolsSection from "@/components/home/ToolsSection";
 import FaqShort, { homeFaqJsonLd } from "@/components/home/FaqShort";
 import FinalCta from "@/components/home/FinalCta";
 import YearEndOffer from "@/components/home/YearEndOffer";
+import OfferBanner from "@/components/home/OfferBanner";
+import HomeEssentials, { AboutShort, RdvButton } from "@/components/home/HomeEssentials";
+import LatestPosts from "@/components/home/LatestPosts";
+import Precautions from "@/components/Precautions";
+import RealReviews from "@/components/RealReviews";
+import { GOOGLE_BUSINESS_URL } from "@/lib/links";
 
 const organizationLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "HealthAndBeautyBusiness",
   "@id": "https://www.activationkundalini.ch/#organization",
-  "name": "Karmaequilego — Activation Kundalini & Soins Énergétiques",
-  "alternateName": "Matyas Challandes — Accompagnement énergétique",
-  "description": "Accompagnement énergétique en Suisse romande : découverte gratuite d'une heure en visioconférence pour explorer et mettre en lumière vos blocages. Activation Kundalini, chamanisme, kinésiologie, biorésonance.",
+  "name": "Karmaequilego",
+  "founder": { "@type": "Person", "name": "Matyas Challandes" },
+  "description": "Activation Kundalini, soins énergétiques et chamanisme à Bevaix (Neuchâtel), en présentiel ou à distance en Suisse romande.",
   "url": "https://www.activationkundalini.ch",
   "telephone": "+41762445552",
   "email": "matyas.challandes@gmail.com",
   "priceRange": "Prix libre",
   "image": "https://www.activationkundalini.ch/og-image.jpg",
-  "areaServed": ["Bevaix", "La Grande Béroche", "Neuchâtel", "Suisse romande", "Lausanne", "Genève", "Zurich", "Fribourg", "Vaud", "Suisse"],
-  "serviceType": [
-    "Activation Kundalini", "Soins énergétiques", "Chamanisme", "Kinésiologie",
-    "Biorésonance", "Reiki Kundalini", "Human Design", "Lecture d'âme",
-    "Accompagnement burn-out", "Libération des blocages émotionnels",
-    "Harmonisation des chakras", "Soins à distance"
-  ],
+  "areaServed": ["Neuchâtel", "Vaud", "Fribourg", "Genève", "Valais", "Jura", "Berne francophone"],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Chemin du Cuard 22",
     "addressLocality": "Bevaix",
-    "addressRegion": "Neuchâtel",
+    "addressRegion": "NE",
     "postalCode": "2022",
     "addressCountry": "CH"
   },
-  "geo": { "@type": "GeoCoordinates", "latitude": "46.9294", "longitude": "6.6906" },
-  "sameAs": ["https://www.activationkundalini.ch"]
+  "geo": { "@type": "GeoCoordinates", "latitude": 46.9294, "longitude": 6.6906 },
+  "sameAs": [GOOGLE_BUSINESS_URL]
 };
 
 const websiteLd = {
@@ -56,23 +56,30 @@ const Index = () => {
   return (
     <Layout>
       <Seo
-        title="Guérisseur &amp; Chamane à Neuchâtel — Activation Kundalini | 1h offerte"
-        description="Tu te sens vidé(e), bloqué(e) ? Matyas Challandes, guérisseur et chamane à Bevaix (Neuchâtel) : activation Kundalini, soins chamaniques, kinésiologie. Première heure découverte offerte, en présentiel ou à distance. ★ 4,9/5 sur Google."
+        title="Guérisseur & Chamane à Neuchâtel | Activation Kundalini"
+        description="Matyas Challandes, guérisseur et chamane à Bevaix (NE) : activation Kundalini, soins énergétiques. 1re heure offerte. ★ 4,9/5 sur Google"
         path="/"
         keywords="activation kundalini Neuchâtel, chamanisme Neuchâtel, kinésiologie Neuchâtel, Karmaequilego, Matyas Challandes, Bevaix"
         jsonLd={[organizationLd, websiteLd, homeFaqJsonLd]}
       />
+      <OfferBanner />
       <YearEndOffer />
       <HeroTunnel />
       <TrustSection />
+      <HomeEssentials />
       <BlocagesSection />
       <DialogueSection />
       <KundaliniSection />
       <RecognizeSection />
       <AboutMatyas />
+      <AboutShort />
+      <Precautions />
+      <RealReviews />
       <ToolsSection />
       <FaqShort />
+      <LatestPosts />
       <FinalCta />
+      <div className="text-center pb-16"><RdvButton /></div>
     </Layout>
   );
 };
