@@ -23,12 +23,12 @@ const HeroTunnel = () => {
               Activation Kundalini à Neuchâtel · Chamanisme &amp; Kinésiologie
             </p>
             <h1 className="font-heading text-3xl md:text-5xl lg:text-[3.4rem] font-light leading-[1.15] mb-6 text-foreground">
-              Vous avez l'impression de tourner en rond{" "}
-              <span className="text-gradient-gold italic font-medium">malgré tous vos efforts</span> ?
+              Guérisseur &amp; chamane à Neuchâtel :{" "}
+              <span className="text-gradient-gold italic font-medium">activation Kundalini à Bevaix</span>
             </h1>
 
             <p className="font-body text-foreground/85 text-lg md:text-xl leading-relaxed mb-10">
-              Et si vous pouviez enfin mettre des mots sur ce qui vous bloque ?
+              Tu as l'impression de tourner en rond malgré tous tes efforts ? Et si tu pouvais enfin mettre des mots sur ce qui te bloque ?
             </p>
 
             <p className="font-body text-foreground/75 leading-relaxed mb-10">

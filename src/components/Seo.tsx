@@ -34,7 +34,7 @@ const Seo = ({
 
   return (
     <Helmet>
-      <html lang="fr" />
+      <html lang="fr-CH" />
       <title>{title}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
@@ -42,12 +42,12 @@ const Seo = ({
 
       {/* Open Graph */}
       <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Activation Kundalini — Karmaequilego" />
+      <meta property="og:site_name" content="Karmaequilego" />
       <meta property="og:locale" content="fr_CH" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
-      {image && <meta property="og:image" content={image} />}
+      <meta property="og:image" content={image || `${SITE_URL}/og-image.jpg`} />
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
 
@@ -55,7 +55,7 @@ const Seo = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      {image && <meta name="twitter:image" content={image} />}
+      <meta name="twitter:image" content={image || `${SITE_URL}/og-image.jpg`} />
 
       {jsonLdArray.map((data, i) => (
         <script key={i} type="application/ld+json">
