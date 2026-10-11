@@ -28,7 +28,7 @@ const Footer = () => {
         <div className="flex items-center justify-center gap-2 text-sm">
           <MapPin className="w-3.5 h-3.5 text-foreground/70" />
           <a href={GOOGLE_MAPS_URL} target="_blank" rel="noopener noreferrer" className="font-body text-foreground/70 hover:text-primary transition-colors">
-            Matyas Challandes · Chemin du Cuard 22, 2022 Bevaix
+            Karmaequilego — Matyas Challandes · Chemin du Cuard 22, 2022 Bevaix
           </a>
         </div>
 
@@ -116,6 +116,19 @@ const Footer = () => {
           </ul>
         </nav>
 
+
+        <nav aria-label="Infos pratiques" className="pt-2">
+          <ul className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs">
+            <li><Link to="/seances-a-distance-suisse-romande" className="text-foreground/60 hover:text-primary transition-colors">Séances à distance</Link></li>
+            <li><Link to="/acces-cabinet-bevaix" className="text-foreground/60 hover:text-primary transition-colors">Venir au cabinet</Link></li>
+            <li><Link to="/mentions-legales" className="text-foreground/60 hover:text-primary transition-colors">Mentions légales</Link></li>
+            <li><Link to="/confidentialite" className="text-foreground/60 hover:text-primary transition-colors">Confidentialité</Link></li>
+          </ul>
+        </nav>
+
+        <p className="font-body text-xs text-foreground/60 max-w-2xl mx-auto pt-2">
+          Les séances sont un accompagnement complémentaire et ne remplacent pas un avis ou un suivi médical ou psychologique.
+        </p>
 
         <p className="font-body text-xs text-muted-foreground pt-2">
           © {new Date().getFullYear()} — Activation & Transformation Profonde

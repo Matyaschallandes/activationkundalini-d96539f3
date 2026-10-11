@@ -63,6 +63,10 @@ const staticEntries: SitemapEntry[] = [
   { path: "/lahochi-neuchatel", changefreq: "monthly", priority: "0.8" },
   { path: "/chamanisme-neuchatel", changefreq: "monthly", priority: "0.8" },
   { path: "/kinesiologie-neuchatel", changefreq: "monthly", priority: "0.8" },
+  { path: "/seances-a-distance-suisse-romande", changefreq: "monthly", priority: "0.9" },
+  { path: "/acces-cabinet-bevaix", changefreq: "yearly", priority: "0.6" },
+  { path: "/mentions-legales", changefreq: "yearly", priority: "0.2" },
+  { path: "/confidentialite", changefreq: "yearly", priority: "0.2" },
 ];
 
 

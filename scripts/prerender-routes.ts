@@ -35,6 +35,8 @@ const commonFooter = `
 <footer>
   <p><strong>Karmaequilego — Matyas Challandes</strong> · Chemin du Cuard 22, 2022 Bevaix, Neuchâtel, Suisse</p>
   <p>Téléphone / WhatsApp : <a href="tel:+41762445552">+41 76 244 55 52</a> · Email : <a href="mailto:matyas.challandes@gmail.com">matyas.challandes@gmail.com</a></p>
+  <p>Les séances sont un accompagnement complémentaire et ne remplacent pas un avis ou un suivi médical ou psychologique.</p>
+  <p><a href="/mentions-legales">Mentions légales</a> · <a href="/confidentialite">Confidentialité</a> · <a href="/seances-a-distance-suisse-romande">Séances à distance</a></p>
   <p>Séances en présentiel à Bevaix (Neuchâtel) et à distance dans toute la Suisse romande : Vaud, Genève, Fribourg, Jura, Valais, Berne francophone.</p>
 </footer>`;
 
@@ -454,6 +456,34 @@ ${commonFooter}`,
     description: "Remplis en ligne ton carnet de préparation avant ta séance d'activation Kundalini : libération des mémoires, croyances limitantes, message du corps, clés d'harmonisation et PDF personnalisé à télécharger.",
     canonical: `${BASE}/carnet-de-preparation`,
     content: `${commonNav}<main><h1>Carnet de préparation en ligne à ta séance d'activation Kundalini</h1><p>Ce carnet prépare le corps et le mental à libérer les mémoires avant le soin énergétique. En neuf étapes guidées, tu clarifies ce que tu choisis de libérer, la version de toi que tu souhaites incarner, les peurs et croyances limitantes qui te retiennent, le message de ton corps et ton engagement des 72 heures.</p><h2>Ce que tu reçois à la fin</h2><p>Une lecture énergétique symbolique de tes réponses (centres énergétiques les plus sollicités, thèmes repérés), des clés d'harmonisation personnalisées, un tableau pour remplacer tes programmes limitants par de nouvelles vérités, un protocole de préparation des 72 heures, et ton carnet complet en PDF à télécharger.</p><h2>Confidentialité</h2><p>Tes réponses sont sauvegardées dans ton navigateur et transmises uniquement à Matyas Challandes pour préparer ta séance. Support de bien-être et de développement personnel, sans visée médicale.</p><p><a href="/deroulement-seance">Voir le déroulement d'une séance</a> · <a href="/rendez-vous">Prendre rendez-vous</a>.</p></main>${commonFooter}`,
+  },
+  {
+    path: "/seances-a-distance-suisse-romande",
+    title: "Séances à distance en Suisse romande | Karmaequilego",
+    description: "Activation Kundalini et soin chamanique à distance, en visio ou par téléphone, partout en Suisse romande. Prix libre, 1re heure offerte.",
+    canonical: `${BASE}/seances-a-distance-suisse-romande`,
+    content: `${commonNav}<main><h1>Séances à distance en Suisse romande</h1><p>Activation Kundalini et soin énergétique chamanique en visioconférence ou par téléphone, pour Vaud, Genève, Fribourg, Valais, Jura, Jura bernois et Neuchâtel. Durée 1h30 à 2h, prix libre, première heure offerte. Matériel : téléphone ou ordinateur, écouteurs, endroit calme, de quoi t'allonger.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/acces-cabinet-bevaix">Venir au cabinet</a>.</p></main>${commonFooter}`,
+  },
+  {
+    path: "/acces-cabinet-bevaix",
+    title: "Venir au cabinet à Bevaix (Neuchâtel) | Karmaequilego",
+    description: "Adresse, accès en voiture et en transports publics, ce qu'il faut apporter : tout pour venir à ta séance au cabinet de Bevaix, Chemin du Cuard 22.",
+    canonical: `${BASE}/acces-cabinet-bevaix`,
+    content: `${commonNav}<main><h1>Venir au cabinet à Bevaix</h1><p>Karmaequilego — Matyas Challandes, Chemin du Cuard 22, 2022 Bevaix. Accès par l'A5 (sortie Bevaix) ou en train jusqu'à la gare de Bevaix. Apporte des vêtements confortables et une bouteille d'eau.</p><p><a href="/rendez-vous">Prendre rendez-vous</a>.</p></main>${commonFooter}`,
+  },
+  {
+    path: "/mentions-legales",
+    title: "Mentions légales | Karmaequilego",
+    description: "Mentions légales du site activationkundalini.ch : éditeur, contact, hébergement et responsabilité.",
+    canonical: `${BASE}/mentions-legales`,
+    content: `${commonNav}<main><h1>Mentions légales</h1><p>Éditeur : Karmaequilego — Matyas Challandes, Chemin du Cuard 22, 2022 Bevaix, Suisse.</p></main>${commonFooter}`,
+  },
+  {
+    path: "/confidentialite",
+    title: "Politique de confidentialité (LPD) | Karmaequilego",
+    description: "Comment tes données sont collectées et protégées sur activationkundalini.ch, selon la loi suisse sur la protection des données (LPD).",
+    canonical: `${BASE}/confidentialite`,
+    content: `${commonNav}<main><h1>Politique de confidentialité</h1><p>Responsable du traitement : Matyas Challandes. Tu peux demander l'accès ou la suppression de tes données à matyas.challandes@gmail.com.</p></main>${commonFooter}`,
   },
   ...citySnapshots,
 ];
