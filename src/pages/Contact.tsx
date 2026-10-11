@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import CtaSection from "@/components/CtaSection";
@@ -122,7 +123,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-    </Layout>
+          <p className="text-center pb-12"><Link to="/acces-cabinet-bevaix" className="text-primary underline">Comment venir au cabinet à Bevaix</Link></p>
+</Layout>
   );
 };
 

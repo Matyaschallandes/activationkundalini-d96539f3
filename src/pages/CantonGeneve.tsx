@@ -2,6 +2,7 @@ import CantonPage from "@/components/CantonPage";
 
 const CantonGeneve = () => (
   <CantonPage
+    localNote="Depuis Genève, la plupart des personnes choisissent la séance à distance, en visio, pour éviter le trajet. Celles qui veulent vivre l'activation Kundalini en présentiel profitent souvent d'un samedi pour faire l'aller-retour en train direct jusqu'à Neuchâtel. Les personnes travaillant dans les organisations internationales apprécient la discrétion et la souplesse des horaires."
     slug="/soins-energetiques-canton-geneve"
     canton="Genève"
     regionShort="canton de Genève"

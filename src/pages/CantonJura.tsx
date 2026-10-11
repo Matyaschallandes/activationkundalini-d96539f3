@@ -2,6 +2,7 @@ import CantonPage from "@/components/CantonPage";
 
 const CantonJura = () => (
   <CantonPage
+    localNote="Depuis Delémont ou Porrentruy, le trajet par les gorges et le Jura neuchâtelois prend environ une heure. Les Franches-Montagnes ont un lien fort avec la nature, ce qui résonne beaucoup avec le chamanisme et le travail avec les éléments. Pour les longs trajets en hiver, la séance à distance est une bonne alternative."
     slug="/soins-energetiques-canton-jura"
     canton="Jura"
     regionShort="canton du Jura"

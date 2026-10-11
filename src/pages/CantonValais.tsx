@@ -2,6 +2,7 @@ import CantonPage from "@/components/CantonPage";
 
 const CantonValais = () => (
   <CantonPage
+    localNote="Pour le Valais, je recommande surtout la séance à distance : le trajet jusqu'à Bevaix est long. Les personnes de Sion, Sierre ou Martigny me contactent souvent après une période d'épuisement ou de changement de vie. Une première séance en visio permet de voir si l'approche te convient avant d'éventuellement venir au cabinet."
     slug="/soins-energetiques-canton-valais"
     canton="Valais"
     regionShort="Valais romand"

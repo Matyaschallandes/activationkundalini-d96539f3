@@ -15,6 +15,7 @@ export type CantonPageProps = {
   intro: string;
   h1: string;
   areaServed: string[];
+  localNote?: string;
 };
 
 const CantonPage = ({
@@ -29,6 +30,7 @@ const CantonPage = ({
   intro,
   h1,
   areaServed,
+  localNote,
 }: CantonPageProps) => {
   const url = `https://www.activationkundalini.ch${slug}`;
 
@@ -91,13 +93,18 @@ const CantonPage = ({
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-6 max-w-4xl">
           <h2 className="font-heading text-3xl md:text-4xl font-light mb-6 text-foreground">
-            Un accompagnement énergétique <span className="text-gradient-gold italic">au plus près de chez vous</span>
+            Un accompagnement énergétique <span className="text-gradient-gold italic">au plus près de chez toi</span>
           </h2>
           <p className="font-body text-foreground/75 leading-relaxed mb-4">
-            Basé à Bevaix, dans le canton de Neuchâtel, Matyas Challandes reçoit régulièrement des personnes venant du {regionShort} pour des séances de soins énergétiques, d'activation Kundalini, de kinésiologie et d'accompagnement du stress ou du burn-out. Le cabinet est {distanceLine}, ce qui rend les séances en présentiel très accessibles pour les habitants du {regionShort}.
+            Basé à Bevaix, dans le canton de Neuchâtel, je reçois régulièrement des personnes venant du {regionShort} pour des séances de soins énergétiques, d'activation Kundalini, de kinésiologie et d'accompagnement du stress ou du burn-out. Le cabinet est {distanceLine}, ce qui rend les séances en présentiel très accessibles pour les habitants du {regionShort}.
           </p>
           <p className="font-body text-foreground/75 leading-relaxed mb-4">
-            Pour celles et ceux qui préfèrent rester chez eux, les séances à distance offrent la même qualité de travail énergétique — un simple téléphone ou une visioconférence suffisent.
+          </p>
+          <p className="font-body text-foreground/75 leading-relaxed mb-4">
+            {localNote}
+          </p>
+          <p className="font-body text-foreground/75 leading-relaxed mb-4">
+            Pour celles et ceux qui préfèrent rester chez eux, les séances à distance offrent la même qualité de travail énergétique — un simple téléphone ou une visioconférence suffisent. Tout est expliqué sur la page <Link to="/seances-a-distance-suisse-romande" className="text-primary underline">séances à distance en Suisse romande</Link>.
           </p>
 
           <h3 className="font-heading text-2xl font-light mt-10 mb-4 text-foreground">
@@ -149,14 +156,14 @@ const CantonPage = ({
             & guidance
           </h3>
           <p className="font-body text-foreground/75 leading-relaxed mb-4">
-            Une écoute intuitive de votre trajectoire pour éclairer les questions importantes, identifier les schémas répétitifs et retrouver un axe personnel aligné avec votre chemin de vie.
+            Une écoute intuitive de ta trajectoire pour éclairer les questions importantes, identifier les schémas répétitifs et retrouver un axe personnel aligné avec ton chemin de vie.
           </p>
 
           <h2 className="font-heading text-3xl md:text-4xl font-light mt-14 mb-6 text-foreground">
             Séances en présentiel ou à distance
           </h2>
           <p className="font-body text-foreground/75 leading-relaxed mb-4">
-            Les séances peuvent se dérouler au cabinet à Bevaix (Neuchâtel) ou à distance, partout dans le {regionShort} et en Suisse romande. Les séances à distance sont pleinement efficaces : l'énergie ne connaît pas les kilomètres.
+            Les séances peuvent se dérouler au cabinet à Bevaix (Neuchâtel) ou à distance, partout dans le {regionShort} et en Suisse romande. Les séances à distance suivent le même déroulé qu'au cabinet.
           </p>
           <p className="font-body text-foreground/75 leading-relaxed mb-8">
             Toutes les séances sont proposées en <strong>prix libre</strong>, dans un esprit de conscience et d'accessibilité. Personne ne devrait renoncer à un accompagnement pour des raisons financières.
@@ -182,10 +189,6 @@ const CantonPage = ({
               Me contacter
             </Link>
           </div>
-
-          <p className="font-body text-foreground/40 text-xs mt-16">
-            {canton} · {cities.join(" · ")} · Suisse romande · soins énergétiques · activation Kundalini · kinésiologie · accompagnement burn-out · harmonisation des chakras · libération émotionnelle
-          </p>
         </div>
       </section>
     </Layout>

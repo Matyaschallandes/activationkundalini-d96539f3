@@ -1,3 +1,4 @@
+import RealReviews from "@/components/RealReviews";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import WhyMeSection from "@/components/WhyMeSection";
@@ -39,7 +40,8 @@ const APropos = () => {
       <WhyMeSection />
       <JourneySection />
       <GoogleReviewsBadge />
-    </Layout>
+          <RealReviews />
+</Layout>
   );
 };
 
