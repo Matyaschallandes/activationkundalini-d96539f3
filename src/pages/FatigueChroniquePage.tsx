@@ -1,3 +1,4 @@
+import Precautions from "@/components/Precautions";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import { Link } from "react-router-dom";
@@ -107,7 +108,8 @@ const FatigueChroniquePage = () => (
         </p>
       </div>
     </section>
-  </Layout>
+        <Precautions />
+</Layout>
 );
 
 export default FatigueChroniquePage;

@@ -1,3 +1,4 @@
+import Precautions from "@/components/Precautions";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import MaillageInterne from "@/components/MaillageInterne";
@@ -489,7 +490,8 @@ const LaKundalini = () => {
       </section>
 
       <MaillageInterne exclude={["/la-kundalini"]} />
-    </Layout>
+          <Precautions />
+</Layout>
   );
 };
 

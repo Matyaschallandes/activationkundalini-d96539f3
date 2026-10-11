@@ -1,3 +1,4 @@
+import Precautions from "@/components/Precautions";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import { Link } from "react-router-dom";
@@ -145,7 +146,8 @@ const BurnOutPage = () => (
         </p>
       </div>
     </section>
-  </Layout>
+        <Precautions distress />
+</Layout>
 );
 
 export default BurnOutPage;
