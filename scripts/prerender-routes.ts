@@ -71,9 +71,9 @@ ${commonFooter}`,
 export const routes: RouteSnapshot[] = [
   {
     path: "/",
-    title: "Guérisseur & Chamane à Neuchâtel — Activation Kundalini | 1h offerte",
+    title: "Guérisseur & Chamane à Neuchâtel | Activation Kundalini",
     description:
-      "Tu te sens vidé(e), bloqué(e) ? Matyas Challandes, guérisseur et chamane à Bevaix (Neuchâtel) : activation Kundalini, soins chamaniques, kinésiologie. Première heure découverte offerte, en présentiel ou à distance. ★ 4,9/5 sur Google.",
+      "Matyas Challandes, guérisseur et chamane à Bevaix (NE) : activation Kundalini, soins énergétiques. 1re heure offerte. ★ 4,9/5 sur Google",
     canonical: `${BASE}/`,
     content: `
 ${commonNav}

@@ -2,6 +2,7 @@ import CantonPage from "@/components/CantonPage";
 
 const CantonFribourg = () => (
   <CantonPage
+    localNote="Pour la Broye fribourgeoise — Estavayer-le-Lac, Domdidier — le cabinet est presque voisin, de l'autre côté du lac. Depuis la Gruyère et la Veveyse, beaucoup préfèrent combiner une première séance au cabinet et un suivi à distance. Les Fribourgeois germanophones peuvent aussi venir : la séance se déroule en français, avec simplicité."
     slug="/soins-energetiques-canton-fribourg"
     canton="Fribourg"
     regionShort="canton de Fribourg"

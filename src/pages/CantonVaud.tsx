@@ -2,6 +2,7 @@ import CantonPage from "@/components/CantonPage";
 
 const CantonVaud = () => (
   <CantonPage
+    localNote="Depuis la Riviera ou le Gros-de-Vaud, beaucoup viennent en train jusqu'à Bevaix : la ligne du pied du Jura relie Yverdon et Lausanne en peu de temps. Les personnes de Lausanne me parlent souvent du rythme urbain, de la pression au travail et du besoin de se poser enfin. Pour la région de Nyon et de La Côte, la séance à distance reste souvent la solution la plus simple."
     slug="/soins-energetiques-canton-vaud"
     canton="Vaud"
     regionShort="canton de Vaud"

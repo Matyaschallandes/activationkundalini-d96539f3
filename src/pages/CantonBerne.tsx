@@ -2,6 +2,7 @@ import CantonPage from "@/components/CantonPage";
 
 const CantonBerne = () => (
   <CantonPage
+    localNote="Depuis Bienne et La Neuveville, le cabinet est à quelques minutes en train le long du lac. Pour le vallon de Saint-Imier, Tavannes ou Moutier, le trajet par Neuchâtel reste court. La séance se déroule en français ; les personnes bilingues de Bienne sont aussi les bienvenues."
     slug="/soins-energetiques-jura-bernois"
     canton="Berne (Jura bernois & Bienne)"
     regionShort="Jura bernois et région biennoise"
