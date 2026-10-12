@@ -63,7 +63,7 @@ export const AboutShort = () => (
         À propos de <span className="text-gradient-gold italic">Matyas</span>
       </h2>
       <p className="font-body text-foreground/80 leading-relaxed mb-4">
-        Je m'appelle Matyas Challandes et je t'accueille à Bevaix, dans le canton de Neuchâtel, ou à distance. Je pratique l'activation Kundalini et le chamanisme, et je suis actuellement en formation de kinésiologie. Mon travail : t'aider à repérer ce qui bloque ton énergie et à le laisser se libérer, en douceur.
+        Je m'appelle Matyas Challandes et je t'accueille à Bevaix, dans le canton de Neuchâtel, ou à distance. Je pratique l'activation Kundalini et le chamanisme, et je suis en formation de kinésiologie (1re année). Mon travail : t'aider à repérer ce qui bloque ton énergie et à le laisser se libérer, en douceur.
       </p>
       <p className="font-body text-foreground/80 leading-relaxed">
         <Link to="/mon-histoire" className="text-primary underline">Découvrir mon parcours</Link> · <Link to="/a-propos" className="text-primary underline">En savoir plus sur moi</Link>
