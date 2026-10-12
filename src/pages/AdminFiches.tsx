@@ -196,6 +196,7 @@ const AdminFiches = () => {
   const [error, setError] = useState("");
   const [carnets, setCarnets] = useState<Carnet[] | null>(null);
   const [suivis, setSuivis] = useState<Suivi[]>([]);
+  const [offres, setOffres] = useState<any[]>([]);
 
   const login = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -211,6 +212,7 @@ const AdminFiches = () => {
     }
     setCarnets(data.carnets);
     setSuivis(data.suivis ?? []);
+    setOffres(data.offres ?? []);
   };
 
   const downloadPdf = (c: Carnet) => {
@@ -260,6 +262,20 @@ const AdminFiches = () => {
 
         {carnets && (
           <div className="space-y-10">
+            <div>
+              <h2 className="font-heading text-2xl text-foreground mb-4">
+                Demandes « 5 blocages offerts » ({offres.length})
+              </h2>
+              <div className="space-y-3">
+                {offres.map((o) => (
+                  <div key={o.id} className="rounded-lg border border-border bg-card p-4 font-body text-sm">
+                    <p className="text-foreground font-medium">{o.prenom} {o.nom} · né(e) le {new Date(o.date_naissance).toLocaleDateString("fr-CH")}{o.heure_naissance ? ` à ${o.heure_naissance}` : ""}{o.lieu_naissance ? ` · ${o.lieu_naissance}` : ""}</p>
+                    <p className="text-muted-foreground">{o.telephone ?? ""} {o.email ? `· ${o.email}` : ""} · reçu le {new Date(o.created_at).toLocaleDateString("fr-CH")}</p>
+                    {o.message && <p className="mt-2 text-foreground/80 whitespace-pre-line">{o.message}</p>}
+                  </div>
+                ))}
+              </div>
+            </div>
             <div>
               <h2 className="font-heading text-2xl text-foreground mb-4">
                 Carnets de préparation ({carnets.length})
