@@ -465,6 +465,13 @@ ${commonFooter}`,
     content: `${commonNav}<main><h1>Séances à distance en Suisse romande</h1><p>Activation Kundalini et soin énergétique chamanique en visioconférence ou par téléphone, pour Vaud, Genève, Fribourg, Valais, Jura, Jura bernois et Neuchâtel. Durée 1h30 à 2h, prix libre, première heure offerte. Matériel : téléphone ou ordinateur, écouteurs, endroit calme, de quoi t'allonger.</p><p><a href="/rendez-vous">Prendre rendez-vous</a> · <a href="/acces-cabinet-bevaix">Venir au cabinet</a>.</p></main>${commonFooter}`,
   },
   {
+    path: "/massage-energetique-liberation-somatique",
+    title: "Massage énergétique & libération somatique | Bevaix",
+    description: "Massage énergétique et libération somatique à Bevaix (Neuchâtel) : le toucher et l'écoute du corps pour relâcher les tensions. Prix libre.",
+    canonical: `${BASE}/massage-energetique-liberation-somatique`,
+    content: `${commonNav}<main><h1>Massage énergétique et libération somatique</h1><p>Un toucher lent et attentif associé à l'écoute de ton ressenti, pour aider les tensions à se relâcher. Au cabinet à Bevaix, environ 1h30, prix libre. Accompagnement de bien-être complémentaire.</p><p><a href="/rendez-vous">Prendre rendez-vous</a>.</p></main>${commonFooter}`,
+  },
+  {
     path: "/acces-cabinet-bevaix",
     title: "Venir au cabinet à Bevaix (Neuchâtel) | Karmaequilego",
     description: "Adresse, accès en voiture et en transports publics, ce qu'il faut apporter : tout pour venir à ta séance au cabinet de Bevaix, Chemin du Cuard 22.",
