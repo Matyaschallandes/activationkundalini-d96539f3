@@ -34,7 +34,7 @@ serve(async (req) => {
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
     );
 
-    const [carnets, suivis] = await Promise.all([
+    const [carnets, suivis, offres] = await Promise.all([
       supabase
         .from("carnet_submissions")
         .select("*")
@@ -45,10 +45,11 @@ serve(async (req) => {
         .select("*")
         .order("created_at", { ascending: false })
         .limit(200),
+      supabase.from("offre_demandes").select("*").order("created_at", { ascending: false }).limit(200),
     ]);
 
     return new Response(
-      JSON.stringify({ carnets: carnets.data ?? [], suivis: suivis.data ?? [] }),
+      JSON.stringify({ carnets: carnets.data ?? [], suivis: suivis.data ?? [], offres: offres.data ?? [] }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     );
   } catch (error) {

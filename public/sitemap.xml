@@ -176,6 +176,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.activationkundalini.ch/seances-a-distance-suisse-romande</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.activationkundalini.ch/acces-cabinet-bevaix</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.activationkundalini.ch/mentions-legales</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.activationkundalini.ch/confidentialite</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.activationkundalini.ch/blog/activation-kundalini-deroule-effets-precautions</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.activationkundalini.ch/blog/premiere-seance-energetique-a-quoi-sattendre</loc>
     <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -200,13 +226,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.activationkundalini.ch/blog/signes-blocage-energetique-comment-reconnaitre</loc>
+    <loc>https://www.activationkundalini.ch/blog/combien-de-temps-dure-activation-kundalini-que-ressent-on-apres</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.activationkundalini.ch/blog/combien-de-temps-dure-activation-kundalini-que-ressent-on-apres</loc>
+    <loc>https://www.activationkundalini.ch/blog/signes-blocage-energetique-comment-reconnaitre</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -254,13 +280,13 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.activationkundalini.ch/blog/fatigue-chronique-kundalini-circulation-energetique</loc>
+    <loc>https://www.activationkundalini.ch/blog/kundalini-burn-out-reconstruction-energetique</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.activationkundalini.ch/blog/kundalini-burn-out-reconstruction-energetique</loc>
+    <loc>https://www.activationkundalini.ch/blog/fatigue-chronique-kundalini-circulation-energetique</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

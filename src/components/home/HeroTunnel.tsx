@@ -20,7 +20,7 @@ const HeroTunnel = () => {
         <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-12 items-center">
           <div className="text-center md:text-left">
             <p className="font-body tracking-[0.25em] uppercase text-xs text-primary mb-4">
-              Activation Kundalini à Neuchâtel · Chamanisme &amp; Kinésiologie
+              Activation Kundalini à Neuchâtel · Chamanisme &amp; énergie
             </p>
             <h1 className="font-heading text-3xl md:text-5xl lg:text-[3.4rem] font-light leading-[1.15] mb-6 text-foreground">
               Guérisseur &amp; chamane à Neuchâtel :{" "}
@@ -35,7 +35,7 @@ const HeroTunnel = () => {
               Je m'appelle Matyas Challandes. À Bevaix, dans le canton de Neuchâtel, j'accompagne
               par l'<Link to="/la-kundalini" className="text-primary underline underline-offset-4">Activation Kundalini</Link>,
               le <Link to="/chamanisme-neuchatel" className="text-primary underline underline-offset-4">chamanisme</Link> et
-              la <Link to="/kinesiologie-neuchatel" className="text-primary underline underline-offset-4">kinésiologie</Link>,
+              la <Link to="/kinesiologie-neuchatel" className="text-primary underline underline-offset-4">kinésiologie</Link> (en formation, 1re année),
               en présentiel ou à distance dans toute la Suisse romande.
             </p>
 
@@ -44,7 +44,7 @@ const HeroTunnel = () => {
                 Découverte gratuite
               </p>
               <p className="font-body text-foreground/90 text-base md:text-lg leading-relaxed mb-4">
-                1 heure pour faire le point sur ce que vous vivez, comprendre vos principaux
+                1 heure pour faire le point sur ce que tu vis, comprendre tes principaux
                 blocages et repartir avec une première clé de compréhension.
               </p>
               <p className="font-body text-foreground/85 text-sm md:text-base leading-relaxed mb-5">
@@ -61,7 +61,7 @@ const HeroTunnel = () => {
             </div>
 
             <div className="mb-8 text-left">
-              <h2 className="font-heading text-2xl text-foreground mb-5">Les étapes de votre parcours</h2>
+              <h2 className="font-heading text-2xl text-foreground mb-5">Les étapes de ton parcours</h2>
               <ol className="relative space-y-0 border-l border-primary/30 ml-5">
               <li className="relative pb-5 pl-8">
                 <span className="absolute -left-5 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-background font-heading text-primary">1</span>
@@ -74,7 +74,7 @@ const HeroTunnel = () => {
                 <Calendar className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="font-body text-sm text-foreground">
                   <strong>Prendre contact & fixer un rendez-vous</strong>
-                  <span className="block text-xs text-muted-foreground mt-0.5">Réservez votre créneau directement sur le calendrier en ligne.</span>
+                  <span className="block text-xs text-muted-foreground mt-0.5">Réserve ton créneau directement sur le calendrier en ligne.</span>
                 </span>
               </a>
               </li>
@@ -105,15 +105,15 @@ const HeroTunnel = () => {
                 <span className="font-body text-sm text-foreground">
                   <strong>Lecture d'âme — Human Design</strong>
                   <span className="block text-xs text-muted-foreground mt-0.5">
-                    Mieux comprendre comment vous fonctionnez et pourquoi vous êtes né(e). Très conseillé : pendant l'activation, cela aide à reconnecter avec la personne que vous êtes censé(e) incarner.
+                    Mieux comprendre comment tu fonctionnes et pourquoi tu es né(e). Très conseillé : pendant l'activation, cela aide à reconnecter avec la personne que tu es censé(e) incarner.
                   </span>
                 </span>
               </a>
               </li>
               {[
-                ["4", "Échange au début de la séance", "Vous me parlez de ce qui se passe dans votre vie. Nous revenons sur vos préparations si vous le souhaitez."],
-                ["5", "Détection des blocages", "Je réalise le test énergétique afin de cibler ce qui vous bloque."],
-                ["6", "Activation ou soin", "Nous terminons par une activation Kundalini, un soin chamanique — ou les deux."],
+                ["4", "Échange au début de la séance", "Tu me parles de ce qui se passe dans ta vie. On revient sur tes préparations si tu le souhaites."],
+                ["5", "Détection des blocages", "Je réalise le test énergétique afin de cibler ce qui te bloque."],
+                ["6", "Activation ou soin", "On termine par une activation Kundalini, un soin chamanique — ou les deux."],
               ].map(([number, title, text], index) => (
                 <li key={number} className={`relative pl-8 ${index < 2 ? "pb-5" : ""}`}>
                   <span className="absolute -left-5 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-background font-heading text-primary">{number}</span>
@@ -127,12 +127,12 @@ const HeroTunnel = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-center md:justify-start">
-              <Link
-                to="/offre-decouverte-gratuite"
+              <a
+                href="#offre-gratuite"
                 className="bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-9 py-5 rounded-sm text-center hover:shadow-gold transition-all duration-500"
               >
-                Je réserve ma découverte gratuite
-              </Link>
+                Recevoir mes 5 blocages offerts
+              </a>
               <button
                 onClick={() => setDialogOpen(true)}
                 className="inline-flex items-center justify-center gap-2 border border-primary/50 text-foreground font-body font-medium tracking-wider uppercase text-sm px-7 py-5 rounded-sm hover:bg-primary/10 transition-all duration-500"

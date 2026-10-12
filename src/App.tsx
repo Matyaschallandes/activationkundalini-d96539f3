@@ -50,6 +50,7 @@ import Unsubscribe from "./pages/Unsubscribe";
 import SuiviPostSeance from "./pages/SuiviPostSeance";
 import SeancesDistance from "./pages/SeancesDistance";
 import AccesCabinet from "./pages/AccesCabinet";
+import MassageEnergetique from "./pages/MassageEnergetique";
 import MentionsLegales from "./pages/MentionsLegales";
 import Confidentialite from "./pages/Confidentialite";
 import WhatsAppButton from "./components/WhatsAppButton";
@@ -108,6 +109,7 @@ const App = () => (
           <Route path="/unsubscribe" element={<Unsubscribe />} />
           <Route path="/seances-a-distance-suisse-romande" element={<SeancesDistance />} />
           <Route path="/acces-cabinet-bevaix" element={<AccesCabinet />} />
+          <Route path="/massage-energetique-liberation-somatique" element={<MassageEnergetique />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/confidentialite" element={<Confidentialite />} />
 

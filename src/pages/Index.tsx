@@ -1,16 +1,11 @@
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import HeroTunnel from "@/components/home/HeroTunnel";
-import TrustSection from "@/components/home/TrustSection";
 import BlocagesSection from "@/components/home/BlocagesSection";
-import DialogueSection from "@/components/home/DialogueSection";
-import KundaliniSection from "@/components/home/KundaliniSection";
-import RecognizeSection from "@/components/home/RecognizeSection";
-import AboutMatyas from "@/components/home/AboutMatyas";
-import ToolsSection from "@/components/home/ToolsSection";
 import FaqShort, { homeFaqJsonLd } from "@/components/home/FaqShort";
 import FinalCta from "@/components/home/FinalCta";
-import YearEndOffer from "@/components/home/YearEndOffer";
+import FreeOffer from "@/components/home/FreeOffer";
+import ServicesGrid from "@/components/home/ServicesGrid";
 import OfferBanner from "@/components/home/OfferBanner";
 import HomeEssentials, { AboutShort, RdvButton } from "@/components/home/HomeEssentials";
 import LatestPosts from "@/components/home/LatestPosts";
@@ -59,26 +54,20 @@ const Index = () => {
         title="Guérisseur & Chamane à Neuchâtel | Activation Kundalini"
         description="Matyas Challandes, guérisseur et chamane à Bevaix (NE) : activation Kundalini, soins énergétiques. 1re heure offerte. ★ 4,9/5 sur Google"
         path="/"
-        keywords="activation kundalini Neuchâtel, chamanisme Neuchâtel, kinésiologie Neuchâtel, Karmaequilego, Matyas Challandes, Bevaix"
         jsonLd={[organizationLd, websiteLd, homeFaqJsonLd]}
       />
       <OfferBanner />
-      <YearEndOffer />
       <HeroTunnel />
-      <TrustSection />
-      <HomeEssentials />
+      <FreeOffer />
       <BlocagesSection />
-      <DialogueSection />
-      <KundaliniSection />
-      <RecognizeSection />
-      <AboutMatyas />
-      <AboutShort />
-      <Precautions />
+      <ServicesGrid />
+      <HomeEssentials />
       <RealReviews />
-      <ToolsSection />
+      <AboutShort />
       <FaqShort />
-      <LatestPosts />
+      <Precautions />
       <FinalCta />
+      <LatestPosts />
       <div className="text-center pb-16"><RdvButton /></div>
     </Layout>
   );

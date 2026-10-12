@@ -14,6 +14,7 @@ const Confidentialite = () => (
     <h2>Données collectées</h2>
     <ul>
       <li>Formulaire de contact et de rendez-vous : nom, prénom, email, téléphone, date, heure et lieu de naissance, message</li>
+      <li>Offre « 5 blocages offerts » : prénom, nom, date (heure et lieu facultatifs) de naissance, téléphone ou email, message — uniquement avec ton consentement</li>
       <li>Carnet de préparation : tes réponses aux questions et tes objectifs</li>
       <li>Achats en boutique : données nécessaires au paiement (traitées par Stripe)</li>
       <li>Statistiques de visite anonymes</li>
