@@ -8,8 +8,8 @@ const MobileCtaBar = () => (
     <a href="https://wa.me/41762445552" target="_blank" rel="noopener noreferrer" className="flex-1 flex items-center justify-center gap-2 py-3.5 font-body text-sm font-medium text-foreground border-l border-border" aria-label="Écrire à Matyas sur WhatsApp">
       <MessageCircle className="w-4 h-4 text-primary" /> WhatsApp
     </a>
-    <a href="/#offre-gratuite" className="flex-[1.3] flex items-center justify-center gap-2 py-3.5 bg-gradient-gold text-primary-foreground font-body text-sm font-semibold">
-      <Gift className="w-4 h-4" /> 5 blocages offerts
+    <a href="/offre-decouverte-gratuite" className="flex-[1.3] flex items-center justify-center gap-2 py-3.5 bg-gradient-gold text-primary-foreground font-body text-sm font-semibold">
+      <Gift className="w-4 h-4" /> Découverte
     </a>
   </div>
 );

@@ -5,14 +5,14 @@ const OfferBanner = () => (
   <div className="bg-card border-b border-primary/30">
     <div className="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-center gap-3 text-center">
       <p className="font-body text-sm text-foreground">
-        <strong>Offert : tes 5 blocages principaux + un mini-soin énergétique</strong> ·{" "}
+        <strong>Découverte gratuite : environ 1 heure, sans engagement</strong> ·{" "}
         <a href={GOOGLE_BUSINESS_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline">
           ★ {GOOGLE_RATING}/5{GOOGLE_REVIEW_COUNT ? ` sur ${GOOGLE_REVIEW_COUNT} avis` : ""} sur Google
         </a>
       </p>
-      <a href="#offre-gratuite"
+      <a href="/offre-decouverte-gratuite"
         className="inline-flex px-5 py-2 rounded-full bg-gradient-gold text-primary-foreground font-body text-sm font-semibold">
-        Recevoir mes 5 blocages
+        Découvrir l’offre gratuite
       </a>
     </div>
   </div>

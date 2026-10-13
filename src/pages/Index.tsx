@@ -4,7 +4,7 @@ import HeroTunnel from "@/components/home/HeroTunnel";
 import BlocagesSection from "@/components/home/BlocagesSection";
 import FaqShort, { homeFaqJsonLd } from "@/components/home/FaqShort";
 import FinalCta from "@/components/home/FinalCta";
-import FreeOffer from "@/components/home/FreeOffer";
+import YearEndOffer from "@/components/home/YearEndOffer";
 import ServicesGrid from "@/components/home/ServicesGrid";
 import OfferBanner from "@/components/home/OfferBanner";
 import HomeEssentials, { AboutShort, RdvButton } from "@/components/home/HomeEssentials";
@@ -56,9 +56,9 @@ const Index = () => {
         path="/"
         jsonLd={[organizationLd, websiteLd, homeFaqJsonLd]}
       />
+      <YearEndOffer />
       <OfferBanner />
       <HeroTunnel />
-      <FreeOffer />
       <BlocagesSection />
       <ServicesGrid />
       <HomeEssentials />

@@ -128,10 +128,12 @@ const HeroTunnel = () => {
 
             <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-center justify-center md:justify-start">
               <a
-                href="#offre-gratuite"
+                href={KOALENDAR_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-gradient-gold text-primary-foreground font-body font-semibold tracking-wider uppercase text-sm px-9 py-5 rounded-sm text-center hover:shadow-gold transition-all duration-500"
               >
-                Recevoir mes 5 blocages offerts
+                Réserver ma découverte gratuite
               </a>
               <button
                 onClick={() => setDialogOpen(true)}
