@@ -15,6 +15,7 @@ const secondaryItems = [
   { label: "Mon histoire", path: "/mon-histoire" },
   { label: "Déroulement d'une séance", path: "/deroulement-seance" },
   { label: "Chamanisme", path: "/chamanisme-neuchatel" },
+  { label: "Massage énergétique", path: "/massage-energetique-liberation-somatique" },
   { label: "Cercle de guérison", path: "/cercle-de-guerison" },
   { label: "Photos", path: "/photos" },
   { label: "Blog", path: "/blog" },

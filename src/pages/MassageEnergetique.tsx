@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import SimplePage from "@/components/SimplePage";
 import Precautions from "@/components/Precautions";
 import { RdvButton } from "@/components/home/HomeEssentials";
+import { Button } from "@/components/ui/button";
+import { Phone, MessageCircle } from "lucide-react";
 
 const MassageEnergetique = () => (
   <SimplePage
@@ -11,26 +13,38 @@ const MassageEnergetique = () => (
     h1="Massage énergétique et libération somatique"
     crumb="Massage énergétique"
   >
+    <h2>Libérer les tensions, retrouver de l'espace dans son corps</h2>
     <p>
-      Le corps garde en mémoire ce que l'on n'a pas pu exprimer. Le massage énergétique associe un toucher lent et attentif à l'écoute de ton ressenti, pour aider les tensions à se relâcher et l'énergie à circuler à nouveau.
+      Le massage énergétique et la libération somatique sont une approche corporelle personnalisée qui associe différentes techniques de toucher et de pression à un accompagnement énergétique.
     </p>
-    <h2>La libération somatique</h2>
+    <h2>Un travail précis, à l'écoute du corps</h2>
     <p>
-      Pendant la séance, certaines zones du corps peuvent réagir : chaleur, tremblements, émotions, envie de bouger ou de respirer plus fort. Je t'accompagne pour laisser ces mouvements se faire, en sécurité, sans forcer. C'est le corps qui guide.
+      Je travaille sur des points précis du corps : points trigger, points neurovasculaires, points neurolymphatiques, les fascias et les méridiens, ainsi que sur certaines zones comme le psoas. Le massage peut concerner la tête, le crâne, les pieds, le cou, les épaules, le ventre, le hara, les bras et les jambes.
     </p>
-    <h2>Comment se passe la séance</h2>
-    <ul>
-      <li>Un temps d'échange sur ce que tu vis et ce que tu ressens dans ton corps</li>
-      <li>Le massage énergétique, habillé(e) ou selon ce qui te convient</li>
-      <li>Un temps calme pour intégrer, puis quelques mots sur ce qui s'est passé</li>
-    </ul>
     <p>
-      Durée : environ 1h30. Au cabinet à <Link to="/acces-cabinet-bevaix">Bevaix</Link>. Prix libre. Ce massage peut aussi précéder une <Link to="/la-kundalini">activation Kundalini</Link> ou un <Link to="/chamanisme-neuchatel">soin chamanique</Link>.
+      Cette approche peut être combinée à mes <Link to="/chamanisme-neuchatel">soins énergétiques chamaniques</Link> et à l'<Link to="/la-kundalini">activation Kundalini</Link> afin d'accompagner un relâchement corporel plus global.
+    </p>
+    <h2>Un espace pour accueillir ce qui se présente</h2>
+    <p>
+      L'objectif est de favoriser la détente, d'aider le corps à relâcher certaines tensions et d'offrir un espace pour accueillir les sensations et les émotions qui peuvent émerger.
+    </p>
+    <p>
+      Chaque séance est adaptée à ton ressenti, à tes besoins et à tes limites. Nous avançons à ton rythme, dans un cadre respectueux et bienveillant.
+    </p>
+    <p>
+      Au cabinet à <Link to="/acces-cabinet-bevaix">Bevaix (Neuchâtel)</Link>. Prix libre.
     </p>
     <p>
       Les séances sont un accompagnement de bien-être complémentaire : elles ne remplacent pas un suivi médical, psychologique ou de physiothérapie.
     </p>
-    <div className="pt-4"><RdvButton /></div>
+    <h2>Envie de découvrir cette approche ?</h2>
+    <p>Contacte-moi pour échanger sur tes besoins et convenir d'une séance.</p>
+    <p>Matyas Challandes — Karmaequilego<br />Téléphone et WhatsApp : <a href="tel:+41762445552">+41 76 244 55 52</a></p>
+    <div className="flex flex-wrap gap-3 pt-4">
+      <Button asChild variant="outline"><a href="tel:+41762445552"><Phone />Contacter Matyas</a></Button>
+      <Button asChild variant="outline"><a href="https://wa.me/41762445552" target="_blank" rel="noopener noreferrer"><MessageCircle />WhatsApp</a></Button>
+      <RdvButton />
+    </div>
     <Precautions />
   </SimplePage>
 );
